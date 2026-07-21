@@ -8,7 +8,7 @@ const portfolioData = [
     category: "VISUAL MERCHANDISING",
     slug: "visual-merchandising",
     items: [
-      { title: "Creative Windows", image: "https://static.wixstatic.com/media/9e4437_b1d6e14a69774452990aa064af82b819~mv2.jpg/v1/crop/x_0,y_151,w_2978,h_3558/fill/w_660,h_710,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_20220509_111042.jpg" },
+      { title: "Creative Windows", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif" },
       { title: "In-Store Displays", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg" },
       { title: "Limited Editions", image: "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg" }
     ]

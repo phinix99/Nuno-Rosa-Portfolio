@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Summer Collection '23",
     category: "Creative Window Concepts",
-    image: "https://static.wixstatic.com/media/9e4437_b1d6e14a69774452990aa064af82b819~mv2.jpg/v1/crop/x_0,y_151,w_2978,h_3558/fill/w_660,h_710,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_20220509_111042.jpg",
+    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
   },
   {
     id: 2,
