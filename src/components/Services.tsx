@@ -69,7 +69,7 @@ export default function Services() {
             </div>
 
             {/* Laptop Inner Screen */}
-            <div className="w-full h-full rounded-lg sm:rounded-xl overflow-hidden bg-black relative">
+            <div className="w-full h-full rounded-lg sm:rounded-xl overflow-hidden bg-black relative pointer-events-none">
               <iframe 
                 width="100%" 
                 height="100%" 
@@ -77,11 +77,11 @@ export default function Services() {
                 frameBorder="0" 
                 allow="autoplay; fullscreen"
                 allowFullScreen
-                title="Vero Moda Press Preview SS 2019 Video"
-                className="w-full h-full object-cover"
+                title="Service Showcase Video"
+                className="w-full h-full object-cover scale-[1.25] origin-center"
               />
               {/* Screen Gloss Reflection */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.04] to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.03] to-transparent pointer-events-none" />
             </div>
           </div>
 
