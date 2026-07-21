@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const categories = [
@@ -42,73 +42,89 @@ const categories = [
 
 export default function PortfolioHighlights() {
   return (
-    <section className="w-full bg-[#fdfdfd] pt-24 md:pt-32 pb-24 md:pb-32 border-b border-[#111]/10 px-6 md:px-12 lg:px-20" id="projects">
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-16 md:gap-24">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+    <section className="w-full bg-[#fdfdfd] pt-20 md:pt-28 pb-24 md:pb-32 border-b border-[#111]/10 px-6 md:px-12 lg:px-20" id="projects">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 md:gap-16">
+        
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#111]/10 pb-8">
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-1.5 text-xs font-bold tracking-widest text-[#6B4C9A] uppercase">
-              PORTFOLIO MENU
+            <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#6B4C9A] uppercase">
+              <Sparkles size={14} /> PORTFOLIO MENU
             </div>
-            <h2 className="font-sans text-[10vw] md:text-[6vw] leading-[0.9] font-medium tracking-tighter uppercase text-[#111]">
+            <h2 className="font-sans text-4xl md:text-6xl font-medium tracking-tight uppercase text-[#111]">
               OUR DISCIPLINES
             </h2>
           </div>
           <Link 
             to="/portfolio" 
-            className="flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-[#111] hover:text-[#6B4C9A] transition-colors mb-2 md:mb-4 group"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#111]/20 hover:border-[#6B4C9A] hover:bg-[#6B4C9A] hover:text-white transition-all text-xs font-bold tracking-widest uppercase text-[#111] group w-fit"
           >
-            Explore Portfolio
-            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            Explore Full Portfolio
+            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
         </div>
 
-        {/* Categories List */}
-        <div className="flex flex-col border-t border-[#111]/10">
+        {/* Visual Discipline Cards Grid - Images Always Visible */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((cat, idx) => (
-            <Link 
-              key={idx}
-              to={`/portfolio/${cat.slug}`}
-              className="group flex flex-col lg:flex-row lg:items-center py-8 lg:py-12 border-b border-[#111]/10 relative overflow-hidden"
+            <motion.div
+              key={cat.slug}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              {/* Background fill on hover */}
-              <div className="absolute inset-0 bg-[#111] translate-y-[101%] group-hover:translate-y-0 transition-transform duration-700 ease-[0.16,1,0.3,1] z-0" />
-              
-              <div className="w-full flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16 relative z-10 px-4">
-                {/* Number */}
-                <span className="font-sans text-sm md:text-base font-bold tracking-widest text-[#111]/40 group-hover:text-[#fdfdfd]/50 transition-colors duration-500 w-12">
-                  {cat.num}
-                </span>
+              <Link 
+                to={`/portfolio/${cat.slug}`}
+                className="group flex flex-col gap-5 h-full rounded-2xl p-4 bg-neutral-50/60 hover:bg-white border border-neutral-200/80 hover:border-[#6B4C9A]/40 hover:shadow-[0_20px_40px_rgba(107,76,154,0.1)] transition-all duration-500"
+              >
+                {/* Visual Image Showcase (Visible Before Hover) */}
+                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-neutral-200 border border-neutral-200/80">
+                  <img 
+                    src={cat.image} 
+                    alt={cat.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  
+                  {/* Floating Number Badge */}
+                  <div className="absolute top-3 left-3 bg-[#111]/85 backdrop-blur-md px-3 py-1 rounded-full text-white font-sans text-xs font-mono font-bold tracking-widest shadow-md">
+                    {cat.num}
+                  </div>
 
-                {/* Title & Mobile Icon */}
-                <div className="flex flex-1 items-center justify-between lg:justify-start lg:w-1/2 gap-4">
-                  <h3 className="font-sans text-3xl md:text-5xl lg:text-[4rem] font-medium tracking-tighter uppercase text-[#111] group-hover:text-[#fdfdfd] transition-colors duration-500">
+                  {/* Floating Arrow Badge */}
+                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-[#111] group-hover:bg-[#6B4C9A] group-hover:text-white transition-all shadow-md">
+                    <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
+
+                  {/* Overlay Gradient on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                </div>
+
+                {/* Content Details */}
+                <div className="flex flex-col gap-3 px-1 pb-1 flex-1">
+                  <h3 className="font-sans text-xl md:text-2xl font-medium tracking-tight uppercase text-[#111] group-hover:text-[#6B4C9A] transition-colors leading-snug">
                     {cat.title}
                   </h3>
-                  <ArrowRight size={20} className="text-[#111] opacity-50 group-hover:text-[#fdfdfd] group-hover:opacity-100 lg:hidden transition-colors duration-500" />
-                </div>
 
-                {/* Subcategories */}
-                <div className="flex flex-wrap gap-2 lg:gap-4 lg:w-1/3">
-                  {cat.subcategories.map((sub, i) => (
-                    <span 
-                      key={i} 
-                      className="px-3 py-1 text-[10px] md:text-xs font-semibold tracking-wider uppercase border border-[#111]/20 rounded-full text-[#111]/70 group-hover:border-[#fdfdfd]/30 group-hover:text-[#fdfdfd] transition-colors duration-500 bg-[#fdfdfd]/50 group-hover:bg-transparent backdrop-blur-sm"
-                    >
-                      {sub}
-                    </span>
-                  ))}
+                  {/* Subcategories Tags */}
+                  <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                    {cat.subcategories.map((sub, i) => (
+                      <span 
+                        key={i} 
+                        className="px-2.5 py-1 text-[10px] font-semibold tracking-wider uppercase border border-neutral-200 rounded-full text-neutral-600 group-hover:border-[#6B4C9A]/30 group-hover:text-[#6B4C9A] bg-white transition-colors"
+                      >
+                        {sub}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-
-                {/* Hover Image Reveal */}
-                <div className="absolute top-1/2 right-12 -translate-y-1/2 w-72 aspect-[4/3] rounded-lg overflow-hidden opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-700 ease-[0.16,1,0.3,1] pointer-events-none hidden lg:block shadow-2xl">
-                  <img src={cat.image} alt={cat.title} className="w-full h-full object-cover" />
-                </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
 }
+
