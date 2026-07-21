@@ -159,78 +159,72 @@ export default function Philosophy() {
         </motion.div>
 
         {/* Global Locations Highlight Block */}
-        <div className="mt-24 md:mt-32 p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] bg-[#050505] text-[#fdfdfd] relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+        <div className="mt-16 md:mt-24 p-6 md:p-8 lg:p-10 rounded-2xl md:rounded-3xl bg-[#050505] text-[#fdfdfd] relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/10">
           {/* Subtle background glow */}
           <div className="absolute top-0 left-1/4 w-1/2 h-full bg-[#6B4C9A]/15 blur-[120px] rounded-full pointer-events-none" />
 
-          <div className="relative z-10 flex flex-col md:flex-row justify-between md:items-end gap-6 mb-16">
-            <div className="flex flex-col gap-3">
+          <div className="relative z-10 flex flex-col md:flex-row justify-between md:items-end gap-4 mb-6 md:mb-8">
+            <div className="flex flex-col gap-1.5">
               <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#6B4C9A] uppercase">
-                <Globe2 size={16} /> Global Footprint
+                <Globe2 size={14} /> Global Footprint
               </div>
-              <h4 className="font-sans text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white">
+              <h4 className="font-sans text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight text-white">
                 ACTIVE CO-ORDINATES
               </h4>
             </div>
-            <p className="font-sans text-sm md:text-base font-light text-white/60 max-w-sm md:text-right leading-relaxed">
-              We manage spatial and visual campaigns globally, coordinating seamless creative direction across timezones.
+            <p className="font-sans text-xs md:text-sm font-light text-white/60 max-w-xs md:text-right leading-relaxed">
+              We manage spatial and visual campaigns globally across timezones.
             </p>
           </div>
 
-          {/* Locations List - Premium Dark Card Layout */}
-          <div className="relative z-10 w-full flex flex-col gap-4">
+          {/* Locations List - Compact Rows Layout */}
+          <div className="relative z-10 w-full flex flex-col gap-2.5">
             {locations.map((loc, index) => (
               <motion.div 
                 key={loc.city}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full flex flex-col lg:flex-row lg:items-center p-6 lg:p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500 group relative overflow-hidden cursor-default"
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.5, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                className="w-full flex flex-col sm:flex-row sm:items-center justify-between py-3.5 px-5 lg:py-4 lg:px-6 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 group relative overflow-hidden cursor-default gap-3 sm:gap-6"
               >
                 {/* Hover gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#6B4C9A]/0 via-[#6B4C9A]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#6B4C9A]/0 via-[#6B4C9A]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
-                {/* 1. Country & Status */}
-                <div className="w-full lg:w-1/5 flex items-center gap-4 mb-6 lg:mb-0 relative z-10">
-                  <div className="relative flex items-center justify-center">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-                    <span className="absolute w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping opacity-75" />
+                {/* 1. Status & Country + City */}
+                <div className="flex items-center gap-3.5 min-w-[200px] relative z-10">
+                  <div className="relative flex items-center justify-center shrink-0">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                    <span className="absolute w-2 h-2 rounded-full bg-emerald-400 animate-ping opacity-75" />
                   </div>
-                  <span className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-white/50 group-hover:text-white/80 transition-colors">
-                    {loc.country}
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+                    <h5 className="font-sans text-lg md:text-xl font-medium tracking-tight uppercase text-white/90 group-hover:text-white transition-colors">
+                      {loc.city}
+                    </h5>
+                    <span className="font-sans text-[10px] font-semibold tracking-widest uppercase text-white/40 group-hover:text-white/70 transition-colors">
+                      {loc.country}
+                    </span>
+                  </div>
+                </div>
+
+                {/* 2. Coords & Short Desc */}
+                <div className="hidden lg:flex items-center gap-3 relative z-10 flex-1 max-w-md px-4">
+                  <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 font-sans text-[10px] tracking-widest font-mono text-white/60 shrink-0 group-hover:bg-[#6B4C9A]/20 group-hover:border-[#6B4C9A]/30 group-hover:text-[#d3bcfa] transition-all">
+                    {loc.coords}
                   </span>
-                </div>
-                
-                {/* 2. City Name */}
-                <div className="w-full lg:w-1/4 mb-4 lg:mb-0 relative z-10">
-                  <h5 className="font-sans text-3xl md:text-4xl font-medium tracking-tight uppercase text-white/90 group-hover:text-white group-hover:translate-x-2 transition-all duration-500">
-                    {loc.city}
-                  </h5>
+                  <p className="font-sans text-xs font-light truncate text-white/50 group-hover:text-white/75 transition-colors">
+                    {loc.desc}
+                  </p>
                 </div>
 
-                {/* 3. Description & Coords */}
-                <div className="w-full lg:w-1/3 mb-6 lg:mb-0 pr-4 lg:pr-8 relative z-10">
-                  <div className="flex flex-col gap-4">
-                    <span className="inline-block px-3 py-1.5 rounded-full bg-white/5 border border-white/10 font-sans text-[10px] tracking-widest font-mono text-white/70 w-fit group-hover:bg-[#6B4C9A]/20 group-hover:border-[#6B4C9A]/30 group-hover:text-[#d3bcfa] transition-all duration-500">
-                      {loc.coords}
-                    </span>
-                    <p className="font-sans text-sm font-light leading-relaxed text-white/50 group-hover:text-white/70 transition-colors">
-                      {loc.desc}
-                    </p>
-                  </div>
-                </div>
-
-                {/* 4. Time */}
-                <div className="w-full lg:w-auto ml-auto text-left lg:text-right relative z-10">
-                  <div className="flex flex-col items-start lg:items-end gap-1.5 p-5 lg:p-0 rounded-xl bg-white/5 lg:bg-transparent border lg:border-none border-white/5 group-hover:bg-transparent transition-colors">
-                    <span className="font-sans text-[10px] font-semibold tracking-[0.15em] uppercase text-white/40">
-                      Local Time
-                    </span>
-                    <span className="font-sans text-2xl md:text-3xl font-light tabular-nums font-mono text-white/90 group-hover:text-white transition-colors">
-                      {getCityTime(loc.timezone)}
-                    </span>
-                  </div>
+                {/* 3. Time */}
+                <div className="flex items-center gap-2 shrink-0 ml-auto relative z-10">
+                  <span className="font-sans text-[9px] font-semibold tracking-widest uppercase text-white/40">
+                    LOCAL
+                  </span>
+                  <span className="font-sans text-lg md:text-xl font-medium tabular-nums font-mono text-white/90 group-hover:text-white transition-colors">
+                    {getCityTime(loc.timezone)}
+                  </span>
                 </div>
               </motion.div>
             ))}
