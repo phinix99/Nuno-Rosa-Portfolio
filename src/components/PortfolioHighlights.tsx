@@ -8,35 +8,40 @@ const categories = [
     title: "VISUAL MERCHANDISING",
     subcategories: ["Creative Windows", "In-Store Displays", "Limited Editions"],
     image: "https://static.wixstatic.com/media/9e4437_b1d6e14a69774452990aa064af82b819~mv2.jpg/v1/crop/x_0,y_151,w_2978,h_3558/fill/w_660,h_710,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_20220509_111042.jpg",
-    slug: "visual-merchandising"
+    slug: "visual-merchandising",
+    bentoClass: "lg:col-span-2 lg:row-span-2 min-h-[420px] lg:min-h-[600px]"
   },
   {
     num: "02",
     title: "E-COMMERCE & STYLING",
     subcategories: ["Fashion Editorial Styling"],
     image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
-    slug: "e-commerce-styling"
+    slug: "e-commerce-styling",
+    bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[290px]"
   },
   {
     num: "03",
     title: "CONCEPT & SIGNAGE",
     subcategories: ["Conceptual Design", "Visual Signage"],
     image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg",
-    slug: "concept-signage"
+    slug: "concept-signage",
+    bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[290px]"
   },
   {
     num: "04",
     title: "EVENTS & BRAND EXHIBITION",
-    subcategories: ["Trade Shows", "Press Showroom Curation", "Luxury Events"],
+    subcategories: ["Trade Shows", "Press Showrooms", "Luxury Events"],
     image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
-    slug: "events-exhibition"
+    slug: "events-exhibition",
+    bentoClass: "lg:col-span-2 lg:row-span-1 min-h-[300px]"
   },
   {
     num: "05",
     title: "PRESS & GUEST SPEAKER",
     subcategories: ["Keynote Speaking", "Workshops"],
     image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
-    slug: "press-speaker"
+    slug: "press-speaker",
+    bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[300px]"
   }
 ];
 
@@ -64,54 +69,56 @@ export default function PortfolioHighlights() {
           </Link>
         </div>
 
-        {/* Visual Discipline Cards Grid - Images Always Visible */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Dynamic Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, idx) => (
             <motion.div
               key={cat.slug}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              className={cat.bentoClass}
             >
               <Link 
                 to={`/portfolio/${cat.slug}`}
-                className="group flex flex-col gap-5 h-full rounded-2xl p-4 bg-neutral-50/60 hover:bg-white border border-neutral-200/80 hover:border-[#6B4C9A]/40 hover:shadow-[0_20px_40px_rgba(107,76,154,0.1)] transition-all duration-500"
+                className="group relative flex flex-col justify-between w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#6B4C9A]/50 hover:shadow-[0_25px_50px_rgba(107,76,154,0.14)] transition-all duration-700 p-6 md:p-8 bg-neutral-900"
               >
-                {/* Visual Image Showcase (Visible Before Hover) */}
-                <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-neutral-200 border border-neutral-200/80">
+                {/* Background Image - Always Visible */}
+                <div className="absolute inset-0 z-0 overflow-hidden">
                   <img 
                     src={cat.image} 
                     alt={cat.title} 
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  
-                  {/* Floating Number Badge */}
-                  <div className="absolute top-3 left-3 bg-[#111]/85 backdrop-blur-md px-3 py-1 rounded-full text-white font-sans text-xs font-mono font-bold tracking-widest shadow-md">
-                    {cat.num}
-                  </div>
-
-                  {/* Floating Arrow Badge */}
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-[#111] group-hover:bg-[#6B4C9A] group-hover:text-white transition-all shadow-md">
-                    <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </div>
-
-                  {/* Overlay Gradient on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  {/* Gradient Overlays */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 group-hover:from-black/90 group-hover:via-black/45 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-[#6B4C9A]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
                 </div>
 
-                {/* Content Details */}
-                <div className="flex flex-col gap-3 px-1 pb-1 flex-1">
-                  <h3 className="font-sans text-xl md:text-2xl font-medium tracking-tight uppercase text-[#111] group-hover:text-[#6B4C9A] transition-colors leading-snug">
+                {/* Top Bar: Number & Arrow CTA */}
+                <div className="relative z-10 flex items-center justify-between w-full">
+                  <span className="font-sans text-xs md:text-sm font-mono font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-white border border-white/20 shadow-sm">
+                    {cat.num}
+                  </span>
+
+                  <div className="w-10 h-10 rounded-full bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#6B4C9A] group-hover:border-[#6B4C9A] transition-all shadow-md">
+                    <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
+                </div>
+
+                {/* Bottom Content: Title & Subcategory Badges */}
+                <div className="relative z-10 flex flex-col gap-3 mt-auto pt-12">
+                  <h3 className="font-sans text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight uppercase text-white group-hover:text-[#d3bcfa] transition-colors leading-tight">
                     {cat.title}
                   </h3>
 
                   {/* Subcategories Tags */}
-                  <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                  <div className="flex flex-wrap gap-2 pt-1">
                     {cat.subcategories.map((sub, i) => (
                       <span 
                         key={i} 
-                        className="px-2.5 py-1 text-[10px] font-semibold tracking-wider uppercase border border-neutral-200 rounded-full text-neutral-600 group-hover:border-[#6B4C9A]/30 group-hover:text-[#6B4C9A] bg-white transition-colors"
+                        className="px-3 py-1 text-[10px] md:text-xs font-semibold tracking-wider uppercase border border-white/20 rounded-full text-white/80 bg-white/10 backdrop-blur-md group-hover:border-white/40 group-hover:text-white transition-colors"
                       >
                         {sub}
                       </span>
@@ -127,4 +134,5 @@ export default function PortfolioHighlights() {
     </section>
   );
 }
+
 
