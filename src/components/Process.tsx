@@ -33,7 +33,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="w-full bg-[#6B4C9A] py-24 md:py-32 px-6 md:px-12 border-b border-[#111]/10 text-[#fdfdfd]" id="process">
+    <section className="w-full bg-[#6B4C9A] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-[#111]/10 text-[#fdfdfd]" id="process">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between md:items-start gap-8 mb-16 lg:mb-24">
           <h2 className="font-sans text-[12vw] md:text-[8rem] font-medium tracking-tighter uppercase leading-none text-[#fdfdfd]">
@@ -78,7 +78,7 @@ export default function Process() {
                       whileInView={{ width: step.percent }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.5 + idx * 0.1, ease: "easeOut" }}
-                      className="h-full bg-[#6B4C9A]"
+                      className="h-full bg-[#fdfdfd]"
                     />
                   </div>
                 </div>

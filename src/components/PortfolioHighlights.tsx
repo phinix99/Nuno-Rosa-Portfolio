@@ -80,10 +80,13 @@ export default function PortfolioHighlights() {
                   {cat.num}
                 </span>
 
-                {/* Title */}
-                <h3 className="font-sans text-3xl md:text-5xl lg:text-[4rem] font-medium tracking-tighter uppercase text-[#111] group-hover:text-[#fdfdfd] transition-colors duration-500 lg:w-1/2">
-                  {cat.title}
-                </h3>
+                {/* Title & Mobile Icon */}
+                <div className="flex flex-1 items-center justify-between lg:justify-start lg:w-1/2 gap-4">
+                  <h3 className="font-sans text-3xl md:text-5xl lg:text-[4rem] font-medium tracking-tighter uppercase text-[#111] group-hover:text-[#fdfdfd] transition-colors duration-500">
+                    {cat.title}
+                  </h3>
+                  <ArrowRight size={20} className="text-[#111] opacity-50 group-hover:text-[#fdfdfd] group-hover:opacity-100 lg:hidden transition-colors duration-500" />
+                </div>
 
                 {/* Subcategories */}
                 <div className="flex flex-wrap gap-2 lg:gap-4 lg:w-1/3">

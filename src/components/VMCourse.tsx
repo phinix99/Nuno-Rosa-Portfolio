@@ -44,7 +44,7 @@ export default function VMCourse() {
   };
 
   return (
-    <section className="w-full bg-[#fafafa] text-[#111] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-[#111]/10 overflow-hidden" id="vm-course">
+    <section className="w-full bg-[#fdfdfd] text-[#111] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-[#111]/10 overflow-hidden" id="vm-course">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           

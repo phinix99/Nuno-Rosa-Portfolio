@@ -36,7 +36,7 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full bg-[#fdfdfd] py-24 md:py-32 px-6 md:px-12 border-b border-[#111]/10">
+    <section className="w-full bg-[#fdfdfd] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-[#111]/10">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Header */}
