@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 const categories = [
   {
     num: "01",
-    title: "VISUAL MERCHANDISING",
+    titleLine1: "VISUAL",
+    titleLine2: "MERCHANDISING",
     subcategories: ["Creative Windows", "In-Store Displays", "Limited Editions"],
     image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
     slug: "visual-merchandising",
@@ -13,7 +14,8 @@ const categories = [
   },
   {
     num: "02",
-    title: "E-COMMERCE & STYLING",
+    titleLine1: "E-COMMERCE",
+    titleLine2: "& STYLING",
     subcategories: ["Fashion Editorial Styling"],
     image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
     slug: "e-commerce-styling",
@@ -21,7 +23,8 @@ const categories = [
   },
   {
     num: "03",
-    title: "CONCEPT & SIGNAGE",
+    titleLine1: "CONCEPT",
+    titleLine2: "& SIGNAGE",
     subcategories: ["Conceptual Design", "Visual Signage"],
     image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg",
     slug: "concept-signage",
@@ -29,7 +32,8 @@ const categories = [
   },
   {
     num: "04",
-    title: "EVENTS & BRAND EXHIBITION",
+    titleLine1: "EVENTS &",
+    titleLine2: "BRAND EXHIBITION",
     subcategories: ["Trade Shows", "Press Showrooms", "Luxury Events"],
     image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
     slug: "events-exhibition",
@@ -37,7 +41,8 @@ const categories = [
   },
   {
     num: "05",
-    title: "PRESS & GUEST SPEAKER",
+    titleLine1: "PRESS &",
+    titleLine2: "GUEST SPEAKER",
     subcategories: ["Keynote Speaking", "Workshops"],
     image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
     slug: "press-speaker",
@@ -88,7 +93,7 @@ export default function PortfolioHighlights() {
                 <div className="absolute inset-0 z-0 overflow-hidden">
                   <img 
                     src={cat.image} 
-                    alt={cat.title} 
+                    alt={`${cat.titleLine1} ${cat.titleLine2}`} 
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   {/* Gradient Overlays */}
@@ -109,8 +114,8 @@ export default function PortfolioHighlights() {
 
                 {/* Bottom Content: Title & Subcategory Badges */}
                 <div className="relative z-10 flex flex-col gap-3 mt-auto pt-12">
-                  <h3 className="font-sans text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight uppercase text-white group-hover:text-[#d3bcfa] transition-colors leading-tight">
-                    {cat.title}
+                  <h3 className="font-sans text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight uppercase text-white group-hover:text-[#d3bcfa] transition-colors leading-[1.08]">
+                    {cat.titleLine1} <br /> {cat.titleLine2}
                   </h3>
 
                   {/* Subcategories Tags */}
