@@ -77,29 +77,41 @@ export default function Philosophy() {
     <section className="w-full bg-[#fdfdfd] text-[#111] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-[#111]/10" id="about">
       <div className="max-w-[1400px] mx-auto">
         
-        {/* Main Flex Block: Who We Are and Image */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col lg:flex-row gap-12 lg:gap-20 pb-20 border-b border-[#111]/10"
-        >
-          {/* Left Side: Header & Content */}
-          <div className="w-full lg:w-3/5">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 bg-[#fdfdfd] rounded-full" />
-              <h2 className="font-sans text-xs font-semibold tracking-widest uppercase text-[#111]/60">
+        {/* Main Block: Who We Are - Editorial Overlap Layout */}
+        <div className="relative w-full flex flex-col mb-32 lg:mb-48">
+          
+          {/* Background Image Layer */}
+          <div className="w-full lg:w-[85%] aspect-[16/10] md:aspect-[21/9] rounded-2xl overflow-hidden bg-[#fdfdfd] shadow-[0_8px_30px_rgb(0,0,0,0.02)] border border-[#111]/10 group relative" ref={imageRef}>
+            <motion.img 
+              style={{ y, scale: 1.15 }}
+              src="https://static.wixstatic.com/media/9e4437_23f54bb89f8a4b8bba3f476b18271c3e~mv2.jpg/v1/crop/x_4,y_123,w_2996,h_1491/fill/w_1463,h_728,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3_Life%20Style_1180mm%20X%20635mm_edited.jpg"
+              alt="Lifestyle Campaign Showcase"
+              className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-[1.1]"
+            />
+            <div className="absolute inset-0 bg-[#111]/5 pointer-events-none transition-colors duration-700 mix-blend-overlay" />
+          </div>
+
+          {/* Overlapping Text Card */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="w-[90%] md:w-[80%] lg:w-[50%] mx-auto lg:mx-0 lg:absolute lg:-bottom-24 lg:right-4 xl:right-12 bg-[#fdfdfd] p-8 md:p-12 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-[#111]/5 rounded-2xl lg:-mt-0 -mt-16 relative z-10"
+          >
+            <div className="flex items-center gap-2 mb-8">
+              <span className="w-2 h-2 bg-[#6B4C9A] rounded-full" />
+              <h2 className="font-sans text-xs font-bold tracking-[0.2em] uppercase text-[#111]/60">
                 Who We Are
               </h2>
             </div>
             
-            <h3 className="font-sans text-3xl md:text-5xl lg:text-[2.75rem] lg:leading-[1.15] font-medium tracking-tight mb-10">
+            <h3 className="font-sans text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight mb-8 leading-snug">
               We architect spatial narratives that command attention, translating bold brand concepts into immersive, high-conversion retail environments.
             </h3>
 
-            <div className="font-sans text-base md:text-lg font-light leading-relaxed text-[#111]/80 pr-4">
-              <p className="mb-8">
+            <div className="font-sans text-sm md:text-base font-light leading-relaxed text-[#111]/70">
+              <p className="mb-6">
                 Spanning London, the UAE, India, Mexico, and Portugal, our work bridges diverse global markets. True visual merchandising acts as the silent architecture of desire. For over 30 years, we have engineered physical retail experiences that transcend borders and demographic expectations.
               </p>
               
@@ -112,23 +124,23 @@ export default function Philosophy() {
                     transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <p className="mb-8 text-[#111]/80">
+                    <p className="mb-6">
                       Our methodology blends structural precision with commercial empathy. By deconstructing both the brand identity and the physical space, we build comprehensive 360-degree environments—from conceptual window displays to intricate in-store flow architectures.
                     </p>
-                    <p className="mb-8 text-[#111]/80">
+                    <p className="mb-6">
                       We do not merely decorate; we architect the tension between objects and space. This involves meticulous space optimization, bespoke fixture design, and leading cross-functional teams to execute flawless rollouts across global retail networks.
                     </p>
                   </motion.div>
                 )}
               </AnimatePresence>
 
-              <div className="flex items-center gap-6 mt-12">
-                <a href="#projects" className="bg-[#fdfdfd] text-[#111] px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 transition-colors">
+              <div className="flex flex-wrap items-center gap-4 mt-10 border-t border-[#111]/10 pt-8">
+                <a href="#projects" className="bg-[#111] text-[#fdfdfd] px-6 py-3 rounded-full text-[10px] font-bold tracking-widest uppercase hover:bg-[#6B4C9A] transition-colors shadow-md">
                   Our Work
                 </a>
                 <button 
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase hover:opacity-50 transition-all text-[#111]/60"
+                  className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase hover:text-[#6B4C9A] transition-colors text-[#111]"
                   aria-expanded={isExpanded}
                 >
                   {isExpanded ? 'Read Less' : 'Our Approach'}
@@ -142,21 +154,8 @@ export default function Philosophy() {
                 </button>
               </div>
             </div>
-          </div>
-
-          {/* Right Side: Lifestyle Image */}
-          <div className="w-full lg:w-2/5 flex items-center" ref={imageRef}>
-            <div className="w-full aspect-[3/2] rounded-[20px] overflow-hidden bg-[#fdfdfd] shadow-[0_8px_30px_rgb(0,0,0,0.02)] border border-[#111]/10 group relative">
-              <motion.img 
-                style={{ y, scale: 1.15 }}
-                src="https://static.wixstatic.com/media/9e4437_23f54bb89f8a4b8bba3f476b18271c3e~mv2.jpg/v1/crop/x_4,y_123,w_2996,h_1491/fill/w_1463,h_728,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3_Life%20Style_1180mm%20X%20635mm_edited.jpg"
-                alt="Lifestyle Campaign Showcase"
-                className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-[1.2]"
-              />
-              <div className="absolute inset-0 bg-neutral-950/5 pointer-events-none group-hover:bg-[#fdfdfd]/10 transition-colors duration-700 mix-blend-overlay" />
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Global Locations Highlight Block */}
         <div className="mt-20 flex flex-col gap-8">
