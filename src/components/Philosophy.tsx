@@ -95,12 +95,12 @@ export default function Philosophy() {
             </div>
             
             <h3 className="font-sans text-3xl md:text-5xl lg:text-[2.75rem] lg:leading-[1.15] font-medium tracking-tight mb-10">
-              We architect spatial narratives that command attention, translating bold brand concepts into immersive, high-conversion retail environments.
+              We architect spatial narratives that command attention.
             </h3>
 
             <div className="font-sans text-base md:text-lg font-light leading-relaxed text-[#111]/80 pr-4">
               <p className="mb-8">
-                Spanning London, the UAE, India, Mexico, and Portugal, our work bridges diverse global markets. True visual merchandising acts as the silent architecture of desire. For over 30 years, we have engineered physical retail experiences that transcend borders and demographic expectations.
+                For over 30 years, we have engineered physical retail experiences that transcend borders, transforming bold brand concepts into immersive, high-conversion environments globally.
               </p>
               
               <AnimatePresence>
@@ -113,10 +113,10 @@ export default function Philosophy() {
                     className="overflow-hidden"
                   >
                     <p className="mb-8 text-[#111]/80">
-                      Our methodology blends structural precision with commercial empathy. By deconstructing both the brand identity and the physical space, we build comprehensive 360-degree environments—from conceptual window displays to intricate in-store flow architectures.
+                      We deconstruct brand identity and physical space to build comprehensive 360-degree environments—from conceptual window displays to intricate in-store flow architectures.
                     </p>
                     <p className="mb-8 text-[#111]/80">
-                      We do not merely decorate; we architect the tension between objects and space. This involves meticulous space optimization, bespoke fixture design, and leading cross-functional teams to execute flawless rollouts across global retail networks.
+                      We do not merely decorate; we architect the tension between objects and space, executing flawless rollouts across global retail networks.
                     </p>
                   </motion.div>
                 )}
@@ -159,56 +159,63 @@ export default function Philosophy() {
         </motion.div>
 
         {/* Global Locations Highlight Block */}
-        <div className="mt-20 flex flex-col gap-8">
-          <div className="flex flex-col md:flex-row justify-between md:items-end gap-4">
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-1.5 text-xs font-bold tracking-widest text-[#6B4C9A] uppercase">
-                <Globe2 size={14} /> Global Footprint
+        <div className="mt-24 md:mt-32 p-8 md:p-12 lg:p-16 rounded-[2rem] md:rounded-[3rem] bg-[#050505] text-[#fdfdfd] relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+          {/* Subtle background glow */}
+          <div className="absolute top-0 left-1/4 w-1/2 h-full bg-[#6B4C9A]/15 blur-[120px] rounded-full pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col md:flex-row justify-between md:items-end gap-6 mb-16">
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#6B4C9A] uppercase">
+                <Globe2 size={16} /> Global Footprint
               </div>
-              <h4 className="font-sans text-2xl md:text-3xl font-bold tracking-tight text-[#111]">
+              <h4 className="font-sans text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white">
                 ACTIVE CO-ORDINATES
               </h4>
             </div>
-            <p className="font-sans text-xs md:text-sm font-light text-[#111]/50 max-w-sm md:text-right leading-relaxed">
+            <p className="font-sans text-sm md:text-base font-light text-white/60 max-w-sm md:text-right leading-relaxed">
               We manage spatial and visual campaigns globally, coordinating seamless creative direction across timezones.
             </p>
           </div>
 
-          {/* Locations List - Premium Architectural Layout */}
-          <div className="w-full flex flex-col border-t border-[#111]/10 mt-8">
-            {locations.map((loc) => (
-              <div 
-                key={loc.city} 
-                className="w-full flex flex-col lg:flex-row lg:items-center py-6 lg:py-8 border-b border-[#111]/10 group hover:bg-[#111] transition-colors duration-500 px-4 md:px-8 relative overflow-hidden"
+          {/* Locations List - Premium Dark Card Layout */}
+          <div className="relative z-10 w-full flex flex-col gap-4">
+            {locations.map((loc, index) => (
+              <motion.div 
+                key={loc.city}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="w-full flex flex-col lg:flex-row lg:items-center p-6 lg:p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500 group relative overflow-hidden cursor-default"
               >
-                {/* Background accent */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#6B4C9A]/0 via-[#6B4C9A]/10 to-[#6B4C9A]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#6B4C9A]/0 via-[#6B4C9A]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                 
                 {/* 1. Country & Status */}
-                <div className="w-full lg:w-1/5 flex items-center gap-3 mb-4 lg:mb-0 relative z-10">
+                <div className="w-full lg:w-1/5 flex items-center gap-4 mb-6 lg:mb-0 relative z-10">
                   <div className="relative flex items-center justify-center">
-                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    <span className="absolute w-2 h-2 rounded-full bg-green-500 animate-ping opacity-75" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                    <span className="absolute w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping opacity-75" />
                   </div>
-                  <span className="font-sans text-[10px] font-bold tracking-widest uppercase text-[#111]/60 group-hover:text-[#fdfdfd]/70 transition-colors">
+                  <span className="font-sans text-[11px] font-semibold tracking-[0.2em] uppercase text-white/50 group-hover:text-white/80 transition-colors">
                     {loc.country}
                   </span>
                 </div>
                 
                 {/* 2. City Name */}
-                <div className="w-full lg:w-1/4 mb-3 lg:mb-0 relative z-10">
-                  <h5 className="font-sans text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight uppercase text-[#111] group-hover:text-[#fdfdfd] group-hover:translate-x-4 transition-all duration-500">
+                <div className="w-full lg:w-1/4 mb-4 lg:mb-0 relative z-10">
+                  <h5 className="font-sans text-3xl md:text-4xl font-medium tracking-tight uppercase text-white/90 group-hover:text-white group-hover:translate-x-2 transition-all duration-500">
                     {loc.city}
                   </h5>
                 </div>
 
                 {/* 3. Description & Coords */}
-                <div className="w-full lg:w-1/3 mb-4 lg:mb-0 pr-4 lg:pr-8 relative z-10">
-                  <div className="flex flex-col gap-2">
-                    <span className="font-sans text-[10px] tracking-widest font-mono text-[#6B4C9A] group-hover:text-[#6B4C9A] transition-colors">
+                <div className="w-full lg:w-1/3 mb-6 lg:mb-0 pr-4 lg:pr-8 relative z-10">
+                  <div className="flex flex-col gap-4">
+                    <span className="inline-block px-3 py-1.5 rounded-full bg-white/5 border border-white/10 font-sans text-[10px] tracking-widest font-mono text-white/70 w-fit group-hover:bg-[#6B4C9A]/20 group-hover:border-[#6B4C9A]/30 group-hover:text-[#d3bcfa] transition-all duration-500">
                       {loc.coords}
                     </span>
-                    <p className="font-sans text-xs md:text-sm font-light leading-relaxed text-[#111]/60 group-hover:text-[#fdfdfd]/70 transition-colors line-clamp-2 lg:line-clamp-none">
+                    <p className="font-sans text-sm font-light leading-relaxed text-white/50 group-hover:text-white/70 transition-colors">
                       {loc.desc}
                     </p>
                   </div>
@@ -216,16 +223,16 @@ export default function Philosophy() {
 
                 {/* 4. Time */}
                 <div className="w-full lg:w-auto ml-auto text-left lg:text-right relative z-10">
-                  <div className="flex flex-col items-start lg:items-end gap-1">
-                    <span className="font-sans text-[9px] font-bold tracking-wider uppercase text-[#111]/40 group-hover:text-[#fdfdfd]/40 transition-colors">
+                  <div className="flex flex-col items-start lg:items-end gap-1.5 p-5 lg:p-0 rounded-xl bg-white/5 lg:bg-transparent border lg:border-none border-white/5 group-hover:bg-transparent transition-colors">
+                    <span className="font-sans text-[10px] font-semibold tracking-[0.15em] uppercase text-white/40">
                       Local Time
                     </span>
-                    <span className="font-sans text-xl md:text-2xl font-light tabular-nums font-mono text-[#111] group-hover:text-[#fdfdfd] transition-colors">
+                    <span className="font-sans text-2xl md:text-3xl font-light tabular-nums font-mono text-white/90 group-hover:text-white transition-colors">
                       {getCityTime(loc.timezone)}
                     </span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

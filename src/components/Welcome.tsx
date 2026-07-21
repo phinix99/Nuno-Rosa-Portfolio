@@ -35,10 +35,10 @@ export default function Welcome() {
             
             <div className="font-sans text-base md:text-lg font-light leading-relaxed text-[#111]/80 max-w-2xl flex flex-col gap-6">
               <p>
-                Welcome to my atelier. I believe that space is not merely a volume to be filled, but a canvas for a physical narrative. Over my 30-year journey as an International Head of Visual Merchandising, I have worked at the intersection of psychology, architecture, and brand direction to craft retail experiences that transcend commerce.
+                Space is not merely a volume to be filled, but a canvas for narrative. With 30 years of experience, I craft retail environments that intersect psychology, architecture, and brand direction.
               </p>
               <p>
-                Every sightline is calculated; every texture and shadow is calibrated to evoke emotion. It is about creating the beautiful tension that leads to curiosity, connection, and ultimately, conversions.
+                Every sightline is calculated. Every texture evokes emotion. We create the beautiful tension that drives curiosity, connection, and conversions.
               </p>
             </div>
 

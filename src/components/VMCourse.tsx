@@ -6,22 +6,22 @@ const modules = [
   {
     num: "01",
     title: "The Architecture of Desire",
-    desc: "Psychological principles of retail design, consumer sightline mapping, and the silent cues that trigger customer interest."
+    desc: "Psychological principles of retail design and consumer sightline mapping."
   },
   {
     num: "02",
     title: "Street-Level Narratives",
-    desc: "Window display engineering, theatrical lighting, material tension, and creating immediate visual magnetism in seconds."
+    desc: "Window display engineering and creating immediate visual magnetism."
   },
   {
     num: "03",
     title: "Bespoke Space Optimization",
-    desc: "In-store traffic flow management, hot zone allocation, sensory product zoning, and premium custom fixture layouts."
+    desc: "Traffic flow management, hot zone allocation, and custom layouts."
   },
   {
     num: "04",
     title: "Global Operations & Rollout",
-    desc: "Translating brand concepts into modular guidelines, budget management, leading cross-functional teams, and international rollouts."
+    desc: "Translating concepts into modular guidelines for international execution."
   }
 ];
 
@@ -59,7 +59,7 @@ export default function VMCourse() {
                 VM MASTERCLASS
               </h2>
               <p className="font-sans text-lg md:text-xl font-light text-[#111]/70 mt-2 max-w-xl">
-                The Silent Architecture of Desire — A comprehensive, 360-degree course in visual merchandising and commercial space engineering.
+                A definitive 8-week program mastering the silent architecture of desire.
               </p>
             </div>
 
@@ -150,7 +150,7 @@ export default function VMCourse() {
                         Reserve Your Seat
                       </h3>
                       <p className="font-sans text-xs md:text-sm font-light text-[#111]/60 leading-relaxed">
-                        Secure early enrollment or request the detailed course syllabus. Seats are highly limited to preserve personalized studio coaching.
+                        Seats are highly limited to preserve personalized studio coaching. Secure early enrollment today.
                       </p>
                     </div>
 
@@ -192,7 +192,7 @@ export default function VMCourse() {
                           <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                         ) : (
                           <>
-                            Request Enrollment & Syllabus <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                            Request Syllabus <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                           </>
                         )}
                       </button>
