@@ -43,7 +43,7 @@ const locations = [
     country: "India", 
     timezone: "Asia/Kolkata", 
     coords: "12.9716° N, 77.5946° E",
-    desc: "Innovation hub for tech-integrated retail experiences and digital-physical spatial activations."
+    desc: "Tech-integrated retail environments, innovation hubs, and strategic development centers."
   }
 ];
 
