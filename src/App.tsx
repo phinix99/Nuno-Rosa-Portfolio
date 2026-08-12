@@ -3,6 +3,7 @@ import Lenis from 'lenis';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
+import ProjectGalleryPage from './pages/ProjectGalleryPage';
 
 export default function App() {
   useEffect(() => {
@@ -47,6 +48,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/portfolio/:category?" element={<Portfolio />} />
+      <Route path="/gallery/:category" element={<ProjectGalleryPage />} />
     </Routes>
   );
 }
