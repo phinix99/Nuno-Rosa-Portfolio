@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { portfolioData } from '../data/portfolio';
+import ProjectGallery from './ProjectGallery';
 
 const categories = [
   {
@@ -8,8 +11,8 @@ const categories = [
     titleLine1: "VISUAL",
     titleLine2: "MERCHANDISING",
     subcategories: ["Creative Windows", "In-Store Displays", "Limited Editions"],
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
-    slug: "visual-merchandising",
+    image: portfolioData["VISUAL MERCHANDISING"]?.[0] || "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
+    categoryKey: "VISUAL MERCHANDISING",
     bentoClass: "lg:col-span-2 lg:row-span-2 min-h-[420px] lg:min-h-[600px]"
   },
   {
@@ -17,8 +20,8 @@ const categories = [
     titleLine1: "E-COMMERCE",
     titleLine2: "& STYLING",
     subcategories: ["Fashion Editorial Styling"],
-    image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
-    slug: "e-commerce-styling",
+    image: portfolioData["E-COMMERCE & STYLING"]?.[0] || "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
+    categoryKey: "E-COMMERCE & STYLING",
     bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[290px]"
   },
   {
@@ -26,8 +29,8 @@ const categories = [
     titleLine1: "CONCEPT",
     titleLine2: "& SIGNAGE",
     subcategories: ["Conceptual Design", "Visual Signage"],
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg",
-    slug: "concept-signage",
+    image: portfolioData["CONCEPT & SIGNAGE"]?.[0] || "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg",
+    categoryKey: "CONCEPT & SIGNAGE",
     bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[290px]"
   },
   {
@@ -35,8 +38,8 @@ const categories = [
     titleLine1: "EVENTS &",
     titleLine2: "BRAND EXHIBITION",
     subcategories: ["Trade Shows", "Press Showrooms", "Luxury Events"],
-    image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
-    slug: "events-exhibition",
+    image: portfolioData["EVENTS & Brand Exhibition"]?.[0] || "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
+    categoryKey: "EVENTS & Brand Exhibition",
     bentoClass: "lg:col-span-2 lg:row-span-1 min-h-[300px]"
   },
   {
@@ -44,13 +47,15 @@ const categories = [
     titleLine1: "PRESS &",
     titleLine2: "GUEST SPEAKER",
     subcategories: ["Keynote Speaking", "Workshops"],
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
-    slug: "press-speaker",
+    image: portfolioData["PRESS & GUEST SPEAKER"]?.[0] || "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
+    categoryKey: "PRESS & GUEST SPEAKER",
     bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[300px]"
   }
 ];
 
 export default function PortfolioHighlights() {
+  const [selectedCategory, setSelectedCategory] = useState<{key: string, title: string} | null>(null);
+
   return (
     <section className="w-full bg-[#fdfdfd] pt-20 md:pt-28 pb-24 md:pb-32 border-b border-[#111]/10 px-6 md:px-12 lg:px-20" id="projects">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12 md:gap-16">
@@ -78,16 +83,16 @@ export default function PortfolioHighlights() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat, idx) => (
             <motion.div
-              key={cat.slug}
+              key={cat.categoryKey}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className={cat.bentoClass}
             >
-              <Link 
-                to={`/portfolio/${cat.slug}`}
-                className="group relative flex flex-col justify-between w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#6B4C9A]/50 hover:shadow-[0_25px_50px_rgba(107,76,154,0.14)] transition-all duration-700 p-6 md:p-8 bg-neutral-900"
+              <button 
+                onClick={() => setSelectedCategory({ key: cat.categoryKey, title: `${cat.titleLine1} ${cat.titleLine2}` })}
+                className="group relative flex flex-col justify-between w-full h-full text-left rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#6B4C9A]/50 hover:shadow-[0_25px_50px_rgba(107,76,154,0.14)] transition-all duration-700 p-6 md:p-8 bg-neutral-900"
               >
                 {/* Background Image - Always Visible */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
@@ -130,12 +135,19 @@ export default function PortfolioHighlights() {
                     ))}
                   </div>
                 </div>
-              </Link>
+              </button>
             </motion.div>
           ))}
         </div>
 
       </div>
+
+      <ProjectGallery 
+        isOpen={!!selectedCategory} 
+        onClose={() => setSelectedCategory(null)} 
+        categoryKey={selectedCategory?.key || ''} 
+        title={selectedCategory?.title || ''} 
+      />
     </section>
   );
 }
