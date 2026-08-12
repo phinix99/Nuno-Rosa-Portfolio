@@ -1,6 +1,7 @@
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
+import { portfolioData } from '../data/portfolio';
 
 function RollingReel({ value, suffix = "" }: { value: number; suffix?: string }) {
   const numbers = Array.from({ length: value + 1 }, (_, i) => i);
@@ -35,6 +36,23 @@ export default function Hero() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+
+  const heroImages = [
+    portfolioData["VISUAL MERCHANDISING"]?.[0],
+    portfolioData["E-COMMERCE & STYLING"]?.[0],
+    portfolioData["CONCEPT & SIGNAGE"]?.[0],
+    portfolioData["EVENTS & Brand Exhibition"]?.[0]
+  ].filter(Boolean) as string[];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (heroImages.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 4500); // Change image every 4.5 seconds
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -213,12 +231,19 @@ export default function Hero() {
               {/* Subtle ambient accent glow behind frame */}
               <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4C9A]/15 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
               
-              <motion.img 
-                style={{ y, scale: 1.12 }}
-                src="https://res.cloudinary.com/dtom0ivbp/image/upload/v1784660741/1_228_iqyley.avif"
-                alt="Featured Spatial Architecture by Nuno Rosa"
-                className="w-full h-full object-cover origin-center transition-transform duration-[2.5s] ease-out group-hover:scale-[1.16]"
-              />
+              <AnimatePresence mode="wait">
+                <motion.img 
+                  key={currentImageIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1.2, ease: "easeInOut" }}
+                  style={{ y, scale: 1.12 }}
+                  src={heroImages[currentImageIndex] || "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784660741/1_228_iqyley.avif"}
+                  alt="Featured Spatial Architecture by Nuno Rosa"
+                  className="absolute inset-0 w-full h-full object-cover origin-center transition-transform duration-[2.5s] ease-out group-hover:scale-[1.16]"
+                />
+              </AnimatePresence>
 
               {/* Floating Pill Badge on Image */}
               <div className="absolute top-4 left-4 md:top-6 md:left-6 z-20 flex items-center gap-2.5 bg-[#111]/80 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg">
