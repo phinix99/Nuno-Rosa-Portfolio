@@ -14,9 +14,18 @@ const timeline = [
 ];
 
 const brands = [
-  "Mango", "United Colours of Benetton", "Central Models", "Hugo Boss", 
-  "Lacoste", "Bicester Village Outlet", "Chalhoub Group", "C&A Group", 
-  "Vero Moda", "Jack & Jones", "Trends", "Yousta"
+  { name: "Mango", domain: "mango.com" },
+  { name: "United Colours of Benetton", domain: "benetton.com" },
+  { name: "Central Models", domain: "centralmodels.pt" },
+  { name: "Hugo Boss", domain: "hugoboss.com" },
+  { name: "Lacoste", domain: "lacoste.com" },
+  { name: "Bicester Village", domain: "thebicestercollection.com" },
+  { name: "Chalhoub Group", domain: "chalhoubgroup.com" },
+  { name: "C&A", domain: "c-and-a.com" },
+  { name: "Vero Moda", domain: "veromoda.com" },
+  { name: "Jack & Jones", domain: "jackjones.com" },
+  { name: "Trends", domain: "reliancetrends.com" },
+  { name: "Yousta", domain: "relianceretail.com" }
 ];
 
 const metrics = [
@@ -37,17 +46,40 @@ export default function Philosophy() {
         
 
 
-        {/* Brands Section */}
-        <div className="pt-16 pb-10">
+        {/* Brands Carousel Section */}
+        <div className="pt-16 pb-10 overflow-hidden w-full relative">
           <h4 className="text-center font-sans text-xs font-bold tracking-widest uppercase text-black/40 mb-10">
             Trusted by Global Icons
           </h4>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 md:gap-x-12">
-            {brands.map((brand) => (
-              <span key={brand} className="font-sans text-lg md:text-xl font-medium tracking-tight text-black/70 hover:text-[#6B4C9A] transition-colors cursor-default">
-                {brand}
-              </span>
-            ))}
+          
+          <div className="relative w-full flex overflow-hidden">
+            {/* Fade Edges */}
+            <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            
+            <motion.div 
+              className="flex items-center"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+              style={{ width: "fit-content" }}
+            >
+              {[...brands, ...brands].map((brand, idx) => (
+                <div key={`${brand.name}-${idx}`} className="flex flex-col items-center justify-center shrink-0 w-32 md:w-48 mx-6 md:mx-10 group">
+                  <img 
+                    src={`https://logos.hunter.io/${brand.domain}`} 
+                    alt={brand.name}
+                    className="h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling!.classList.remove('hidden');
+                    }}
+                  />
+                  <span className="hidden font-sans text-lg md:text-xl font-medium tracking-tight text-black/60 group-hover:text-[#6B4C9A] transition-colors cursor-default text-center">
+                    {brand.name}
+                  </span>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
 
