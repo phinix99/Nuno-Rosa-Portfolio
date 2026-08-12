@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const portfolioDir = path.join(process.cwd(), 'public', 'portfolio');
@@ -34,7 +34,7 @@ categories.forEach(category => {
   portfolioData[key].push(...images);
 });
 
-const output = "export const portfolioData: Record<string, string[]> = " + JSON.stringify(portfolioData, null, 2) + ";\\n";
+const output = "export const portfolioData: Record<string, string[]> = " + JSON.stringify(portfolioData, null, 2) + ";";
 fs.mkdirSync(path.join(process.cwd(), 'src', 'data'), { recursive: true });
 fs.writeFileSync(path.join(process.cwd(), 'src', 'data', 'portfolio.ts'), output);
 console.log('Portfolio data generated successfully.');
