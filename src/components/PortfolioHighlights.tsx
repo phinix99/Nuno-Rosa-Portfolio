@@ -58,22 +58,22 @@ const categories = [
 
 export default function PortfolioHighlights() {
   return (
-    <section className="w-full bg-[#fdfdfd] pt-20 md:pt-28 pb-24 md:pb-32 border-b border-[#111]/10 px-6 md:px-12 lg:px-20" id="projects">
+    <section className="w-full bg-white pt-20 md:pt-28 pb-24 md:pb-32 border-b border-black/10 px-6 md:px-12 lg:px-20" id="projects">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12 md:gap-16">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#111]/10 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-black/10 pb-8">
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#6B4C9A] uppercase">
               <Sparkles size={14} /> PORTFOLIO MENU
             </div>
-            <h2 className="font-sans text-4xl md:text-6xl font-medium tracking-tight uppercase text-[#111]">
+            <h2 className="font-sans text-4xl md:text-6xl font-medium tracking-tight uppercase text-black">
               MY DISCIPLINES
             </h2>
           </div>
           <Link 
             to="/portfolio" 
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#111]/20 hover:border-[#6B4C9A] hover:bg-[#6B4C9A] hover:text-white transition-all text-xs font-bold tracking-widest uppercase text-[#111] group w-fit"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/20 hover:border-[#6B4C9A] hover:bg-[#6B4C9A] hover:text-white transition-all text-xs font-bold tracking-widest uppercase text-black group w-fit"
           >
             Explore Full Portfolio
             <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -93,7 +93,7 @@ export default function PortfolioHighlights() {
             >
               <Link 
                 to={`/gallery/${cat.slug}`}
-                className="group relative flex flex-col justify-between w-full h-full text-left rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#6B4C9A]/50 hover:shadow-[0_25px_50px_rgba(107,76,154,0.14)] transition-all duration-700 p-6 md:p-8 bg-neutral-900"
+                className="group relative flex flex-col justify-between w-full h-full text-left rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#6B4C9A] hover:shadow-[0_25px_50px_rgba(107,76,154,0.2)] transition-all duration-700 p-6 md:p-8 bg-white"
               >
                 {/* Background Image - Always Visible */}
                 <div className="absolute inset-0 z-0 overflow-hidden">
@@ -103,8 +103,8 @@ export default function PortfolioHighlights() {
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   {/* Gradient Overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 group-hover:from-black/90 group-hover:via-black/45 transition-colors duration-500" />
-                  <div className="absolute inset-0 bg-[#6B4C9A]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#6B4C9A]/90 via-[#6B4C9A]/40 to-black/20 group-hover:from-[#6B4C9A] group-hover:via-[#6B4C9A]/70 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
                 </div>
 
                 {/* Top Bar: Number & Arrow CTA */}

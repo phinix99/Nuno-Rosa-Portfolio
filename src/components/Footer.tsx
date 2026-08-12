@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#111] text-[#fdfdfd] px-6 md:px-12 lg:px-20 py-12 md:py-24" id="contact">
+    <footer className="w-full bg-[#6B4C9A] text-white px-6 md:px-12 lg:px-20 py-12 md:py-24" id="contact">
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
         <motion.div 
           initial={{ opacity: 0 }}
@@ -14,7 +14,7 @@ export default function Footer() {
           <h2 className="font-sans text-5xl md:text-[8rem] font-medium tracking-tighter uppercase mb-6 md:mb-12 leading-none">
             LET'S TALK
           </h2>
-          <div className="flex flex-col gap-2 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase opacity-70 hover:text-[#6B4C9A] transition-colors">
+          <div className="flex flex-col gap-2 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase opacity-70 hover:text-black transition-colors">
             <a href="mailto:hello@studio.co">hello@studio.co</a>
           </div>
         </motion.div>
@@ -27,8 +27,8 @@ export default function Footer() {
           className="flex flex-col md:text-right gap-8"
         >
           <div className="flex flex-col gap-2 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase">
-            <a href="#" className="hover:text-[#6B4C9A] transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-[#6B4C9A] transition-colors">Instagram</a>
+            <a href="#" className="hover:text-black transition-colors">LinkedIn</a>
+            <a href="#" className="hover:text-black transition-colors">Instagram</a>
           </div>
           <div className="font-sans text-[10px] tracking-widest uppercase opacity-40">
             © {new Date().getFullYear()} Studio. All Rights Reserved.

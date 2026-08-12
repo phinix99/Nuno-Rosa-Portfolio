@@ -42,7 +42,7 @@ export default function Philosophy() {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section className="w-full bg-[#fdfdfd] text-[#111] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-[#111]/10" id="about">
+    <section className="w-full bg-white text-black py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-black/10" id="about">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Main Flex Block: About Me and Image */}
@@ -51,7 +51,7 @@ export default function Philosophy() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col lg:flex-row gap-12 lg:gap-20 pb-20 border-b border-[#111]/10"
+          className="flex flex-col lg:flex-row gap-12 lg:gap-20 pb-20 border-b border-black/10"
         >
           {/* Left Side: Header & Content */}
           <div className="w-full lg:w-3/5">
@@ -66,7 +66,7 @@ export default function Philosophy() {
               I balance artistic vision with proven business strategy results at any scale.
             </h3>
 
-            <div className="font-sans text-base md:text-lg font-light leading-relaxed text-[#111]/80 pr-4">
+            <div className="font-sans text-base md:text-lg font-light leading-relaxed text-black/80 pr-4">
               <p className="mb-8">
                 With 30+ years of international fashion retail experience spanning the UAE, Mexico, India, Portugal, and the UK, I am a creative, commercial Visual Merchandiser and Designer who balances artistic vision with proven business strategy results at any scale.
               </p>
@@ -80,10 +80,10 @@ export default function Philosophy() {
                     transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <p className="mb-8 text-[#111]/80">
+                    <p className="mb-8 text-black/80">
                       I translate high-impact designs into immersive, 360-degree visual storytelling experiences that completely transform retail environments. By combining eye-catching window concepts with intentional brand enhancement, my signature style and work turns ordinary spaces into commercial triumphs.
                     </p>
-                    <p className="mb-8 text-[#111] font-medium italic">
+                    <p className="mb-8 text-black font-medium italic">
                       "This portfolio is my masterpiece."
                     </p>
                   </motion.div>
@@ -91,12 +91,12 @@ export default function Philosophy() {
               </AnimatePresence>
 
               <div className="flex flex-wrap items-center gap-4 mt-8">
-                <a href="#projects" className="bg-[#6B4C9A] text-[#fdfdfd] px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-neutral-800 transition-colors shadow-lg">
+                <a href="#projects" className="bg-[#6B4C9A] text-white px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-black transition-colors shadow-lg">
                   View Masterpiece
                 </a>
                 <button 
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase hover:text-[#6B4C9A] transition-all text-[#111]/60 px-4 py-3"
+                  className="flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase hover:text-[#6B4C9A] transition-all text-black/60 px-4 py-3"
                   aria-expanded={isExpanded}
                 >
                   {isExpanded ? 'Read Less' : 'Read Full Story'}
@@ -108,7 +108,7 @@ export default function Philosophy() {
 
           {/* Right Side: Portrait/Lifestyle Image */}
           <div className="w-full lg:w-2/5 flex items-center" ref={imageRef}>
-            <div className="w-full aspect-[3/4] rounded-[20px] overflow-hidden bg-[#fdfdfd] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-[#111]/10 group relative">
+            <div className="w-full aspect-[3/4] rounded-[20px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-black/10 group relative">
               <motion.img 
                 style={{ y, scale: 1.15 }}
                 src="https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg"
@@ -122,12 +122,12 @@ export default function Philosophy() {
 
         {/* Brands Section */}
         <div className="pt-16 pb-10">
-          <h4 className="text-center font-sans text-xs font-bold tracking-widest uppercase text-[#111]/40 mb-10">
+          <h4 className="text-center font-sans text-xs font-bold tracking-widest uppercase text-black/40 mb-10">
             Trusted by Global Icons
           </h4>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 md:gap-x-12">
             {brands.map((brand) => (
-              <span key={brand} className="font-sans text-lg md:text-xl font-medium tracking-tight text-[#111]/70 hover:text-[#6B4C9A] transition-colors cursor-default">
+              <span key={brand} className="font-sans text-lg md:text-xl font-medium tracking-tight text-black/70 hover:text-[#6B4C9A] transition-colors cursor-default">
                 {brand}
               </span>
             ))}
@@ -135,14 +135,14 @@ export default function Philosophy() {
         </div>
 
         {/* Global Footprint Timeline */}
-        <div className="mt-16 p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-[2rem] bg-[#050505] text-[#fdfdfd] relative overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.2)] border border-white/10">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-[#6B4C9A]/15 blur-[120px] rounded-full pointer-events-none" />
+        <div className="mt-16 p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-[2rem] bg-[#6B4C9A] text-white relative overflow-hidden shadow-[0_30px_60px_rgba(107,76,154,0.3)] border border-white/10">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-black/10 blur-[120px] rounded-full pointer-events-none" />
 
           <div className="relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-20">
             
             {/* Left: Metrics */}
             <div className="w-full lg:w-1/3 flex flex-col">
-              <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#6B4C9A] uppercase mb-4">
+              <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-black/50 uppercase mb-4">
                 <Globe2 size={14} /> Career Highlights
               </div>
               <h4 className="font-sans text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white mb-10">
@@ -172,23 +172,23 @@ export default function Philosophy() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-20px" }}
                   transition={{ duration: 0.5, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between py-4 px-6 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/20 transition-all duration-300 group cursor-default gap-2 sm:gap-6"
+                  className="flex flex-col sm:flex-row sm:items-center justify-between py-4 px-6 rounded-xl bg-black/[0.05] border border-black/10 hover:bg-black/[0.1] hover:border-black/20 transition-all duration-300 group cursor-default gap-2 sm:gap-6"
                 >
                   <div className="flex items-center gap-4 min-w-[200px]">
-                    <span className="font-mono text-sm md:text-base font-bold text-[#6B4C9A] group-hover:text-[#d3bcfa] transition-colors tabular-nums">
+                    <span className="font-mono text-sm md:text-base font-bold text-white group-hover:text-black transition-colors tabular-nums">
                       {item.year}
                     </span>
-                    <span className="font-sans text-[11px] md:text-xs font-bold tracking-widest uppercase text-white/50 group-hover:text-white/80 transition-colors">
+                    <span className="font-sans text-[11px] md:text-xs font-bold tracking-widest uppercase text-white/70 group-hover:text-black/70 transition-colors">
                       {item.location}
                     </span>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 flex-1 lg:justify-end text-left sm:text-right">
-                    <span className="font-sans text-sm md:text-base font-medium tracking-wide text-white/90 group-hover:text-white transition-colors">
+                    <span className="font-sans text-sm md:text-base font-medium tracking-wide text-white group-hover:text-black transition-colors">
                       {item.role}
                     </span>
-                    <span className="hidden sm:inline text-white/20">|</span>
-                    <span className="font-sans text-[11px] md:text-xs font-bold tracking-widest uppercase text-[#6B4C9A]/80">
+                    <span className="hidden sm:inline text-white/30">|</span>
+                    <span className="font-sans text-[11px] md:text-xs font-bold tracking-widest uppercase text-white/90 group-hover:text-black/90">
                       @{item.brand}
                     </span>
                   </div>

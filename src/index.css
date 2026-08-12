@@ -30,7 +30,7 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-offblack);
+  background-color: #6B4C9A;
   color: var(--color-alabaster);
 }
 

@@ -36,15 +36,15 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full bg-[#fdfdfd] py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-[#111]/10">
+    <section className="w-full bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-black/10">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between md:items-start gap-8 mb-16 lg:mb-24">
-          <h2 className="font-sans text-5xl md:text-[8rem] font-medium tracking-tighter uppercase leading-none text-[#111]">
+          <h2 className="font-sans text-5xl md:text-[8rem] font-medium tracking-tighter uppercase leading-none text-black">
             SERVICES<sup className="text-xl md:text-3xl ml-2 font-medium">(4)</sup>
           </h2>
-          <div className="font-sans text-base md:text-lg font-light tracking-tight text-[#111] max-w-sm md:mt-4 leading-snug">
+          <div className="font-sans text-base md:text-lg font-light tracking-tight text-black max-w-sm md:mt-4 leading-snug">
             We work across art direction, spatial design, brand identity, and immersive digital experiences.
           </div>
         </div>
@@ -76,11 +76,11 @@ export default function Services() {
         </motion.div>
         
         {/* Services Accordion */}
-        <div className="flex flex-col border-t border-[#111]/10">
+        <div className="flex flex-col border-t border-black/10">
           {services.map((service, idx) => {
             const isOpen = openService === service.id;
             return (
-              <div key={service.id} className="border-b border-[#111]/10">
+              <div key={service.id} className="border-b border-black/10">
                 <button 
                   onClick={() => toggleService(service.id)}
                   className={`w-full flex items-center justify-between py-8 md:py-12 text-left group transition-colors duration-300 ${isOpen ? 'text-[#6B4C9A]' : 'hover:text-[#6B4C9A]'}`}
@@ -94,10 +94,10 @@ export default function Services() {
                     </h3>
                   </div>
                   <div className="relative w-4 h-4 shrink-0 flex items-center justify-center">
-                    <span className={`absolute w-full h-[2px] transition-colors duration-300 ${isOpen ? 'bg-[#6B4C9A]' : 'bg-[#111] group-hover:bg-[#6B4C9A]'}`}></span>
+                    <span className={`absolute w-full h-[2px] transition-colors duration-300 ${isOpen ? 'bg-[#6B4C9A]' : 'bg-black group-hover:bg-[#6B4C9A]'}`}></span>
                     <motion.span 
                       animate={{ rotate: isOpen ? 0 : 90 }}
-                      className={`absolute w-full h-[2px] transition-colors duration-300 ${isOpen ? 'bg-[#6B4C9A]' : 'bg-[#111] group-hover:bg-[#6B4C9A]'}`}
+                      className={`absolute w-full h-[2px] transition-colors duration-300 ${isOpen ? 'bg-[#6B4C9A]' : 'bg-black group-hover:bg-[#6B4C9A]'}`}
                     />
                   </div>
                 </button>
@@ -112,12 +112,12 @@ export default function Services() {
                       className="overflow-hidden"
                     >
                       <div className="flex flex-col md:flex-row gap-8 pb-12 pl-[4.5rem] md:pl-[10.5rem]">
-                        <div className="w-full md:w-1/3 flex flex-col gap-2 font-sans text-sm text-[#111]/70">
+                        <div className="w-full md:w-1/3 flex flex-col gap-2 font-sans text-sm text-black/70">
                           {service.tags.map(tag => (
                             <span key={tag}>{tag}</span>
                           ))}
                         </div>
-                        <div className="w-full md:w-2/3 max-w-2xl font-sans text-base md:text-lg font-light leading-relaxed text-[#111]/80">
+                        <div className="w-full md:w-2/3 max-w-2xl font-sans text-base md:text-lg font-light leading-relaxed text-black/80">
                           {service.content}
                         </div>
                       </div>

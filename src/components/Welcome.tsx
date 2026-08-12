@@ -10,7 +10,7 @@ export default function Welcome() {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section className="w-full bg-[#fdfdfd] text-[#111] py-20 md:py-32 px-6 md:px-12 lg:px-20 border-b border-[#111]/10 overflow-hidden" id="welcome">
+    <section className="w-full bg-white text-black py-20 md:py-32 px-6 md:px-12 lg:px-20 border-b border-black/10 overflow-hidden" id="welcome">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
@@ -29,7 +29,7 @@ export default function Welcome() {
               </h2>
             </div>
             
-            <h3 className="font-sans text-3xl md:text-5xl lg:text-5xl font-medium tracking-tight leading-[1.15] text-[#111]">
+            <h3 className="font-sans text-3xl md:text-5xl lg:text-5xl font-medium tracking-tight leading-[1.15] text-[#6B4C9A]">
               "True visual merchandising is the silent architecture of desire."
             </h3>
             
@@ -62,9 +62,9 @@ export default function Welcome() {
             className="lg:col-span-5 w-full flex justify-center lg:justify-end"
             ref={imageRef}
           >
-            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden bg-[#fdfdfd] shadow-[0_12px_40px_rgba(0,0,0,0.03)] group border border-[#111]/10">
+            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden bg-white shadow-[0_12px_40px_rgba(107,76,154,0.15)] group border border-black/10">
               {/* Decorative Frame */}
-              <div className="absolute inset-4 border border-[#6B4C9A]/30 rounded-xl pointer-events-none z-10 transition-all duration-500 group-hover:inset-3 group-hover:border-[#6B4C9A]/60" />
+              <div className="absolute inset-4 border border-[#6B4C9A]/40 rounded-xl pointer-events-none z-10 transition-all duration-500 group-hover:inset-3 group-hover:border-[#6B4C9A]" />
               
               <motion.img 
                 style={{ y, scale: 1.15 }}

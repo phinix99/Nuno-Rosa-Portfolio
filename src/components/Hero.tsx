@@ -90,7 +90,7 @@ export default function Hero() {
   };
 
   return (
-    <section ref={heroRef} className="w-full bg-[#fdfdfd] text-[#111] pt-8 md:pt-14 lg:pt-16 px-6 md:px-12 lg:px-20 pb-16 md:pb-28 overflow-hidden">
+    <section ref={heroRef} className="w-full bg-white text-black pt-8 md:pt-14 lg:pt-16 px-6 md:px-12 lg:px-20 pb-16 md:pb-28 overflow-hidden">
       {/* Top Nav */}
       <motion.nav 
         initial={{ opacity: 0, y: -10 }}
@@ -156,9 +156,9 @@ export default function Hero() {
           </motion.div>
           <motion.h1 
             variants={lineVariants}
-            className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.5vw] leading-[0.88] font-medium tracking-tighter uppercase ml-[-0.3vw] select-none text-[#111]"
+            className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.5vw] leading-[0.88] font-medium tracking-tighter uppercase ml-[-0.3vw] select-none text-[#6B4C9A]"
           >
-            SPATIAL <br className="hidden md:inline" /> <span className="text-[#6B4C9A]">NARRATIVES</span>
+            SPATIAL <br className="hidden md:inline" /> NARRATIVES
           </motion.h1>
         </div>
 
@@ -182,13 +182,13 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-5 font-sans text-xs font-semibold tracking-wider uppercase pt-2">
               <a 
                 href="#contact" 
-                className="bg-[#6B4C9A] text-[#fdfdfd] px-8 py-4 rounded-full hover:bg-[#111] hover:text-[#fdfdfd] hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2"
+                className="bg-[#6B4C9A] text-white px-8 py-4 rounded-full hover:bg-black hover:text-white hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2"
               >
                 Start Project <ArrowUpRight size={14} strokeWidth={2.5} />
               </a>
               <a 
                 href="#about" 
-                className="flex items-center gap-1.5 py-3 px-1 hover:text-[#6B4C9A] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#111]/30 hover:after:bg-[#6B4C9A]"
+                className="flex items-center gap-1.5 py-3 px-1 hover:text-[#6B4C9A] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-black/30 hover:after:bg-[#6B4C9A]"
               >
                 My Approach
               </a>
