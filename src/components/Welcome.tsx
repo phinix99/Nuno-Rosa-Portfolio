@@ -24,21 +24,24 @@ export default function Welcome() {
           >
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-[#6B4C9A] rounded-full animate-pulse" />
-              <h2 className="font-sans text-xs font-semibold tracking-widest uppercase text-[#111]/60">
-                WELCOME & INTRODUCTION
+              <h2 className="font-sans text-xs font-semibold tracking-widest uppercase text-black/60">
+                ABOUT ME
               </h2>
             </div>
             
-            <h3 className="font-sans text-3xl md:text-5xl lg:text-5xl font-medium tracking-tight leading-[1.15] text-[#6B4C9A]">
-              "True visual merchandising is the silent architecture of desire."
+            <h3 className="font-sans text-3xl md:text-5xl lg:text-[2.75rem] font-medium tracking-tight leading-[1.15] text-[#6B4C9A]">
+              I balance artistic vision with proven business strategy results at any scale.
             </h3>
             
-            <div className="font-sans text-base md:text-lg font-light leading-relaxed text-[#111]/80 max-w-2xl flex flex-col gap-6">
+            <div className="font-sans text-base md:text-lg font-light leading-relaxed text-black/80 max-w-2xl flex flex-col gap-6">
               <p>
-                Space is not merely a volume to be filled, but a canvas for narrative. With 30 years of experience, I craft retail environments that intersect psychology, architecture, and brand direction.
+                With 30+ years of international fashion retail experience spanning the UAE, Mexico, India, Portugal, and the UK, I am a creative, commercial Visual Merchandiser and Designer who balances artistic vision with proven business strategy results at any scale.
               </p>
               <p>
-                Every sightline is calculated. Every texture evokes emotion. We create the beautiful tension that drives curiosity, connection, and conversions.
+                I translate high-impact designs into immersive, 360-degree visual storytelling experiences that completely transform retail environments. By combining eye-catching window concepts with intentional brand enhancement, my signature style and work turns ordinary spaces into commercial triumphs.
+              </p>
+              <p className="font-medium italic text-black">
+                "This portfolio is my masterpiece."
               </p>
             </div>
 

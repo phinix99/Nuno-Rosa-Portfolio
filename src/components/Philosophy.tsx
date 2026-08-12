@@ -1,5 +1,4 @@
-import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
-import { useState, useRef } from 'react';
+import { motion } from 'motion/react';
 import { Globe2, Briefcase, Award, TrendingUp, Users, MapPin, Building2, CheckCircle2 } from 'lucide-react';
 
 const timeline = [
@@ -32,93 +31,11 @@ const metrics = [
 ];
 
 export default function Philosophy() {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const imageRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: imageRef,
-    offset: ["start end", "end start"]
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-
   return (
     <section className="w-full bg-white text-black py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-black/10" id="about">
       <div className="max-w-[1400px] mx-auto">
         
-        {/* Main Flex Block: About Me and Image */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col lg:flex-row gap-12 lg:gap-20 pb-20 border-b border-black/10"
-        >
-          {/* Left Side: Header & Content */}
-          <div className="w-full lg:w-3/5">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 bg-[#6B4C9A] rounded-full animate-pulse" />
-              <h2 className="font-sans text-xs font-bold tracking-widest uppercase text-[#6B4C9A]">
-                About Me
-              </h2>
-            </div>
-            
-            <h3 className="font-sans text-3xl md:text-5xl lg:text-[2.75rem] lg:leading-[1.15] font-medium tracking-tight mb-10">
-              I balance artistic vision with proven business strategy results at any scale.
-            </h3>
 
-            <div className="font-sans text-base md:text-lg font-light leading-relaxed text-black/80 pr-4">
-              <p className="mb-8">
-                With 30+ years of international fashion retail experience spanning the UAE, Mexico, India, Portugal, and the UK, I am a creative, commercial Visual Merchandiser and Designer who balances artistic vision with proven business strategy results at any scale.
-              </p>
-              
-              <AnimatePresence>
-                {isExpanded && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <p className="mb-8 text-black/80">
-                      I translate high-impact designs into immersive, 360-degree visual storytelling experiences that completely transform retail environments. By combining eye-catching window concepts with intentional brand enhancement, my signature style and work turns ordinary spaces into commercial triumphs.
-                    </p>
-                    <p className="mb-8 text-black font-medium italic">
-                      "This portfolio is my masterpiece."
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              <div className="flex flex-wrap items-center gap-4 mt-8">
-                <a href="#projects" className="bg-[#6B4C9A] text-white px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-black transition-colors shadow-lg">
-                  View Masterpiece
-                </a>
-                <button 
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  className="flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase hover:text-[#6B4C9A] transition-all text-black/60 px-4 py-3"
-                  aria-expanded={isExpanded}
-                >
-                  {isExpanded ? 'Read Less' : 'Read Full Story'}
-                  <motion.span animate={{ rotate: isExpanded ? -180 : 0 }} transition={{ duration: 0.4 }} className="inline-block">↗</motion.span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side: Portrait/Lifestyle Image */}
-          <div className="w-full lg:w-2/5 flex items-center" ref={imageRef}>
-            <div className="w-full aspect-[3/4] rounded-[20px] overflow-hidden bg-white shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-black/10 group relative">
-              <motion.img 
-                style={{ y, scale: 1.15 }}
-                src="https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg"
-                alt="Nuno Rosa - Creative Director"
-                className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-[1.2]"
-              />
-              <div className="absolute inset-0 bg-neutral-950/10 pointer-events-none group-hover:bg-transparent transition-colors duration-700" />
-            </div>
-          </div>
-        </motion.div>
 
         {/* Brands Section */}
         <div className="pt-16 pb-10">
