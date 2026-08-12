@@ -4,7 +4,6 @@ import PortfolioHighlights from '../components/PortfolioHighlights';
 import Philosophy from '../components/Philosophy';
 import Services from '../components/Services';
 import VMCourse from '../components/VMCourse';
-import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 
@@ -17,7 +16,6 @@ export default function Home() {
       <Philosophy />
       <Services />
       <VMCourse />
-      <Process />
       <Testimonials />
       <Footer />
     </main>

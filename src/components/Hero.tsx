@@ -126,6 +126,34 @@ export default function Hero() {
         animate="visible"
         className="max-w-[1600px] mx-auto w-full flex flex-col"
       >
+        {/* Primary Banner Header Bar: Project Title & Established Country Footprint */}
+        <motion.div 
+          variants={lineVariants}
+          className="w-full flex flex-col lg:flex-row lg:items-center justify-between gap-4 py-3.5 px-6 rounded-2xl bg-neutral-950 text-[#fdfdfd] mb-8 border border-neutral-800 shadow-xl"
+        >
+          <div className="flex items-center gap-3">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#6B4C9A] animate-pulse" />
+            <span className="font-sans text-xs md:text-sm font-mono font-bold tracking-widest uppercase text-white/90">
+              PROJECT TITLE: <span className="text-[#d3bcfa]">SPATIAL NARRATIVES</span>
+            </span>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-sans text-xs font-medium tracking-wider uppercase text-neutral-300">
+            <span className="text-white/40 text-[10px] font-bold tracking-widest font-mono mr-1">LOCATIONS:</span>
+            <span className="text-white font-semibold">LISBON</span>
+            <span className="text-[#6B4C9A] font-bold">•</span>
+            <span className="text-white font-semibold">LONDON</span>
+            <span className="text-[#6B4C9A] font-bold">•</span>
+            <span className="text-white font-semibold">DUBAI</span>
+            <span className="text-[#6B4C9A] font-bold">•</span>
+            <span className="text-white font-semibold">MEXICO</span>
+            <span className="text-[#6B4C9A] font-bold">•</span>
+            <span className="text-white font-semibold">MUMBAI</span>
+            <span className="text-[#6B4C9A] font-bold">•</span>
+            <span className="text-white font-semibold">BANGALORE</span>
+          </div>
+        </motion.div>
+
         {/* Dynamic Display Title */}
         <div className="overflow-hidden mb-6 md:mb-8">
           <motion.h1 

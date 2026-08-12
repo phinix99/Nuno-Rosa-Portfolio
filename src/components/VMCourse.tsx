@@ -2,6 +2,33 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle2, ArrowRight, Sparkles, BookOpen, Clock, Users, Globe } from 'lucide-react';
 
+const processSteps = [
+  {
+    id: "01",
+    title: "DISCOVER",
+    desc: "Understanding brand identity, consumer psychology, and strategic spatial objectives.",
+    percent: "25%"
+  },
+  {
+    id: "02",
+    title: "DESIGN",
+    desc: "Ideas take shape. Conceptualizing space, sightlines, materialization, and visual storytelling.",
+    percent: "50%"
+  },
+  {
+    id: "03",
+    title: "BUILD",
+    desc: "Developing final spatial solutions with technical precision and modular display engineering.",
+    percent: "75%"
+  },
+  {
+    id: "04",
+    title: "LAUNCH",
+    desc: "Managing global activations, international rollout guidelines, and brand performance.",
+    percent: "100%"
+  }
+];
+
 const modules = [
   {
     num: "01",
@@ -53,13 +80,13 @@ export default function VMCourse() {
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 bg-[#6B4C9A] rounded-full animate-ping" />
-                <span className="font-sans text-xs font-semibold tracking-widest uppercase text-[#111]/60">VM EDUCATION</span>
+                <span className="font-sans text-xs font-semibold tracking-widest uppercase text-[#111]/60">VM EDUCATION & MASTERCLASS</span>
               </div>
               <h2 className="font-sans text-4xl md:text-6xl font-medium tracking-tight uppercase leading-none text-[#111]">
                 VM MASTERCLASS
               </h2>
               <p className="font-sans text-lg md:text-xl font-light text-[#111]/70 mt-2 max-w-xl">
-                A definitive 8-week program mastering the silent architecture of desire.
+                A definitive 8-week program mastering the silent architecture of desire and spatial retail engineering.
               </p>
             </div>
 
@@ -91,8 +118,35 @@ export default function VMCourse() {
               </div>
             </div>
 
+            {/* Repurposed Design Process Introduction for Masterclass */}
+            <div className="flex flex-col gap-5 pt-2">
+              <div className="flex justify-between items-center border-b border-[#111]/10 pb-3">
+                <h3 className="font-sans text-xs font-bold tracking-widest text-[#6B4C9A] uppercase">
+                  MASTERCLASS METHODOLOGY & DESIGN PROCESS
+                </h3>
+                <span className="font-sans text-[10px] font-semibold uppercase tracking-wider text-[#111]/50">4-STAGE FRAMEWORK</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {processSteps.map((step) => (
+                  <div key={step.id} className="p-5 bg-neutral-50/80 rounded-xl border border-neutral-200/80 flex flex-col justify-between gap-3">
+                    <div className="flex items-center justify-between">
+                      <span className="font-sans text-xs font-mono font-bold text-[#6B4C9A] px-2 py-0.5 rounded bg-[#6B4C9A]/10">
+                        {step.id}
+                      </span>
+                      <span className="font-sans text-[10px] font-semibold text-neutral-400">{step.percent}</span>
+                    </div>
+                    <div>
+                      <h4 className="font-sans text-base font-bold tracking-tight text-[#111] mb-1">{step.title}</h4>
+                      <p className="font-sans text-xs font-light text-[#111]/70 leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Curriculum Modules */}
-            <div className="flex flex-col gap-4 mt-2">
+            <div className="flex flex-col gap-4 mt-4">
               <h3 className="font-sans text-xs font-bold tracking-widest text-[#111]/60 uppercase">
                 CURRICULUM SYLLABUS
               </h3>

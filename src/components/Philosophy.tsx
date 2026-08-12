@@ -4,6 +4,13 @@ import { Globe2, MapPin } from 'lucide-react';
 
 const locations = [
   { 
+    city: "LISBON", 
+    country: "Portugal", 
+    timezone: "Europe/Lisbon", 
+    coords: "38.7223° N, 9.1393° W",
+    desc: "Traditional fine craftsmanship liaison, heritage brand setups, and southern European curation."
+  },
+  { 
     city: "LONDON", 
     country: "United Kingdom", 
     timezone: "Europe/London", 
@@ -18,13 +25,6 @@ const locations = [
     desc: "Middle Eastern flagship architecture, luxury experiential activations, and elite client relations."
   },
   { 
-    city: "MUMBAI", 
-    country: "India", 
-    timezone: "Asia/Kolkata", 
-    coords: "19.0760° N, 72.8777° E",
-    desc: "Large-scale retail production, VM leadership summits, and regional rollouts across Asia."
-  },
-  { 
     city: "MEXICO CITY", 
     country: "Mexico", 
     timezone: "America/Mexico_City", 
@@ -32,11 +32,18 @@ const locations = [
     desc: "Latin American retail rollouts, boutique space optimization, and cultural narrative integration."
   },
   { 
-    city: "LISBON", 
-    country: "Portugal", 
-    timezone: "Europe/Lisbon", 
-    coords: "38.7223° N, 9.1393° W",
-    desc: "Traditional fine craftsmanship liaison, heritage brand setups, and southern European curation."
+    city: "MUMBAI", 
+    country: "India", 
+    timezone: "Asia/Kolkata", 
+    coords: "19.0760° N, 72.8777° E",
+    desc: "Large-scale retail production, VM leadership summits, and regional rollouts across Asia."
+  },
+  { 
+    city: "BANGALORE", 
+    country: "India", 
+    timezone: "Asia/Kolkata", 
+    coords: "12.9716° N, 77.5946° E",
+    desc: "Innovation hub for tech-integrated retail experiences and digital-physical spatial activations."
   }
 ];
 
