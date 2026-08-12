@@ -68,7 +68,7 @@ export default function PortfolioHighlights() {
               <Sparkles size={14} /> PORTFOLIO MENU
             </div>
             <h2 className="font-sans text-4xl md:text-6xl font-medium tracking-tight uppercase text-[#111]">
-              OUR DISCIPLINES
+              MY DISCIPLINES
             </h2>
           </div>
           <Link 

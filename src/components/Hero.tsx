@@ -176,7 +176,7 @@ export default function Hero() {
             </div>
 
             <div className="font-sans text-lg md:text-xl lg:text-2xl font-light tracking-tight text-[#111]/90 max-w-lg leading-relaxed">
-              Crafting immersive visual merchandising and bespoke exhibition architectures that captivate global audiences and transform physical spaces into visceral brand stories.
+              I craft immersive visual merchandising and bespoke exhibition architectures that captivate global audiences and transform physical spaces into visceral brand stories.
             </div>
             
             <div className="flex flex-wrap items-center gap-5 font-sans text-xs font-semibold tracking-wider uppercase pt-2">
@@ -190,7 +190,7 @@ export default function Hero() {
                 href="#about" 
                 className="flex items-center gap-1.5 py-3 px-1 hover:text-[#6B4C9A] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#111]/30 hover:after:bg-[#6B4C9A]"
               >
-                Our Approach
+                My Approach
               </a>
             </div>
 

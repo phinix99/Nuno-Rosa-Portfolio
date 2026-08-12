@@ -17,7 +17,9 @@ export default function ProjectGalleryPage() {
   const { category } = useParams();
   const navigate = useNavigate();
   const categoryKey = category ? slugMap[category] : "";
-  const images = categoryKey ? portfolioData[categoryKey] : [];
+  const subcategories = categoryKey ? portfolioData[categoryKey] || {} : {};
+  const flattenedImages = Object.values(subcategories).flat();
+  const hasImages = flattenedImages.length > 0;
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -27,25 +29,25 @@ export default function ProjectGalleryPage() {
     if (selectedImageIndex === null || !isPlaying) return;
 
     const timer = setInterval(() => {
-      setSelectedImageIndex((prev) => prev !== null ? (prev + 1) % images.length : null);
+      setSelectedImageIndex((prev) => prev !== null ? (prev + 1) % flattenedImages.length : null);
     }, 3500); // 3.5 seconds per slide
 
     return () => clearInterval(timer);
-  }, [selectedImageIndex, isPlaying, images.length]);
+  }, [selectedImageIndex, isPlaying, flattenedImages.length]);
 
   const handleNext = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedImageIndex !== null) {
-      setSelectedImageIndex((selectedImageIndex + 1) % images.length);
+      setSelectedImageIndex((selectedImageIndex + 1) % flattenedImages.length);
     }
-  }, [selectedImageIndex, images.length]);
+  }, [selectedImageIndex, flattenedImages.length]);
 
   const handlePrev = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedImageIndex !== null) {
-      setSelectedImageIndex((selectedImageIndex - 1 + images.length) % images.length);
+      setSelectedImageIndex((selectedImageIndex - 1 + flattenedImages.length) % flattenedImages.length);
     }
-  }, [selectedImageIndex, images.length]);
+  }, [selectedImageIndex, flattenedImages.length]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -117,44 +119,62 @@ export default function ProjectGalleryPage() {
 
       {/* Bento Grid */}
       <div className="max-w-[1600px] mx-auto px-4 md:px-12">
-        {images.length === 0 ? (
+        {!hasImages ? (
            <p className="text-white/40 uppercase tracking-widest py-10 font-mono text-sm">No images available for this discipline.</p>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 auto-rows-[200px] md:auto-rows-[320px]">
-            {images.map((src, i) => {
-              // Bento logic for varied sizing
-              let spanClass = "col-span-1 row-span-1";
-              if (i % 7 === 0) spanClass = "col-span-2 row-span-2";
-              else if (i % 5 === 0) spanClass = "col-span-1 row-span-2";
-              else if (i % 11 === 0) spanClass = "col-span-2 row-span-1";
+          <div className="flex flex-col gap-16 md:gap-24">
+            {Object.entries(subcategories).map(([subcatName, subcatImages], subcatIdx) => {
+              if (subcatImages.length === 0) return null;
+              
+              const globalIndexOffset = Object.values(subcategories).slice(0, subcatIdx).reduce((acc, curr) => acc + curr.length, 0);
 
               return (
-                <motion.div
-                  key={src + i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "50px" }}
-                  transition={{ duration: 0.5, delay: (i % 10) * 0.05 }}
-                  onClick={() => setSelectedImageIndex(i)}
-                  className={`group relative rounded-xl md:rounded-[2rem] overflow-hidden bg-neutral-900 border border-white/5 cursor-pointer shadow-lg hover:shadow-2xl hover:border-white/20 transition-all duration-500 ${spanClass}`}
-                >
-                  <img 
-                    src={src} 
-                    alt={`${categoryKey} showcase ${i}`}
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  {/* Subtle vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Hover Button */}
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                    <span className="bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-white font-mono text-xs uppercase tracking-widest border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      View
-                    </span>
+                <section key={subcatName}>
+                  {subcatName !== 'Gallery' && (
+                    <div className="sticky top-[60px] md:top-[76px] z-30 bg-[#050505]/95 backdrop-blur-md py-4 mb-4 md:mb-8 border-b border-white/10">
+                      <h2 className="text-xl md:text-2xl font-medium tracking-wide uppercase text-white/90">
+                        {subcatName}
+                      </h2>
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 auto-rows-[200px] md:auto-rows-[320px]">
+                    {subcatImages.map((src, localIdx) => {
+                      let spanClass = "col-span-1 row-span-1";
+                      if (localIdx % 7 === 0) spanClass = "col-span-2 row-span-2";
+                      else if (localIdx % 5 === 0) spanClass = "col-span-1 row-span-2";
+                      else if (localIdx % 11 === 0) spanClass = "col-span-2 row-span-1";
+
+                      const globalIndex = globalIndexOffset + localIdx;
+
+                      return (
+                        <motion.div
+                          key={src + localIdx}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true, margin: "50px" }}
+                          transition={{ duration: 0.5, delay: (localIdx % 10) * 0.05 }}
+                          onClick={() => setSelectedImageIndex(globalIndex)}
+                          className={`group relative rounded-xl md:rounded-[2rem] overflow-hidden bg-neutral-900 border border-white/5 cursor-pointer shadow-lg hover:shadow-2xl hover:border-white/20 transition-all duration-500 ${spanClass}`}
+                        >
+                          <img 
+                            src={src} 
+                            alt={`${subcatName} showcase ${localIdx}`}
+                            className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                            <span className="bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-white font-mono text-xs uppercase tracking-widest border border-white/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                              View
+                            </span>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
                   </div>
-                </motion.div>
-              )
+                </section>
+              );
             })}
           </div>
         )}
@@ -173,7 +193,7 @@ export default function ProjectGalleryPage() {
             {/* Top Bar Controls */}
             <div className="absolute top-0 w-full p-6 md:p-8 flex justify-between items-center z-50">
               <span className="text-white/50 font-mono text-xs md:text-sm tracking-widest">
-                {selectedImageIndex + 1} / {images.length}
+                {selectedImageIndex + 1} / {flattenedImages.length}
               </span>
               <div className="flex items-center gap-4 md:gap-6">
                 <button 
@@ -209,7 +229,7 @@ export default function ProjectGalleryPage() {
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                   exit={{ opacity: 0, scale: 1.05, filter: "blur(10px)" }}
                   transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                  src={images[selectedImageIndex]}
+                  src={flattenedImages[selectedImageIndex]}
                   alt={`${categoryKey} showcase ${selectedImageIndex}`}
                   className="max-w-full max-h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                   onClick={(e) => e.stopPropagation()} // prevent close on image click
