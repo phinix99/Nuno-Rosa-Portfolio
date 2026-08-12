@@ -47,15 +47,15 @@ export default function Philosophy() {
 
 
         {/* Brands Carousel Section */}
-        <div className="pt-16 pb-10 overflow-hidden w-full relative">
-          <h4 className="text-center font-sans text-xs font-bold tracking-widest uppercase text-black/40 mb-10">
+        <div className="my-16 py-12 md:py-16 rounded-[2rem] bg-[#FAF9FB] border border-[#6B4C9A]/10 overflow-hidden w-full relative shadow-[inset_0_0_40px_rgba(107,76,154,0.02)]">
+          <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-widest uppercase text-[#6B4C9A]/60 mb-12">
             Trusted by Global Icons
           </h4>
           
           <div className="relative w-full flex overflow-hidden">
             {/* Fade Edges */}
-            <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-[#FAF9FB] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-[#FAF9FB] to-transparent z-10 pointer-events-none" />
             
             <motion.div 
               className="flex items-center"
@@ -64,17 +64,17 @@ export default function Philosophy() {
               style={{ width: "fit-content" }}
             >
               {[...brands, ...brands].map((brand, idx) => (
-                <div key={`${brand.name}-${idx}`} className="flex flex-col items-center justify-center shrink-0 w-32 md:w-48 mx-6 md:mx-10 group">
+                <div key={`${brand.name}-${idx}`} className="flex flex-col items-center justify-center shrink-0 w-40 md:w-56 lg:w-64 mx-6 md:mx-12 group">
                   <img 
                     src={`https://logos.hunter.io/${brand.domain}`} 
                     alt={brand.name}
-                    className="h-8 md:h-12 w-auto object-contain filter grayscale opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
+                    className="h-12 md:h-16 lg:h-20 w-auto object-contain filter grayscale opacity-50 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 drop-shadow-sm"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       e.currentTarget.nextElementSibling!.classList.remove('hidden');
                     }}
                   />
-                  <span className="hidden font-sans text-lg md:text-xl font-medium tracking-tight text-black/60 group-hover:text-[#6B4C9A] transition-colors cursor-default text-center">
+                  <span className="hidden font-sans text-xl md:text-2xl font-medium tracking-tight text-black/60 group-hover:text-[#6B4C9A] transition-colors cursor-default text-center">
                     {brand.name}
                   </span>
                 </div>
