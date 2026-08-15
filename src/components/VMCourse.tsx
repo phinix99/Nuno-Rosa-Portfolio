@@ -52,7 +52,7 @@ export default function VMCourse() {
           <div className="lg:col-span-7 flex flex-col gap-10">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 bg-[#6B4C9A] rounded-full animate-ping" />
+                <span className="w-2.5 h-2.5 bg-[#7F56D9] rounded-full animate-ping" />
                 <span className="font-sans text-xs font-semibold tracking-widest uppercase text-black/60">VM EDUCATION</span>
               </div>
               <h2 className="font-sans text-4xl md:text-6xl font-medium tracking-tight uppercase leading-none text-black">
@@ -67,25 +67,25 @@ export default function VMCourse() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 py-6 border-y border-black/10 font-sans">
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1.5">
-                  <Clock size={12} className="text-[#6B4C9A]" /> Duration
+                  <Clock size={12} className="text-[#7F56D9]" /> Duration
                 </span>
                 <span className="text-sm font-bold text-black">8 Weeks Online</span>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1.5">
-                  <BookOpen size={12} className="text-[#6B4C9A]" /> Format
+                  <BookOpen size={12} className="text-[#7F56D9]" /> Format
                 </span>
                 <span className="text-sm font-bold text-black">Live Workshops</span>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1.5">
-                  <Users size={12} className="text-[#6B4C9A]" /> Cohort Size
+                  <Users size={12} className="text-[#7F56D9]" /> Cohort Size
                 </span>
                 <span className="text-sm font-bold text-black">25 Spots Only</span>
               </div>
               <div className="flex flex-col gap-1">
                 <span className="text-[10px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1.5">
-                  <Globe size={12} className="text-[#6B4C9A]" /> Alumni
+                  <Globe size={12} className="text-[#7F56D9]" /> Alumni
                 </span>
                 <span className="text-sm font-bold text-black">Global Brands</span>
               </div>
@@ -105,13 +105,13 @@ export default function VMCourse() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="p-6 bg-white border border-black/10 rounded-xl hover:border-[#6B4C9A]/50 hover:shadow-lg transition-all duration-300 flex flex-col gap-3 group"
+                    className="p-6 bg-white border border-black/10 rounded-xl hover:border-[#7F56D9]/50 hover:shadow-lg transition-all duration-300 flex flex-col gap-3 group"
                   >
                     <div className="flex justify-between items-center">
-                      <span className="font-sans text-xs font-bold text-[#6B4C9A] tracking-widest uppercase">
+                      <span className="font-sans text-xs font-bold text-[#7F56D9] tracking-widest uppercase">
                         MODULE {m.num}
                       </span>
-                      <span className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-xs font-semibold text-black/60 group-hover:bg-[#6B4C9A]/10 group-hover:text-[#6B4C9A] transition-colors">
+                      <span className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-xs font-semibold text-black/60 group-hover:bg-[#7F56D9]/10 group-hover:text-[#7F56D9] transition-colors">
                         →
                       </span>
                     </div>
@@ -129,9 +129,9 @@ export default function VMCourse() {
 
           {/* Right Column: Waitlist Sign Up Form */}
           <div className="lg:col-span-5 w-full lg:sticky lg:top-24 mt-4 lg:mt-0">
-            <div className="w-full bg-white border border-[#6B4C9A]/20 rounded-2xl p-8 md:p-10 shadow-[0_12px_40px_rgba(107,76,154,0.1)] relative overflow-hidden">
+            <div className="w-full bg-white border border-[#7F56D9]/20 rounded-2xl p-8 md:p-10 shadow-[0_12px_40px_rgba(107,76,154,0.1)] relative overflow-hidden">
               {/* Luxury Accent Bar */}
-              <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#6B4C9A]" />
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#7F56D9]" />
               
               <AnimatePresence mode="wait">
                 {!submitted ? (
@@ -143,7 +143,7 @@ export default function VMCourse() {
                     className="flex flex-col gap-6"
                   >
                     <div className="flex flex-col gap-2">
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#6B4C9A]/10 text-[#6B4C9A] rounded-full text-[10px] font-bold tracking-widest uppercase w-fit">
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#7F56D9]/10 text-[#7F56D9] rounded-full text-[10px] font-bold tracking-widest uppercase w-fit">
                         <Sparkles size={10} /> Next Cohort: Sept 2026
                       </div>
                       <h3 className="font-sans text-2xl font-bold tracking-tight text-black mt-2">
@@ -165,7 +165,7 @@ export default function VMCourse() {
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           placeholder="e.g. Jean Laurent"
-                          className="w-full px-4 py-3 bg-white border border-black/10 rounded-lg focus:outline-none focus:border-[#6B4C9A] focus:bg-white text-sm transition-all placeholder:text-black/40 text-black"
+                          className="w-full px-4 py-3 bg-white border border-black/10 rounded-lg focus:outline-none focus:border-[#7F56D9] focus:bg-white text-sm transition-all placeholder:text-black/40 text-black"
                         />
                       </div>
                       
@@ -179,14 +179,14 @@ export default function VMCourse() {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="e.g. jean@fashionbrand.com"
-                          className="w-full px-4 py-3 bg-white border border-black/10 rounded-lg focus:outline-none focus:border-[#6B4C9A] focus:bg-white text-sm transition-all placeholder:text-black/40 text-black"
+                          className="w-full px-4 py-3 bg-white border border-black/10 rounded-lg focus:outline-none focus:border-[#7F56D9] focus:bg-white text-sm transition-all placeholder:text-black/40 text-black"
                         />
                       </div>
 
                       <button 
                         type="submit"
                         disabled={loading}
-                        className="w-full mt-2 bg-[#6B4C9A] hover:bg-black disabled:bg-neutral-300 text-white font-bold tracking-wider uppercase text-xs py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 group shadow-[0_10px_30px_rgba(107,76,154,0.2)] hover:shadow-lg hover:-translate-y-0.5"
+                        className="w-full mt-2 bg-[#7F56D9] hover:bg-black disabled:bg-neutral-300 text-white font-bold tracking-wider uppercase text-xs py-4 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 group shadow-[0_10px_30px_rgba(107,76,154,0.2)] hover:shadow-lg hover:-translate-y-0.5"
                       >
                         {loading ? (
                           <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -214,7 +214,7 @@ export default function VMCourse() {
                       animate={{ scale: 1 }}
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
                     >
-                      <CheckCircle2 size={56} className="text-[#6B4C9A] mb-6" />
+                      <CheckCircle2 size={56} className="text-[#7F56D9] mb-6" />
                     </motion.div>
                     
                     <h3 className="text-2xl font-bold tracking-tight text-black mb-2">

@@ -23,7 +23,7 @@ function RollingReel({ value, suffix = "" }: { value: number; suffix?: string })
           ))}
         </motion.div>
       </span>
-      <span className="text-[#6B4C9A] ml-0.5">{suffix}</span>
+      <span className="text-[#7F56D9] ml-0.5">{suffix}</span>
     </span>
   );
 }
@@ -122,16 +122,16 @@ export default function Hero() {
         
         {/* Navigation Menu */}
         <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-8 gap-y-3">
-          <a href="#projects" className="hover:text-[#6B4C9A] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#6B4C9A] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#projects" className="hover:text-[#7F56D9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7F56D9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Projects
           </a>
-          <a href="#vm-course" className="hover:text-[#6B4C9A] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#6B4C9A] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#vm-course" className="hover:text-[#7F56D9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7F56D9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             VM Course
           </a>
-          <a href="#about" className="hover:text-[#6B4C9A] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#6B4C9A] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#about" className="hover:text-[#7F56D9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7F56D9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             About
           </a>
-          <a href="#contact" className="hover:text-[#6B4C9A] transition-colors flex items-center gap-1 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#6B4C9A] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#contact" className="hover:text-[#7F56D9] transition-colors flex items-center gap-1 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7F56D9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Contact <ArrowUpRight size={13} strokeWidth={2.5} />
           </a>
         </div>
@@ -151,12 +151,12 @@ export default function Hero() {
             className="flex flex-wrap gap-2 md:gap-4 mb-4 text-[#111]/70 font-sans text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase"
           >
             <span className="text-[#111]">NUNO ROSA PORTFOLIO</span>
-            <span className="hidden md:inline text-[#6B4C9A]">|</span>
+            <span className="hidden md:inline text-[#7F56D9]">|</span>
             <span>LISBON • LONDON • DUBAI • MEXICO • MUMBAI • BANGALORE</span>
           </motion.div>
           <motion.h1 
             variants={lineVariants}
-            className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.5vw] leading-[0.88] font-medium tracking-tighter uppercase ml-[-0.3vw] select-none text-[#6B4C9A]"
+            className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.5vw] leading-[0.88] font-medium tracking-tighter uppercase ml-[-0.3vw] select-none text-[#7F56D9]"
           >
             SPATIAL <br className="hidden md:inline" /> NARRATIVES
           </motion.h1>
@@ -170,7 +170,7 @@ export default function Hero() {
             variants={itemVariants}
             className="lg:col-span-5 flex flex-col items-start gap-8 lg:pr-4 order-2 lg:order-1"
           >
-            <div className="flex items-center gap-2.5 bg-[#6B4C9A]/10 text-[#6B4C9A] px-3.5 py-1.5 rounded-full font-sans text-xs font-semibold tracking-wider uppercase border border-[#6B4C9A]/20">
+            <div className="flex items-center gap-2.5 bg-[#7F56D9]/10 text-[#7F56D9] px-3.5 py-1.5 rounded-full font-sans text-xs font-semibold tracking-wider uppercase border border-[#7F56D9]/20">
               <Sparkles size={13} />
               <span>Spatial Design & Visual Merchandising</span>
             </div>
@@ -182,13 +182,13 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-5 font-sans text-xs font-semibold tracking-wider uppercase pt-2">
               <a 
                 href="#contact" 
-                className="bg-[#6B4C9A] text-white px-8 py-4 rounded-full hover:bg-black hover:text-white hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2"
+                className="bg-[#7F56D9] text-white px-8 py-4 rounded-full hover:bg-black hover:text-white hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2"
               >
                 Start Project <ArrowUpRight size={14} strokeWidth={2.5} />
               </a>
               <a 
                 href="#about" 
-                className="flex items-center gap-1.5 py-3 px-1 hover:text-[#6B4C9A] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-black/30 hover:after:bg-[#6B4C9A]"
+                className="flex items-center gap-1.5 py-3 px-1 hover:text-[#7F56D9] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-black/30 hover:after:bg-[#7F56D9]"
               >
                 My Approach
               </a>
@@ -229,7 +229,7 @@ export default function Hero() {
             {/* Elevated Image Showcase Container */}
             <div className="relative w-full aspect-[16/10] sm:aspect-[16/9.5] rounded-[24px] md:rounded-[32px] overflow-hidden bg-neutral-100 shadow-[0_25px_60px_rgba(0,0,0,0.09)] border border-neutral-200/80 group">
               {/* Subtle ambient accent glow behind frame */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#6B4C9A]/15 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#7F56D9]/15 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
               
               <AnimatePresence mode="wait">
                 <motion.img 
@@ -247,7 +247,7 @@ export default function Hero() {
 
               {/* Floating Pill Badge on Image */}
               <div className="absolute top-4 left-4 md:top-6 md:left-6 z-20 flex items-center gap-2.5 bg-[#111]/80 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg">
-                <span className="w-2 h-2 bg-[#6B4C9A] rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-[#7F56D9] rounded-full animate-pulse" />
                 Featured Spatial Showcase
               </div>
 

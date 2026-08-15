@@ -81,7 +81,7 @@ export default function ProjectGalleryPage() {
     return (
       <div className="min-h-screen bg-white text-black flex flex-col items-center justify-center">
         <h1 className="text-2xl mb-4 font-sans tracking-widest uppercase">Gallery not found</h1>
-        <button onClick={() => navigate('/')} className="px-6 py-3 bg-black text-white hover:bg-[#6B4C9A] hover:text-white transition-colors rounded-full text-xs font-bold uppercase tracking-wider">
+        <button onClick={() => navigate('/')} className="px-6 py-3 bg-black text-white hover:bg-[#7F56D9] hover:text-white transition-colors rounded-full text-xs font-bold uppercase tracking-wider">
           Return Home
         </button>
       </div>
@@ -89,10 +89,10 @@ export default function ProjectGalleryPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white text-black font-sans selection:bg-[#6B4C9A] selection:text-white pb-24">
+    <main className="min-h-screen bg-white text-black font-sans selection:bg-[#7F56D9] selection:text-white pb-24">
       {/* Sticky Navbar */}
       <nav className="sticky top-0 w-full z-40 bg-white/80 backdrop-blur-xl border-b border-black/5 p-4 md:px-12 md:py-6 flex justify-between items-center shadow-sm">
-        <button onClick={() => navigate('/')} className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#6B4C9A] transition-colors group">
+        <button onClick={() => navigate('/')} className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#7F56D9] transition-colors group">
           <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> NUNO ROSA
         </button>
         <span className="font-mono text-xs md:text-sm text-black/50 tracking-widest uppercase hidden sm:block">
@@ -110,7 +110,7 @@ export default function ProjectGalleryPage() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight uppercase text-black mb-6 leading-none">
             {categoryKey}
           </h1>
-          <div className="w-20 h-[2px] bg-[#6B4C9A]" />
+          <div className="w-20 h-[2px] bg-[#7F56D9]" />
           <p className="mt-8 text-black/60 font-light max-w-2xl text-lg md:text-xl leading-relaxed">
             Explore the curated spatial architecture and visual merchandising concepts for {categoryKey}.
           </p>
@@ -155,7 +155,7 @@ export default function ProjectGalleryPage() {
                           viewport={{ once: true, margin: "50px" }}
                           transition={{ duration: 0.5, delay: (localIdx % 10) * 0.05 }}
                           onClick={() => setSelectedImageIndex(globalIndex)}
-                          className={`group relative rounded-xl md:rounded-[2rem] overflow-hidden bg-white border border-black/10 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#6B4C9A]/50 transition-all duration-500 ${spanClass}`}
+                          className={`group relative rounded-xl md:rounded-[2rem] overflow-hidden bg-white border border-black/10 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#7F56D9]/50 transition-all duration-500 ${spanClass}`}
                         >
                           <img 
                             src={src} 
@@ -163,9 +163,9 @@ export default function ProjectGalleryPage() {
                             className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#6B4C9A]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                          <div className="absolute inset-0 bg-[#6B4C9A]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                            <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-full text-[#6B4C9A] font-mono text-xs uppercase tracking-widest border border-[#6B4C9A]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#7F56D9]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          <div className="absolute inset-0 bg-[#7F56D9]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                            <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-full text-[#7F56D9] font-mono text-xs uppercase tracking-widest border border-[#7F56D9]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
                               View
                             </span>
                           </div>
@@ -215,7 +215,7 @@ export default function ProjectGalleryPage() {
             {/* Previous Button */}
             <button 
               onClick={handlePrev}
-              className="absolute left-4 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-white/40 hover:bg-[#6B4C9A] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
+              className="absolute left-4 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-white/40 hover:bg-[#7F56D9] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
             >
               <ChevronLeft size={28} />
             </button>
@@ -240,7 +240,7 @@ export default function ProjectGalleryPage() {
             {/* Next Button */}
             <button 
               onClick={handleNext}
-              className="absolute right-4 md:right-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-white/40 hover:bg-[#6B4C9A] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
+              className="absolute right-4 md:right-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-white/40 hover:bg-[#7F56D9] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
             >
               <ChevronRight size={28} />
             </button>
@@ -248,7 +248,7 @@ export default function ProjectGalleryPage() {
             {/* Progress Bar (if playing) */}
             {isPlaying && (
               <motion.div 
-                className="absolute bottom-0 left-0 h-1 bg-[#6B4C9A]"
+                className="absolute bottom-0 left-0 h-1 bg-[#7F56D9]"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 3.5, ease: "linear", repeat: Infinity, key: selectedImageIndex }}
