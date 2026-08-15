@@ -5,25 +5,25 @@ const services = [
   {
     id: '01',
     title: 'VISUAL STRATEGY',
-    content: 'We define the visual compass for your brand. From foundational layout principles to evocative typography and material selection, we ensure every touchpoint communicates a cohesive and compelling story.',
+    content: 'I define the visual compass for your brand. From foundational layout principles to evocative typography and material selection, I ensure every touchpoint communicates a cohesive and compelling story.',
     tags: ['Visual direction', 'Type rules']
   },
   {
     id: '02',
     title: 'EXPERIENTIAL IDENTITY',
-    content: 'We build brand identities that command presence. Blending deep strategic insight with refined execution, we design aesthetic frameworks that translate seamlessly from digital to physical spaces.',
+    content: 'Developing sophisticated brand identities that command presence. Blending deep strategic insight with refined execution, I design aesthetic frameworks that translate seamlessly from digital to physical spaces.',
     tags: ['Brand guidelines', 'Logo design']
   },
   {
     id: '03',
     title: 'SPATIAL ARCHITECTURE',
-    content: 'We architect physical retail and exhibition environments that transform abstract brand concepts into visceral, immersive experiences. Every volume, texture, and light source is engineered for impact.',
+    content: 'I architect physical retail and exhibition environments that transform abstract brand concepts into visceral, immersive experiences. Every volume, texture, and light source is engineered for impact.',
     tags: ['Retail spaces', 'Exhibition']
   },
   {
     id: '04',
     title: 'OMNICHANNEL INTEGRATION',
-    content: 'Bridging the gap between physical retail and digital commerce. We prioritize performance, accessibility, and modern aesthetics to ensure a unified and powerful brand presence across all mediums.',
+    content: 'Bridging the gap between physical retail and digital commerce. I prioritize performance, accessibility, and modern aesthetics to ensure a unified and powerful brand presence across all mediums.',
     tags: ['Web design', 'Development']
   }
 ];
@@ -45,7 +45,7 @@ export default function Services() {
             SERVICES<sup className="text-xl md:text-3xl ml-2 font-medium">(4)</sup>
           </h2>
           <div className="font-sans text-base md:text-lg font-light tracking-tight text-black max-w-sm md:mt-4 leading-snug">
-            We work across art direction, spatial design, brand identity, and immersive digital experiences.
+            I work across art direction, spatial design, brand identity, and immersive digital experiences.
           </div>
         </div>
 

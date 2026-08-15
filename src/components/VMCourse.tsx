@@ -221,7 +221,7 @@ export default function VMCourse() {
                       Syllabus Request Sent
                     </h3>
                     <p className="text-sm font-light text-black/60 max-w-xs leading-relaxed mb-6">
-                      Thank you, <span className="font-semibold text-black">{name}</span>. We have dispatched the visual curriculum and waitlist application to <span className="font-semibold text-black">{email}</span>.
+                      Thank you, <span className="font-semibold text-black">{name}</span>. I have dispatched the visual curriculum and waitlist application to <span className="font-semibold text-black">{email}</span>.
                     </p>
                     
                     <button 
