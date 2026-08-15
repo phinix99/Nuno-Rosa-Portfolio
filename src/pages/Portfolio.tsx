@@ -91,7 +91,7 @@ export default function Portfolio() {
       <nav className="w-full px-6 md:px-12 py-5 border-b border-neutral-200/80 flex justify-between items-center sticky top-0 bg-[#fdfdfd]/90 backdrop-blur-md z-50">
         <Link 
           to="/" 
-          className="flex items-center gap-2 font-bold tracking-tight text-lg uppercase hover:text-[#7F56D9] transition-colors"
+          className="flex items-center gap-2 font-bold tracking-tight text-lg uppercase hover:text-[#7651B9] transition-colors"
         >
           <ArrowLeft size={18} /> NUNO ROSA
         </Link>
@@ -117,7 +117,7 @@ export default function Portfolio() {
       {/* Page Header */}
       <header className="max-w-[1500px] mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-12 border-b border-neutral-200/80">
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#7F56D9] uppercase">
+          <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#7651B9] uppercase">
             <Sparkles size={14} /> ARCHITECTURAL PORTFOLIO
           </div>
           <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight uppercase text-[#111]">
@@ -137,7 +137,7 @@ export default function Portfolio() {
             {/* Section Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-neutral-200/80 pb-6">
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-[#7F56D9]">
+                <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-[#7651B9]">
                   DISCIPLINE {section.num}
                 </div>
                 <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight uppercase text-[#111]">
@@ -160,7 +160,7 @@ export default function Portfolio() {
                   transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   className={item.bentoSpan}
                 >
-                  <div className="group relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#7F56D9]/40 hover:shadow-[0_25px_50px_rgba(107,76,154,0.12)] transition-all duration-700 bg-neutral-900 p-6 md:p-8 flex flex-col justify-between">
+                  <div className="group relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#7651B9]/40 hover:shadow-[0_25px_50px_rgba(107,76,154,0.12)] transition-all duration-700 bg-neutral-900 p-6 md:p-8 flex flex-col justify-between">
                     {/* Background Full-Bleed Image */}
                     <div className="absolute inset-0 z-0 overflow-hidden">
                       <img 
@@ -170,7 +170,7 @@ export default function Portfolio() {
                       />
                       {/* Gradient Overlays for readable text */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20 group-hover:from-black/90 group-hover:via-black/40 transition-colors duration-500" />
-                      <div className="absolute inset-0 bg-[#7F56D9]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
+                      <div className="absolute inset-0 bg-[#7651B9]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
                     </div>
 
                     {/* Top Tag & Arrow */}
@@ -179,14 +179,14 @@ export default function Portfolio() {
                         {section.num}.0{i + 1}
                       </span>
                       
-                      <div className="w-9 h-9 rounded-full bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#7F56D9] group-hover:border-[#7F56D9] transition-all shadow-md">
+                      <div className="w-9 h-9 rounded-full bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#7651B9] group-hover:border-[#7651B9] transition-all shadow-md">
                         <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </div>
                     </div>
 
                     {/* Bottom Title */}
                     <div className="relative z-10 mt-auto pt-16">
-                      <span className="bg-[#111]/70 backdrop-blur-md text-white px-4 py-2 rounded-full font-sans text-xs md:text-sm font-semibold tracking-wider uppercase border border-white/20 inline-block group-hover:bg-[#7F56D9] group-hover:border-[#7F56D9] transition-colors shadow-lg">
+                      <span className="bg-[#111]/70 backdrop-blur-md text-white px-4 py-2 rounded-full font-sans text-xs md:text-sm font-semibold tracking-wider uppercase border border-white/20 inline-block group-hover:bg-[#7651B9] group-hover:border-[#7651B9] transition-colors shadow-lg">
                         {item.title}
                       </span>
                     </div>

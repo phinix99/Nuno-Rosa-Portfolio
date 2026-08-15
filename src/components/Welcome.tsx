@@ -23,13 +23,13 @@ export default function Welcome() {
             className="lg:col-span-7 flex flex-col items-start gap-8"
           >
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#7F56D9] rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-[#7651B9] rounded-full animate-pulse" />
               <h2 className="font-sans text-xs font-semibold tracking-widest uppercase text-black/60">
                 ABOUT ME
               </h2>
             </div>
             
-            <h3 className="font-sans text-3xl md:text-5xl lg:text-[2.75rem] font-medium tracking-tight leading-[1.15] text-[#7F56D9]">
+            <h3 className="font-sans text-3xl md:text-5xl lg:text-[2.75rem] font-medium tracking-tight leading-[1.15] text-[#7651B9]">
               I balance artistic vision with proven business strategy results at any scale.
             </h3>
             
@@ -47,7 +47,7 @@ export default function Welcome() {
 
             {/* Designer Signature Detail */}
             <div className="mt-6 flex flex-col gap-1">
-              <span className="font-serif italic text-3xl text-[#7F56D9] font-light tracking-wide select-none">
+              <span className="font-serif italic text-3xl text-[#7651B9] font-light tracking-wide select-none">
                 Nuno Rosa
               </span>
               <span className="font-sans text-[10px] font-semibold tracking-widest uppercase opacity-40">
@@ -67,7 +67,7 @@ export default function Welcome() {
           >
             <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden bg-white shadow-[0_12px_40px_rgba(107,76,154,0.15)] group border border-black/10">
               {/* Decorative Frame */}
-              <div className="absolute inset-4 border border-[#7F56D9]/40 rounded-xl pointer-events-none z-10 transition-all duration-500 group-hover:inset-3 group-hover:border-[#7F56D9]" />
+              <div className="absolute inset-4 border border-[#7651B9]/40 rounded-xl pointer-events-none z-10 transition-all duration-500 group-hover:inset-3 group-hover:border-[#7651B9]" />
               
               <motion.img 
                 style={{ y, scale: 1.15 }}
@@ -77,7 +77,7 @@ export default function Welcome() {
               />
               
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/40 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute inset-0 bg-[#7F56D9]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none mix-blend-overlay" />
+              <div className="absolute inset-0 bg-[#7651B9]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none mix-blend-overlay" />
             </div>
           </motion.div>
 

@@ -47,8 +47,8 @@ export default function Philosophy() {
 
 
         {/* Brands Carousel Section */}
-        <div className="my-16 py-12 md:py-16 rounded-[2rem] bg-[#FAF9FB] border border-[#7F56D9]/10 overflow-hidden w-full relative shadow-[inset_0_0_40px_rgba(107,76,154,0.02)]">
-          <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-widest uppercase text-[#7F56D9]/60 mb-12">
+        <div className="my-16 py-12 md:py-16 rounded-[2rem] bg-[#FAF9FB] border border-[#7651B9]/10 overflow-hidden w-full relative shadow-[inset_0_0_40px_rgba(107,76,154,0.02)]">
+          <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-widest uppercase text-[#7651B9]/60 mb-12">
             Trusted by Global Icons
           </h4>
           
@@ -74,7 +74,7 @@ export default function Philosophy() {
                       e.currentTarget.nextElementSibling!.classList.remove('hidden');
                     }}
                   />
-                  <span className="hidden font-sans text-xl md:text-2xl font-medium tracking-tight text-black/60 group-hover:text-[#7F56D9] transition-colors cursor-default text-center">
+                  <span className="hidden font-sans text-xl md:text-2xl font-medium tracking-tight text-black/60 group-hover:text-[#7651B9] transition-colors cursor-default text-center">
                     {brand.name}
                   </span>
                 </div>
@@ -84,7 +84,7 @@ export default function Philosophy() {
         </div>
 
         {/* Global Footprint Timeline */}
-        <div className="mt-16 p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-[2rem] bg-[#7F56D9] text-white relative overflow-hidden shadow-[0_30px_60px_rgba(107,76,154,0.3)] border border-white/10">
+        <div className="mt-16 p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-[2rem] bg-[#7651B9] text-white relative overflow-hidden shadow-[0_30px_60px_rgba(107,76,154,0.3)] border border-white/10">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-black/10 blur-[120px] rounded-full pointer-events-none" />
 
           <div className="relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-20">
