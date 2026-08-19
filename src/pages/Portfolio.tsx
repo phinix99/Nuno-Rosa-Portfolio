@@ -138,14 +138,14 @@ export default function Portfolio() {
       </header>
 
       {/* Portfolio Content - Alternating Sections Layout */}
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12 py-12 md:py-20 flex flex-col gap-20 md:gap-28">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-12 py-8 md:py-14 flex flex-col gap-12 md:gap-16">
         {portfolioData.map((section, idx) => {
           const isEven = idx % 2 === 1; // 0-indexed: 1 and 3 are bordered boxes
           
           const sectionContent = (
-            <div className="flex flex-col gap-8 md:gap-10">
+            <div className="flex flex-col gap-5 md:gap-6">
               {/* Section Header */}
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1.5">
                 <span className="text-xs font-mono font-bold tracking-widest text-[#5E27BA] uppercase">
                   DISCIPLINE 0{idx + 1}
                 </span>
@@ -153,7 +153,7 @@ export default function Portfolio() {
                   to={`/gallery/${section.slug}`}
                   className="group w-fit"
                 >
-                  <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight uppercase text-[#111] leading-[1.08] group-hover:text-[#5E27BA] transition-colors">
+                  <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase text-[#111] leading-[1.08] group-hover:text-[#5E27BA] transition-colors">
                     {section.category.split(' & ').map((part, i, arr) => (
                       <span key={i}>
                         {part}
@@ -164,16 +164,16 @@ export default function Portfolio() {
                 </Link>
               </div>
 
-              {/* 3-Column Image Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {/* 3-Column Image Grid with Sleek Height */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 {section.items.map((item, i) => (
                   <motion.div 
                     key={item.id}
-                    initial={{ opacity: 0, y: 25 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-40px" }}
-                    transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative aspect-[4/5] md:aspect-auto md:h-[400px] lg:h-[480px]"
+                    transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                    className="relative aspect-[16/11] md:aspect-auto md:h-[270px] lg:h-[310px]"
                   >
                     <Link 
                       to={`/gallery/${item.slug || section.slug}`} 
@@ -192,8 +192,8 @@ export default function Portfolio() {
                       </div>
 
                       {/* Center Badge with responsive text */}
-                      <div className="relative z-10 p-4 text-center">
-                        <span className="bg-white/95 text-black px-6 md:px-8 py-2.5 md:py-3 rounded-sm border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-sm group-hover:bg-[#5E27BA] group-hover:text-white group-hover:border-[#5E27BA] transition-all duration-300 inline-block">
+                      <div className="relative z-10 p-3 text-center">
+                        <span className="bg-white/95 text-black px-5 md:px-7 py-2 md:py-2.5 rounded-sm border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-sm group-hover:bg-[#5E27BA] group-hover:text-white group-hover:border-[#5E27BA] transition-all duration-300 inline-block">
                           {item.title}
                         </span>
                       </div>
@@ -207,7 +207,7 @@ export default function Portfolio() {
           return (
             <section key={section.slug} id={section.slug} className="scroll-mt-32">
               {isEven ? (
-                <div className="w-full border-2 md:border-[3px] border-[#111] p-6 sm:p-8 md:p-12 lg:p-14 rounded-sm md:rounded bg-white shadow-xs">
+                <div className="w-full border-2 md:border-[3px] border-[#111] p-5 sm:p-6 md:p-8 lg:p-10 rounded-sm md:rounded bg-white shadow-xs">
                   {sectionContent}
                 </div>
               ) : (
