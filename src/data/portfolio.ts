@@ -103,6 +103,9 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
   },
   "E-Commerce & Styling": {
     "E-Commerce & Styling": [
+      "/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg",
+      "/portfolio/E-Commerce Creative Direction & Styling/02_sun_styling.jpg",
+      "/portfolio/E-Commerce Creative Direction & Styling/03_bag_styling.jpg",
       "/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg",
       "/portfolio/E-Commerce Creative Direction & Styling/3_Life Style_1180mm X 635mm_edited.jpg",
       "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg",

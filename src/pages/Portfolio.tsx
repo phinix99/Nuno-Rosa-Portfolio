@@ -16,14 +16,14 @@ const portfolioData = [
     ]
   },
   {
-    category: "DIGITAL VISUAL MERCHANDISING",
+    category: "E-COMMERCE & STYLING",
     slug: "e-commerce-styling",
     num: "02",
     desc: "E-commerce creative direction, luxury styling curations, and high-fashion digital campaigns.",
     items: [
-      { id: "es-1", title: "E-Commerce & Styling", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg" },
-      { id: "es-2", title: "Styling Curation", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg" },
-      { id: "es-3", title: "Editorial Lookbooks", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/4_Life Style_1180mm X 635mm_edited.jpg" }
+      { id: "es-1", title: "", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg" },
+      { id: "es-2", title: "", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/02_sun_styling.jpg" },
+      { id: "es-3", title: "", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/03_bag_styling.jpg" }
     ]
   },
   {
@@ -191,12 +191,21 @@ export default function Portfolio() {
                         <div className="absolute inset-0 bg-[#5E27BA]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
                       </div>
 
-                      {/* Center Badge with responsive text */}
-                      <div className="relative z-10 p-3 text-center">
-                        <span className="bg-white/95 text-black px-5 md:px-7 py-2 md:py-2.5 rounded-sm border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-sm group-hover:bg-[#5E27BA] group-hover:text-white group-hover:border-[#5E27BA] transition-all duration-300 inline-block">
-                          {item.title}
-                        </span>
-                      </div>
+                      {/* Center Badge if sub-group exists */}
+                      {item.title ? (
+                        <div className="relative z-10 p-3 text-center">
+                          <span className="bg-white/95 text-black px-5 md:px-7 py-2 md:py-2.5 rounded-sm border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-sm group-hover:bg-[#5E27BA] group-hover:text-white group-hover:border-[#5E27BA] transition-all duration-300 inline-block">
+                            {item.title}
+                          </span>
+                        </div>
+                      ) : (
+                        <div className="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                          <span className="bg-[#5E27BA] text-white px-5 py-2 rounded-sm font-sans text-xs font-semibold tracking-wider uppercase shadow-md flex items-center gap-1.5">
+                            <span>Explore Collection</span>
+                            <ArrowUpRight size={13} />
+                          </span>
+                        </div>
+                      )}
                     </Link>
                   </motion.div>
                 ))}

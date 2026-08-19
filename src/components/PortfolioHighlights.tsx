@@ -26,10 +26,10 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
     },
     {
       id: 'c2',
-      title: 'Styling Curation',
-      category: 'Digital Visual Merchandising',
+      title: 'Fashion Styling & Direction',
+      category: 'E-Commerce & Styling',
       slug: 'e-commerce-styling',
-      image: '/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg',
+      image: '/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg',
       aspect: 'aspect-[16/10]',
       tag: 'Fashion Curation'
     }
@@ -38,9 +38,9 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
     {
       id: 'c4',
       title: 'E-Commerce Direction',
-      category: 'Digital Visual Merchandising',
+      category: 'E-Commerce & Styling',
       slug: 'e-commerce-styling',
-      image: '/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg',
+      image: '/portfolio/E-Commerce Creative Direction & Styling/02_sun_styling.jpg',
       aspect: 'aspect-[4/3]',
       tag: 'Art Direction'
     },

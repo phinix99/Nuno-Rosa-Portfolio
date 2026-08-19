@@ -57,7 +57,7 @@ export default function Hero() {
     {
       title: "E-Commerce & Styling",
       slug: "e-commerce-styling",
-      image: "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg"
+      image: "/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg"
     },
     {
       title: "Conceptual Design",
