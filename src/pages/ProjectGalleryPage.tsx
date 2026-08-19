@@ -130,7 +130,7 @@ export default function ProjectGalleryPage() {
       </nav>
 
       {/* Clean Minimal Header */}
-      <header className="max-w-[1600px] mx-auto px-4 md:px-12 pt-6 md:pt-10 pb-6">
+      <header className="max-w-[1500px] mx-auto px-6 md:px-12 pt-6 md:pt-10 pb-6">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500 mb-4">
           <Link to="/" className="hover:text-[#5E27BA] transition-colors flex items-center gap-1.5 font-medium">
@@ -176,7 +176,7 @@ export default function ProjectGalleryPage() {
       </header>
 
       {/* Gallery Layout */}
-      <div className="max-w-[1600px] mx-auto px-4 md:px-12 mt-4">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-12 mt-4">
         {category === 'press-speaker' && (
           <motion.a 
             initial={{ opacity: 0, y: 15 }}
@@ -387,7 +387,7 @@ export default function ProjectGalleryPage() {
             {/* Next Button */}
             <button 
               onClick={handleNext}
-              className="absolute right-4 md:right-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-white/40 hover:bg-[#5E27BA] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
+              className="absolute right-4 md:right-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-sm bg-white/40 hover:bg-[#5E27BA] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
             >
               <ChevronRight size={28} />
             </button>

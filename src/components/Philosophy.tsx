@@ -24,7 +24,7 @@ const metrics = [
 export default function Philosophy() {
   return (
     <section className="w-full bg-white text-black py-10 md:py-14 border-b border-black/10 overflow-hidden" id="philosophy">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-20">
 
         {/* Compact, Single-Screen Global Footprint Card */}
         <div className="p-5 md:p-8 rounded-sm md:rounded bg-[#5E27BA] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(94, 39, 186,0.22)] border border-white/10">

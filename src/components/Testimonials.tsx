@@ -103,7 +103,7 @@ export default function Testimonials() {
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-[#5E27BA]/5 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto relative z-10">
+      <div className="max-w-[1500px] mx-auto relative z-10">
         
         {/* Section Header with Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 md:mb-10 border-b border-black/10 pb-4">
