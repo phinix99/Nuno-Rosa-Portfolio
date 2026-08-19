@@ -2,7 +2,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 import { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowLeft, ChevronLeft, ChevronRight, X, Play, Pause, Home } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, X, Play, Pause, Home, ArrowUpRight } from 'lucide-react';
 
 // Map slugs back to keys in portfolioData
 const slugMap: Record<string, string> = {
@@ -266,6 +266,32 @@ export default function ProjectGalleryPage() {
           </div>
         )}
       </div>
+
+      {/* Footer */}
+      <footer className="w-full py-12 mt-16 border-t border-neutral-200/80 text-center font-sans text-xs tracking-wider uppercase text-neutral-500 bg-[#fafafa] flex flex-col items-center gap-4">
+        <div className="flex items-center gap-6 text-neutral-700">
+          <a 
+            href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 font-semibold"
+          >
+            LinkedIn <ArrowUpRight size={12} />
+          </a>
+          <span className="text-neutral-300">•</span>
+          <a 
+            href="https://www.instagram.com/nuno.marques.rosa/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 font-semibold"
+          >
+            Instagram <ArrowUpRight size={12} />
+          </a>
+        </div>
+        <div>
+          © {new Date().getFullYear()} NUNO ROSA SPATIAL DESIGN ARCHIVES. ALL RIGHTS RESERVED.
+        </div>
+      </footer>
 
       {/* Full Screen Auto-Play Carousel Overlay */}
       <AnimatePresence>

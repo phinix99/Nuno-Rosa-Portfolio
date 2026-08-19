@@ -35,7 +35,12 @@ export default function Footer() {
             >
               LinkedIn
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">
+            <a 
+              href="https://www.instagram.com/nuno.marques.rosa/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-black transition-colors"
+            >
               Instagram
             </a>
           </div>

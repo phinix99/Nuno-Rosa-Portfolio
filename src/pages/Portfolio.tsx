@@ -230,8 +230,29 @@ export default function Portfolio() {
       </div>
 
       {/* Footer */}
-      <footer className="w-full py-12 border-t border-neutral-200/80 text-center font-sans text-xs tracking-wider uppercase text-neutral-500 bg-[#fafafa]">
-        © {new Date().getFullYear()} NUNO ROSA SPATIAL DESIGN ARCHIVES. ALL RIGHTS RESERVED.
+      <footer className="w-full py-12 border-t border-neutral-200/80 text-center font-sans text-xs tracking-wider uppercase text-neutral-500 bg-[#fafafa] flex flex-col items-center gap-4">
+        <div className="flex items-center gap-6 text-neutral-700">
+          <a 
+            href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 font-semibold"
+          >
+            LinkedIn <ArrowUpRight size={12} />
+          </a>
+          <span className="text-neutral-300">•</span>
+          <a 
+            href="https://www.instagram.com/nuno.marques.rosa/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 font-semibold"
+          >
+            Instagram <ArrowUpRight size={12} />
+          </a>
+        </div>
+        <div>
+          © {new Date().getFullYear()} NUNO ROSA SPATIAL DESIGN ARCHIVES. ALL RIGHTS RESERVED.
+        </div>
       </footer>
     </main>
   );
