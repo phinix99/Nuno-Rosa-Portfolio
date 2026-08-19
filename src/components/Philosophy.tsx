@@ -33,12 +33,12 @@ export default function Philosophy() {
           {/* Top Bar: Section Title + Horizontal Metrics Strip */}
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-5 pb-5 md:pb-6 border-b border-white/15">
             <div className="flex flex-col gap-1">
-              <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-white/70 uppercase">
+              <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-white/80 uppercase">
                 <Globe2 size={13} /> Career Trajectory
               </div>
-              <h3 className="font-sans text-2xl md:text-4xl font-medium tracking-tight text-white uppercase leading-none">
+              <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-white">
                 GLOBAL FOOTPRINT
-              </h3>
+              </h2>
             </div>
 
             {/* Streamlined Horizontal Highlights */}

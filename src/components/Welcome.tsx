@@ -39,18 +39,16 @@ export default function Welcome() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col items-start gap-5"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-[#7651B9]">
               <span className="w-2 h-2 bg-[#7651B9] rounded-full animate-pulse" />
-              <h2 className="font-sans text-xs font-semibold tracking-widest uppercase text-black/60">
-                ABOUT ME
-              </h2>
+              <span>ABOUT ME</span>
             </div>
             
-            <h3 className="font-sans text-2xl md:text-4xl lg:text-[2.25rem] font-medium tracking-tight leading-[1.18] text-[#7651B9]">
+            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-[#7651B9]">
               Balancing artistic vision with proven commercial results at any scale.
-            </h3>
+            </h2>
             
-            <div className="font-sans text-sm md:text-base font-light leading-relaxed text-black/80 max-w-2xl flex flex-col gap-3">
+            <div className="font-sans text-xs md:text-sm lg:text-base font-light leading-relaxed text-black/80 max-w-2xl flex flex-col gap-3">
               <p>
                 With 30+ years of international fashion retail experience spanning the UAE, Mexico, India, Portugal, and the UK, I translate brand identities into immersive, 360-degree visual storytelling environments.
               </p>
@@ -64,10 +62,10 @@ export default function Welcome() {
 
             {/* Designer Signature Detail */}
             <div className="flex flex-col gap-0.5 mt-1">
-              <span className="font-serif italic text-2xl text-[#7651B9] font-light tracking-wide select-none">
+              <span className="font-serif italic text-2xl md:text-3xl text-[#7651B9] font-light tracking-wide select-none">
                 Nuno Rosa
               </span>
-              <span className="font-sans text-[9px] font-semibold tracking-widest uppercase opacity-40">
+              <span className="font-sans text-[10px] font-semibold tracking-widest uppercase opacity-40">
                 Founder & Creative Director
               </span>
             </div>
@@ -108,12 +106,12 @@ export default function Welcome() {
           className="mt-8 md:mt-10 p-4 md:p-6 rounded-2xl bg-[#FAF9FB] border border-[#7651B9]/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4"
         >
           <div className="flex flex-col gap-0.5 shrink-0">
-            <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-[#7651B9] uppercase">
+            <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] text-[#7651B9] uppercase">
               <Sparkles size={11} /> Recognition
             </div>
-            <h4 className="font-sans text-base md:text-lg font-bold tracking-tight text-black">
+            <h3 className="font-sans text-base md:text-lg font-bold tracking-tight text-black">
               GLOBAL RETAIL EXPERT
-            </h4>
+            </h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-3 flex-1">

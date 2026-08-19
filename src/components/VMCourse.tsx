@@ -50,14 +50,14 @@ export default function VMCourse() {
           {/* Left Column: Course Details */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#7651B9] rounded-full animate-ping" />
-                <span className="font-sans text-[10px] font-semibold tracking-widest uppercase text-black/60">VM EDUCATION</span>
+              <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-[#7651B9]">
+                <span className="w-2 h-2 bg-[#7651B9] rounded-full animate-pulse" />
+                <span>VM EDUCATION</span>
               </div>
-              <h2 className="font-sans text-3xl md:text-5xl font-medium tracking-tight uppercase leading-none text-black">
+              <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
                 VM MASTERCLASS
               </h2>
-              <p className="font-sans text-sm md:text-base font-light text-black/70 max-w-xl">
+              <p className="font-sans text-sm md:text-base font-light text-black/70 max-w-xl leading-relaxed">
                 A definitive 8-week program mastering the silent architecture of desire.
               </p>
             </div>
