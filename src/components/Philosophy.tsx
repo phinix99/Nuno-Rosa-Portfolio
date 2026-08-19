@@ -27,7 +27,7 @@ export default function Philosophy() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
 
         {/* Compact, Single-Screen Global Footprint Card */}
-        <div className="p-5 md:p-8 rounded-lg md:rounded-xl bg-[#7651B9] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(118,81,185,0.22)] border border-white/10">
+        <div className="p-5 md:p-8 rounded-sm md:rounded bg-[#7651B9] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(118,81,185,0.22)] border border-white/10">
           <div className="absolute top-0 right-0 w-80 h-80 bg-black/10 blur-[90px] rounded-full pointer-events-none" />
 
           {/* Top Bar: Section Title + Horizontal Metrics Strip */}
@@ -65,10 +65,10 @@ export default function Philosophy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: index * 0.03 }}
-                className="flex items-center justify-between p-2.5 sm:p-3 rounded-md bg-black/[0.08] hover:bg-black/[0.16] border border-white/10 hover:border-white/25 transition-all duration-300 group cursor-default"
+                className="flex items-center justify-between p-2.5 sm:p-3 rounded-sm bg-black/[0.08] hover:bg-black/[0.16] border border-white/10 hover:border-white/25 transition-all duration-300 group cursor-default"
               >
                 <div className="flex items-center gap-2.5 min-w-0 pr-2">
-                  <span className="font-mono text-[11px] md:text-xs font-bold text-white/90 group-hover:text-white tabular-nums shrink-0 px-1.5 py-0.5 rounded bg-white/10">
+                  <span className="font-mono text-[11px] md:text-xs font-bold text-white/90 group-hover:text-white tabular-nums shrink-0 px-1.5 py-0.5 rounded-xs bg-white/10">
                     {item.year}
                   </span>
                   <div className="flex flex-col min-w-0">
@@ -81,7 +81,7 @@ export default function Philosophy() {
                   </div>
                 </div>
 
-                <span className="font-sans text-[9px] md:text-[10px] font-bold tracking-wider uppercase text-white/90 shrink-0 px-2 py-0.5 rounded-md bg-white/15 border border-white/10 group-hover:bg-white group-hover:text-black transition-colors">
+                <span className="font-sans text-[9px] md:text-[10px] font-bold tracking-wider uppercase text-white/90 shrink-0 px-2 py-0.5 rounded-xs bg-white/15 border border-white/10 group-hover:bg-white group-hover:text-black transition-colors">
                   @{item.brand}
                 </span>
               </motion.div>

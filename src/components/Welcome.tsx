@@ -80,8 +80,8 @@ export default function Welcome() {
             className="lg:col-span-5 w-full flex justify-center lg:justify-end"
             ref={imageRef}
           >
-            <div className="relative w-full max-w-[320px] aspect-[3/3.8] rounded-lg overflow-hidden bg-white shadow-[0_10px_30px_rgba(107,76,154,0.12)] group border border-black/10">
-              <div className="absolute inset-2.5 border border-[#7651B9]/30 rounded-md pointer-events-none z-10 transition-all duration-500 group-hover:inset-2 group-hover:border-[#7651B9]" />
+            <div className="relative w-full max-w-[320px] aspect-[3/3.8] rounded-sm overflow-hidden bg-white shadow-[0_10px_30px_rgba(107,76,154,0.12)] group border border-black/10">
+              <div className="absolute inset-2 border border-[#7651B9]/30 rounded-xs pointer-events-none z-10 transition-all duration-500 group-hover:inset-1.5 group-hover:border-[#7651B9]" />
               
               <motion.img 
                 style={{ y, scale: 1.1 }}

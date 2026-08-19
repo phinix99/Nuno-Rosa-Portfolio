@@ -174,7 +174,7 @@ export default function ProjectGalleryPage() {
                           viewport={{ once: true, margin: "50px" }}
                           transition={{ duration: 0.5, delay: (localIdx % 10) * 0.05 }}
                           onClick={() => setSelectedImageIndex(globalIndex)}
-                          className={`group relative rounded-lg md:rounded-xl overflow-hidden bg-white border border-black/10 cursor-pointer shadow-sm hover:shadow-xl hover:border-[#7651B9]/50 transition-all duration-500 ${spanClass}`}
+                          className={`group relative rounded-sm md:rounded overflow-hidden bg-white border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#7651B9]/50 transition-all duration-500 ${spanClass}`}
                         >
                           <img 
                             src={src} 
@@ -184,7 +184,7 @@ export default function ProjectGalleryPage() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-[#7651B9]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                           <div className="absolute inset-0 bg-[#7651B9]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                            <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-md text-[#7651B9] font-mono text-xs uppercase tracking-widest border border-[#7651B9]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-lg">
+                            <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-xs text-[#7651B9] font-mono text-xs uppercase tracking-widest border border-[#7651B9]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
                               View
                             </span>
                           </div>
@@ -217,14 +217,14 @@ export default function ProjectGalleryPage() {
               <div className="flex items-center gap-4 md:gap-6">
                 <button 
                   onClick={(e) => { e.stopPropagation(); setIsPlaying(!isPlaying); }}
-                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-black/5 hover:bg-black/10 text-black transition-colors border border-black/10 backdrop-blur-md"
+                  className="w-12 h-12 flex items-center justify-center rounded-sm bg-black/5 hover:bg-black/10 text-black transition-colors border border-black/10 backdrop-blur-md"
                   title={isPlaying ? "Pause" : "Play"}
                 >
                   {isPlaying ? <Pause size={18} /> : <Play size={18} />}
                 </button>
                 <button 
                   onClick={() => setSelectedImageIndex(null)}
-                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-black/5 hover:bg-black/10 text-black transition-colors border border-black/10 backdrop-blur-md"
+                  className="w-12 h-12 flex items-center justify-center rounded-sm bg-black/5 hover:bg-black/10 text-black transition-colors border border-black/10 backdrop-blur-md"
                 >
                   <X size={20} />
                 </button>
@@ -234,7 +234,7 @@ export default function ProjectGalleryPage() {
             {/* Previous Button */}
             <button 
               onClick={handlePrev}
-              className="absolute left-4 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-lg bg-white/40 hover:bg-[#7651B9] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
+              className="absolute left-4 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-sm bg-white/40 hover:bg-[#7651B9] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
             >
               <ChevronLeft size={28} />
             </button>

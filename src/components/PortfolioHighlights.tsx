@@ -99,7 +99,7 @@ export default function PortfolioHighlights() {
     >
       <Link 
         to={`/portfolio`}
-        className="block relative w-full overflow-hidden rounded-lg md:rounded-xl bg-neutral-100 border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(118,81,185,0.18)] transition-all duration-500 hover:-translate-y-1"
+        className="block relative w-full overflow-hidden rounded-sm md:rounded bg-neutral-100 border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_15px_35px_rgba(118,81,185,0.18)] transition-all duration-500 hover:-translate-y-1"
       >
         <div className={`relative w-full ${item.aspect} overflow-hidden`}>
           <img
@@ -115,7 +115,7 @@ export default function PortfolioHighlights() {
 
           {/* Floating Category Pill */}
           <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/20 text-white font-sans text-[9px] md:text-[10px] font-semibold tracking-widest uppercase shadow-sm">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm bg-black/60 backdrop-blur-md border border-white/20 text-white font-sans text-[9px] md:text-[10px] font-semibold tracking-widest uppercase shadow-xs">
               <span className="w-1.5 h-1.5 rounded-full bg-[#7651B9]" />
               {item.tag}
             </span>
@@ -123,7 +123,7 @@ export default function PortfolioHighlights() {
 
           {/* Action Link Arrow */}
           <div className="absolute top-3 right-3 md:top-4 md:right-4 z-20">
-            <div className="w-8 h-8 rounded-md bg-white/90 backdrop-blur-md text-black flex items-center justify-center shadow-md transform group-hover:scale-110 group-hover:bg-[#7651B9] group-hover:text-white transition-all duration-300">
+            <div className="w-8 h-8 rounded-sm bg-white/90 backdrop-blur-md text-black flex items-center justify-center shadow-xs transform group-hover:scale-110 group-hover:bg-[#7651B9] group-hover:text-white transition-all duration-300">
               <ArrowUpRight size={14} />
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function PortfolioHighlights() {
           <div className="flex items-center gap-3">
             <Link
               to="/portfolio"
-              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-black/15 bg-white text-black hover:bg-[#7651B9] hover:text-white hover:border-[#7651B9] transition-all duration-300 text-xs font-bold tracking-widest uppercase shadow-sm"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-sm border border-black/15 bg-white text-black hover:bg-[#7651B9] hover:text-white hover:border-[#7651B9] transition-all duration-300 text-xs font-bold tracking-widest uppercase shadow-xs"
             >
               <span>Explore All Archives</span>
               <ArrowUpRight size={14} className="text-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />

@@ -99,7 +99,7 @@ export default function VMCourse() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
-                  className="p-3.5 bg-[#FAF9FB] border border-black/10 rounded-md hover:border-[#7651B9]/50 transition-all flex flex-col gap-1.5 group"
+                  className="p-3.5 bg-[#FAF9FB] border border-black/10 rounded-sm hover:border-[#7651B9]/50 transition-all flex flex-col gap-1.5 group"
                 >
                   <div className="flex justify-between items-center">
                     <span className="font-sans text-[10px] font-bold text-[#7651B9] tracking-widest uppercase">
@@ -122,7 +122,7 @@ export default function VMCourse() {
 
           {/* Right Column: Waitlist Sign Up Form */}
           <div className="lg:col-span-5 w-full">
-            <div className="w-full bg-[#FAF9FB] border border-[#7651B9]/20 rounded-lg p-6 md:p-8 shadow-[0_10px_35px_rgba(107,76,154,0.08)] relative overflow-hidden">
+            <div className="w-full bg-[#FAF9FB] border border-[#7651B9]/20 rounded-md p-6 md:p-8 shadow-[0_10px_35px_rgba(107,76,154,0.08)] relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#7651B9]" />
               
               <AnimatePresence mode="wait">
@@ -135,7 +135,7 @@ export default function VMCourse() {
                     className="flex flex-col gap-4"
                   >
                     <div className="flex flex-col gap-1">
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#7651B9]/10 text-[#7651B9] rounded-md text-[9px] font-bold tracking-widest uppercase w-fit">
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#7651B9]/10 text-[#7651B9] rounded-xs text-[9px] font-bold tracking-widest uppercase w-fit">
                         <Sparkles size={9} /> Next Cohort: Sept 2026
                       </div>
                       <h3 className="font-sans text-xl font-bold tracking-tight text-black mt-1">
@@ -157,7 +157,7 @@ export default function VMCourse() {
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           placeholder="e.g. Jean Laurent"
-                          className="w-full px-3.5 py-2.5 bg-white border border-black/10 rounded-md focus:outline-none focus:border-[#7651B9] text-xs transition-all placeholder:text-black/40 text-black"
+                          className="w-full px-3.5 py-2.5 bg-white border border-black/10 rounded-sm focus:outline-none focus:border-[#7651B9] text-xs transition-all placeholder:text-black/40 text-black"
                         />
                       </div>
                       
@@ -171,14 +171,14 @@ export default function VMCourse() {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="e.g. jean@fashionbrand.com"
-                          className="w-full px-3.5 py-2.5 bg-white border border-black/10 rounded-md focus:outline-none focus:border-[#7651B9] text-xs transition-all placeholder:text-black/40 text-black"
+                          className="w-full px-3.5 py-2.5 bg-white border border-black/10 rounded-sm focus:outline-none focus:border-[#7651B9] text-xs transition-all placeholder:text-black/40 text-black"
                         />
                       </div>
 
                       <button 
                         type="submit"
                         disabled={loading}
-                        className="w-full mt-1 bg-[#7651B9] hover:bg-black disabled:bg-neutral-300 text-white font-bold tracking-wider uppercase text-xs py-3 rounded-md flex items-center justify-center gap-2 transition-all duration-300 group shadow-md"
+                        className="w-full mt-1 bg-[#7651B9] hover:bg-black disabled:bg-neutral-300 text-white font-bold tracking-wider uppercase text-xs py-3 rounded-sm flex items-center justify-center gap-2 transition-all duration-300 group shadow-sm"
                       >
                         {loading ? (
                           <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
