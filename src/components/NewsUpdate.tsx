@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
-import { Linkedin, ArrowUpRight, Heart, MessageCircle, Share2, Sparkles, ChevronLeft, ChevronRight, Play, Image as ImageIcon, Video } from 'lucide-react';
+import { Linkedin, ArrowUpRight, Newspaper, Heart, MessageCircle, Share2, Sparkles, ChevronLeft, ChevronRight, CheckCircle2, Play, Image as ImageIcon, Video, ExternalLink } from 'lucide-react';
 
 const linkedInPosts = [
   {
@@ -20,28 +20,29 @@ It would give people a true appreciation for the massive, cross-functional engin
 
 To anyone currently deep in the pre-launch phase I say BRAVO to you.`,
     tags: ["#RetailStrategy", "#CommercialStreet", "#BangaloreRetail", "#StoreLaunch", "#Forecasting", "#VisualMerchandising", "#RetailDesign", "#Leadership"],
-    stats: { reactions: "140+", comments: "12", reposts: "8" },
+    stats: { reactions: "542", comments: "12", reposts: "18" },
     mediaType: "gallery",
+    mediaCount: "1/4",
     images: [
       {
-        src: "/news/post1_1.jpg",
-        caption: "15,000 sq.ft Commercial Street Flagship Scaffolding & Facade Preparation",
-        tag: "Pre-Launch Facade"
+        src: "/brands/YOUSTA.jpg",
+        caption: "15,000 sq.ft Commercial Street Flagship Facade & Structure",
+        tag: "Exterior Architecture"
       },
       {
-        src: "/news/post1_2.jpg",
-        caption: "Architectural Glazing & Commercial Street Sightlines",
-        tag: "Exterior Structure"
+        src: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
+        caption: "In-Store Spatial Journey & Visual Category Zoning",
+        tag: "Interior Zoning"
       },
       {
-        src: "/news/post1_3.jpg",
-        caption: "Multi-Level Retail Volume & Spatial Geometry",
-        tag: "Scale Architecture"
+        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg",
+        caption: "High-Traffic Sightline Choreography & Display Architecture",
+        tag: "Visual Merchandising"
       },
       {
-        src: "/news/post1_4.jpg",
-        caption: "Cross-Functional Engineering & Behind-The-Curtain Prep",
-        tag: "Operational Dynamics"
+        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
+        caption: "Illumination Geometry & Commercial Launch Window",
+        tag: "Lighting Scheme"
       }
     ],
     postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7493976849853661184/"
@@ -63,13 +64,13 @@ The true measure of our work lies in how effectively we elevate our brands, maxi
 
 Leadership in Visual Merchandising is undeniable magic. However, creativity alone isn't enough. Success requires a 360-degree integration with retail operations—driving impact in the critical, unseen spaces of the business.`,
     tags: ["#RetailLeadership", "#InStoreAsia2026", "#VisualMerchandising", "#StoreOperations", "#RetailStrategy"],
-    stats: { reactions: "684+", comments: "48", reposts: "36" },
+    stats: { reactions: "684", comments: "48", reposts: "36" },
     mediaType: "video",
     videoPreview: {
-      thumbnail: "/news/post2_video_thumb.jpg",
-      title: "Inspiring Retail & Fashion Leaders Through Effective Integration",
-      location: "In-Store Asia | Mumbai Convention Centre",
-      duration: "Live Keynote Video"
+      thumbnail: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg",
+      title: "Nuno Rosa Keynote Address | In-Store Asia Summit",
+      location: "Mumbai Convention Centre",
+      duration: "Keynote Session"
     },
     images: [
       {
@@ -235,15 +236,15 @@ export default function NewsUpdate() {
                 {/* Video or Multi-Photo Media Showcase */}
                 {activePost.mediaType === 'video' && activePost.videoPreview ? (
                   <div className="flex flex-col gap-4">
-                    {/* Featured Keynote Video Player Preview */}
+                    {/* Featured Video Player Preview */}
                     <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-black shadow-lg group border border-black/10">
                       <img 
                         src={activePost.videoPreview.thumbnail} 
                         alt={activePost.videoPreview.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
                       />
                       
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 flex flex-col justify-between p-6">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20 flex flex-col justify-between p-6">
                         <div className="flex items-center justify-between">
                           <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/90 text-white font-mono text-[10px] font-bold uppercase tracking-widest shadow-md">
                             <span className="w-2 h-2 rounded-full bg-white animate-pulse" /> LIVE KEYNOTE RECORDING
@@ -293,7 +294,7 @@ export default function NewsUpdate() {
                     </div>
                   </div>
                 ) : (
-                  /* 4-Image Grid with Exact Images from Post 1 */
+                  /* 4-Image Grid for Yousta Store Launch */
                   <div className="flex flex-col gap-3">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {activePost.images.slice(0, 2).map((img, i) => (
