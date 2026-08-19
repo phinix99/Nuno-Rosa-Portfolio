@@ -144,13 +144,13 @@ export default function ProjectGalleryPage() {
           <span className="text-neutral-900 font-bold">{categoryKey}</span>
         </nav>
 
-        {/* Sleek Single Gallery Switcher Bar */}
-        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-2 mb-6">
+        {/* Left-Aligned Visible Gallery Switcher Bar */}
+        <div className="flex flex-wrap items-center justify-start gap-2 py-2 mb-6">
           {galleryTabs.map((tab) => (
             <Link
               key={tab.slug}
               to={`/gallery/${tab.slug}`}
-              className={`shrink-0 px-3.5 py-1.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all border ${
+              className={`px-3.5 py-1.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all border ${
                 category === tab.slug
                   ? 'bg-[#7651B9] text-white border-[#7651B9] shadow-xs'
                   : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-black/5'

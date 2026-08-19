@@ -122,13 +122,13 @@ export default function Portfolio() {
           </nav>
         </div>
 
-        {/* Gallery Selectors Bar - Click any to directly open that gallery */}
-        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+        {/* Left-Aligned Visible Gallery Selectors Bar */}
+        <div className="flex flex-wrap items-center justify-start gap-2 pb-1">
           {galleryLinks.map((g) => (
             <Link 
               key={g.slug} 
               to={`/gallery/${g.slug}`}
-              className="shrink-0 px-3.5 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-800 hover:bg-[#7651B9] hover:text-white border border-black/5 hover:border-[#7651B9] shadow-xs flex items-center gap-1.5 group"
+              className="px-3.5 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-800 hover:bg-[#7651B9] hover:text-white border border-black/5 hover:border-[#7651B9] shadow-xs flex items-center gap-1.5 group"
             >
               <span>{g.name}</span>
               <ArrowUpRight size={12} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
