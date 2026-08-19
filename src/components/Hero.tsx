@@ -123,28 +123,26 @@ export default function Hero() {
         animate="visible"
         className="max-w-[1600px] mx-auto w-full flex flex-col flex-1 justify-center"
       >
-        {/* Highlighted Nuno Rosa Identification Kicker & Title */}
-        <div className="overflow-hidden mb-4 md:mb-6">
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-wrap items-center gap-2.5 mb-3"
-          >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#7651B9] text-white font-sans text-xs md:text-sm font-bold tracking-[0.2em] uppercase shadow-[0_4px_16px_rgba(118,81,185,0.3)] border border-white/20">
-              <Sparkles size={13} className="text-white animate-pulse" />
-              <span>NUNO ROSA</span>
-            </div>
-            <span className="hidden sm:inline text-black/30 font-bold">•</span>
-            <span className="text-black/70 font-sans text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
-              30+ YRS GLOBAL VISUAL MERCHANDISING & SPATIAL ARCHITECTURE
-            </span>
-          </motion.div>
-
+        {/* Main Title Area: Nuno Rosa + Subtitle + Locations */}
+        <div className="overflow-hidden mb-6 md:mb-8">
           <motion.h1 
             variants={lineVariants}
-            className="font-sans text-[9vw] md:text-[7vw] lg:text-[6vw] leading-[0.9] font-medium tracking-tighter uppercase ml-[-0.2vw] select-none text-[#7651B9]"
+            className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.2vw] leading-[0.88] font-light md:font-normal tracking-[0.03em] uppercase ml-[-0.2vw] select-none text-black"
           >
-            SPATIAL <br className="hidden md:inline" /> NARRATIVES
+            NUNO ROSA
           </motion.h1>
+          
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-col gap-1 mt-3 md:mt-4"
+          >
+            <span className="font-sans text-xl md:text-2xl lg:text-3xl font-light tracking-tight text-black/90">
+              Fashion Retail & Visual Merchandising
+            </span>
+            <span className="font-sans text-xs md:text-sm lg:text-base font-semibold tracking-[0.16em] text-[#7651B9] uppercase mt-0.5">
+              London &nbsp;|&nbsp; UAE &nbsp;|&nbsp; India &nbsp;|&nbsp; Mexico &nbsp;|&nbsp; Portugal
+            </span>
+          </motion.div>
         </div>
 
         {/* 60:30 Split Grid */}
