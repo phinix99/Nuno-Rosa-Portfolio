@@ -31,9 +31,31 @@ export default function Welcome() {
         {/* Main About Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
-          {/* Left Column: Greeting and Philosophy Statement */}
+          {/* Left Column: Image 4 (1677031409.png) with Exact Aspect Ratio */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 w-full flex justify-center lg:justify-start"
+            ref={imageRef}
+          >
+            <div className="relative w-full aspect-[900/586] rounded-sm overflow-hidden bg-neutral-100 shadow-[0_15px_40px_rgba(94,39,186,0.12)] group border border-black/10">
+              <div className="absolute inset-2 border border-[#5E27BA]/30 rounded-xs pointer-events-none z-10 transition-all duration-500 group-hover:inset-1.5 group-hover:border-[#5E27BA]" />
+              
+              <img 
+                src="/portfolio/Press & Guest Speaker/1677031409.png" 
+                alt="Nuno Rosa - Global Retail Visual Merchandising" 
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+              />
+              
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/20 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </motion.div>
+
+          {/* Right Column: Greeting and Philosophy Statement */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -68,29 +90,6 @@ export default function Welcome() {
               <span className="font-sans text-[10px] font-semibold tracking-widest uppercase opacity-40">
                 Founder & Creative Director
               </span>
-            </div>
-          </motion.div>
-
-          {/* Right Column: Portrait */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 w-full flex justify-center lg:justify-end"
-            ref={imageRef}
-          >
-            <div className="relative w-full max-w-[320px] aspect-[3/3.8] rounded-sm overflow-hidden bg-white shadow-[0_10px_30px_rgba(107,76,154,0.12)] group border border-black/10">
-              <div className="absolute inset-2 border border-[#5E27BA]/30 rounded-xs pointer-events-none z-10 transition-all duration-500 group-hover:inset-1.5 group-hover:border-[#5E27BA]" />
-              
-              <motion.img 
-                style={{ y, scale: 1.1 }}
-                src="/DP/SKPL8757_JPG.avif" 
-                alt="Nuno Rosa Portrait" 
-                className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.14]"
-              />
-              
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/20 via-transparent to-transparent pointer-events-none" />
             </div>
           </motion.div>
 
