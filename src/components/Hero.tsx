@@ -42,22 +42,22 @@ export default function Hero() {
     {
       title: "Creative Windows",
       slug: "creative-windows",
-      image: "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg"
+      image: "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG_7385.jpg"
     },
     {
       title: "In-store Display",
       slug: "in-store-display",
-      image: "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/20170227_112718.avif"
+      image: "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(4).jpg"
     },
     {
       title: "Limited Editions",
       slug: "limited-editions",
-      image: "/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg"
+      image: "/portfolio/VISUAL MERCHANDISING/Limited Editions/43527154_2279064838833119_2170682248129413120_n.jpg"
     },
     {
       title: "E-Commerce & Styling",
       slug: "e-commerce-styling",
-      image: "/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg"
+      image: "/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg"
     },
     {
       title: "Conceptual Design",
@@ -67,22 +67,22 @@ export default function Hero() {
     {
       title: "Visual Signage",
       slug: "visual-signage",
-      image: "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide1.JPG"
+      image: "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Diapositiva3.JPG"
     },
     {
       title: "Trade Shows",
       slug: "trade-shows",
-      image: "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg"
+      image: "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/Slide31.JPG"
     },
     {
       title: "Showroom Curation",
       slug: "showroom-curation",
-      image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194904.jpg"
+      image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/IMG_9004.jpg"
     },
     {
       title: "Luxury Events",
       slug: "luxury-events",
-      image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0001 (2).JPG"
+      image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0053.JPG"
     },
     {
       title: "Press & Guest Speaker",
