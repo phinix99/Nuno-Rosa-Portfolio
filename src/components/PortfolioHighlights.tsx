@@ -17,8 +17,8 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
   col1: [
     {
       id: 'c1',
-      title: 'Bespoke Windows Concepts',
-      category: 'Creative Visual Storytelling',
+      title: 'Creative Windows',
+      category: 'Visual Merchandising',
       slug: 'creative-windows',
       image: '/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg',
       aspect: 'aspect-[4/3]',
@@ -26,52 +26,52 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
     },
     {
       id: 'c2',
-      title: 'Fashion Styling & Direction',
-      category: 'E-Commerce & Styling',
-      slug: 'e-commerce-styling',
-      image: '/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg',
+      title: 'In-store Display',
+      category: 'Spatial Experience',
+      slug: 'in-store-display',
+      image: '/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA.jpg',
       aspect: 'aspect-[16/10]',
-      tag: 'Fashion Curation'
+      tag: 'Store Display'
     }
   ],
   col2: [
     {
-      id: 'c4',
-      title: 'E-Commerce Direction',
-      category: 'E-Commerce & Styling',
-      slug: 'e-commerce-styling',
-      image: '/portfolio/E-Commerce Creative Direction & Styling/02_sun_styling.jpg',
+      id: 'c3',
+      title: 'Limited Editions',
+      category: 'Bespoke Visuals',
+      slug: 'limited-editions',
+      image: '/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg',
       aspect: 'aspect-[4/3]',
-      tag: 'Art Direction'
+      tag: 'Limited Editions'
     },
     {
-      id: 'c5',
-      title: 'Retail Conceptual Design',
-      category: 'Spatial Graphic Design',
-      slug: 'conceptual-design',
-      image: '/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg',
+      id: 'c4',
+      title: 'E-Commerce & Styling',
+      category: 'Creative Direction',
+      slug: 'e-commerce-styling',
+      image: '/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg',
       aspect: 'aspect-[16/10]',
-      tag: 'Spatial Geometry'
+      tag: 'Fashion Styling'
     }
   ],
   col3: [
     {
-      id: 'c7',
-      title: 'Fashion Trade Shows',
-      category: 'Brand Retail Experiences',
-      slug: 'trade-shows',
-      image: '/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg',
+      id: 'c5',
+      title: 'Conceptual Design',
+      category: 'Spatial Graphic Design',
+      slug: 'conceptual-design',
+      image: '/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg',
       aspect: 'aspect-[4/3]',
-      tag: 'Expo Architecture'
+      tag: 'Spatial Geometry'
     },
     {
-      id: 'c8',
-      title: 'Keynote & Industry Panels',
-      category: 'Press & Guest Speaker',
-      slug: 'press-speaker',
-      image: '/portfolio/Press & Guest Speaker/SKPL8763_JPG.avif',
+      id: 'c6',
+      title: 'Visual Signage',
+      category: 'Wayfinding & Graphics',
+      slug: 'visual-signage',
+      image: '/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide102.JPG',
       aspect: 'aspect-[16/10]',
-      tag: 'Guest Speaker'
+      tag: 'Visual Signage'
     }
   ]
 };
@@ -98,7 +98,7 @@ export default function PortfolioHighlights() {
       className="group relative w-full"
     >
       <Link 
-        to={`/portfolio`}
+        to={`/gallery/${item.slug}`}
         className="block relative w-full overflow-hidden rounded-sm md:rounded bg-neutral-100 border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_15px_35px_rgba(94, 39, 186,0.18)] transition-all duration-500 hover:-translate-y-1"
       >
         <div className={`relative w-full ${item.aspect} overflow-hidden`}>
