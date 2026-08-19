@@ -38,22 +38,69 @@ export default function Hero() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
-  const heroImages = [
-    portfolioData["VISUAL MERCHANDISING"]?.[0],
-    portfolioData["E-COMMERCE & STYLING"]?.[0],
-    portfolioData["CONCEPT & SIGNAGE"]?.[0],
-    portfolioData["EVENTS & Brand Exhibition"]?.[0]
-  ].filter(Boolean) as string[];
+  const showcaseSlides = [
+    {
+      title: "Creative Windows",
+      slug: "creative-windows",
+      image: portfolioData["Creative Windows"]?.["Creative Window Concepts"]?.[0] || "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/a.jpg"
+    },
+    {
+      title: "In-store Display",
+      slug: "in-store-display",
+      image: portfolioData["In-store Display"]?.["In-store Product Displays"]?.[0] || "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/1.jpg"
+    },
+    {
+      title: "Limited Editions",
+      slug: "limited-editions",
+      image: portfolioData["Limited Editions"]?.["Limited Editions"]?.[0] || "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg"
+    },
+    {
+      title: "E-Commerce & Styling",
+      slug: "e-commerce-styling",
+      image: portfolioData["E-Commerce & Styling"]?.["E-Commerce & Styling"]?.[0] || "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg"
+    },
+    {
+      title: "Conceptual Design",
+      slug: "conceptual-design",
+      image: portfolioData["Conceptual Design"]?.["Conceptual Design"]?.[0] || "/portfolio/CONCEPTUAL DESIGN/1.jpg"
+    },
+    {
+      title: "Visual Signage",
+      slug: "visual-signage",
+      image: portfolioData["Visual Signage"]?.["Visual Signage"]?.[0] || "/portfolio/VISUAL SIGNAGE/Slide1.JPG"
+    },
+    {
+      title: "Trade Shows",
+      slug: "trade-shows",
+      image: portfolioData["Trade Shows"]?.["Trade Shows"]?.[0] || "https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg"
+    },
+    {
+      title: "Showroom Curation",
+      slug: "showroom-curation",
+      image: portfolioData["Showroom Curation"]?.["Press & Showroom Curation"]?.[0] || "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/IMG_20220816_064620.jpg"
+    },
+    {
+      title: "Luxury Events",
+      slug: "luxury-events",
+      image: portfolioData["Luxury Events"]?.["Luxury & Lifestyle Events"]?.[0] || "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg"
+    },
+    {
+      title: "Press & Guest Speaker",
+      slug: "press-speaker",
+      image: portfolioData["Press & Guest Speaker"]?.["Keynote Panels & Workshops"]?.[0] || "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg"
+    }
+  ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   useEffect(() => {
-    if (heroImages.length <= 1) return;
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 4500);
+      setCurrentSlideIndex((prev) => (prev + 1) % showcaseSlides.length);
+    }, 3600);
     return () => clearInterval(interval);
-  }, [heroImages.length]);
+  }, [showcaseSlides.length]);
+
+  const currentSlide = showcaseSlides[currentSlideIndex];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -204,36 +251,47 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: 7 Columns */}
+          {/* Right Column: 7 Columns - Automatic 10-Discipline Showcase Carousel */}
           <motion.div 
             variants={itemVariants}
             className="lg:col-span-7 w-full order-1 lg:order-2"
           >
-            <div className="relative w-full aspect-[16/9] md:aspect-[16/8.8] rounded-sm md:rounded overflow-hidden bg-neutral-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-neutral-200/80 group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#7651B9]/15 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
+            <Link 
+              to={`/gallery/${currentSlide.slug}`}
+              className="block relative w-full aspect-[16/9] md:aspect-[16/8.8] rounded-sm md:rounded overflow-hidden bg-neutral-900 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-neutral-200/80 group cursor-pointer"
+            >
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#7651B9]/20 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
               
               <AnimatePresence mode="wait">
                 <motion.img 
-                  key={currentImageIndex}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 1, ease: "easeInOut" }}
-                  style={{ y, scale: 1.08 }}
-                  src={heroImages[currentImageIndex] || "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784660741/1_228_iqyley.avif"}
-                  alt="Featured Spatial Architecture by Nuno Rosa"
+                  key={currentSlideIndex}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1.08 }}
+                  exit={{ opacity: 0, scale: 1.04 }}
+                  transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ y }}
+                  src={currentSlide.image}
+                  alt={`${currentSlide.title} showcase by Nuno Rosa`}
                   className="absolute inset-0 w-full h-full object-cover origin-center transition-transform duration-[2s] ease-out group-hover:scale-[1.12]"
                 />
               </AnimatePresence>
 
-              {/* Floating Pill Badge on Image */}
-              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/80 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] font-semibold tracking-widest uppercase shadow-lg">
-                <span className="w-1.5 h-1.5 bg-[#7651B9] rounded-full animate-pulse" />
-                Featured Spatial Showcase
+              {/* Floating Dynamic Discipline Pill Badge on Image */}
+              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-[#7651B9] transition-colors duration-300">
+                <span className="w-1.5 h-1.5 bg-[#7651B9] group-hover:bg-white rounded-full animate-pulse" />
+                <span>{currentSlide.title}</span>
+                <ArrowUpRight size={12} className="opacity-60 group-hover:opacity-100 transition-opacity" />
               </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111]/40 via-transparent to-transparent opacity-40 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none z-10" />
-            </div>
+              {/* Indicator Counter & Dots */}
+              <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 z-20 flex items-center gap-1.5 bg-[#111]/80 backdrop-blur-md px-3 py-1 rounded-sm border border-white/10 text-white font-mono text-[10px] tracking-wider uppercase">
+                <span className="text-[#7651B9] font-bold">0{currentSlideIndex + 1}</span>
+                <span className="opacity-40">/</span>
+                <span className="opacity-60">10</span>
+              </div>
+
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111]/50 via-transparent to-transparent opacity-40 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none z-10" />
+            </Link>
           </motion.div>
 
         </div>
