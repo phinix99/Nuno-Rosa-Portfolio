@@ -85,7 +85,7 @@ export default function Welcome() {
               
               <motion.img 
                 style={{ y, scale: 1.1 }}
-                src="/images/1 (224).jpg" 
+                src="/DP/SKPL8757_JPG.avif" 
                 alt="Nuno Rosa Portrait" 
                 className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.14]"
               />

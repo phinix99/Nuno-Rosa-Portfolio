@@ -67,7 +67,7 @@ Leadership in Visual Merchandising is undeniable magic. However, creativity alon
     stats: { reactions: "684", comments: "48", reposts: "36" },
     mediaType: "video",
     videoPreview: {
-      thumbnail: "/images/1 (224).jpg",
+      thumbnail: "/DP/20190118_165706_HDR~2.jpg",
       title: "Nuno Rosa Keynote Address | In-Store Asia Summit",
       location: "Mumbai Convention Centre",
       duration: "Keynote Session"
@@ -79,7 +79,7 @@ Leadership in Visual Merchandising is undeniable magic. However, creativity alon
         tag: "Stage Insights"
       },
       {
-        src: "/images/1 (228).jpg",
+        src: "/DP/20190118_165754.jpg",
         caption: "Retail Summit Discussion Panel & Industry Dialogue",
         tag: "Executive Panel"
       }
@@ -162,7 +162,7 @@ export default function NewsUpdate() {
                   className="relative group"
                 >
                   <img 
-                    src="/images/1 (224).jpg" 
+                    src="/DP/1 (1).png" 
                     alt="Nuno Rosa"
                     className="w-14 h-14 rounded-full object-cover border-2 border-[#5E27BA] group-hover:scale-105 transition-transform"
                   />
