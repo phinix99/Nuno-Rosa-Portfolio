@@ -5,69 +5,63 @@ import { Linkedin, ArrowUpRight, Newspaper, Heart, MessageCircle, Share2, Sparkl
 const linkedInPosts = [
   {
     id: "post-1",
-    tabTitle: "Yousta Store Launch",
-    category: "Retail Store Architecture",
-    date: "Recent Activity",
+    tabTitle: "YOUSTA 15,000 sq.ft Flagship Launch",
+    category: "Retail Store Architecture & Launch",
+    date: "Latest Dispatch",
     followers: "14,288+ followers",
     headline: "Global Creative Head of Visual Merchandising & Retail Design",
-    text: "Every successful retail store opening hides an invisible story. The 'behind-the-curtain' logistics of spatial choreography, sightline geometry, and human emotion coming together seamlessly in a high-traffic physical space.",
-    tags: ["#VisualMerchandising", "#RetailDesign", "#StoreOpening", "#RetailArchitecture"],
-    stats: { reactions: "528", comments: "64", reposts: "22" },
+    text: `Every successful retail store opening hides an invisible story. The "behind-the-curtain" logistics of a major launch are truly cinematic. Long before day one, teams manage high-level category forecasting and balancing complex, massive budgets under tight deadlines.
+
+For our upcoming 15,000 sq.ft. #YOUSTA Flagship launch at Commercial Street, the stakes couldn't be higher to Reliance Retail.
+
+Turning our operational dynamics into a short film would perfectly capture the chaotic brilliance that happens before the doors ever open.
+
+It would give people a true appreciation for the massive, cross-functional engine running behind the scenes to deliver a modern shopping experience pushing the boundaries of visual innovation, and product enhancement to truly stand out in a legendary retail hub.
+
+To anyone currently deep in the pre-launch phase I say BRAVO to you.`,
+    tags: ["#RetailStrategy", "#CommercialStreet", "#BangaloreRetail", "#StoreLaunch", "#Forecasting", "#VisualMerchandising", "#RetailDesign", "#Leadership"],
+    stats: { reactions: "542", comments: "12", reposts: "18" },
     images: [
       {
         src: "/brands/YOUSTA.jpg",
-        caption: "Store Facade & Illumination"
+        caption: "15,000 sq.ft Commercial Street Flagship Facade"
       },
       {
         src: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
-        caption: "In-Store Spatial Journey"
+        caption: "In-Store Spatial Journey & Visual Innovation"
       }
     ],
-    postUrl: "https://www.linkedin.com/in/fashionvisualmerchandising/"
+    postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7493976849853661184/"
   },
   {
     id: "post-2",
-    tabTitle: "Retail4Growth Feature",
-    category: "Industry Thought Leadership",
-    date: "Press Feature",
-    followers: "14,288+ followers",
-    headline: "Global Creative Head of Visual Merchandising & Retail Design",
-    text: "'Copy-paste approach is a big NO for Visual Merchandising.' In an in-depth conversation with Retail4Growth, I discussed why true retail innovation requires bespoke local identity, disciplined lighting schemes, and commercial agility.",
-    tags: ["#Retail4Growth", "#RetailStrategy", "#DesignLeadership", "#FashionRetail"],
-    stats: { reactions: "412", comments: "48", reposts: "19" },
-    images: [
-      {
-        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
-        caption: "Retail4Growth Interview Feature"
-      },
-      {
-        src: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
-        caption: "Curated Press Preview"
-      }
-    ],
-    postUrl: "https://www.linkedin.com/in/fashionvisualmerchandising/"
-  },
-  {
-    id: "post-3",
-    tabTitle: "VM Challenge & Keynote",
-    category: "Panels & Masterclasses",
+    tabTitle: "In-Store Asia Keynote Reflection",
+    category: "Industry Leadership & 360° Operations",
     date: "Keynote Dispatch",
     followers: "14,288+ followers",
     headline: "Global Creative Head of Visual Merchandising & Retail Design",
-    text: "Honored to host the VM Challenge at In-Store Asia and deliver keynote perspectives across national retail summits. Mentoring the next generation of visual storytellers is how our industry continues to evolve and thrive.",
-    tags: ["#InStoreAsia", "#VMChallenge", "#KeynoteSpeaker", "#FashionEducation"],
-    stats: { reactions: "635", comments: "79", reposts: "34" },
+    text: `What does it take to truly inspire the next generation of Retail & Fashion leaders?
+
+This was my core reflection as I took the stage at In-Store Asia at the Mumbai Convention Centre.
+
+Bringing 30+ years of global experience to the industry is a privilege, but longevity isn't the final metric.
+
+The true measure of our work lies in how effectively we elevate our brands, maximize our budgets, and empower our teams.
+
+Leadership in Visual Merchandising is undeniable magic. However, creativity alone isn't enough. Success requires a 360-degree integration with retail operations—driving impact in the critical, unseen spaces of the business.`,
+    tags: ["#RetailLeadership", "#InStoreAsia2026", "#VisualMerchandising", "#StoreOperations", "#RetailStrategy"],
+    stats: { reactions: "684", comments: "48", reposts: "36" },
     images: [
       {
         src: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg",
-        caption: "Great India Retail Summit Keynote"
+        caption: "Keynote at In-Store Asia, Mumbai Convention Centre"
       },
       {
-        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
-        caption: "Award-Winning Spatial Concept"
+        src: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
+        caption: "360° Retail Curation & Brand Elevation"
       }
     ],
-    postUrl: "https://www.linkedin.com/in/fashionvisualmerchandising/"
+    postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7483837657177972736/"
   }
 ];
 
@@ -138,7 +132,7 @@ export default function NewsUpdate() {
             <div className="p-6 md:p-8 flex items-center justify-between border-b border-black/5 bg-white/80 backdrop-blur-md">
               <div className="flex items-center gap-4">
                 <a 
-                  href={activePost.postUrl} 
+                  href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="relative group"
@@ -156,7 +150,7 @@ export default function NewsUpdate() {
                 <div className="flex flex-col">
                   <div className="flex items-center gap-2">
                     <a 
-                      href={activePost.postUrl} 
+                      href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="font-sans text-base md:text-lg font-bold text-black hover:text-[#7651B9] transition-colors"
@@ -249,9 +243,9 @@ export default function NewsUpdate() {
                     href={activePost.postUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-[#7651B9] hover:underline font-bold uppercase tracking-wider text-[11px]"
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#0077B5] hover:bg-black text-white font-bold uppercase tracking-wider text-[11px] transition-colors shadow-sm"
                   >
-                    View on LinkedIn <ArrowUpRight size={12} />
+                    <Linkedin size={13} /> View on LinkedIn <ArrowUpRight size={13} />
                   </a>
                 </div>
               </motion.div>
@@ -259,7 +253,7 @@ export default function NewsUpdate() {
 
           </div>
 
-          {/* Side Column: Profile Bio Highlights & Speaking Calendar */}
+          {/* Side Column: Profile Summary & Keynote Calendar */}
           <div className="lg:col-span-4 flex flex-col gap-6">
             
             {/* Quick Profile Summary Card */}
@@ -273,14 +267,14 @@ export default function NewsUpdate() {
                   Nuno Rosa
                 </h4>
                 <p className="font-sans text-xs md:text-sm font-light text-black/70 leading-relaxed">
-                  30+ years leading visual merchandising and spatial design across Europe, Middle East, Mexico, and India.
+                  30+ years leading visual merchandising, brand enhancement, and spatial architecture across Europe, Middle East, Mexico, and India.
                 </p>
               </div>
 
               <div className="flex flex-col gap-2.5 pt-4 border-t border-black/10 font-sans text-xs">
                 <div className="flex items-center gap-2 text-black/80">
                   <CheckCircle2 size={15} className="text-[#7651B9] shrink-0" />
-                  <span>14,280+ Active Industry Followers</span>
+                  <span>14,288+ Active Industry Followers</span>
                 </div>
                 <div className="flex items-center gap-2 text-black/80">
                   <CheckCircle2 size={15} className="text-[#7651B9] shrink-0" />
@@ -288,7 +282,7 @@ export default function NewsUpdate() {
                 </div>
                 <div className="flex items-center gap-2 text-black/80">
                   <CheckCircle2 size={15} className="text-[#7651B9] shrink-0" />
-                  <span>Open for Consultations & Workshops</span>
+                  <span>Open for Consultations & Masterclasses</span>
                 </div>
               </div>
 
