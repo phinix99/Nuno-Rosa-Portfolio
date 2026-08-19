@@ -19,7 +19,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       id: 'c1',
       title: 'Bespoke Windows Concepts',
       category: 'Creative Visual Storytelling',
-      slug: 'visual-merchandising',
+      slug: 'creative-windows',
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif',
       aspect: 'aspect-[4/3]',
       tag: 'Window Concepts'
@@ -48,7 +48,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       id: 'c5',
       title: 'Retail Conceptual Design',
       category: 'Spatial Graphic Design',
-      slug: 'concept-signage',
+      slug: 'conceptual-design',
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg',
       aspect: 'aspect-[16/10]',
       tag: 'Spatial Geometry'
@@ -59,7 +59,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       id: 'c7',
       title: 'Fashion Trade Shows',
       category: 'Brand Retail Experiences',
-      slug: 'events-exhibition',
+      slug: 'trade-shows',
       image: 'https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg',
       aspect: 'aspect-[4/3]',
       tag: 'Expo Architecture'
