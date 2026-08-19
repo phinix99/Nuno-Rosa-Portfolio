@@ -27,7 +27,7 @@ export default function Philosophy() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
 
         {/* Compact, Single-Screen Global Footprint Card */}
-        <div className="p-5 md:p-8 rounded-sm md:rounded bg-[#7651B9] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(118,81,185,0.22)] border border-white/10">
+        <div className="p-5 md:p-8 rounded-sm md:rounded bg-[#5E27BA] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(94, 39, 186,0.22)] border border-white/10">
           <div className="absolute top-0 right-0 w-80 h-80 bg-black/10 blur-[90px] rounded-full pointer-events-none" />
 
           {/* Top Bar: Section Title + Horizontal Metrics Strip */}

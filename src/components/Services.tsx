@@ -58,7 +58,7 @@ export default function Services() {
           className="w-full max-w-[1100px] mx-auto mb-20 md:mb-32 relative px-2 sm:px-4"
         >
           {/* Ambient Purple Soft Glow Behind Video */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-[#7651B9]/15 blur-[120px] rounded-full pointer-events-none z-0" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-[#5E27BA]/15 blur-[120px] rounded-full pointer-events-none z-0" />
 
           {/* Clean Rounded Video Player */}
           <div className="relative w-full aspect-[16/9] rounded-2xl md:rounded-[2rem] overflow-hidden bg-black shadow-[0_30px_80px_rgba(0,0,0,0.15)] border border-neutral-200/50 z-10">
@@ -83,7 +83,7 @@ export default function Services() {
               <div key={service.id} className="border-b border-black/10">
                 <button 
                   onClick={() => toggleService(service.id)}
-                  className={`w-full flex items-center justify-between py-8 md:py-12 text-left group transition-colors duration-300 ${isOpen ? 'text-[#7651B9]' : 'hover:text-[#7651B9]'}`}
+                  className={`w-full flex items-center justify-between py-8 md:py-12 text-left group transition-colors duration-300 ${isOpen ? 'text-[#5E27BA]' : 'hover:text-[#5E27BA]'}`}
                 >
                   <div className="flex items-center gap-12 md:gap-32 w-full">
                     <span className="font-sans text-xs font-semibold tracking-wide uppercase opacity-50 shrink-0 w-8 group-hover:opacity-100">
@@ -94,10 +94,10 @@ export default function Services() {
                     </h3>
                   </div>
                   <div className="relative w-4 h-4 shrink-0 flex items-center justify-center">
-                    <span className={`absolute w-full h-[2px] transition-colors duration-300 ${isOpen ? 'bg-[#7651B9]' : 'bg-black group-hover:bg-[#7651B9]'}`}></span>
+                    <span className={`absolute w-full h-[2px] transition-colors duration-300 ${isOpen ? 'bg-[#5E27BA]' : 'bg-black group-hover:bg-[#5E27BA]'}`}></span>
                     <motion.span 
                       animate={{ rotate: isOpen ? 0 : 90 }}
-                      className={`absolute w-full h-[2px] transition-colors duration-300 ${isOpen ? 'bg-[#7651B9]' : 'bg-black group-hover:bg-[#7651B9]'}`}
+                      className={`absolute w-full h-[2px] transition-colors duration-300 ${isOpen ? 'bg-[#5E27BA]' : 'bg-black group-hover:bg-[#5E27BA]'}`}
                     />
                   </div>
                 </button>

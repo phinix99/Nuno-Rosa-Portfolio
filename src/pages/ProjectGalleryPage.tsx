@@ -103,7 +103,7 @@ export default function ProjectGalleryPage() {
     return (
       <div className="min-h-screen bg-white text-black flex flex-col items-center justify-center">
         <h1 className="text-2xl mb-4 font-sans tracking-widest uppercase">Gallery not found</h1>
-        <button onClick={() => navigate('/')} className="px-6 py-3 bg-black text-white hover:bg-[#7651B9] hover:text-white transition-colors rounded-lg text-xs font-bold uppercase tracking-wider">
+        <button onClick={() => navigate('/')} className="px-6 py-3 bg-black text-white hover:bg-[#5E27BA] hover:text-white transition-colors rounded-lg text-xs font-bold uppercase tracking-wider">
           Return Home
         </button>
       </div>
@@ -111,15 +111,15 @@ export default function ProjectGalleryPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white text-black font-sans selection:bg-[#7651B9] selection:text-white pb-24">
+    <main className="min-h-screen bg-white text-black font-sans selection:bg-[#5E27BA] selection:text-white pb-24">
       {/* Sticky Minimal Navbar */}
       <nav className="sticky top-0 w-full z-40 bg-white/90 backdrop-blur-xl border-b border-black/5 px-6 md:px-12 py-4 md:py-5 flex justify-between items-center shadow-xs">
         <div className="flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#7651B9] transition-colors group">
+          <Link to="/" className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#5E27BA] transition-colors group">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> NUNO ROSA
           </Link>
           <span className="text-neutral-300 hidden sm:inline">|</span>
-          <Link to="/portfolio" className="text-xs uppercase tracking-wider font-semibold text-neutral-500 hover:text-[#7651B9] transition-colors hidden sm:inline">
+          <Link to="/portfolio" className="text-xs uppercase tracking-wider font-semibold text-neutral-500 hover:text-[#5E27BA] transition-colors hidden sm:inline">
             ← All Disciplines
           </Link>
         </div>
@@ -133,11 +133,11 @@ export default function ProjectGalleryPage() {
       <header className="max-w-[1600px] mx-auto px-4 md:px-12 pt-6 md:pt-10 pb-6">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500 mb-4">
-          <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
+          <Link to="/" className="hover:text-[#5E27BA] transition-colors flex items-center gap-1.5 font-medium">
             <Home size={13} /> Home
           </Link>
           <ChevronRight size={13} className="text-neutral-400" />
-          <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors">
+          <Link to="/portfolio" className="hover:text-[#5E27BA] transition-colors">
             Portfolio
           </Link>
           <ChevronRight size={13} className="text-neutral-400" />
@@ -152,7 +152,7 @@ export default function ProjectGalleryPage() {
               to={`/gallery/${tab.slug}`}
               className={`px-3.5 py-1.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all border ${
                 category === tab.slug
-                  ? 'bg-[#7651B9] text-white border-[#7651B9] shadow-xs'
+                  ? 'bg-[#5E27BA] text-white border-[#5E27BA] shadow-xs'
                   : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-black/5'
               }`}
             >
@@ -167,7 +167,7 @@ export default function ProjectGalleryPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase text-black">
               {categoryKey}
             </h1>
-            <div className="w-12 h-[2.5px] bg-[#7651B9] mt-2" />
+            <div className="w-12 h-[2.5px] bg-[#5E27BA] mt-2" />
           </div>
           <span className="font-mono text-xs text-black/40 uppercase tracking-widest hidden sm:inline">
             {flattenedImages.length} Visuals
@@ -214,7 +214,7 @@ export default function ProjectGalleryPage() {
                           viewport={{ once: true, margin: "50px" }}
                           transition={{ duration: 0.5, delay: (localIdx % 10) * 0.05 }}
                           onClick={() => setSelectedImageIndex(globalIndex)}
-                          className={`group relative rounded-sm md:rounded overflow-hidden bg-white border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#7651B9]/50 transition-all duration-500 ${spanClass}`}
+                          className={`group relative rounded-sm md:rounded overflow-hidden bg-white border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#5E27BA]/50 transition-all duration-500 ${spanClass}`}
                         >
                           <img 
                             src={src} 
@@ -222,9 +222,9 @@ export default function ProjectGalleryPage() {
                             className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#7651B9]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                          <div className="absolute inset-0 bg-[#7651B9]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                            <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-xs text-[#7651B9] font-mono text-xs uppercase tracking-widest border border-[#7651B9]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#5E27BA]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          <div className="absolute inset-0 bg-[#5E27BA]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                            <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-xs text-[#5E27BA] font-mono text-xs uppercase tracking-widest border border-[#5E27BA]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
                               View
                             </span>
                           </div>
@@ -274,7 +274,7 @@ export default function ProjectGalleryPage() {
             {/* Previous Button */}
             <button 
               onClick={handlePrev}
-              className="absolute left-4 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-sm bg-white/40 hover:bg-[#7651B9] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
+              className="absolute left-4 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-sm bg-white/40 hover:bg-[#5E27BA] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
             >
               <ChevronLeft size={28} />
             </button>
@@ -299,7 +299,7 @@ export default function ProjectGalleryPage() {
             {/* Next Button */}
             <button 
               onClick={handleNext}
-              className="absolute right-4 md:right-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-white/40 hover:bg-[#7651B9] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
+              className="absolute right-4 md:right-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bg-white/40 hover:bg-[#5E27BA] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
             >
               <ChevronRight size={28} />
             </button>
@@ -307,7 +307,7 @@ export default function ProjectGalleryPage() {
             {/* Progress Bar (if playing) */}
             {isPlaying && (
               <motion.div 
-                className="absolute bottom-0 left-0 h-1 bg-[#7651B9]"
+                className="absolute bottom-0 left-0 h-1 bg-[#5E27BA]"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 3.5, ease: "linear", repeat: Infinity, key: selectedImageIndex }}

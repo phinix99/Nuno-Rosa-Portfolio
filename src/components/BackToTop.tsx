@@ -35,7 +35,7 @@ export default function BackToTop() {
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
           aria-label="Back to top"
-          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 p-3.5 md:p-4 rounded-full bg-[#111] text-white hover:bg-[#7651B9] shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_35px_rgba(118,81,185,0.4)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 flex items-center justify-center border border-white/20 cursor-pointer"
+          className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 p-3.5 md:p-4 rounded-full bg-[#111] text-white hover:bg-[#5E27BA] shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_35px_rgba(94, 39, 186,0.4)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95 flex items-center justify-center border border-white/20 cursor-pointer"
           title="Back to Top"
         >
           <ArrowUp size={20} strokeWidth={2.2} />

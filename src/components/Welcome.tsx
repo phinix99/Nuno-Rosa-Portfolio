@@ -39,12 +39,12 @@ export default function Welcome() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col items-start gap-5"
           >
-            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-[#7651B9]">
-              <span className="w-2 h-2 bg-[#7651B9] rounded-full animate-pulse" />
+            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-[#5E27BA]">
+              <span className="w-2 h-2 bg-[#5E27BA] rounded-full animate-pulse" />
               <span>ABOUT ME</span>
             </div>
             
-            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-[#7651B9]">
+            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-[#5E27BA]">
               Balancing artistic vision with proven commercial results at any scale.
             </h2>
             
@@ -62,7 +62,7 @@ export default function Welcome() {
 
             {/* Designer Signature Detail */}
             <div className="flex flex-col gap-0.5 mt-1">
-              <span className="font-serif italic text-2xl md:text-3xl text-[#7651B9] font-light tracking-wide select-none">
+              <span className="font-serif italic text-2xl md:text-3xl text-[#5E27BA] font-light tracking-wide select-none">
                 Nuno Rosa
               </span>
               <span className="font-sans text-[10px] font-semibold tracking-widest uppercase opacity-40">
@@ -81,7 +81,7 @@ export default function Welcome() {
             ref={imageRef}
           >
             <div className="relative w-full max-w-[320px] aspect-[3/3.8] rounded-sm overflow-hidden bg-white shadow-[0_10px_30px_rgba(107,76,154,0.12)] group border border-black/10">
-              <div className="absolute inset-2 border border-[#7651B9]/30 rounded-xs pointer-events-none z-10 transition-all duration-500 group-hover:inset-1.5 group-hover:border-[#7651B9]" />
+              <div className="absolute inset-2 border border-[#5E27BA]/30 rounded-xs pointer-events-none z-10 transition-all duration-500 group-hover:inset-1.5 group-hover:border-[#5E27BA]" />
               
               <motion.img 
                 style={{ y, scale: 1.1 }}
@@ -104,7 +104,7 @@ export default function Welcome() {
           transition={{ duration: 0.5 }}
           className="w-full border-t border-neutral-200/80 pt-6 mt-10 md:mt-12"
         >
-          <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#7651B9] uppercase mb-4">
+          <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#5E27BA] uppercase mb-4">
             <Sparkles size={13} />
             <span>GLOBAL RETAIL EXPERT</span>
           </div>
@@ -120,7 +120,7 @@ export default function Welcome() {
                     {item.value}
                   </span>
                   {item.suffix && (
-                    <span className="font-sans text-xl lg:text-2xl font-bold text-[#7651B9]">
+                    <span className="font-sans text-xl lg:text-2xl font-bold text-[#5E27BA]">
                       {item.suffix}
                     </span>
                   )}

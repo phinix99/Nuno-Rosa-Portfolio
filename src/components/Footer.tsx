@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#7651B9] text-white px-6 md:px-12 lg:px-20 py-10 md:py-16" id="contact">
+    <footer className="w-full bg-[#5E27BA] text-white px-6 md:px-12 lg:px-20 py-10 md:py-16" id="contact">
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <motion.div 
           initial={{ opacity: 0 }}

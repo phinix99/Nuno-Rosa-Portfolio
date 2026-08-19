@@ -24,7 +24,7 @@ function RollingReel({ value, suffix = "" }: { value: number; suffix?: string })
           ))}
         </motion.div>
       </span>
-      <span className="text-[#7651B9] ml-0.5">{suffix}</span>
+      <span className="text-[#5E27BA] ml-0.5">{suffix}</span>
     </span>
   );
 }
@@ -148,16 +148,16 @@ export default function Hero() {
       >
         {/* Navigation Menu */}
         <div className="flex flex-wrap justify-end items-center gap-x-6 md:gap-x-10 gap-y-2">
-          <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <Link to="/portfolio" className="hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Portfolio
           </Link>
-          <a href="#about" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#about" className="hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
             About Me
           </a>
-          <a href="#vm-course" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#vm-course" className="hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
             VM Course
           </a>
-          <a href="#contact" className="hover:text-[#7651B9] transition-colors flex items-center gap-1 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#contact" className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Contact <ArrowUpRight size={13} strokeWidth={2.5} />
           </a>
         </div>
@@ -186,7 +186,7 @@ export default function Hero() {
             <span className="font-sans text-xl md:text-2xl lg:text-3xl font-light tracking-tight text-black/90">
               Fashion Retail & Visual Merchandising
             </span>
-            <span className="font-sans text-xs md:text-sm lg:text-base font-semibold tracking-[0.12em] text-[#7651B9] uppercase mt-0.5">
+            <span className="font-sans text-xs md:text-sm lg:text-base font-semibold tracking-[0.12em] text-[#5E27BA] uppercase mt-0.5">
               London &nbsp;|&nbsp; UAE &nbsp;|&nbsp; India &nbsp;|&nbsp; Mexico &nbsp;|&nbsp; Portugal
             </span>
           </motion.div>
@@ -200,7 +200,7 @@ export default function Hero() {
             variants={itemVariants}
             className="lg:col-span-5 flex flex-col items-start gap-6 lg:pr-4 order-2 lg:order-1"
           >
-            <div className="flex items-center gap-2 bg-[#7651B9]/10 text-[#7651B9] px-3 py-1 rounded-sm font-sans text-[11px] font-semibold tracking-wider uppercase border border-[#7651B9]/20">
+            <div className="flex items-center gap-2 bg-[#5E27BA]/10 text-[#5E27BA] px-3 py-1 rounded-sm font-sans text-[11px] font-semibold tracking-wider uppercase border border-[#5E27BA]/20">
               <Sparkles size={12} />
               <span>Spatial Design & Visual Merchandising</span>
             </div>
@@ -212,13 +212,13 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-4 font-sans text-xs font-semibold tracking-wider uppercase">
               <a 
                 href="#contact" 
-                className="bg-[#7651B9] text-white px-7 py-3 rounded-sm hover:bg-black hover:text-white hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2 text-xs"
+                className="bg-[#5E27BA] text-white px-7 py-3 rounded-sm hover:bg-black hover:text-white hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2 text-xs"
               >
                 Start Project <ArrowUpRight size={13} strokeWidth={2.5} />
               </a>
               <a 
                 href="#about" 
-                className="flex items-center gap-1 py-2 px-1 hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-black/30 hover:after:bg-[#7651B9] text-xs"
+                className="flex items-center gap-1 py-2 px-1 hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-black/30 hover:after:bg-[#5E27BA] text-xs"
               >
                 My Approach
               </a>
@@ -260,7 +260,7 @@ export default function Hero() {
               to={`/gallery/${currentSlide.slug}`}
               className="block relative w-full aspect-[16/9] md:aspect-[16/8.8] rounded-sm md:rounded overflow-hidden bg-neutral-900 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-neutral-200/80 group cursor-pointer"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#7651B9]/20 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#5E27BA]/20 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
               
               <AnimatePresence mode="wait">
                 <motion.img 
@@ -277,15 +277,15 @@ export default function Hero() {
               </AnimatePresence>
 
               {/* Floating Dynamic Discipline Pill Badge on Image */}
-              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-[#7651B9] transition-colors duration-300">
-                <span className="w-1.5 h-1.5 bg-[#7651B9] group-hover:bg-white rounded-full animate-pulse" />
+              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-[#5E27BA] transition-colors duration-300">
+                <span className="w-1.5 h-1.5 bg-[#5E27BA] group-hover:bg-white rounded-full animate-pulse" />
                 <span>{currentSlide.title}</span>
                 <ArrowUpRight size={12} className="opacity-60 group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Indicator Counter & Dots */}
               <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 z-20 flex items-center gap-1.5 bg-[#111]/80 backdrop-blur-md px-3 py-1 rounded-sm border border-white/10 text-white font-mono text-[10px] tracking-wider uppercase">
-                <span className="text-[#7651B9] font-bold">0{currentSlideIndex + 1}</span>
+                <span className="text-[#5E27BA] font-bold">0{currentSlideIndex + 1}</span>
                 <span className="opacity-40">/</span>
                 <span className="opacity-60">10</span>
               </div>
