@@ -170,23 +170,23 @@ export default function Hero() {
         animate="visible"
         className="max-w-[1600px] mx-auto w-full flex flex-col flex-1 justify-center"
       >
-        {/* Main Title Area: Nuno Rosa + Subtitle + Locations */}
-        <div className="overflow-hidden mb-6 md:mb-8">
+        {/* Main Title Area: NUNO ROSA + Subtitle + Locations */}
+        <div className="overflow-hidden mb-4 md:mb-6">
           <motion.h1 
             variants={lineVariants}
-            className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.2vw] leading-[0.88] font-light md:font-normal tracking-[0.03em] uppercase ml-[-0.2vw] select-none text-black"
+            className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.2vw] leading-[0.88] font-normal tracking-tight md:tracking-[-0.02em] uppercase select-none text-black ml-0 text-left"
           >
             NUNO ROSA
           </motion.h1>
           
           <motion.div 
             variants={itemVariants}
-            className="flex flex-col gap-1 mt-3 md:mt-4"
+            className="flex flex-col gap-1 mt-2 md:mt-3 text-left"
           >
             <span className="font-sans text-xl md:text-2xl lg:text-3xl font-light tracking-tight text-black/90">
               Fashion Retail & Visual Merchandising
             </span>
-            <span className="font-sans text-xs md:text-sm lg:text-base font-semibold tracking-[0.16em] text-[#7651B9] uppercase mt-0.5">
+            <span className="font-sans text-xs md:text-sm lg:text-base font-semibold tracking-[0.12em] text-[#7651B9] uppercase mt-0.5">
               London &nbsp;|&nbsp; UAE &nbsp;|&nbsp; India &nbsp;|&nbsp; Mexico &nbsp;|&nbsp; Portugal
             </span>
           </motion.div>
