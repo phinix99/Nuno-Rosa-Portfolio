@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, Sparkles, Home, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Home, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const portfolioData = [
@@ -131,39 +131,26 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* Page Header & Breadcrumb */}
-      <header className="max-w-[1500px] mx-auto px-6 md:px-12 pt-12 md:pt-20 pb-12 border-b border-neutral-200/80">
-        
+      {/* Minimal Header & Breadcrumbs */}
+      <header className="max-w-[1500px] mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-6 border-b border-neutral-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
         {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500 mb-8">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500">
           <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
             <Home size={13} /> Home
           </Link>
           <ChevronRight size={13} className="text-neutral-400" />
-          <span className="text-neutral-900 font-bold">Portfolio Archives</span>
+          <span className="text-neutral-900 font-bold">Portfolio</span>
         </nav>
 
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#7651B9] uppercase">
-            <Sparkles size={14} /> ARCHITECTURAL PORTFOLIO
-          </div>
-          <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight uppercase text-[#111] leading-none">
-            CREATIVE DISCIPLINE ARCHIVES
-          </h1>
-          <p className="font-sans text-base md:text-lg font-light text-neutral-600 max-w-2xl leading-relaxed mt-2">
-            A comprehensive curation of retail window displays, editorial styling, spatial exhibition architectures, and keynote speaking engagements worldwide.
-          </p>
-        </div>
-
-        {/* Mobile Quick Category Bar */}
-        <div className="flex xl:hidden items-center gap-2 overflow-x-auto no-scrollbar pt-8 pb-2">
+        {/* Quick Category Bar */}
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
           {portfolioData.map((section) => (
             <button 
               key={section.slug} 
               onClick={() => scrollToSection(section.slug)}
-              className={`shrink-0 px-4 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all ${
+              className={`shrink-0 px-3.5 py-1.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all ${
                 activeSlug === section.slug 
-                  ? 'bg-[#111] text-white' 
+                  ? 'bg-[#111] text-white shadow-xs' 
                   : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
               }`}
             >
@@ -174,19 +161,22 @@ export default function Portfolio() {
       </header>
 
       {/* Portfolio Content - Alternating Sections Layout */}
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12 py-16 md:py-24 flex flex-col gap-24 md:gap-32">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-12 py-12 md:py-20 flex flex-col gap-20 md:gap-28">
         {portfolioData.map((section, idx) => {
           const isEven = idx % 2 === 1; // 0-indexed: 1 and 3 are bordered boxes
           
           const sectionContent = (
-            <div className="flex flex-col gap-8 md:gap-12">
+            <div className="flex flex-col gap-8 md:gap-10">
               {/* Section Header */}
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                <div className="flex flex-col gap-2">
-                  <span className="text-xs font-mono font-bold tracking-widest text-[#7651B9] uppercase">
-                    DISCIPLINE 0{idx + 1}
-                  </span>
-                  <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl font-light tracking-tight uppercase text-[#111] leading-[1.08]">
+              <div className="flex flex-col gap-2">
+                <span className="text-xs font-mono font-bold tracking-widest text-[#7651B9] uppercase">
+                  DISCIPLINE 0{idx + 1}
+                </span>
+                <Link 
+                  to={`/gallery/${section.slug}`}
+                  className="group w-fit"
+                >
+                  <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight uppercase text-[#111] leading-[1.08] group-hover:text-[#7651B9] transition-colors">
                     {section.category.split(' & ').map((part, i, arr) => (
                       <span key={i}>
                         {part}
@@ -194,14 +184,6 @@ export default function Portfolio() {
                       </span>
                     ))}
                   </h2>
-                </div>
-
-                <Link
-                  to={`/gallery/${section.slug}`}
-                  className="flex items-center gap-2 px-6 py-3 rounded-sm border border-black/20 hover:border-[#7651B9] hover:bg-[#7651B9] hover:text-white transition-all text-xs font-bold tracking-widest uppercase text-black group w-fit shadow-xs"
-                >
-                  View Full Gallery
-                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               </div>
 

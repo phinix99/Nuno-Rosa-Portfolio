@@ -271,7 +271,14 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
       "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0154 (2).JPG"
     ]
   },
-  "PRESS & GUEST SPEAKER": {},
+  "PRESS & GUEST SPEAKER": {
+    "Keynote Panels & Summits": [
+      "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg",
+      "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
+      "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
+      "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg"
+    ]
+  },
   "VISUAL MERCHANDISING": {
     "IN STORE": [
       "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/1.jpg",
