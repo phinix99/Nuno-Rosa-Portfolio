@@ -13,26 +13,11 @@ const timeline = [
   { location: "Lisbon, Portugal", year: "1996", brand: "MANGO", role: "Country VM of Franchise Expansion" }
 ];
 
-const brandLogos = [
-  { name: "Hugo Boss", src: "/brands/966_hugoboss.jpg" },
-  { name: "Jack & Jones", src: "/brands/1200px-Jack_&_Jones_logo.svg (1).png" },
-  { name: "Vero Moda", src: "/brands/Vero-Moda-Logo500x417_02.png" },
-  { name: "Mango", src: "/brands/mango_logo.gif" },
-  { name: "United Colors of Benetton", src: "/brands/ucb.jpg" },
-  { name: "Yousta", src: "/brands/YOUSTA.jpg" },
-  { name: "Reliance Trends", src: "/brands/reliance-trends-logo-hd.png" },
-  { name: "Bell & Ross", src: "/brands/bell-ross-1.svg" },
-  { name: "Chalhoub Group", src: "/brands/20140713_chalhoub.jpg" },
-  { name: "COS Bicester", src: "/brands/COS Bicester Logo BLACK L_JPG.jpg" },
-  { name: "Ermenegildo Zegna", src: "/brands/Logo_von_Ermenegildo_Zegna.svg.png" },
-  { name: "Tod's", src: "/brands/Tods-Logo-normal.png" },
-  { name: "Marc Jacobs", src: "/brands/marcjacobs.jpg" },
-  { name: "S.T. Dupont", src: "/brands/st_ dupont logo.jpg" },
-  { name: "Pequignet", src: "/brands/pequignet-logo.png" },
-  { name: "Jack & Jones Junior", src: "/brands/jackjones_junior_logo_1_line_blue_rgb.png" },
-  { name: "DSD", src: "/brands/DSD.png" },
-  { name: "260", src: "/brands/260_01.jpg" }
-];
+const brandLogos = Array.from({ length: 23 }, (_, i) => ({
+  id: `brand-${i + 1}`,
+  src: `/brands/${i + 1}.jpg`,
+  alt: `Global Brand Icon ${i + 1}`
+}));
 
 const metrics = [
   { icon: Globe2, label: "International Experience", value: "30+ Yrs" },
@@ -62,29 +47,23 @@ export default function Philosophy() {
           <motion.div 
             className="flex items-center py-6"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 32 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
             style={{ width: "fit-content" }}
           >
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
               <div 
-                key={`${brand.name}-${idx}`} 
+                key={`${brand.id}-${idx}`} 
                 className="flex items-center justify-center shrink-0 w-44 md:w-60 lg:w-68 h-24 md:h-28 mx-6 md:mx-10 group"
               >
                 <div className="w-full h-full flex items-center justify-center p-2">
                   <img 
                     src={brand.src} 
-                    alt={brand.name}
-                    className="max-h-14 md:max-h-18 lg:max-h-20 max-w-[170px] md:max-w-[220px] lg:max-w-[250px] w-auto h-auto object-contain filter grayscale contrast-125 mix-blend-multiply opacity-55 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-115 transform-gpu origin-center"
+                    alt={brand.alt}
+                    className="max-h-16 md:max-h-20 lg:max-h-24 max-w-[180px] md:max-w-[230px] lg:max-w-[260px] w-auto h-auto object-contain filter grayscale contrast-125 mix-blend-multiply opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-115 transform-gpu origin-center"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
-                      if (e.currentTarget.nextElementSibling) {
-                        e.currentTarget.nextElementSibling.classList.remove('hidden');
-                      }
                     }}
                   />
-                  <span className="hidden font-sans text-base md:text-xl font-bold tracking-tight text-black/70 group-hover:text-[#7651B9] transition-colors cursor-default text-center">
-                    {brand.name}
-                  </span>
                 </div>
               </div>
             ))}
