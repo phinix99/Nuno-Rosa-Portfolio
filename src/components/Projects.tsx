@@ -42,7 +42,7 @@ const projects = [
     id: 7,
     title: "Vogue Retail Summit",
     category: "Press & Guest Speaker Events",
-    image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG",
+    image: "/portfolio/Press & Guest Speaker/SKPL8763_JPG.jpg",
   },
   {
     id: 8,
