@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Sparkles, Award } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
@@ -114,11 +114,13 @@ export default function Hero() {
                     transition: { duration: 0.6, delay: i * 0.04, ease: "easeInOut" }
                   }
                 }}
-                className="bg-[#111] opacity-95 rounded-[1px]"
+                className="bg-[#7651B9] rounded-[1px]"
               />
             ))}
           </div>
-          <span className="tracking-widest group-hover:opacity-60 transition-opacity">NUNO ROSA</span>
+          <span className="tracking-[0.22em] font-extrabold text-[#7651B9] group-hover:text-black transition-colors text-sm">
+            NUNO ROSA
+          </span>
         </motion.div>
         
         {/* Navigation Menu */}
@@ -145,16 +147,22 @@ export default function Hero() {
         animate="visible"
         className="max-w-[1600px] mx-auto w-full flex flex-col"
       >
-        {/* Dynamic Display Title */}
+        {/* Highlighted Nuno Rosa Identification Kicker & Dynamic Display Title */}
         <div className="overflow-hidden mb-6 md:mb-8">
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap gap-2 md:gap-4 mb-4 text-[#111]/70 font-sans text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase"
+            className="flex flex-wrap items-center gap-3 mb-5"
           >
-            <span className="text-[#111]">NUNO ROSA PORTFOLIO</span>
-            <span className="hidden md:inline text-[#7651B9]">|</span>
-            <span>LISBON • LONDON • DUBAI • MEXICO • MUMBAI • BANGALORE</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#7651B9] text-white font-sans text-xs md:text-sm font-bold tracking-[0.2em] uppercase shadow-[0_4px_20px_rgba(118,81,185,0.35)] border border-white/20">
+              <Sparkles size={14} className="text-white animate-pulse" />
+              <span>NUNO ROSA</span>
+            </div>
+            <span className="hidden sm:inline text-black/30 font-bold">•</span>
+            <span className="text-black/70 font-sans text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
+              30+ YRS GLOBAL VISUAL MERCHANDISING & SPATIAL ARCHITECTURE
+            </span>
           </motion.div>
+
           <motion.h1 
             variants={lineVariants}
             className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.5vw] leading-[0.88] font-medium tracking-tighter uppercase ml-[-0.3vw] select-none text-[#7651B9]"
@@ -262,4 +270,3 @@ export default function Hero() {
     </section>
   );
 }
-

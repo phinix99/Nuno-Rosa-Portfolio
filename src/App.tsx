@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import ProjectGalleryPage from './pages/ProjectGalleryPage';
+import BackToTop from './components/BackToTop';
 
 function HashAndScrollHandler({ lenis }: { lenis: Lenis | null }) {
   const { pathname, hash } = useLocation();
@@ -80,6 +81,7 @@ export default function App() {
         <Route path="/portfolio/:category?" element={<Portfolio />} />
         <Route path="/gallery/:category" element={<ProjectGalleryPage />} />
       </Routes>
+      <BackToTop />
     </>
   );
 }
