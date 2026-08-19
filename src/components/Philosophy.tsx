@@ -1,97 +1,93 @@
 import { motion } from 'motion/react';
-import { Globe2, Briefcase, Award, TrendingUp, Users, MapPin, Building2, CheckCircle2 } from 'lucide-react';
+import { Globe2, Sparkles, TrendingUp, Building2, Award } from 'lucide-react';
 
 const timeline = [
   { location: "Bangalore, India", year: "2025", brand: "YOUSTA", role: "Chief of Visual Merchandising" },
-  { location: "Bangalore, India", year: "2024", brand: "TRENDS", role: "Vice President of Visual Merchandising F&L" },
-  { location: "Mumbai, India", year: "2022", brand: "JACK & JONES Men's and Juniors", role: "Head of VM & E-commerce Styling Manager" },
-  { location: "Mumbai, India", year: "2015", brand: "VERO MODA", role: "Head of VM & E-commerce Styling Manager" },
-  { location: "GDL, Mexico", year: "2013", brand: "C&A", role: "Department Stores National Head VM & Brand Presentation" },
-  { location: "UK & Ireland", year: "2010", brand: "LACOSTE", role: "Visual Merchandising Director & Store Design Manager" },
-  { location: "Dubai & GC, UAE", year: "2008", brand: "Chalhoub Group (Waterman, Bell & Ross, S.T.Dupont, Misaki)", role: "Senior Regional VM Manager" },
+  { location: "Bangalore, India", year: "2024", brand: "TRENDS", role: "VP of Visual Merchandising F&L" },
+  { location: "Mumbai, India", year: "2022", brand: "JACK & JONES", role: "Head of VM & Styling" },
+  { location: "Mumbai, India", year: "2015", brand: "VERO MODA", role: "Head of VM & Styling" },
+  { location: "GDL, Mexico", year: "2013", brand: "C&A", role: "National Head of VM" },
+  { location: "UK & Ireland", year: "2010", brand: "LACOSTE", role: "VM & Store Design Director" },
+  { location: "Dubai, UAE", year: "2008", brand: "CHALHOUB GROUP", role: "Senior Regional VM Manager" },
   { location: "London, UK", year: "2005", brand: "HUGO BOSS", role: "Area Display Merchandiser" },
-  { location: "Lisbon, Portugal", year: "1996", brand: "MANGO", role: "Country VM of Franchise Expansion" }
+  { location: "Lisbon, Portugal", year: "1996", brand: "MANGO", role: "Country VM Lead" }
 ];
 
 const metrics = [
-  { icon: Globe2, label: "International Experience", value: "30+ Yrs" },
-  { icon: MapPin, label: "Market Takeover", value: "3 Continents" },
-  { icon: TrendingUp, label: "Annual VM Budget Savings", value: "+5Cr INR" },
+  { icon: Globe2, label: "Experience", value: "30+ Yrs" },
+  { icon: Sparkles, label: "Market Reach", value: "3 Continents" },
   { icon: Building2, label: "Stores Managed", value: "2,000+" },
-  { icon: Users, label: "Professionals Managed", value: "50+" },
-  { icon: CheckCircle2, label: "Brand Enhancement", value: "45%+" },
-  { icon: Award, label: "National Window Awards", value: "4" },
-  { icon: Users, label: "Guest Speaker / Host", value: "10x" }
+  { icon: TrendingUp, label: "Annual VM Savings", value: "+5Cr INR" },
+  { icon: Award, label: "Window Awards", value: "4 National" }
 ];
 
 export default function Philosophy() {
   return (
-    <section className="w-full bg-white text-black py-20 md:py-28 border-b border-black/10 overflow-hidden" id="philosophy">
+    <section className="w-full bg-white text-black py-16 md:py-20 border-b border-black/10 overflow-hidden" id="philosophy">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
 
-        {/* Global Footprint Timeline */}
-        <div className="p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-[2rem] bg-[#7651B9] text-white relative overflow-hidden shadow-[0_30px_60px_rgba(107,76,154,0.3)] border border-white/10">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-black/10 blur-[120px] rounded-full pointer-events-none" />
+        {/* Compact, High-Impact Global Footprint Card */}
+        <div className="p-6 md:p-10 lg:p-12 rounded-2xl md:rounded-[2rem] bg-[#7651B9] text-white relative overflow-hidden shadow-[0_25px_50px_rgba(118,81,185,0.25)] border border-white/10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-black/10 blur-[100px] rounded-full pointer-events-none" />
 
-          <div className="relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-20">
-            
-            {/* Left: Metrics */}
-            <div className="w-full lg:w-1/3 flex flex-col">
-              <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-black/50 uppercase mb-4">
-                <Globe2 size={14} /> Career Highlights
+          {/* Top Bar: Section Title + Horizontal Metrics Strip */}
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-8 md:pb-10 border-b border-white/15">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-white/70 uppercase">
+                <Globe2 size={14} /> Career Trajectory
               </div>
-              <h4 className="font-sans text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white mb-10">
-                GLOBAL <br /> FOOTPRINT
-              </h4>
-              
-              <div className="grid grid-cols-2 gap-x-6 gap-y-8">
-                {metrics.map((metric, idx) => (
-                  <div key={idx} className="flex flex-col gap-1.5 border-l-2 border-white/10 pl-4">
-                    <span className="font-sans text-2xl font-bold tracking-tight text-white">
-                      {metric.value}
-                    </span>
-                    <span className="font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase text-white/50">
-                      {metric.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <h3 className="font-sans text-3xl md:text-5xl font-medium tracking-tight text-white uppercase leading-none">
+                GLOBAL FOOTPRINT
+              </h3>
             </div>
 
-            {/* Right: Timeline */}
-            <div className="w-full lg:w-2/3 flex flex-col gap-4">
-              {timeline.map((item, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-20px" }}
-                  transition={{ duration: 0.5, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between py-4 px-6 rounded-xl bg-black/[0.05] border border-black/10 hover:bg-black/[0.1] hover:border-black/20 transition-all duration-300 group cursor-default gap-2 sm:gap-6"
-                >
-                  <div className="flex items-center gap-4 min-w-[200px]">
-                    <span className="font-mono text-sm md:text-base font-bold text-white group-hover:text-black transition-colors tabular-nums">
-                      {item.year}
+            {/* Streamlined Horizontal Highlights */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 font-sans">
+              {metrics.map((m, idx) => (
+                <div key={idx} className="flex flex-col border-l border-white/20 pl-3.5">
+                  <span className="text-xl md:text-2xl font-bold tracking-tight text-white leading-tight">
+                    {m.value}
+                  </span>
+                  <span className="text-[10px] md:text-[11px] font-medium tracking-wider uppercase text-white/70 mt-0.5">
+                    {m.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 2-Column Compact Timeline Grid */}
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 pt-8 md:pt-10">
+            {timeline.map((item, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.04 }}
+                className="flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-black/[0.08] hover:bg-black/[0.16] border border-white/10 hover:border-white/25 transition-all duration-300 group cursor-default"
+              >
+                <div className="flex items-center gap-3 min-w-0 pr-2">
+                  <span className="font-mono text-xs md:text-sm font-bold text-white/90 group-hover:text-white tabular-nums shrink-0 px-2 py-1 rounded bg-white/10">
+                    {item.year}
+                  </span>
+                  <div className="flex flex-col min-w-0">
+                    <span className="font-sans text-xs md:text-sm font-semibold text-white tracking-tight truncate">
+                      {item.role}
                     </span>
-                    <span className="font-sans text-[11px] md:text-xs font-bold tracking-widest uppercase text-white/70 group-hover:text-black/70 transition-colors">
+                    <span className="font-sans text-[10px] text-white/60 uppercase tracking-wider truncate">
                       {item.location}
                     </span>
                   </div>
-                  
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 flex-1 lg:justify-end text-left sm:text-right">
-                    <span className="font-sans text-sm md:text-base font-medium tracking-wide text-white group-hover:text-black transition-colors">
-                      {item.role}
-                    </span>
-                    <span className="hidden sm:inline text-white/30">|</span>
-                    <span className="font-sans text-[11px] md:text-xs font-bold tracking-widest uppercase text-white/90 group-hover:text-black/90">
-                      @{item.brand}
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                </div>
 
+                <span className="font-sans text-[10px] md:text-xs font-bold tracking-wider uppercase text-white/90 shrink-0 px-2.5 py-1 rounded-full bg-white/15 border border-white/10 group-hover:bg-white group-hover:text-black transition-colors">
+                  @{item.brand}
+                </span>
+              </motion.div>
+            ))}
           </div>
+
         </div>
 
       </div>

@@ -36,15 +36,15 @@ export default function Welcome() {
             </div>
             
             <h3 className="font-sans text-3xl md:text-5xl lg:text-[2.75rem] font-medium tracking-tight leading-[1.15] text-[#7651B9]">
-              I balance artistic vision with proven business strategy results at any scale.
+              Balancing artistic vision with proven commercial results at any scale.
             </h3>
             
             <div className="font-sans text-base md:text-lg font-light leading-relaxed text-black/80 max-w-2xl flex flex-col gap-6">
               <p>
-                With 30+ years of international fashion retail experience spanning the UAE, Mexico, India, Portugal, and the UK, I am a creative, commercial Visual Merchandiser and Designer who balances artistic vision with proven business strategy results at any scale.
+                With 30+ years of international fashion retail experience spanning the UAE, Mexico, India, Portugal, and the UK, I translate brand identities into immersive, 360-degree visual storytelling environments.
               </p>
               <p>
-                I translate high-impact designs into immersive, 360-degree visual storytelling experiences that completely transform retail environments. By combining eye-catching window concepts with intentional brand enhancement, my signature style and work turns ordinary spaces into commercial triumphs.
+                By combining eye-catching window concepts with intentional spatial architecture, my signature style turns ordinary retail spaces into commercial triumphs.
               </p>
               <p className="font-medium italic text-black">
                 "This portfolio is my masterpiece."
