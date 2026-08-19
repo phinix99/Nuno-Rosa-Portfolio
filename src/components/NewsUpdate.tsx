@@ -85,6 +85,41 @@ Leadership in Visual Merchandising is undeniable magic. However, creativity alon
       }
     ],
     postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7483837657177972736/"
+  },
+  {
+    id: "post-3",
+    tabTitle: "Retail4Growth Eco-System",
+    category: "Press & Retail Media",
+    date: "Media Feature",
+    followers: "Retail4Growth Coverage",
+    headline: "Latest from the world of retail experience and its eco-system",
+    text: `Exploring the future of retail design, spatial visual merchandising, and the evolving retail ecosystem. 
+
+Featured analyses, interviews, and industry coverage covering 30+ years of global retail architecture and strategic brand transformation.
+
+Read the full series of articles and thought-leadership pieces on Retail4Growth.`,
+    tags: ["#Retail4Growth", "#RetailExperience", "#VisualMerchandising", "#RetailDesign", "#EcoSystem", "#StoreArchitecture"],
+    stats: { reactions: "890", comments: "34", reposts: "52" },
+    mediaType: "gallery",
+    mediaCount: "1/3",
+    images: [
+      {
+        src: "/portfolio/Press & Guest Speaker/retail4growth_edited.jpg",
+        caption: "Retail4Growth Industry Feature & Strategic VM Analysis",
+        tag: "Press Article"
+      },
+      {
+        src: "/portfolio/Press & Guest Speaker/Drapers UK press 2013  - Biggest LACOSTE Flagship in Europe _edited.jpg",
+        caption: "Drapers UK Press - Biggest European Flagship Architecture",
+        tag: "Global Press"
+      },
+      {
+        src: "/portfolio/Press & Guest Speaker/VMRD Magazine.jpg",
+        caption: "VMRD Magazine Retail Design & Storefront Dialogue",
+        tag: "Magazine Feature"
+      }
+    ],
+    postUrl: "https://www.retail4growth.com/search/nuno-rosa"
   }
 ];
 
@@ -417,6 +452,31 @@ export default function NewsUpdate() {
                 4x Guest Host of the VM Challenge and Keynote Speaker at Asian National Retail Summits.
               </p>
             </div>
+
+            {/* Retail4Growth Press Feature Card */}
+            <a 
+              href="https://www.retail4growth.com/search/nuno-rosa" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-6 md:p-8 rounded-3xl bg-neutral-900 text-white flex flex-col gap-3.5 border border-black/10 hover:border-[#5E27BA] transition-all group shadow-md"
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#5E27BA]">
+                  Press & Media Feature
+                </span>
+                <ExternalLink size={14} className="text-white/60 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </div>
+              <h4 className="font-sans text-base md:text-lg font-bold tracking-tight leading-snug group-hover:text-[#5E27BA] transition-colors">
+                Latest from the world of retail experience and its eco-system
+              </h4>
+              <p className="font-sans text-xs font-light text-white/70 leading-relaxed">
+                Read Nuno Rosa's exclusive articles, interviews, and industry analyses on Retail4Growth.
+              </p>
+              <div className="flex items-center gap-1.5 text-xs font-bold text-[#5E27BA] uppercase tracking-wider mt-1">
+                <span>Read on Retail4Growth</span>
+                <ArrowUpRight size={13} />
+              </div>
+            </a>
 
           </div>
 

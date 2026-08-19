@@ -177,6 +177,33 @@ export default function ProjectGalleryPage() {
 
       {/* Gallery Layout */}
       <div className="max-w-[1600px] mx-auto px-4 md:px-12 mt-4">
+        {category === 'press-speaker' && (
+          <motion.a 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            href="https://www.retail4growth.com/search/nuno-rosa" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="mb-8 p-5 md:p-7 rounded-sm bg-neutral-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-black/10 hover:border-[#5E27BA] transition-all group shadow-sm"
+          >
+            <div className="flex flex-col gap-1.5">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#5E27BA]">
+                Featured Press & Articles
+              </span>
+              <h3 className="font-sans text-lg sm:text-xl font-bold text-white group-hover:text-[#5E27BA] transition-colors leading-snug">
+                Latest from the world of retail experience and its eco-system
+              </h3>
+              <p className="text-xs text-white/70">
+                Explore Nuno Rosa's complete collection of published interviews, store analyses, and retail design columns on Retail4Growth.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 px-5 py-2.5 bg-[#5E27BA] text-white text-xs font-bold uppercase tracking-wider rounded-sm shrink-0 group-hover:bg-white group-hover:text-black transition-colors shadow-sm">
+              <span>Read on Retail4Growth</span>
+              <ArrowUpRight size={14} />
+            </div>
+          </motion.a>
+        )}
+
         {!hasImages ? (
            <p className="text-black/40 uppercase tracking-widest py-10 font-mono text-sm">No images available for this discipline.</p>
         ) : (
