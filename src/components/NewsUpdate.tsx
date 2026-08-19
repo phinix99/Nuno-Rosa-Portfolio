@@ -1,12 +1,12 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
-import { Linkedin, ArrowUpRight, Newspaper, Heart, MessageCircle, Share2, Sparkles, ChevronLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { Linkedin, ArrowUpRight, Newspaper, Heart, MessageCircle, Share2, Sparkles, ChevronLeft, ChevronRight, CheckCircle2, Play, Image as ImageIcon, Video, ExternalLink } from 'lucide-react';
 
 const linkedInPosts = [
   {
     id: "post-1",
     tabTitle: "YOUSTA 15,000 sq.ft Flagship Launch",
-    category: "Retail Store Architecture & Launch",
+    category: "Store Architecture & Launch",
     date: "Latest Dispatch",
     followers: "14,288+ followers",
     headline: "Global Creative Head of Visual Merchandising & Retail Design",
@@ -21,14 +21,28 @@ It would give people a true appreciation for the massive, cross-functional engin
 To anyone currently deep in the pre-launch phase I say BRAVO to you.`,
     tags: ["#RetailStrategy", "#CommercialStreet", "#BangaloreRetail", "#StoreLaunch", "#Forecasting", "#VisualMerchandising", "#RetailDesign", "#Leadership"],
     stats: { reactions: "542", comments: "12", reposts: "18" },
+    mediaType: "gallery",
+    mediaCount: "1/4",
     images: [
       {
         src: "/brands/YOUSTA.jpg",
-        caption: "15,000 sq.ft Commercial Street Flagship Facade"
+        caption: "15,000 sq.ft Commercial Street Flagship Facade & Structure",
+        tag: "Exterior Architecture"
       },
       {
         src: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
-        caption: "In-Store Spatial Journey & Visual Innovation"
+        caption: "In-Store Spatial Journey & Visual Category Zoning",
+        tag: "Interior Zoning"
+      },
+      {
+        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg",
+        caption: "High-Traffic Sightline Choreography & Display Architecture",
+        tag: "Visual Merchandising"
+      },
+      {
+        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
+        caption: "Illumination Geometry & Commercial Launch Window",
+        tag: "Lighting Scheme"
       }
     ],
     postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7493976849853661184/"
@@ -36,7 +50,7 @@ To anyone currently deep in the pre-launch phase I say BRAVO to you.`,
   {
     id: "post-2",
     tabTitle: "In-Store Asia Keynote Reflection",
-    category: "Industry Leadership & 360° Operations",
+    category: "Keynote & Retail Leadership",
     date: "Keynote Dispatch",
     followers: "14,288+ followers",
     headline: "Global Creative Head of Visual Merchandising & Retail Design",
@@ -51,14 +65,23 @@ The true measure of our work lies in how effectively we elevate our brands, maxi
 Leadership in Visual Merchandising is undeniable magic. However, creativity alone isn't enough. Success requires a 360-degree integration with retail operations—driving impact in the critical, unseen spaces of the business.`,
     tags: ["#RetailLeadership", "#InStoreAsia2026", "#VisualMerchandising", "#StoreOperations", "#RetailStrategy"],
     stats: { reactions: "684", comments: "48", reposts: "36" },
+    mediaType: "video",
+    videoPreview: {
+      thumbnail: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg",
+      title: "Nuno Rosa Keynote Address | In-Store Asia Summit",
+      location: "Mumbai Convention Centre",
+      duration: "Keynote Session"
+    },
     images: [
       {
-        src: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg",
-        caption: "Keynote at In-Store Asia, Mumbai Convention Centre"
+        src: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
+        caption: "360° Operations Integration & Brand Value Framework",
+        tag: "Stage Insights"
       },
       {
-        src: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
-        caption: "360° Retail Curation & Brand Elevation"
+        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
+        caption: "Retail Summit Discussion Panel & Industry Dialogue",
+        tag: "Executive Panel"
       }
     ],
     postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7483837657177972736/"
@@ -111,12 +134,13 @@ export default function NewsUpdate() {
             <button
               key={post.id}
               onClick={() => setActivePostIndex(idx)}
-              className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all whitespace-nowrap ${
+              className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all whitespace-nowrap flex items-center gap-2 ${
                 activePostIndex === idx
                   ? 'bg-[#7651B9] text-white shadow-md'
                   : 'bg-[#FAF9FB] text-black/60 hover:text-black hover:bg-neutral-200/70 border border-black/5'
               }`}
             >
+              {post.mediaType === 'video' ? <Video size={13} /> : <ImageIcon size={13} />}
               {post.tabTitle}
             </button>
           ))}
@@ -209,21 +233,106 @@ export default function NewsUpdate() {
                   ))}
                 </div>
 
-                {/* Post Visual Gallery */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 rounded-2xl overflow-hidden border border-black/10">
-                  {activePost.images.map((img, i) => (
-                    <div key={i} className="aspect-[4/3] bg-neutral-900 overflow-hidden relative group">
+                {/* Video or Multi-Photo Media Showcase */}
+                {activePost.mediaType === 'video' && activePost.videoPreview ? (
+                  <div className="flex flex-col gap-4">
+                    {/* Featured Video Player Preview */}
+                    <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-black shadow-lg group border border-black/10">
                       <img 
-                        src={img.src} 
-                        alt={img.caption}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src={activePost.videoPreview.thumbnail} 
+                        alt={activePost.videoPreview.title}
+                        className="w-full h-full object-cover object-top opacity-85 group-hover:scale-105 transition-transform duration-700"
                       />
-                      <div className="absolute bottom-3 left-3 right-3 px-3 py-1.5 rounded-xl bg-black/75 backdrop-blur-md text-white font-sans text-xs tracking-wide">
-                        {img.caption}
+                      
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20 flex flex-col justify-between p-6">
+                        <div className="flex items-center justify-between">
+                          <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600/90 text-white font-mono text-[10px] font-bold uppercase tracking-widest shadow-md">
+                            <span className="w-2 h-2 rounded-full bg-white animate-pulse" /> LIVE KEYNOTE RECORDING
+                          </span>
+                          <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white font-mono text-[10px] uppercase">
+                            {activePost.videoPreview.location}
+                          </span>
+                        </div>
+
+                        <div className="flex items-end justify-between">
+                          <div className="flex flex-col gap-1 max-w-lg">
+                            <h4 className="font-sans text-lg md:text-xl font-bold text-white leading-tight">
+                              {activePost.videoPreview.title}
+                            </h4>
+                            <span className="text-xs text-white/70">
+                              360° Operations Integration • In-Store Asia Mumbai
+                            </span>
+                          </div>
+
+                          <a 
+                            href={activePost.postUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="w-14 h-14 rounded-full bg-[#7651B9] text-white flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-white hover:text-black transition-all shrink-0"
+                            title="Play Video on LinkedIn"
+                          >
+                            <Play size={24} className="ml-1 fill-current" />
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  ))}
-                </div>
+
+                    {/* Accompanying Photo Strip */}
+                    <div className="grid grid-cols-2 gap-3">
+                      {activePost.images.map((img, i) => (
+                        <div key={i} className="aspect-[16/10] rounded-xl overflow-hidden bg-neutral-900 relative group border border-black/10">
+                          <img 
+                            src={img.src} 
+                            alt={img.caption}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          />
+                          <div className="absolute bottom-2 left-2 right-2 px-2.5 py-1 rounded-lg bg-black/75 backdrop-blur-md text-white font-sans text-[11px] truncate">
+                            {img.caption}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  /* 4-Image Grid for Yousta Store Launch */
+                  <div className="flex flex-col gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {activePost.images.slice(0, 2).map((img, i) => (
+                        <div key={i} className="aspect-[4/3] rounded-2xl bg-neutral-900 overflow-hidden relative group border border-black/10">
+                          <img 
+                            src={img.src} 
+                            alt={img.caption}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          />
+                          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md text-white font-mono text-[10px] uppercase tracking-wider">
+                            {img.tag}
+                          </div>
+                          <div className="absolute bottom-3 left-3 right-3 px-3 py-1.5 rounded-xl bg-black/75 backdrop-blur-md text-white font-sans text-xs tracking-wide">
+                            {img.caption}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {activePost.images.slice(2, 4).map((img, i) => (
+                        <div key={i} className="aspect-[16/10] rounded-2xl bg-neutral-900 overflow-hidden relative group border border-black/10">
+                          <img 
+                            src={img.src} 
+                            alt={img.caption}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          />
+                          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md text-white font-mono text-[10px] uppercase tracking-wider">
+                            {img.tag}
+                          </div>
+                          <div className="absolute bottom-3 left-3 right-3 px-3 py-1.5 rounded-xl bg-black/75 backdrop-blur-md text-white font-sans text-xs tracking-wide truncate">
+                            {img.caption}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Engagement Bar */}
                 <div className="flex items-center justify-between pt-4 border-t border-black/10 text-xs font-semibold text-black/60">
@@ -253,7 +362,7 @@ export default function NewsUpdate() {
 
           </div>
 
-          {/* Side Column: Profile Summary & Keynote Calendar */}
+          {/* Side Column: Profile Summary & Speaking Dispatches */}
           <div className="lg:col-span-4 flex flex-col gap-6">
             
             {/* Quick Profile Summary Card */}
