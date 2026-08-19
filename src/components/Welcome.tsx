@@ -1,6 +1,6 @@
-import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
-import { Award, Mic, Trophy, Newspaper, GraduationCap, Sparkles } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { Sparkles } from 'lucide-react';
 
 const brandLogos = Array.from({ length: 23 }, (_, i) => ({
   id: `brand-${i + 1}`,
@@ -9,11 +9,11 @@ const brandLogos = Array.from({ length: 23 }, (_, i) => ({
 }));
 
 const accolades = [
-  { icon: Award, text: "4 National Window Design Awards" },
-  { icon: Mic, text: "2x Asian Retail Keynote Speaker" },
-  { icon: Trophy, text: "4x Host of VM Challenge In-Store Asia" },
-  { icon: Newspaper, text: "8+ Press Featured Articles" },
-  { icon: GraduationCap, text: "2x Fashion School VM Workshops" }
+  { label: "Window Design", value: "4", suffix: "", detail: "Awards" },
+  { label: "Keynote Speaker", value: "2", suffix: "x", detail: "Asian Summits" },
+  { label: "VM Challenge", value: "4", suffix: "x", detail: "Guest Host" },
+  { label: "Press Features", value: "8", suffix: "+", detail: "Articles" },
+  { label: "Masterclasses", value: "2", suffix: "x", detail: "Workshops" }
 ];
 
 export default function Welcome() {
@@ -96,37 +96,40 @@ export default function Welcome() {
 
         </div>
 
-        {/* Compact Accolades Strip */}
+        {/* Global Retail Expert Recognition Strip - Matching Hero Numbers Style */}
         <motion.div 
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-8 md:mt-10 p-4 md:p-6 rounded-lg bg-[#FAF9FB] border border-[#7651B9]/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4"
+          className="w-full border-t border-neutral-200/80 pt-6 mt-10 md:mt-12"
         >
-          <div className="flex flex-col gap-0.5 shrink-0">
-            <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] text-[#7651B9] uppercase">
-              <Sparkles size={11} /> Recognition
-            </div>
-            <h3 className="font-sans text-base md:text-lg font-bold tracking-tight text-black">
-              GLOBAL RETAIL EXPERT
-            </h3>
+          <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#7651B9] uppercase mb-4">
+            <Sparkles size={13} />
+            <span>GLOBAL RETAIL EXPERT</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-3 flex-1">
-            {accolades.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <div key={idx} className="flex items-center gap-2 p-2.5 rounded-md bg-white border border-black/5 shadow-xs">
-                  <div className="w-6 h-6 rounded-md bg-[#7651B9]/10 text-[#7651B9] flex items-center justify-center shrink-0">
-                    <Icon size={13} />
-                  </div>
-                  <span className="font-sans text-[11px] font-semibold text-black/80 leading-tight">
-                    {item.text}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+            {accolades.map((item, idx) => (
+              <div key={idx} className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-3 last:border-r-0">
+                <span className="font-sans text-[9px] lg:text-[10px] font-semibold tracking-widest text-[#111]/60 uppercase">
+                  {item.label}
+                </span>
+                <div className="flex items-baseline gap-0.5 text-[#111]">
+                  <span className="font-sans text-2xl lg:text-3xl font-bold tracking-tight text-[#111]">
+                    {item.value}
+                  </span>
+                  {item.suffix && (
+                    <span className="font-sans text-xl lg:text-2xl font-bold text-[#7651B9]">
+                      {item.suffix}
+                    </span>
+                  )}
+                  <span className="font-sans text-[9px] lg:text-[10px] font-semibold uppercase text-[#111]/60 ml-1">
+                    {item.detail}
                   </span>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </motion.div>
 
