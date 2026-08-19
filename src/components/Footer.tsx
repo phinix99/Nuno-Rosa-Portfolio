@@ -27,11 +27,20 @@ export default function Footer() {
           className="flex flex-col md:text-right gap-8"
         >
           <div className="flex flex-col gap-2 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase">
-            <a href="#" className="hover:text-black transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-black transition-colors">Instagram</a>
+            <a 
+              href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-black transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">
+              Instagram
+            </a>
           </div>
-          <div className="font-sans text-[10px] tracking-widest uppercase opacity-40">
-            © {new Date().getFullYear()} Studio. All Rights Reserved.
+          <div className="font-sans text-[10px] tracking-widest uppercase opacity-60">
+            © {new Date().getFullYear()} NUNO ROSA. ALL RIGHTS RESERVED.
           </div>
         </motion.div>
       </div>

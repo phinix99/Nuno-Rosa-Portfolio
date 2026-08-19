@@ -18,7 +18,7 @@ export default function NewsUpdate() {
           </div>
 
           <a 
-            href="https://www.linkedin.com/in/nunorosa" 
+            href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#111] text-white hover:bg-[#7651B9] transition-all text-xs font-bold tracking-widest uppercase group w-fit shadow-md"
@@ -107,7 +107,7 @@ export default function NewsUpdate() {
                   </span>
                 </div>
                 <a 
-                  href="https://www.linkedin.com/in/nunorosa" 
+                  href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 text-[#7651B9] hover:underline font-bold uppercase tracking-wider text-[11px]"
