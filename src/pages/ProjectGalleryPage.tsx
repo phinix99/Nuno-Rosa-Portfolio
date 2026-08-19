@@ -239,17 +239,17 @@ export default function ProjectGalleryPage() {
                     {rowList.map((row, rowIdx) => {
                       const rowLen = row.length;
                       let gridClass = "grid-cols-1";
-                      let aspectClass = "aspect-[16/9] md:aspect-[21/9]";
+                      let aspectClass = "aspect-[16/10] md:aspect-[21/9] max-h-[580px]";
 
                       if (rowLen === 2) {
                         gridClass = "grid-cols-1 sm:grid-cols-2";
-                        aspectClass = "aspect-[4/3] md:aspect-[16/10]";
+                        aspectClass = "aspect-[4/3] md:aspect-[16/11] max-h-[500px]";
                       } else if (rowLen === 3) {
-                        gridClass = "grid-cols-1 sm:grid-cols-3";
-                        aspectClass = "aspect-[3/4] md:aspect-[4/5]";
+                        gridClass = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3";
+                        aspectClass = "aspect-[1/1] md:aspect-[4/3] max-h-[420px]";
                       } else if (rowLen >= 4) {
                         gridClass = "grid-cols-2 sm:grid-cols-4";
-                        aspectClass = "aspect-[3/4]";
+                        aspectClass = "aspect-[3/4] md:aspect-[1/1] max-h-[360px]";
                       }
 
                       return (
@@ -266,18 +266,18 @@ export default function ProjectGalleryPage() {
                                 viewport={{ once: true, margin: "50px" }}
                                 transition={{ duration: 0.5 }}
                                 onClick={() => setSelectedImageIndex(globalIndex)}
-                                className={`group relative rounded-sm md:rounded overflow-hidden bg-white border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#5E27BA]/50 transition-all duration-500 ${aspectClass}`}
+                                className={`group relative rounded-sm md:rounded overflow-hidden bg-neutral-100/80 border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#5E27BA]/50 transition-all duration-500 flex items-center justify-center ${aspectClass}`}
                               >
                                 <img 
                                   src={src} 
                                   alt={`${subcatName} showcase ${globalIndex + 1}`}
-                                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                                  className="w-full h-full object-contain p-1 sm:p-2 transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
                                   loading="lazy"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#5E27BA]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className="absolute inset-0 bg-[#5E27BA]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                                  <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-xs text-[#5E27BA] font-mono text-xs uppercase tracking-widest border border-[#5E27BA]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
-                                    View
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#5E27BA]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                                <div className="absolute inset-0 bg-[#5E27BA]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center pointer-events-none">
+                                  <span className="bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-xs text-[#5E27BA] font-mono text-xs uppercase tracking-widest border border-[#5E27BA]/20 transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
+                                    View Visual
                                   </span>
                                 </div>
                               </motion.div>
