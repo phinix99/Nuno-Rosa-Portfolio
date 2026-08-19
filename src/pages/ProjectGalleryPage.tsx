@@ -40,7 +40,7 @@ export default function ProjectGalleryPage() {
   const navigate = useNavigate();
   const categoryKey = category ? slugMap[category] : "";
   const subcategories = categoryKey ? portfolioData[categoryKey] || {} : {};
-  const flattenedImages = Object.values(subcategories).flat();
+  const flattenedImages: string[] = (Object.values(subcategories) as any).flat(Infinity).filter(Boolean) as string[];
   const hasImages = flattenedImages.length > 0;
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
@@ -175,16 +175,27 @@ export default function ProjectGalleryPage() {
         </div>
       </header>
 
-      {/* Bento Grid */}
+      {/* Gallery Layout */}
       <div className="max-w-[1600px] mx-auto px-4 md:px-12 mt-4">
         {!hasImages ? (
            <p className="text-black/40 uppercase tracking-widest py-10 font-mono text-sm">No images available for this discipline.</p>
         ) : (
           <div className="flex flex-col gap-12 md:gap-16">
-            {Object.entries(subcategories).map(([subcatName, subcatImages], subcatIdx) => {
-              if (subcatImages.length === 0) return null;
-              
-              const globalIndexOffset = Object.values(subcategories).slice(0, subcatIdx).reduce((acc, curr) => acc + curr.length, 0);
+            {Object.entries(subcategories).map(([subcatName, subcatContent], subcatIdx) => {
+              if (!subcatContent || (subcatContent as any).length === 0) return null;
+
+              const isRowBased = Array.isArray(subcatContent[0]);
+              const rowList: string[][] = isRowBased
+                ? (subcatContent as unknown as string[][])
+                : [(subcatContent as unknown as string[])];
+
+              // Global offset for lightbox
+              let globalOffset = 0;
+              Object.values(subcategories).slice(0, subcatIdx).forEach((prev) => {
+                globalOffset += (prev as any).flat(Infinity).length;
+              });
+
+              let currentCounter = 0;
               const showSubcatHeader = Object.keys(subcategories).length > 1 && subcatName !== 'Gallery' && subcatName.toLowerCase() !== categoryKey.toLowerCase();
 
               return (
@@ -197,38 +208,55 @@ export default function ProjectGalleryPage() {
                     </div>
                   )}
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 auto-rows-[200px] md:auto-rows-[320px]">
-                    {subcatImages.map((src, localIdx) => {
-                      let spanClass = "col-span-1 row-span-1";
-                      if (localIdx % 7 === 0) spanClass = "col-span-2 row-span-2";
-                      else if (localIdx % 5 === 0) spanClass = "col-span-1 row-span-2";
-                      else if (localIdx % 11 === 0) spanClass = "col-span-2 row-span-1";
+                  <div className="flex flex-col gap-4 md:gap-6">
+                    {rowList.map((row, rowIdx) => {
+                      const rowLen = row.length;
+                      let gridClass = "grid-cols-1";
+                      let aspectClass = "aspect-[16/9] md:aspect-[21/9]";
 
-                      const globalIndex = globalIndexOffset + localIdx;
+                      if (rowLen === 2) {
+                        gridClass = "grid-cols-1 sm:grid-cols-2";
+                        aspectClass = "aspect-[4/3] md:aspect-[16/10]";
+                      } else if (rowLen === 3) {
+                        gridClass = "grid-cols-1 sm:grid-cols-3";
+                        aspectClass = "aspect-[3/4] md:aspect-[4/5]";
+                      } else if (rowLen >= 4) {
+                        gridClass = "grid-cols-2 sm:grid-cols-4";
+                        aspectClass = "aspect-[3/4]";
+                      }
 
                       return (
-                        <motion.div
-                          key={src + localIdx}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true, margin: "50px" }}
-                          transition={{ duration: 0.5, delay: (localIdx % 10) * 0.05 }}
-                          onClick={() => setSelectedImageIndex(globalIndex)}
-                          className={`group relative rounded-sm md:rounded overflow-hidden bg-white border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#5E27BA]/50 transition-all duration-500 ${spanClass}`}
-                        >
-                          <img 
-                            src={src} 
-                            alt={`${subcatName} showcase ${localIdx}`}
-                            className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#5E27BA]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                          <div className="absolute inset-0 bg-[#5E27BA]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                            <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-xs text-[#5E27BA] font-mono text-xs uppercase tracking-widest border border-[#5E27BA]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
-                              View
-                            </span>
-                          </div>
-                        </motion.div>
+                        <div key={rowIdx} className={`grid ${gridClass} gap-3 md:gap-5`}>
+                          {row.map((src) => {
+                            const globalIndex = globalOffset + currentCounter;
+                            currentCounter++;
+
+                            return (
+                              <motion.div
+                                key={src + globalIndex}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "50px" }}
+                                transition={{ duration: 0.5 }}
+                                onClick={() => setSelectedImageIndex(globalIndex)}
+                                className={`group relative rounded-sm md:rounded overflow-hidden bg-white border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#5E27BA]/50 transition-all duration-500 ${aspectClass}`}
+                              >
+                                <img 
+                                  src={src} 
+                                  alt={`${subcatName} showcase ${globalIndex + 1}`}
+                                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                                  loading="lazy"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#5E27BA]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-[#5E27BA]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                                  <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-xs text-[#5E27BA] font-mono text-xs uppercase tracking-widest border border-[#5E27BA]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
+                                    View
+                                  </span>
+                                </div>
+                              </motion.div>
+                            );
+                          })}
+                        </div>
                       );
                     })}
                   </div>
