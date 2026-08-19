@@ -144,15 +144,8 @@ export default function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-[1500px] mx-auto w-full flex justify-between items-center mb-6 md:mb-8 font-sans text-xs font-semibold tracking-wider uppercase border-b border-neutral-200/60 pb-4"
+        className="max-w-[1500px] mx-auto w-full flex justify-end items-center mb-6 md:mb-8 font-sans text-xs font-semibold tracking-wider uppercase border-b border-neutral-200/60 pb-4"
       >
-        <Link 
-          to="/" 
-          className="font-bold tracking-widest text-sm uppercase text-black hover:text-[#5E27BA] transition-colors"
-        >
-          NUNO ROSA
-        </Link>
-
         {/* Navigation Menu */}
         <div className="flex flex-wrap justify-end items-center gap-x-6 md:gap-x-10 gap-y-2">
           <Link to="/portfolio" className="hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
