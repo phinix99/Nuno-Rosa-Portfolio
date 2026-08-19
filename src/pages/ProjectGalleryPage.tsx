@@ -112,8 +112,8 @@ export default function ProjectGalleryPage() {
 
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-[#7651B9] selection:text-white pb-24">
-      {/* Sticky Navbar */}
-      <nav className="sticky top-0 w-full z-40 bg-white/90 backdrop-blur-xl border-b border-black/5 px-6 md:px-12 py-4 md:py-5 flex justify-between items-center shadow-sm">
+      {/* Sticky Minimal Navbar */}
+      <nav className="sticky top-0 w-full z-40 bg-white/90 backdrop-blur-xl border-b border-black/5 px-6 md:px-12 py-4 md:py-5 flex justify-between items-center shadow-xs">
         <div className="flex items-center gap-4">
           <Link to="/" className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#7651B9] transition-colors group">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> NUNO ROSA
@@ -124,16 +124,36 @@ export default function ProjectGalleryPage() {
           </Link>
         </div>
 
-        {/* Gallery Tabs (Desktop Navbar) */}
-        <div className="hidden xl:flex items-center gap-2">
+        <span className="font-mono text-xs md:text-sm text-black/60 tracking-widest uppercase">
+          {flattenedImages.length} Curated Visuals
+        </span>
+      </nav>
+
+      {/* Clean Minimal Header */}
+      <header className="max-w-[1600px] mx-auto px-4 md:px-12 pt-6 md:pt-10 pb-6">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500 mb-4">
+          <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
+            <Home size={13} /> Home
+          </Link>
+          <ChevronRight size={13} className="text-neutral-400" />
+          <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors">
+            Portfolio
+          </Link>
+          <ChevronRight size={13} className="text-neutral-400" />
+          <span className="text-neutral-900 font-bold">{categoryKey}</span>
+        </nav>
+
+        {/* Sleek Single Gallery Switcher Bar */}
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-2 mb-6">
           {galleryTabs.map((tab) => (
             <Link
               key={tab.slug}
               to={`/gallery/${tab.slug}`}
-              className={`px-3 py-1.5 rounded-sm text-[11px] font-semibold tracking-wider uppercase transition-all ${
+              className={`shrink-0 px-3.5 py-1.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all border ${
                 category === tab.slug
-                  ? 'bg-[#7651B9] text-white'
-                  : 'text-black/60 hover:text-black hover:bg-black/5'
+                  ? 'bg-[#7651B9] text-white border-[#7651B9] shadow-xs'
+                  : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-black/5'
               }`}
             >
               {tab.name}
@@ -141,73 +161,37 @@ export default function ProjectGalleryPage() {
           ))}
         </div>
 
-        <span className="font-mono text-xs md:text-sm text-black/60 tracking-widest uppercase">
-          {flattenedImages.length} Curated Visuals
-        </span>
-      </nav>
-
-      {/* Header */}
-      <header className="max-w-[1600px] mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-8">
-        {/* Breadcrumb Navigation & Top Category Switcher */}
-        <div className="flex flex-col gap-6 mb-8">
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500">
-            <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
-              <Home size={13} /> Home
-            </Link>
-            <ChevronRight size={13} className="text-neutral-400" />
-            <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors">
-              Portfolio
-            </Link>
-            <ChevronRight size={13} className="text-neutral-400" />
-            <span className="text-neutral-900 font-bold">{categoryKey}</span>
-          </nav>
-
-          {/* Gallery Switcher Bar */}
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
-            {galleryTabs.map((tab) => (
-              <Link
-                key={tab.slug}
-                to={`/gallery/${tab.slug}`}
-                className={`shrink-0 px-3.5 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all border ${
-                  category === tab.slug
-                    ? 'bg-[#7651B9] text-white border-[#7651B9] shadow-xs'
-                    : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-black/5'
-                }`}
-              >
-                {tab.name}
-              </Link>
-            ))}
+        {/* Gallery Title */}
+        <div className="flex items-baseline justify-between gap-4 border-b border-black/10 pb-4">
+          <div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase text-black">
+              {categoryKey}
+            </h1>
+            <div className="w-12 h-[2.5px] bg-[#7651B9] mt-2" />
           </div>
+          <span className="font-mono text-xs text-black/40 uppercase tracking-widest hidden sm:inline">
+            {flattenedImages.length} Visuals
+          </span>
         </div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight uppercase text-black mb-4 leading-none">
-            {categoryKey}
-          </h1>
-          <div className="w-16 h-[3px] bg-[#7651B9]" />
-        </motion.div>
       </header>
 
       {/* Bento Grid */}
-      <div className="max-w-[1600px] mx-auto px-4 md:px-12">
+      <div className="max-w-[1600px] mx-auto px-4 md:px-12 mt-4">
         {!hasImages ? (
            <p className="text-black/40 uppercase tracking-widest py-10 font-mono text-sm">No images available for this discipline.</p>
         ) : (
-          <div className="flex flex-col gap-16 md:gap-24">
+          <div className="flex flex-col gap-12 md:gap-16">
             {Object.entries(subcategories).map(([subcatName, subcatImages], subcatIdx) => {
               if (subcatImages.length === 0) return null;
               
               const globalIndexOffset = Object.values(subcategories).slice(0, subcatIdx).reduce((acc, curr) => acc + curr.length, 0);
+              const showSubcatHeader = Object.keys(subcategories).length > 1 && subcatName !== 'Gallery' && subcatName.toLowerCase() !== categoryKey.toLowerCase();
 
               return (
                 <section key={subcatName}>
-                  {subcatName !== 'Gallery' && (
-                    <div className="sticky top-[60px] md:top-[76px] z-30 bg-white/95 backdrop-blur-md py-4 mb-4 md:mb-8 border-b border-black/10">
-                      <h2 className="text-xl md:text-2xl font-medium tracking-wide uppercase text-black/90">
+                  {showSubcatHeader && (
+                    <div className="sticky top-[60px] md:top-[76px] z-30 bg-white/95 backdrop-blur-md py-3 mb-4 md:mb-6 border-b border-black/10">
+                      <h2 className="text-lg md:text-xl font-medium tracking-wide uppercase text-black/90">
                         {subcatName}
                       </h2>
                     </div>
