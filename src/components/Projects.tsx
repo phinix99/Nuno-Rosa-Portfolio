@@ -36,7 +36,7 @@ const projects = [
     id: 6,
     title: "Bell & Ross",
     category: "Luxury Lifestyle Events",
-    image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG",
+    image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0001 (2).JPG",
   },
   {
     id: 7,
@@ -48,7 +48,7 @@ const projects = [
     id: 8,
     title: "Minimalist Geometry",
     category: "Conceptual Spatial Design",
-    image: "/portfolio/CONCEPTUAL DESIGN/1.jpg",
+    image: "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg",
   }
 ];
 
@@ -113,7 +113,7 @@ export default function Projects() {
           >
             <motion.img 
               style={{ y, scale: 1.15 }}
-              src="/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG"
+              src="/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0001 (2).JPG"
               alt="Bell & Ross Luxury Events Campaign"
               className="w-full h-full object-cover origin-center transition-transform duration-[2s] ease-out group-hover:scale-[1.2]"
             />

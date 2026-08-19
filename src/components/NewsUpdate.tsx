@@ -25,7 +25,7 @@ To anyone currently deep in the pre-launch phase I say BRAVO to you.`,
     mediaCount: "1/4",
     images: [
       {
-        src: "/brands/YOUSTA.jpg",
+        src: "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA.jpg",
         caption: "15,000 sq.ft Commercial Street Flagship Facade & Structure",
         tag: "Exterior Architecture"
       },

@@ -62,12 +62,12 @@ export default function Hero() {
     {
       title: "Conceptual Design",
       slug: "conceptual-design",
-      image: "/portfolio/CONCEPTUAL DESIGN/1.jpg"
+      image: "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg"
     },
     {
       title: "Visual Signage",
       slug: "visual-signage",
-      image: "/portfolio/VISUAL SIGNAGE/Slide1.JPG"
+      image: "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide1.JPG"
     },
     {
       title: "Trade Shows",
@@ -82,7 +82,7 @@ export default function Hero() {
     {
       title: "Luxury Events",
       slug: "luxury-events",
-      image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG"
+      image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0001 (2).JPG"
     },
     {
       title: "Press & Guest Speaker",

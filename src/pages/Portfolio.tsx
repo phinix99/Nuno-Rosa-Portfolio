@@ -32,9 +32,9 @@ const portfolioData = [
     num: "03",
     desc: "Retail conceptual designs, visual signage communication, and spatial environmental brand frameworks.",
     items: [
-      { id: "cs-1", title: "Conceptual Design", slug: "conceptual-design", image: "/portfolio/CONCEPTUAL DESIGN/1.jpg" },
-      { id: "cs-2", title: "Visual Signage", slug: "visual-signage", image: "/portfolio/VISUAL SIGNAGE/Slide1.JPG" },
-      { id: "cs-3", title: "Environmental Graphics", slug: "visual-signage", image: "/portfolio/VISUAL SIGNAGE/Slide2.JPG" }
+      { id: "cs-1", title: "Conceptual Design", slug: "conceptual-design", image: "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg" },
+      { id: "cs-2", title: "Visual Signage", slug: "visual-signage", image: "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide1.JPG" },
+      { id: "cs-3", title: "Environmental Graphics", slug: "visual-signage", image: "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide2.JPG" }
     ]
   },
   {
@@ -45,7 +45,7 @@ const portfolioData = [
     items: [
       { id: "ee-1", title: "Trade Shows", slug: "trade-shows", image: "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg" },
       { id: "ee-2", title: "Showroom Curation", slug: "showroom-curation", image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194904.jpg" },
-      { id: "ee-3", title: "Luxury Events", slug: "luxury-events", image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG" }
+      { id: "ee-3", title: "Luxury Events", slug: "luxury-events", image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0001 (2).JPG" }
     ]
   },
   {

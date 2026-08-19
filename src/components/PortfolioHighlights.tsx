@@ -49,7 +49,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       title: 'Retail Conceptual Design',
       category: 'Spatial Graphic Design',
       slug: 'conceptual-design',
-      image: '/portfolio/CONCEPTUAL DESIGN/1.jpg',
+      image: '/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg',
       aspect: 'aspect-[16/10]',
       tag: 'Spatial Geometry'
     }
