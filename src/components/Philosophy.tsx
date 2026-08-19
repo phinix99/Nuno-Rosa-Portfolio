@@ -50,37 +50,42 @@ export default function Philosophy() {
     <section className="w-full bg-white text-black py-20 md:py-28 border-b border-black/10 overflow-hidden" id="about">
       {/* Full-Screen Brands Carousel Section without container box */}
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pb-16 md:pb-24">
-        <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-black/50 mb-12 md:mb-16">
+        <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-black/50 mb-8 md:mb-10">
           TRUSTED BY GLOBAL ICONS
         </h4>
         
-        <div className="relative w-full flex overflow-hidden">
+        <div className="relative w-full flex overflow-hidden py-10 md:py-16">
           {/* Fade Edges for seamless edge fading on full-screen white background */}
-          <div className="absolute inset-y-0 left-0 w-20 md:w-60 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-20 md:w-60 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-24 md:w-64 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-24 md:w-64 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
           
           <motion.div 
-            className="flex items-center"
+            className="flex items-center py-6"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ repeat: Infinity, ease: "linear", duration: 32 }}
             style={{ width: "fit-content" }}
           >
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
-              <div key={`${brand.name}-${idx}`} className="flex flex-col items-center justify-center shrink-0 w-48 md:w-72 lg:w-80 mx-8 md:mx-14 group">
-                <img 
-                  src={brand.src} 
-                  alt={brand.name}
-                  className="h-16 md:h-24 lg:h-28 max-h-[110px] w-auto max-w-[220px] md:max-w-[280px] object-contain filter grayscale contrast-125 mix-blend-multiply opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    if (e.currentTarget.nextElementSibling) {
-                      e.currentTarget.nextElementSibling.classList.remove('hidden');
-                    }
-                  }}
-                />
-                <span className="hidden font-sans text-lg md:text-2xl font-bold tracking-tight text-black/70 group-hover:text-[#7651B9] transition-colors cursor-default text-center">
-                  {brand.name}
-                </span>
+              <div 
+                key={`${brand.name}-${idx}`} 
+                className="flex items-center justify-center shrink-0 w-44 md:w-60 lg:w-68 h-24 md:h-28 mx-6 md:mx-10 group"
+              >
+                <div className="w-full h-full flex items-center justify-center p-2">
+                  <img 
+                    src={brand.src} 
+                    alt={brand.name}
+                    className="max-h-14 md:max-h-18 lg:max-h-20 max-w-[170px] md:max-w-[220px] lg:max-w-[250px] w-auto h-auto object-contain filter grayscale contrast-125 mix-blend-multiply opacity-55 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-115 transform-gpu origin-center"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      if (e.currentTarget.nextElementSibling) {
+                        e.currentTarget.nextElementSibling.classList.remove('hidden');
+                      }
+                    }}
+                  />
+                  <span className="hidden font-sans text-base md:text-xl font-bold tracking-tight text-black/70 group-hover:text-[#7651B9] transition-colors cursor-default text-center">
+                    {brand.name}
+                  </span>
+                </div>
               </div>
             ))}
           </motion.div>
