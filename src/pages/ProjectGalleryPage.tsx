@@ -1,8 +1,8 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 import { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowLeft, ChevronLeft, ChevronRight, X, Play, Pause } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, ChevronRight, X, Play, Pause, Home } from 'lucide-react';
 
 // Map slugs back to keys
 const slugMap: Record<string, string> = {
@@ -91,17 +91,36 @@ export default function ProjectGalleryPage() {
   return (
     <main className="min-h-screen bg-white text-black font-sans selection:bg-[#7651B9] selection:text-white pb-24">
       {/* Sticky Navbar */}
-      <nav className="sticky top-0 w-full z-40 bg-white/80 backdrop-blur-xl border-b border-black/5 p-4 md:px-12 md:py-6 flex justify-between items-center shadow-sm">
-        <button onClick={() => navigate('/')} className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#7651B9] transition-colors group">
-          <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> NUNO ROSA
-        </button>
-        <span className="font-mono text-xs md:text-sm text-black/50 tracking-widest uppercase hidden sm:block">
-          GALLERY / {categoryKey}
+      <nav className="sticky top-0 w-full z-40 bg-white/90 backdrop-blur-xl border-b border-black/5 px-6 md:px-12 py-4 md:py-5 flex justify-between items-center shadow-sm">
+        <div className="flex items-center gap-4">
+          <Link to="/" className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#7651B9] transition-colors group">
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> NUNO ROSA
+          </Link>
+          <span className="text-neutral-300 hidden sm:inline">|</span>
+          <Link to="/portfolio" className="text-xs uppercase tracking-wider font-semibold text-neutral-500 hover:text-[#7651B9] transition-colors hidden sm:inline">
+            ← All Disciplines
+          </Link>
+        </div>
+        <span className="font-mono text-xs md:text-sm text-black/60 tracking-widest uppercase">
+          {flattenedImages.length} Curated Visuals
         </span>
       </nav>
 
       {/* Header */}
-      <header className="max-w-[1600px] mx-auto px-6 md:px-12 pt-16 md:pt-28 pb-16">
+      <header className="max-w-[1600px] mx-auto px-6 md:px-12 pt-12 md:pt-20 pb-12">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500 mb-8">
+          <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
+            <Home size={13} /> Home
+          </Link>
+          <ChevronRight size={13} className="text-neutral-400" />
+          <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors">
+            Portfolio
+          </Link>
+          <ChevronRight size={13} className="text-neutral-400" />
+          <span className="text-neutral-900 font-bold">{categoryKey}</span>
+        </nav>
+
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,8 +129,8 @@ export default function ProjectGalleryPage() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight uppercase text-black mb-6 leading-none">
             {categoryKey}
           </h1>
-          <div className="w-20 h-[2px] bg-[#7651B9]" />
-          <p className="mt-8 text-black/60 font-light max-w-2xl text-lg md:text-xl leading-relaxed">
+          <div className="w-20 h-[3px] bg-[#7651B9]" />
+          <p className="mt-6 text-black/70 font-light max-w-2xl text-base md:text-xl leading-relaxed">
             Explore the curated spatial architecture and visual merchandising concepts for {categoryKey}.
           </p>
         </motion.div>

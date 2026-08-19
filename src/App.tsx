@@ -1,17 +1,45 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import ProjectGalleryPage from './pages/ProjectGalleryPage';
 
+function HashAndScrollHandler({ lenis }: { lenis: Lenis | null }) {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const timer = setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el instanceof HTMLElement) {
+          if (lenis) {
+            lenis.scrollTo(el, { offset: -40, duration: 1.2 });
+          } else {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }, 120);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      if (lenis) lenis.scrollTo(0, { immediate: true });
+    }
+  }, [pathname, hash, lenis]);
+
+  return null;
+}
+
 export default function App() {
+  const [lenisInstance, setLenisInstance] = useState<Lenis | null>(null);
+
   useEffect(() => {
     // Initialize Lenis smooth scroll
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
     });
+    setLenisInstance(lenis);
 
     let rafId: number;
     function raf(time: number) {
@@ -28,7 +56,7 @@ export default function App() {
         if (targetElement instanceof HTMLElement) {
           e.preventDefault();
           lenis.scrollTo(targetElement, {
-            offset: 0,
+            offset: -30,
             duration: 1.4,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           });
@@ -45,10 +73,13 @@ export default function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/portfolio/:category?" element={<Portfolio />} />
-      <Route path="/gallery/:category" element={<ProjectGalleryPage />} />
-    </Routes>
+    <>
+      <HashAndScrollHandler lenis={lenisInstance} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio/:category?" element={<Portfolio />} />
+        <Route path="/gallery/:category" element={<ProjectGalleryPage />} />
+      </Routes>
+    </>
   );
 }

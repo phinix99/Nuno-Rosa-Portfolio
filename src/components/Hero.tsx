@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 
 function RollingReel({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -122,9 +123,9 @@ export default function Hero() {
         
         {/* Navigation Menu */}
         <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-8 gap-y-3">
-          <a href="#portfolio" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Portfolio
-          </a>
+          </Link>
           <a href="#about" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             About Me
           </a>
