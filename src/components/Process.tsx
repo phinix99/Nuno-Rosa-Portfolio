@@ -13,7 +13,7 @@ const steps = [
     title: "DESIGN",
     desc: "Ideas take shape. We explore directions, test concepts, and refine until it feels right.",
     percent: "50%",
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg"
+    image: "/portfolio/CONCEPTUAL DESIGN/1.jpg"
   },
   {
     id: "03",

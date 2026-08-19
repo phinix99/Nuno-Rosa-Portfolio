@@ -98,8 +98,7 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
       "/portfolio/VISUAL MERCHANDISING/Limited Editions/IMG-20181018-WA0004.jpg",
       "/portfolio/VISUAL MERCHANDISING/Limited Editions/IMG-20181130-WA0028.jpg",
       "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212301994.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212511085.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/MARQUEE COLLECTION 1 - SS22.jpg"
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212511085.jpg"
     ]
   },
   "E-Commerce & Styling": {
@@ -335,7 +334,7 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
     ]
   },
   "Trade Shows": {
-    "Trade Shows": [
+    "Fashion Trade Shows": [
       "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/1.jpg",
       "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/2.jpg",
       "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/3.jpg",
@@ -434,11 +433,45 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
     ]
   },
   "Press & Guest Speaker": {
-    "Keynote Panels & Workshops": [
-      "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg",
-      "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
-      "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
-      "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg"
+    "Press & Guest Speaker": [
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7892.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7903.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7915.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7950.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.20.40.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.26.52.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.11.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/2017-06-21 21.27.11.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.52.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.14.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.34.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.29.14.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 22.22.13.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194904.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194926.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194933.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195007.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195027.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195141.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195452.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195525~3.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200318.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200412.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200439.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200647~2.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200709.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105043.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105057.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105107.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/20200124_135958.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/20200124_140521_HDR.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8981.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8991.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8999.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_9004.JPG",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/IMG_9004.jpg",
+      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/InShot_20190124_142823798.jpg"
     ]
   }
 };

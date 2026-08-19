@@ -6,49 +6,49 @@ const projects = [
     id: 1,
     title: "Summer Collection '23",
     category: "Creative Window Concepts",
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
+    image: "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg",
   },
   {
     id: 2,
     title: "Musical Symphony",
     category: "Aesthetic Pop-Up Architecture",
-    image: "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg",
+    image: "/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg",
   },
   {
     id: 3,
     title: "Beachfront Campaign",
     category: "Fashion Editorial Styling",
-    image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
+    image: "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg",
   },
   {
     id: 4,
     title: "Jack & Jones Booth",
     category: "Experiential Trade Architecture",
-    image: "https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg",
+    image: "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg",
   },
   {
     id: 5,
     title: "In-Store Setup",
     category: "Bespoke Visual Merchandising",
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg",
+    image: "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/20170227_112718.avif",
   },
   {
     id: 6,
     title: "Bell & Ross",
     category: "Luxury Lifestyle Events",
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg",
+    image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG",
   },
   {
     id: 7,
     title: "Vogue Retail Summit",
     category: "Press & Guest Speaker Events",
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
+    image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG",
   },
   {
     id: 8,
     title: "Minimalist Geometry",
     category: "Conceptual Spatial Design",
-    image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg",
+    image: "/portfolio/CONCEPTUAL DESIGN/1.jpg",
   }
 ];
 
@@ -113,7 +113,7 @@ export default function Projects() {
           >
             <motion.img 
               style={{ y, scale: 1.15 }}
-              src="https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg"
+              src="/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG"
               alt="Bell & Ross Luxury Events Campaign"
               className="w-full h-full object-cover origin-center transition-transform duration-[2s] ease-out group-hover:scale-[1.2]"
             />

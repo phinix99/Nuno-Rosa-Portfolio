@@ -21,9 +21,9 @@ const portfolioData = [
     num: "02",
     desc: "E-commerce creative direction, luxury styling curations, and high-fashion digital campaigns.",
     items: [
-      { id: "es-1", title: "E-Commerce & Styling", slug: "e-commerce-styling", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" },
-      { id: "es-2", title: "Styling Curation", slug: "e-commerce-styling", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
-      { id: "es-3", title: "Editorial Lookbooks", slug: "e-commerce-styling", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg" }
+      { id: "es-1", title: "E-Commerce & Styling", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg" },
+      { id: "es-2", title: "Styling Curation", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg" },
+      { id: "es-3", title: "Editorial Lookbooks", slug: "e-commerce-styling", image: "/portfolio/E-Commerce Creative Direction & Styling/4_Life Style_1180mm X 635mm_edited.jpg" }
     ]
   },
   {
@@ -32,9 +32,9 @@ const portfolioData = [
     num: "03",
     desc: "Retail conceptual designs, visual signage communication, and spatial environmental brand frameworks.",
     items: [
-      { id: "cs-1", title: "Conceptual Design", slug: "conceptual-design", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg" },
-      { id: "cs-2", title: "Visual Signage", slug: "visual-signage", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
-      { id: "cs-3", title: "Environmental Graphics", slug: "visual-signage", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
+      { id: "cs-1", title: "Conceptual Design", slug: "conceptual-design", image: "/portfolio/CONCEPTUAL DESIGN/1.jpg" },
+      { id: "cs-2", title: "Visual Signage", slug: "visual-signage", image: "/portfolio/VISUAL SIGNAGE/Slide1.JPG" },
+      { id: "cs-3", title: "Environmental Graphics", slug: "visual-signage", image: "/portfolio/VISUAL SIGNAGE/Slide2.JPG" }
     ]
   },
   {
@@ -43,9 +43,9 @@ const portfolioData = [
     num: "04",
     desc: "Fashion trade shows, bespoke press room curations, and high-profile luxury lifestyle events.",
     items: [
-      { id: "ee-1", title: "Trade Shows", slug: "trade-shows", image: "https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg" },
-      { id: "ee-2", title: "Showroom Curation", slug: "showroom-curation", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
-      { id: "ee-3", title: "Luxury Events", slug: "luxury-events", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" }
+      { id: "ee-1", title: "Trade Shows", slug: "trade-shows", image: "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg" },
+      { id: "ee-2", title: "Showroom Curation", slug: "showroom-curation", image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194904.jpg" },
+      { id: "ee-3", title: "Luxury Events", slug: "luxury-events", image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG" }
     ]
   },
   {
@@ -54,9 +54,9 @@ const portfolioData = [
     num: "05",
     desc: "Keynote industry panel sessions, creative workshops, and international retail design features.",
     items: [
-      { id: "ps-1", title: "Keynote Panels", slug: "press-speaker", image: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" },
-      { id: "ps-2", title: "Press & Articles", slug: "press-speaker", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
-      { id: "ps-3", title: "VM Workshops", slug: "press-speaker", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
+      { id: "ps-1", title: "Keynote Panels", slug: "press-speaker", image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG" },
+      { id: "ps-2", title: "Press & Articles", slug: "press-speaker", image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195007.jpg" },
+      { id: "ps-3", title: "VM Workshops", slug: "press-speaker", image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7903.JPG" }
     ]
   }
 ];

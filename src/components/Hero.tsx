@@ -57,37 +57,37 @@ export default function Hero() {
     {
       title: "E-Commerce & Styling",
       slug: "e-commerce-styling",
-      image: portfolioData["E-Commerce & Styling"]?.["E-Commerce & Styling"]?.[0] || "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg"
+      image: "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg"
     },
     {
       title: "Conceptual Design",
       slug: "conceptual-design",
-      image: portfolioData["Conceptual Design"]?.["Conceptual Design"]?.[0] || "/portfolio/CONCEPTUAL DESIGN/1.jpg"
+      image: "/portfolio/CONCEPTUAL DESIGN/1.jpg"
     },
     {
       title: "Visual Signage",
       slug: "visual-signage",
-      image: portfolioData["Visual Signage"]?.["Visual Signage"]?.[0] || "/portfolio/VISUAL SIGNAGE/Slide1.JPG"
+      image: "/portfolio/VISUAL SIGNAGE/Slide1.JPG"
     },
     {
       title: "Trade Shows",
       slug: "trade-shows",
-      image: portfolioData["Trade Shows"]?.["Trade Shows"]?.[0] || "https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg"
+      image: "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg"
     },
     {
       title: "Showroom Curation",
       slug: "showroom-curation",
-      image: portfolioData["Showroom Curation"]?.["Press & Showroom Curation"]?.[0] || "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/IMG_20220816_064620.jpg"
+      image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194904.jpg"
     },
     {
       title: "Luxury Events",
       slug: "luxury-events",
-      image: portfolioData["Luxury Events"]?.["Luxury & Lifestyle Events"]?.[0] || "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg"
+      image: "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG"
     },
     {
       title: "Press & Guest Speaker",
       slug: "press-speaker",
-      image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg"
+      image: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG"
     }
   ];
 

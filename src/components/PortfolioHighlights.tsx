@@ -29,7 +29,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       title: 'Styling Curation',
       category: 'Digital Visual Merchandising',
       slug: 'e-commerce-styling',
-      image: 'https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg',
+      image: '/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg',
       aspect: 'aspect-[16/10]',
       tag: 'Fashion Curation'
     }
@@ -40,7 +40,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       title: 'E-Commerce Direction',
       category: 'Digital Visual Merchandising',
       slug: 'e-commerce-styling',
-      image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg',
+      image: '/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg',
       aspect: 'aspect-[4/3]',
       tag: 'Art Direction'
     },
@@ -49,7 +49,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       title: 'Retail Conceptual Design',
       category: 'Spatial Graphic Design',
       slug: 'conceptual-design',
-      image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg',
+      image: '/portfolio/CONCEPTUAL DESIGN/1.jpg',
       aspect: 'aspect-[16/10]',
       tag: 'Spatial Geometry'
     }
@@ -60,7 +60,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       title: 'Fashion Trade Shows',
       category: 'Brand Retail Experiences',
       slug: 'trade-shows',
-      image: 'https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg',
+      image: '/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg',
       aspect: 'aspect-[4/3]',
       tag: 'Expo Architecture'
     },
@@ -69,7 +69,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       title: 'Keynote & Industry Panels',
       category: 'Press & Guest Speaker',
       slug: 'press-speaker',
-      image: 'https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg',
+      image: '/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG',
       aspect: 'aspect-[16/10]',
       tag: 'Guest Speaker'
     }

@@ -85,7 +85,7 @@ export default function Welcome() {
               
               <motion.img 
                 style={{ y, scale: 1.1 }}
-                src="https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" 
+                src="/images/1 (224).jpg" 
                 alt="Nuno Rosa Portrait" 
                 className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.14]"
               />

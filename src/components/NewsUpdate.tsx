@@ -30,17 +30,17 @@ To anyone currently deep in the pre-launch phase I say BRAVO to you.`,
         tag: "Exterior Architecture"
       },
       {
-        src: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
+        src: "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg",
         caption: "In-Store Spatial Journey & Visual Category Zoning",
         tag: "Interior Zoning"
       },
       {
-        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg",
+        src: "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/20170227_112718.avif",
         caption: "High-Traffic Sightline Choreography & Display Architecture",
         tag: "Visual Merchandising"
       },
       {
-        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
+        src: "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg",
         caption: "Illumination Geometry & Commercial Launch Window",
         tag: "Lighting Scheme"
       }
@@ -67,19 +67,19 @@ Leadership in Visual Merchandising is undeniable magic. However, creativity alon
     stats: { reactions: "684", comments: "48", reposts: "36" },
     mediaType: "video",
     videoPreview: {
-      thumbnail: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg",
+      thumbnail: "/images/1 (224).jpg",
       title: "Nuno Rosa Keynote Address | In-Store Asia Summit",
       location: "Mumbai Convention Centre",
       duration: "Keynote Session"
     },
     images: [
       {
-        src: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
+        src: "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG",
         caption: "360° Operations Integration & Brand Value Framework",
         tag: "Stage Insights"
       },
       {
-        src: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
+        src: "/images/1 (228).jpg",
         caption: "Retail Summit Discussion Panel & Industry Dialogue",
         tag: "Executive Panel"
       }
@@ -162,7 +162,7 @@ export default function NewsUpdate() {
                   className="relative group"
                 >
                   <img 
-                    src="https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" 
+                    src="/images/1 (224).jpg" 
                     alt="Nuno Rosa"
                     className="w-14 h-14 rounded-full object-cover border-2 border-[#5E27BA] group-hover:scale-105 transition-transform"
                   />
