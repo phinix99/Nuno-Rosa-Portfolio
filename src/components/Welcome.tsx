@@ -148,19 +148,19 @@ export default function Welcome() {
           <motion.div 
             className="flex items-center py-2"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
             style={{ width: "fit-content" }}
           >
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
               <div 
                 key={`${brand.id}-${idx}`} 
-                className="flex items-center justify-center shrink-0 w-36 md:w-48 lg:w-56 h-16 md:h-20 mx-4 md:mx-6 group"
+                className="flex items-center justify-center shrink-0 w-44 md:w-56 lg:w-64 h-20 md:h-24 lg:h-28 mx-2 md:mx-3 group"
               >
                 <div className="w-full h-full flex items-center justify-center p-1">
                   <img 
                     src={brand.src} 
                     alt={brand.alt}
-                    className="max-h-12 md:max-h-14 lg:max-h-16 max-w-[150px] md:max-w-[190px] lg:max-w-[220px] w-auto h-auto object-contain transition-all duration-300 group-hover:scale-105 transform-gpu origin-center"
+                    className="max-h-16 md:max-h-20 lg:max-h-24 max-w-[180px] md:max-w-[230px] lg:max-w-[260px] w-auto h-auto object-contain transition-all duration-300 group-hover:scale-105 transform-gpu origin-center"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
