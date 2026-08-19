@@ -5,47 +5,47 @@ import { motion } from 'motion/react';
 
 const portfolioData = [
   {
-    category: "VISUAL MERCHANDISING",
+    category: "CREATIVE VISUAL STORYTELLING",
     slug: "visual-merchandising",
     num: "01",
-    desc: "Bespoke window architectures, luxury boutique installations, and high-impact retail store environments.",
+    desc: "Bespoke windows concepts, in-store product displays, and limited-edition product launch architectures.",
     items: [
-      { id: "vm-1", title: "Creative Windows", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif" },
-      { id: "vm-2", title: "In-Store Displays", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg" },
-      { id: "vm-3", title: "Limited Editions", image: "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg" }
+      { id: "vm-1", title: "Bespoke Windows Concepts", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif" },
+      { id: "vm-2", title: "In-store Product Display", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg" },
+      { id: "vm-3", title: "Limited-edition Product Launches", image: "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg" }
     ]
   },
   {
-    category: "E-COMMERCE & STYLING",
+    category: "DIGITAL VISUAL MERCHANDISING",
     slug: "e-commerce-styling",
     num: "02",
-    desc: "Fashion editorial lookbooks, high-fashion styling, and luxury product campaign art direction.",
+    desc: "E-commerce creative direction, luxury styling curations, and high-fashion digital campaigns.",
     items: [
-      { id: "es-1", title: "Fashion Styling", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" },
-      { id: "es-2", title: "Editorial Lookbook", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
-      { id: "es-3", title: "Campaign Direction", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg" }
+      { id: "es-1", title: "E-Commerce Creative Direction", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" },
+      { id: "es-2", title: "Styling Curation", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
+      { id: "es-3", title: "Editorial Lookbook Direction", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg" }
     ]
   },
   {
-    category: "CONCEPT & SIGNAGE",
+    category: "SPATIAL GRAPHIC DESIGN",
     slug: "concept-signage",
     num: "03",
-    desc: "Spatial geometry concepts, experimental brand identity signage, and architectural retail frameworks.",
+    desc: "Retail conceptual designs, visual signage communication, and spatial environmental brand frameworks.",
     items: [
-      { id: "cs-1", title: "Conceptual Design", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg" },
-      { id: "cs-2", title: "Visual Signage", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
-      { id: "cs-3", title: "Spatial Graphics", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
+      { id: "cs-1", title: "Retail Conceptual Design", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg" },
+      { id: "cs-2", title: "Visual Signage Communication", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
+      { id: "cs-3", title: "Spatial Environmental Graphics", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
     ]
   },
   {
-    category: "EVENTS & BRAND EXHIBITION",
+    category: "BRAND RETAIL EXPERIENCES",
     slug: "events-exhibition",
     num: "04",
-    desc: "International trade fair booths, press showroom curations, and bespoke luxury launch activations.",
+    desc: "Fashion trade shows, bespoke press room curations, and high-profile luxury lifestyle events.",
     items: [
-      { id: "ee-1", title: "Trade Shows", image: "https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg" },
-      { id: "ee-2", title: "Press Showroom Curation", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
-      { id: "ee-3", title: "Luxury Events", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" }
+      { id: "ee-1", title: "Fashion Trade Shows", image: "https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg" },
+      { id: "ee-2", title: "Press Rooms Curation", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
+      { id: "ee-3", title: "Luxury Lifestyle Events", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" }
     ]
   },
   {
@@ -54,9 +54,9 @@ const portfolioData = [
     num: "05",
     desc: "Keynote industry panel sessions, creative workshops, and international retail design features.",
     items: [
-      { id: "ps-1", title: "Keynote Panels", image: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" },
-      { id: "ps-2", title: "Interviews", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
-      { id: "ps-3", title: "Public Engagements", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
+      { id: "ps-1", title: "Keynote Panels & Summits", image: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" },
+      { id: "ps-2", title: "Industry Press Features", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
+      { id: "ps-3", title: "VM Workshops & Engagements", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
     ]
   }
 ];

@@ -17,37 +17,37 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
   col1: [
     {
       id: 'c1',
-      title: 'Creative Windows',
-      category: 'Visual Merchandising',
+      title: 'Bespoke Windows Concepts',
+      category: 'Creative Visual Storytelling',
       slug: 'visual-merchandising',
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif',
       aspect: 'aspect-[3/4]',
-      tag: 'Window Architecture'
+      tag: 'Window Concepts'
     },
     {
       id: 'c2',
-      title: 'Editorial Styling',
-      category: 'E-Commerce & Styling',
+      title: 'Styling Curation',
+      category: 'Digital Visual Merchandising',
       slug: 'e-commerce-styling',
       image: 'https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg',
       aspect: 'aspect-[4/3]',
-      tag: 'Fashion Lookbook'
+      tag: 'Fashion Curation'
     },
     {
       id: 'c3',
-      title: 'Luxury Events',
-      category: 'Events & Brand Exhibition',
+      title: 'Luxury Lifestyle Events',
+      category: 'Brand Retail Experiences',
       slug: 'events-exhibition',
       image: 'https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg',
       aspect: 'aspect-[3/4]',
-      tag: 'Brand Experience'
+      tag: 'Brand Activation'
     }
   ],
   col2: [
     {
       id: 'c4',
-      title: 'Fashion Campaign',
-      category: 'E-Commerce & Styling',
+      title: 'E-Commerce Direction',
+      category: 'Digital Visual Merchandising',
       slug: 'e-commerce-styling',
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg',
       aspect: 'aspect-[4/5]',
@@ -55,8 +55,8 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
     },
     {
       id: 'c5',
-      title: 'Spatial Concept Design',
-      category: 'Concept & Signage',
+      title: 'Retail Conceptual Design',
+      category: 'Spatial Graphic Design',
       slug: 'concept-signage',
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg',
       aspect: 'aspect-[16/10]',
@@ -64,8 +64,8 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
     },
     {
       id: 'c6',
-      title: 'In-Store Display Experience',
-      category: 'Visual Merchandising',
+      title: 'In-Store Product Display',
+      category: 'Creative Visual Storytelling',
       slug: 'visual-merchandising',
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg',
       aspect: 'aspect-[4/3]',
@@ -76,7 +76,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
     {
       id: 'c7',
       title: 'Fashion Trade Shows',
-      category: 'Events & Brand Exhibition',
+      category: 'Brand Retail Experiences',
       slug: 'events-exhibition',
       image: 'https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg',
       aspect: 'aspect-[4/3]',
@@ -93,8 +93,8 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
     },
     {
       id: 'c9',
-      title: 'Limited Edition Capsules',
-      category: 'Visual Merchandising',
+      title: 'Limited-Edition Launches',
+      category: 'Creative Visual Storytelling',
       slug: 'visual-merchandising',
       image: 'https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg',
       aspect: 'aspect-[16/10]',

@@ -1,11 +1,20 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
+import { Award, Mic, Trophy, Newspaper, GraduationCap, Sparkles } from 'lucide-react';
 
 const brandLogos = Array.from({ length: 23 }, (_, i) => ({
   id: `brand-${i + 1}`,
   src: `/brands/${i + 1}.jpg`,
   alt: `Global Brand Icon ${i + 1}`
 }));
+
+const accolades = [
+  { icon: Award, text: "4 National Window Design Awards" },
+  { icon: Mic, text: "2x Guest Speaker at Asian National Retail Events" },
+  { icon: Trophy, text: "4x Guest Host of the VM Challenge In-Store Asia" },
+  { icon: Newspaper, text: "8+ Press Featured Articles" },
+  { icon: GraduationCap, text: "2x VM Workshops for Fashion Schools" }
+];
 
 export default function Welcome() {
   const imageRef = useRef(null);
@@ -18,6 +27,8 @@ export default function Welcome() {
   return (
     <section className="w-full bg-white text-black pt-20 md:pt-32 pb-16 md:pb-24 border-b border-black/10 overflow-hidden" id="about">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
+        
+        {/* Main About Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
           {/* Left Column: Welcome Greeting and Philosophy Statement */}
@@ -52,7 +63,7 @@ export default function Welcome() {
             </div>
 
             {/* Designer Signature Detail */}
-            <div className="mt-6 flex flex-col gap-1">
+            <div className="mt-2 flex flex-col gap-1">
               <span className="font-serif italic text-3xl text-[#7651B9] font-light tracking-wide select-none">
                 Nuno Rosa
               </span>
@@ -88,10 +99,45 @@ export default function Welcome() {
           </motion.div>
 
         </div>
+
+        {/* Global Retail Design Expert Accolades Block */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 md:mt-20 p-6 md:p-8 rounded-2xl md:rounded-3xl bg-[#FAF9FB] border border-[#7651B9]/15 flex flex-col lg:flex-row lg:items-center justify-between gap-6"
+        >
+          <div className="flex flex-col gap-1 shrink-0">
+            <div className="flex items-center gap-1.5 text-xs font-bold tracking-widest text-[#7651B9] uppercase">
+              <Sparkles size={13} /> Industry Recognition
+            </div>
+            <h4 className="font-sans text-xl md:text-2xl font-bold tracking-tight text-black">
+              GLOBAL RETAIL DESIGN EXPERT
+            </h4>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 flex-1">
+            {accolades.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-white border border-black/5 shadow-xs">
+                  <div className="w-8 h-8 rounded-lg bg-[#7651B9]/10 text-[#7651B9] flex items-center justify-center shrink-0">
+                    <Icon size={16} />
+                  </div>
+                  <span className="font-sans text-xs md:text-sm font-semibold text-black/80">
+                    {item.text}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
+
       </div>
 
       {/* Brands Carousel Section directly under About Me */}
-      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-16 md:pt-24">
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-16 md:pt-20">
         <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-black/50 mb-8 md:mb-10">
           TRUSTED BY GLOBAL ICONS
         </h4>
