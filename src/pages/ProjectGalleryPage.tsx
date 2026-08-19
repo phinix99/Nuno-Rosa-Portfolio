@@ -4,21 +4,35 @@ import { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ChevronLeft, ChevronRight, X, Play, Pause, Home } from 'lucide-react';
 
-// Map slugs back to keys
+// Map slugs back to keys in portfolioData
 const slugMap: Record<string, string> = {
-  "visual-merchandising": "VISUAL MERCHANDISING",
-  "e-commerce-styling": "E-COMMERCE & STYLING",
-  "concept-signage": "CONCEPT & SIGNAGE",
-  "events-exhibition": "EVENTS & Brand Exhibition",
-  "press-speaker": "PRESS & GUEST SPEAKER"
+  "creative-windows": "Creative Windows",
+  "in-store-display": "In-store Display",
+  "limited-editions": "Limited Editions",
+  "e-commerce-styling": "E-Commerce & Styling",
+  "conceptual-design": "Conceptual Design",
+  "visual-signage": "Visual Signage",
+  "trade-shows": "Trade Shows",
+  "showroom-curation": "Showroom Curation",
+  "luxury-events": "Luxury Events",
+  "press-speaker": "Press & Guest Speaker",
+  // Aliases for compatibility
+  "visual-merchandising": "Creative Windows",
+  "concept-signage": "Conceptual Design",
+  "events-exhibition": "Trade Shows"
 };
 
 const galleryTabs = [
-  { name: "VISUAL MERCHANDISING", slug: "visual-merchandising" },
-  { name: "E-COMMERCE & STYLING", slug: "e-commerce-styling" },
-  { name: "CONCEPT & SIGNAGE", slug: "concept-signage" },
-  { name: "EVENTS & EXHIBITION", slug: "events-exhibition" },
-  { name: "PRESS & GUEST SPEAKER", slug: "press-speaker" }
+  { name: "Creative Windows", slug: "creative-windows" },
+  { name: "In-store Display", slug: "in-store-display" },
+  { name: "Limited Editions", slug: "limited-editions" },
+  { name: "E-Commerce & Styling", slug: "e-commerce-styling" },
+  { name: "Conceptual Design", slug: "conceptual-design" },
+  { name: "Visual Signage", slug: "visual-signage" },
+  { name: "Trade Shows", slug: "trade-shows" },
+  { name: "Showroom Curation", slug: "showroom-curation" },
+  { name: "Luxury Events", slug: "luxury-events" },
+  { name: "Press & Guest Speaker", slug: "press-speaker" }
 ];
 
 export default function ProjectGalleryPage() {

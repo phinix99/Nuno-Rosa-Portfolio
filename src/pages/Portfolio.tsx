@@ -6,13 +6,13 @@ import { motion } from 'motion/react';
 const portfolioData = [
   {
     category: "CREATIVE VISUAL STORYTELLING",
-    slug: "visual-merchandising",
+    slug: "creative-windows",
     num: "01",
     desc: "Bespoke windows concepts, in-store product displays, and limited-edition product launch architectures.",
     items: [
-      { id: "vm-1", title: "Bespoke Windows Concepts", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif" },
-      { id: "vm-2", title: "In-store Product Display", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg" },
-      { id: "vm-3", title: "Limited-edition Product Launches", image: "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg" }
+      { id: "vm-1", title: "Creative Windows", slug: "creative-windows", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif" },
+      { id: "vm-2", title: "In-store Display", slug: "in-store-display", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg" },
+      { id: "vm-3", title: "Limited Editions", slug: "limited-editions", image: "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg" }
     ]
   },
   {
@@ -21,31 +21,31 @@ const portfolioData = [
     num: "02",
     desc: "E-commerce creative direction, luxury styling curations, and high-fashion digital campaigns.",
     items: [
-      { id: "es-1", title: "E-Commerce Creative Direction", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" },
-      { id: "es-2", title: "Styling Curation", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
-      { id: "es-3", title: "Editorial Lookbook Direction", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg" }
+      { id: "es-1", title: "E-Commerce & Styling", slug: "e-commerce-styling", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" },
+      { id: "es-2", title: "Styling Curation", slug: "e-commerce-styling", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
+      { id: "es-3", title: "Editorial Lookbooks", slug: "e-commerce-styling", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg" }
     ]
   },
   {
     category: "SPATIAL GRAPHIC DESIGN",
-    slug: "concept-signage",
+    slug: "conceptual-design",
     num: "03",
     desc: "Retail conceptual designs, visual signage communication, and spatial environmental brand frameworks.",
     items: [
-      { id: "cs-1", title: "Retail Conceptual Design", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg" },
-      { id: "cs-2", title: "Visual Signage Communication", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
-      { id: "cs-3", title: "Spatial Environmental Graphics", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
+      { id: "cs-1", title: "Conceptual Design", slug: "conceptual-design", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg" },
+      { id: "cs-2", title: "Visual Signage", slug: "visual-signage", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" },
+      { id: "cs-3", title: "Environmental Graphics", slug: "visual-signage", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
     ]
   },
   {
     category: "BRAND RETAIL EXPERIENCES",
-    slug: "events-exhibition",
+    slug: "trade-shows",
     num: "04",
     desc: "Fashion trade shows, bespoke press room curations, and high-profile luxury lifestyle events.",
     items: [
-      { id: "ee-1", title: "Fashion Trade Shows", image: "https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg" },
-      { id: "ee-2", title: "Press Rooms Curation", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
-      { id: "ee-3", title: "Luxury Lifestyle Events", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" }
+      { id: "ee-1", title: "Trade Shows", slug: "trade-shows", image: "https://static.wixstatic.com/media/9e4437_9eb9fa8391e94b34896eb1060b8066dc~mv2.jpg/v1/crop/x_294,y_374,w_3563,h_2341/fill/w_1049,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IMG_20220816_064620.jpg" },
+      { id: "ee-2", title: "Showroom Curation", slug: "showroom-curation", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
+      { id: "ee-3", title: "Luxury Events", slug: "luxury-events", image: "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg" }
     ]
   },
   {
@@ -54,34 +54,31 @@ const portfolioData = [
     num: "05",
     desc: "Keynote industry panel sessions, creative workshops, and international retail design features.",
     items: [
-      { id: "ps-1", title: "Keynote Panels & Summits", image: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" },
-      { id: "ps-2", title: "Industry Press Features", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
-      { id: "ps-3", title: "VM Workshops & Engagements", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
+      { id: "ps-1", title: "Keynote Panels", slug: "press-speaker", image: "https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" },
+      { id: "ps-2", title: "Press & Articles", slug: "press-speaker", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg" },
+      { id: "ps-3", title: "VM Workshops", slug: "press-speaker", image: "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg" }
     ]
   }
 ];
 
 const galleryLinks = [
-  { name: "VISUAL MERCHANDISING", slug: "visual-merchandising" },
-  { name: "E-COMMERCE & STYLING", slug: "e-commerce-styling" },
-  { name: "CONCEPT & SIGNAGE", slug: "concept-signage" },
-  { name: "EVENTS & EXHIBITIONS", slug: "events-exhibition" },
-  { name: "PRESS & GUEST SPEAKER", slug: "press-speaker" }
+  { name: "Creative Windows", slug: "creative-windows" },
+  { name: "In-store Display", slug: "in-store-display" },
+  { name: "Limited Editions", slug: "limited-editions" },
+  { name: "E-Commerce & Styling", slug: "e-commerce-styling" },
+  { name: "Conceptual Design", slug: "conceptual-design" },
+  { name: "Visual Signage", slug: "visual-signage" },
+  { name: "Trade Shows", slug: "trade-shows" },
+  { name: "Showroom Curation", slug: "showroom-curation" },
+  { name: "Luxury Events", slug: "luxury-events" },
+  { name: "Press & Guest Speaker", slug: "press-speaker" }
 ];
 
 export default function Portfolio() {
   const { category } = useParams();
-  const [activeSlug, setActiveSlug] = useState(category || "visual-merchandising");
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (category) {
-      setActiveSlug(category);
-      const el = document.getElementById(category);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
   }, [category]);
 
   return (
@@ -94,19 +91,6 @@ export default function Portfolio() {
         >
           <ArrowLeft size={16} /> NUNO ROSA
         </Link>
-
-        {/* Quick Category Selector Links (Desktop) */}
-        <div className="hidden xl:flex items-center gap-2 font-sans text-xs font-semibold tracking-wider uppercase">
-          {galleryLinks.map((g) => (
-            <Link 
-              key={g.slug} 
-              to={`/gallery/${g.slug}`}
-              className="px-3.5 py-1.5 rounded-sm transition-all text-[#111]/70 hover:text-white hover:bg-[#7651B9] border border-transparent hover:border-[#7651B9]"
-            >
-              {g.name}
-            </Link>
-          ))}
-        </div>
 
         {/* Navigation back to main sections */}
         <div className="flex items-center gap-4 text-xs font-semibold uppercase tracking-wider">
@@ -139,12 +123,12 @@ export default function Portfolio() {
         </div>
 
         {/* Gallery Selectors Bar - Click any to directly open that gallery */}
-        <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-1">
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
           {galleryLinks.map((g) => (
             <Link 
               key={g.slug} 
               to={`/gallery/${g.slug}`}
-              className="shrink-0 px-4 py-2.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-800 hover:bg-[#7651B9] hover:text-white border border-black/5 hover:border-[#7651B9] shadow-xs flex items-center gap-1.5 group"
+              className="shrink-0 px-3.5 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-800 hover:bg-[#7651B9] hover:text-white border border-black/5 hover:border-[#7651B9] shadow-xs flex items-center gap-1.5 group"
             >
               <span>{g.name}</span>
               <ArrowUpRight size={12} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -192,7 +176,7 @@ export default function Portfolio() {
                     className="relative aspect-[4/5] md:aspect-auto md:h-[400px] lg:h-[480px]"
                   >
                     <Link 
-                      to={`/gallery/${section.slug}`} 
+                      to={`/gallery/${item.slug || section.slug}`} 
                       className="group relative w-full h-full rounded-sm md:rounded overflow-hidden border border-neutral-200/80 hover:border-[#7651B9]/60 hover:shadow-[0_15px_35px_rgba(118,81,185,0.18)] transition-all duration-500 bg-neutral-900 flex flex-col justify-center items-center"
                     >
                       {/* Background Image */}
