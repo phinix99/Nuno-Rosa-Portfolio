@@ -1,311 +1,471 @@
-export const portfolioData: Record<string, Record<string, string[]>> = {
+export const portfolioData: Record<string, Record<string, string[][]>> = {
   "Creative Windows": {
     "Creative Window Concepts": [
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/InShot_20220506_162829603.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/l.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/b.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/y.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG_7385.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/n.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/o.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/m.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/k.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/c.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/d.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/e.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/f.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/g.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/q.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/r.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/s.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/u.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/v.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/w.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/x.JPG",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Slide1.JPG",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG-20220817-WA0027.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG-20221027-WA0017.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Screenshot_2023-06-14-15-18-22-25_1c337646f29875672b5a61192b9010f9.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/z.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/a.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Slide82 (1).JPG",
-      "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/e1.jpg"
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/InShot_20220506_162829603.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/l.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/b.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/y.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG_7385.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/n.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/o.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/m.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/k.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/c.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/d.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/e.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/f.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/g.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/q.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/r.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/s.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/u.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/v.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/w.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/x.JPG"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Slide1.JPG"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG-20220817-WA0027.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG-20221027-WA0017.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Screenshot_2023-06-14-15-18-22-25_1c337646f29875672b5a61192b9010f9.jpg"
+      ]
     ]
   },
   "In-store Display": {
     "In-store Product Displays": [
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/20170227_112718.avif",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/1.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/2.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/3.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/4.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/111.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0027.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0028.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0033.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0045.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0047.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140014279.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140053891.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140140727.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140157594.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140224129.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220421_134457661.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220421_135003449.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20221112_230003627.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J_.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(1).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(2).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(3).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(4).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(5).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(6).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(7).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(8).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(9).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/VERO MODA.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/VERO MODA(1).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/XXXX.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA.jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(1).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(2).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(3).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(4).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(5).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(6).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(7).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(8).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(9).jpg",
-      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(10).jpg"
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/20170227_112718.avif",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/1.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/2.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/3.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/4.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/111.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0027.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0028.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0033.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0045.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0047.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140014279.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140053891.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140140727.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140157594.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220417_140224129.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220421_134457661.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20220421_135003449.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/InShot_20221112_230003627.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J_.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(1).jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(2).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(3).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(4).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(5).jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(6).jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(7).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(8).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/J&J(9).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/VERO MODA.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/VERO MODA(1).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/XXXX.jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(1).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(2).jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(3).jpg",
+        "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA(4).jpg"
+      ]
     ]
   },
   "Limited Editions": {
     "Limited Editions": [
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/43750634_2284038788335724_8388411178828693504_n.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191011_110941~2.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212511085.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212301994.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191104_131042.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191011_110755_edited.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/43527154_2279064838833119_2170682248129413120_n.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/44319782_2298070196932583_2427615974984253440_n.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/44359792_2298070340265902_8587857146383695872_n.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191107_133738~3_edited.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191111_183341~2_edited.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/IMG-20181018-WA0004.jpg",
-      "/portfolio/VISUAL MERCHANDISING/Limited Editions/IMG-20181130-WA0028.jpg"
+      [
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/43750634_2284038788335724_8388411178828693504_n.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191011_110941~2.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212511085.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212301994.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191104_131042.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191011_110755_edited.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/43527154_2279064838833119_2170682248129413120_n.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/44319782_2298070196932583_2427615974984253440_n.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/44359792_2298070340265902_8587857146383695872_n.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191107_133738~3_edited.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191111_183341~2_edited.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/IMG-20181018-WA0004.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Limited Editions/IMG-20181130-WA0028.jpg"
+      ]
     ]
   },
   "E-Commerce & Styling": {
     "E-Commerce & Styling": [
-      "/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/9e4437_02bdca115dd4436ca457a016ae9795c1~mv2.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/9e4437_689e805616dd41fdb162e993702177ef~mv2.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/03_bag_styling.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/11_edited (1).jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/11_edited.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/9e4437_02902626e967470aaeb5c66a9852812a~mv2.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/9e4437_caff7f22862746b99e0b462371a8ee86~mv2.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/3_Life Style_1180mm X 635mm_edited.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/Jack & Jones Cool Guys  (5).jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/JJ cool guys (20).jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/41x21_5_in_Digital_underground_JJ.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/JJ KIDS (4).jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/JJ KIDS (19).jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/MARQUEE COLLECTION 1 - SS22.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/IMG-20220321-WA0068.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/A.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/02_sun_styling.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/Wall Visuals_Mens Causals_1140mm x 750mm.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/1180mm X 635mm_Mens Footwear.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/1774606030628_edited.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/222.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/4_Life Style_1180mm X 635mm_edited.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/1180mm X 635mm (1)_edited.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/IMG-20220321-WA0075.jpg",
-      "/portfolio/E-Commerce Creative Direction & Styling/IMG-20220321-WA0076.jpg"
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/3-compressed.jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/9e4437_02bdca115dd4436ca457a016ae9795c1~mv2.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/9e4437_689e805616dd41fdb162e993702177ef~mv2.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/03_bag_styling.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/11_edited.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/9e4437_02902626e967470aaeb5c66a9852812a~mv2.jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/9e4437_caff7f22862746b99e0b462371a8ee86~mv2.jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/3_Life Style_1180mm X 635mm_edited.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/Jack & Jones Cool Guys  (5).jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/JJ cool guys (20).jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/41x21_5_in_Digital_underground_JJ.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/JJ KIDS (4).jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/JJ KIDS (19).jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/MARQUEE COLLECTION 1 - SS22.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/IMG-20220321-WA0068.jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/A.jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/02_sun_styling.jpg"
+      ],
+      [
+        "/portfolio/E-Commerce Creative Direction & Styling/Wall Visuals_Mens Causals_1140mm x 750mm.jpg",
+        "/portfolio/E-Commerce Creative Direction & Styling/1180mm X 635mm_Mens Footwear.jpg"
+      ]
     ]
   },
   "Conceptual Design": {
     "Conceptual Design": [
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Concept Presentation 09.03.11-page-006 (2).jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/L12 2598 Dublin Showroom Visual 20.11.12-page-001 (2).jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Concept Presentation 09.03.11-page-008.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/lacoste-Knightsbridge-1.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/IMG-20180817-WA0025.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Diapositiva1.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Diapositiva2.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Diapositiva3.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/InShot_20181011_182503257.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/IMG-20180817-WA0024.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Slide3-removebg-preview.png",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/11.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/111.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Presentation1.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/IMG-20180222-WA0041.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE_WINDOWS-page-001.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE_WINDOWS-page-003.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE WINDOWS-page-005.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE WINDOWS-page-002.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE WINDOWS-page-004.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE WINDOWS-page-006.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Concept Presentation 09.03.11-page-005.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/IMG_6561.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/TRENDS I Gift cards holder_Acrylic R3[2][95].jpg"
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Concept Presentation 09.03.11-page-006 (2).jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/L12 2598 Dublin Showroom Visual 20.11.12-page-001 (2).jpg",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Concept Presentation 09.03.11-page-008.jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/lacoste-Knightsbridge-1.jpg",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/IMG-20180817-WA0025.jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Diapositiva1.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Diapositiva2.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Diapositiva3.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/InShot_20181011_182503257.jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/IMG-20180817-WA0024.jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Slide3-removebg-preview.png"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/11.jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Presentation1.jpg",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/IMG-20180222-WA0041.jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE_WINDOWS-page-001.jpg",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE_WINDOWS-page-003.jpg",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/MARQUEE WINDOWS-page-005.jpg"
+      ]
     ]
   },
   "Visual Signage": {
     "Visual Signage": [
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide0.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide1.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide2.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide3.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Sign Language Badge.png",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/VM BADGE.png",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide4.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide5.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide6.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide7.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide8.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide9.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide10.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide11.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide13.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide14.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide27.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide29.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide102.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide104.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide135.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide139.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Diapositiva7.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Diapositiva8.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Diapositiva3.JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Final SS25 In store visuals .jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/InShot_20201006_141141431_2.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/flash back window.jpg",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide1 (1).JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide2 (1).JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide2 (2).JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide2 (3).JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide3 (1).JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide5 (1).JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide5 (2).JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide5 (3).JPG",
-      "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide7 (1).JPG"
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide0.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide2.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide3.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide4.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide5.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide6.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide7.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide8.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide9.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide10.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide11.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide13.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide14.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide27.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide29.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide102.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide104.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide135.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide139.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Diapositiva7.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Diapositiva8.JPG"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Diapositiva3.JPG",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/InShot_20201006_141141431_2.jpg"
+      ],
+      [
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/flash back window.jpg",
+        "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide1 (1).JPG"
+      ]
     ]
   },
   "Trade Shows": {
     "Fashion Trade Shows": [
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG_20220816_065440.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG_20220816_065549.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/1000043071.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG_20220816_061149.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG_20220816_065717.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0009.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0025.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/Slide31.JPG",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/1000043073.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/1000043068.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/1.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/2.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/3.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/InShot_20220519_135821094.jpg",
-      "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/Corporate Fair Stand Display layout 20221024_1.jpg"
+      [
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG_20220816_065440.jpg",
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG_20220816_065549.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/1000043071.jpg",
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG_20220816_061149.jpg",
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG_20220816_065717.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0009.jpg",
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0015.jpg",
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/IMG-20220816-WA0025.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/Slide31.JPG",
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/1000043073.jpg",
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/J&J TRADE SHOW/1000043068.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/1.jpg",
+        "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/VERO MODA CORPORATE GIFT FAIR/2.jpg"
+      ]
     ]
   },
   "Showroom Curation": {
     "Press & Showroom Curation": [
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105057.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105043.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105107.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/InShot_20190124_142823798.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195027.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200439.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/20200124_135958.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/20200124_140521_HDR.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8981.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8991.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8999.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200709.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194926.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.20.40.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.11.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.29.14.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7892.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7903.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7915.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7950.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_9004.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.14.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.34.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.26.52.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.52.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194904.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194933.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195007.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195141.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195452.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195525~3.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200318.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200412.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200647~2.jpg"
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105057.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105043.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190118_105107.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/InShot_20190124_142823798.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_195027.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200439.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/20200124_135958.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/20200124_140521_HDR.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8981.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8991.JPG",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_8999.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_200709.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/VERO MODA PRESS PREVIEW/20190117_194926.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.20.40.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.11.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.29.14.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7892.JPG",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7903.JPG",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7915.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7950.JPG",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/IMG_9004.JPG",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.14.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.34.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.26.52.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.52.jpg"
+      ]
     ]
   },
   "Luxury Events": {
     "Bell & Ross": [
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of 1.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0001 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0007 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0008 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0009 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0010 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0018 (3).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0019.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0036 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0047.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0053.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0058.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0064.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0065.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0075.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0077.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0082 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0084.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0094.JPG"
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of 1.JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0001 (2).JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0007 (2).JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0008 (2).JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0009 (2).JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0010 (2).JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0018 (3).JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0019.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0036 (2).JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0047.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0053.JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0058.JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0064.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0065.JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0075.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0077.JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0082 (2).JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0084.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/Copy of _MG_0094.JPG"
+      ]
     ],
     "Waterman": [
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/01.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/02.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/1.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/2.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/_MG_0017 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/_MG_0032 (2).JPG"
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/01.JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/02.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/1.JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/2.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/_MG_0017 (2).JPG",
+        "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/_MG_0032 (2).JPG"
+      ]
     ]
   },
   "Press & Guest Speaker": {
     "Press & Guest Speaker": [
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7892.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7903.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7915.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7950.JPG",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.20.40.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.26.52.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.11.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.52.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.14.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.34.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.29.14.jpg",
-      "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 22.22.13.jpg"
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7870.JPG",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7892.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7903.JPG",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7915.JPG",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/6E4A7950.JPG"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.20.40.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.26.52.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.11.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.27.52.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.14.jpg"
+      ],
+      [
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.28.34.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 21.29.14.jpg",
+        "/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/New folder (2)/2017-06-21 22.22.13.jpg"
+      ]
     ]
   }
 };

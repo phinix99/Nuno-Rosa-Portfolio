@@ -39,8 +39,15 @@ export default function ProjectGalleryPage() {
   const { category } = useParams();
   const navigate = useNavigate();
   const categoryKey = category ? slugMap[category] : "";
-  const subcategories = categoryKey ? portfolioData[categoryKey] || {} : {};
-  const flattenedImages = Object.values(subcategories).flat();
+  const subcategories = categoryKey ? (portfolioData[categoryKey] as Record<string, string[][] | string[]>) || {} : {};
+  
+  // Flatten all images across subcategories and rows for the lightbox and count
+  const flattenedImages: string[] = Object.values(subcategories).flatMap((item) => {
+    if (Array.isArray(item) && item.length > 0 && Array.isArray(item[0])) {
+      return (item as string[][]).flat();
+    }
+    return item as string[];
+  });
   const hasImages = flattenedImages.length > 0;
 
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
@@ -130,7 +137,7 @@ export default function ProjectGalleryPage() {
       </nav>
 
       {/* Clean Minimal Header */}
-      <header className="max-w-[1600px] mx-auto px-4 md:px-12 pt-6 md:pt-10 pb-6">
+      <header className="max-w-[1100px] mx-auto px-4 md:px-8 pt-6 md:pt-10 pb-6">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500 mb-4">
           <Link to="/" className="hover:text-[#5E27BA] transition-colors flex items-center gap-1.5 font-medium">
@@ -175,60 +182,71 @@ export default function ProjectGalleryPage() {
         </div>
       </header>
 
-      {/* Bento Grid */}
-      <div className="max-w-[1600px] mx-auto px-4 md:px-12 mt-4">
+      {/* Symmetrical Row Gallery Layout */}
+      <div className="max-w-[1100px] mx-auto px-4 md:px-8 mt-4">
         {!hasImages ? (
            <p className="text-black/40 uppercase tracking-widest py-10 font-mono text-sm">No images available for this discipline.</p>
         ) : (
-          <div className="flex flex-col gap-12 md:gap-16">
-            {Object.entries(subcategories).map(([subcatName, subcatImages], subcatIdx) => {
-              if (subcatImages.length === 0) return null;
+          <div className="flex flex-col gap-10 md:gap-14">
+            {Object.entries(subcategories).map(([subcatName, rawContent]) => {
+              // Normalize to string[][] (rows)
+              const rows: string[][] = Array.isArray(rawContent) && rawContent.length > 0 && Array.isArray(rawContent[0])
+                ? (rawContent as string[][])
+                : [(rawContent as string[])];
+
+              if (rows.length === 0 || rows.every(r => r.length === 0)) return null;
               
-              const globalIndexOffset = Object.values(subcategories).slice(0, subcatIdx).reduce((acc, curr) => acc + curr.length, 0);
               const showSubcatHeader = Object.keys(subcategories).length > 1 && subcatName !== 'Gallery' && subcatName.toLowerCase() !== categoryKey.toLowerCase();
 
               return (
-                <section key={subcatName}>
+                <section key={subcatName} className="flex flex-col gap-5 md:gap-6">
                   {showSubcatHeader && (
-                    <div className="sticky top-[60px] md:top-[76px] z-30 bg-white/95 backdrop-blur-md py-3 mb-4 md:mb-6 border-b border-black/10">
+                    <div className="sticky top-[60px] md:top-[76px] z-30 bg-white/95 backdrop-blur-md py-3 mb-2 border-b border-black/10">
                       <h2 className="text-lg md:text-xl font-medium tracking-wide uppercase text-black/90">
                         {subcatName}
                       </h2>
                     </div>
                   )}
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 auto-rows-[200px] md:auto-rows-[320px]">
-                    {subcatImages.map((src, localIdx) => {
-                      let spanClass = "col-span-1 row-span-1";
-                      if (localIdx % 7 === 0) spanClass = "col-span-2 row-span-2";
-                      else if (localIdx % 5 === 0) spanClass = "col-span-1 row-span-2";
-                      else if (localIdx % 11 === 0) spanClass = "col-span-2 row-span-1";
-
-                      const globalIndex = globalIndexOffset + localIdx;
+                  <div className="flex flex-col gap-4 md:gap-6">
+                    {rows.map((row, rowIdx) => {
+                      const count = row.length;
+                      let gridColsClass = "grid-cols-1";
+                      if (count === 2) gridColsClass = "grid-cols-1 sm:grid-cols-2";
+                      else if (count === 3) gridColsClass = "grid-cols-1 sm:grid-cols-3";
+                      else if (count === 4) gridColsClass = "grid-cols-2 sm:grid-cols-4";
 
                       return (
-                        <motion.div
-                          key={src + localIdx}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true, margin: "50px" }}
-                          transition={{ duration: 0.5, delay: (localIdx % 10) * 0.05 }}
-                          onClick={() => setSelectedImageIndex(globalIndex)}
-                          className={`group relative rounded-sm md:rounded overflow-hidden bg-white border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#5E27BA]/50 transition-all duration-500 ${spanClass}`}
-                        >
-                          <img 
-                            src={src} 
-                            alt={`${subcatName} showcase ${localIdx}`}
-                            className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#5E27BA]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                          <div className="absolute inset-0 bg-[#5E27BA]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                            <span className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-xs text-[#5E27BA] font-mono text-xs uppercase tracking-widest border border-[#5E27BA]/20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
-                              View
-                            </span>
-                          </div>
-                        </motion.div>
+                        <div key={rowIdx} className={`grid ${gridColsClass} gap-4 md:gap-6 w-full items-center`}>
+                          {row.map((src) => {
+                            const globalIndex = flattenedImages.indexOf(src);
+
+                            return (
+                              <motion.div
+                                key={src}
+                                initial={{ opacity: 0, y: 15 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "50px" }}
+                                transition={{ duration: 0.4 }}
+                                onClick={() => setSelectedImageIndex(globalIndex >= 0 ? globalIndex : 0)}
+                                className="group relative rounded-sm overflow-hidden bg-neutral-100 border border-black/10 cursor-pointer shadow-2xs hover:shadow-lg hover:border-[#5E27BA]/50 transition-all duration-300 w-full flex items-center justify-center"
+                              >
+                                <img 
+                                  src={src} 
+                                  alt={`${subcatName} visual`}
+                                  className="w-full h-auto max-h-[700px] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                                  loading="lazy"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <div className="absolute inset-0 bg-[#5E27BA]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                  <span className="bg-white/95 text-[#5E27BA] px-4 py-2 rounded-xs font-mono text-[11px] uppercase tracking-widest border border-[#5E27BA]/20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 shadow-sm">
+                                    View
+                                  </span>
+                                </div>
+                              </motion.div>
+                            );
+                          })}
+                        </div>
                       );
                     })}
                   </div>
