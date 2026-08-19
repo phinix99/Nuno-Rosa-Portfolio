@@ -231,7 +231,14 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="w-full py-12 border-t border-neutral-200/80 text-center font-sans text-xs tracking-wider uppercase text-neutral-500 bg-[#fafafa] flex flex-col items-center gap-4">
-        <div className="flex items-center gap-6 text-neutral-700">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-neutral-700">
+          <a 
+            href="mailto:nunorosa75@gmail.com" 
+            className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 font-semibold lowercase"
+          >
+            nunorosa75@gmail.com
+          </a>
+          <span className="text-neutral-300 hidden sm:inline">•</span>
           <a 
             href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
             target="_blank" 
@@ -240,7 +247,7 @@ export default function Portfolio() {
           >
             LinkedIn <ArrowUpRight size={12} />
           </a>
-          <span className="text-neutral-300">•</span>
+          <span className="text-neutral-300 hidden sm:inline">•</span>
           <a 
             href="https://www.instagram.com/nuno.marques.rosa/" 
             target="_blank" 

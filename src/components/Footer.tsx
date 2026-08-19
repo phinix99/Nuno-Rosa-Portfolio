@@ -15,7 +15,7 @@ export default function Footer() {
             LET'S TALK
           </h2>
           <div className="flex flex-col gap-1 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase opacity-75 hover:text-black transition-colors">
-            <a href="mailto:hello@studio.co">hello@studio.co</a>
+            <a href="mailto:nunorosa75@gmail.com">nunorosa75@gmail.com</a>
           </div>
         </motion.div>
 
