@@ -80,18 +80,17 @@ export default function Welcome() {
             className="lg:col-span-5 w-full flex justify-center lg:justify-end"
             ref={imageRef}
           >
-            <div className="relative w-full max-w-[320px] aspect-[3/3.8] rounded-2xl overflow-hidden bg-white shadow-[0_10px_30px_rgba(107,76,154,0.12)] group border border-black/10">
-              <div className="absolute inset-3 border border-[#7651B9]/30 rounded-xl pointer-events-none z-10 transition-all duration-500 group-hover:inset-2 group-hover:border-[#7651B9]" />
+            <div className="relative w-full max-w-[320px] aspect-[3/3.8] rounded-lg overflow-hidden bg-white shadow-[0_10px_30px_rgba(107,76,154,0.12)] group border border-black/10">
+              <div className="absolute inset-2.5 border border-[#7651B9]/30 rounded-md pointer-events-none z-10 transition-all duration-500 group-hover:inset-2 group-hover:border-[#7651B9]" />
               
               <motion.img 
                 style={{ y, scale: 1.1 }}
                 src="https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" 
                 alt="Nuno Rosa Portrait" 
-                className="w-full h-full object-cover object-top filter grayscale hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-[1.14]"
+                className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.14]"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/35 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute inset-0 bg-[#7651B9]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay" />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/20 via-transparent to-transparent pointer-events-none" />
             </div>
           </motion.div>
 
@@ -103,7 +102,7 @@ export default function Welcome() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-8 md:mt-10 p-4 md:p-6 rounded-2xl bg-[#FAF9FB] border border-[#7651B9]/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4"
+          className="mt-8 md:mt-10 p-4 md:p-6 rounded-lg bg-[#FAF9FB] border border-[#7651B9]/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4"
         >
           <div className="flex flex-col gap-0.5 shrink-0">
             <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.2em] text-[#7651B9] uppercase">
@@ -118,7 +117,7 @@ export default function Welcome() {
             {accolades.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div key={idx} className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-black/5 shadow-xs">
+                <div key={idx} className="flex items-center gap-2 p-2.5 rounded-md bg-white border border-black/5 shadow-xs">
                   <div className="w-6 h-6 rounded-md bg-[#7651B9]/10 text-[#7651B9] flex items-center justify-center shrink-0">
                     <Icon size={13} />
                   </div>
@@ -135,7 +134,7 @@ export default function Welcome() {
 
       {/* Brands Carousel Section directly under About Me */}
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-8 md:pt-10">
-        <h4 className="text-center font-sans text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-black/40 mb-4 md:mb-6">
+        <h4 className="text-center font-sans text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-black/50 mb-4 md:mb-6">
           TRUSTED BY GLOBAL ICONS
         </h4>
         
@@ -158,7 +157,7 @@ export default function Welcome() {
                   <img 
                     src={brand.src} 
                     alt={brand.alt}
-                    className="max-h-12 md:max-h-14 lg:max-h-16 max-w-[150px] md:max-w-[190px] lg:max-w-[220px] w-auto h-auto object-contain filter grayscale contrast-125 mix-blend-multiply opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transform-gpu origin-center"
+                    className="max-h-12 md:max-h-14 lg:max-h-16 max-w-[150px] md:max-w-[190px] lg:max-w-[220px] w-auto h-auto object-contain transition-all duration-300 group-hover:scale-105 transform-gpu origin-center"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}

@@ -119,7 +119,7 @@ export default function Testimonials() {
           <div className="flex items-center gap-2.5">
             <button 
               onClick={handlePrev}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#7651B9] hover:text-white hover:border-[#7651B9] transition-all shadow-xs"
+              className="w-10 h-10 flex items-center justify-center rounded-md bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#7651B9] hover:text-white hover:border-[#7651B9] transition-all shadow-xs"
               title="Previous Reviews"
             >
               <ChevronLeft size={18} />
@@ -127,7 +127,7 @@ export default function Testimonials() {
             
             <button 
               onClick={handleNext}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#7651B9] hover:text-white hover:border-[#7651B9] transition-all shadow-xs"
+              className="w-10 h-10 flex items-center justify-center rounded-md bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#7651B9] hover:text-white hover:border-[#7651B9] transition-all shadow-xs"
               title="Next Reviews"
             >
               <ChevronRight size={18} />
@@ -145,7 +145,7 @@ export default function Testimonials() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.35, delay: idx * 0.05 }}
-                className="flex flex-col justify-between p-5 md:p-6 rounded-2xl bg-[#FAF9FB] border border-black/10 hover:border-[#7651B9]/40 hover:shadow-[0_15px_30px_rgba(118,81,185,0.06)] transition-all duration-300 group min-h-[300px]"
+                className="flex flex-col justify-between p-5 md:p-6 rounded-lg bg-[#FAF9FB] border border-black/10 hover:border-[#7651B9]/40 hover:shadow-[0_15px_30px_rgba(118,81,185,0.06)] transition-all duration-300 group min-h-[300px]"
               >
                 {/* Top: Avatar & Recommender Info */}
                 <div className="flex flex-col gap-4">
@@ -156,7 +156,7 @@ export default function Testimonials() {
                           <img 
                             src={t.avatar} 
                             alt={t.name}
-                            className="w-12 h-12 rounded-full object-cover border-2 border-[#7651B9] shadow-xs group-hover:scale-105 transition-transform duration-300"
+                            className="w-12 h-12 rounded-md object-cover border border-[#7651B9] shadow-xs group-hover:scale-105 transition-transform duration-300"
                             onError={(e) => {
                               e.currentTarget.style.display = 'none';
                               if (e.currentTarget.nextElementSibling) {
@@ -165,11 +165,11 @@ export default function Testimonials() {
                             }}
                           />
                         ) : null}
-                        <div className={`${t.avatar ? 'hidden' : 'flex'} w-12 h-12 rounded-full bg-[#7651B9] text-white font-bold items-center justify-center text-sm border-2 border-white shadow-xs`}>
+                        <div className={`${t.avatar ? 'hidden' : 'flex'} w-12 h-12 rounded-md bg-[#7651B9] text-white font-bold items-center justify-center text-sm border border-white shadow-xs`}>
                           {t.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                         </div>
 
-                        <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#0077B5] text-white flex items-center justify-center border-2 border-white">
+                        <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded bg-[#0077B5] text-white flex items-center justify-center border border-white">
                           <Linkedin size={8} />
                         </div>
                       </div>
@@ -187,7 +187,7 @@ export default function Testimonials() {
                       </div>
                     </div>
 
-                    <span className="shrink-0 flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/5 text-[9px] font-bold tracking-wider text-black/60 uppercase">
+                    <span className="shrink-0 flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/5 text-[9px] font-bold tracking-wider text-black/60 uppercase">
                       <MapPin size={9} className="text-[#7651B9]" /> {t.country}
                     </span>
                   </div>
@@ -226,7 +226,7 @@ export default function Testimonials() {
                 setStartIndex(idx);
               }}
               title={`Jump to review ${idx + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
+              className={`h-1.5 rounded-sm transition-all duration-300 ${
                 idx === startIndex ? 'bg-[#7651B9] w-6' : 'bg-black/20 hover:bg-black/40 w-1.5'
               }`}
             />

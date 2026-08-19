@@ -141,7 +141,7 @@ export default function Portfolio() {
           </Link>
           <Link 
             to="/#contact" 
-            className="flex items-center gap-1 px-4 py-2 rounded-full bg-[#7651B9] text-white hover:bg-black transition-colors"
+            className="flex items-center gap-1 px-4 py-2 rounded-lg bg-[#7651B9] text-white hover:bg-black transition-colors"
           >
             Contact <ArrowUpRight size={12} />
           </Link>
@@ -161,7 +161,7 @@ export default function Portfolio() {
         </nav>
 
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#7651B9] uppercase">
+          <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#7651B9] uppercase">
             <Sparkles size={14} /> ARCHITECTURAL PORTFOLIO
           </div>
           <h1 className="font-sans text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight uppercase text-[#111] leading-none">
@@ -178,7 +178,7 @@ export default function Portfolio() {
             <button 
               key={section.slug} 
               onClick={() => scrollToSection(section.slug)}
-              className={`shrink-0 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all ${
+              className={`shrink-0 px-4 py-2 rounded-md text-xs font-semibold tracking-wider uppercase transition-all ${
                 activeSlug === section.slug 
                   ? 'bg-[#111] text-white' 
                   : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
@@ -215,7 +215,7 @@ export default function Portfolio() {
 
                 <Link
                   to={`/gallery/${section.slug}`}
-                  className="flex items-center gap-2 px-6 py-3 rounded-full border border-black/20 hover:border-[#7651B9] hover:bg-[#7651B9] hover:text-white transition-all text-xs font-bold tracking-widest uppercase text-black group w-fit shadow-sm"
+                  className="flex items-center gap-2 px-6 py-3 rounded-lg border border-black/20 hover:border-[#7651B9] hover:bg-[#7651B9] hover:text-white transition-all text-xs font-bold tracking-widest uppercase text-black group w-fit shadow-sm"
                 >
                   View Full Gallery
                   <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -235,7 +235,7 @@ export default function Portfolio() {
                   >
                     <Link 
                       to={`/gallery/${section.slug}`} 
-                      className="group relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#7651B9]/60 hover:shadow-[0_25px_50px_rgba(118,81,185,0.2)] transition-all duration-700 bg-neutral-900 flex flex-col justify-center items-center"
+                      className="group relative w-full h-full rounded-lg md:rounded-xl overflow-hidden border border-neutral-200/80 hover:border-[#7651B9]/60 hover:shadow-[0_25px_50px_rgba(118,81B185,0.2)] transition-all duration-700 bg-neutral-900 flex flex-col justify-center items-center"
                     >
                       {/* Background Image */}
                       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -251,7 +251,7 @@ export default function Portfolio() {
 
                       {/* Center Badge with responsive text */}
                       <div className="relative z-10 p-4 text-center">
-                        <span className="bg-white/95 text-black px-6 md:px-8 py-2.5 md:py-3 rounded-full border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-lg group-hover:bg-[#7651B9] group-hover:text-white group-hover:border-[#7651B9] transition-all duration-300 inline-block">
+                        <span className="bg-white/95 text-black px-6 md:px-8 py-2.5 md:py-3 rounded-md border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-lg group-hover:bg-[#7651B9] group-hover:text-white group-hover:border-[#7651B9] transition-all duration-300 inline-block">
                           {item.title}
                         </span>
                       </div>
@@ -265,7 +265,7 @@ export default function Portfolio() {
           return (
             <section key={section.slug} id={section.slug} className="scroll-mt-32">
               {isEven ? (
-                <div className="w-full border-[10px] md:border-[14px] border-[#111] p-6 sm:p-10 md:p-14 lg:p-16 rounded-[2rem] bg-white shadow-sm">
+                <div className="w-full border-[8px] md:border-[10px] border-[#111] p-6 sm:p-10 md:p-14 lg:p-16 rounded-xl bg-white shadow-sm">
                   {sectionContent}
                 </div>
               ) : (

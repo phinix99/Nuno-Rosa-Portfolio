@@ -153,7 +153,7 @@ export default function Hero() {
             variants={itemVariants}
             className="lg:col-span-5 flex flex-col items-start gap-6 lg:pr-4 order-2 lg:order-1"
           >
-            <div className="flex items-center gap-2 bg-[#7651B9]/10 text-[#7651B9] px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-wider uppercase border border-[#7651B9]/20">
+            <div className="flex items-center gap-2 bg-[#7651B9]/10 text-[#7651B9] px-3 py-1 rounded-md font-sans text-[11px] font-semibold tracking-wider uppercase border border-[#7651B9]/20">
               <Sparkles size={12} />
               <span>Spatial Design & Visual Merchandising</span>
             </div>
@@ -165,7 +165,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-4 font-sans text-xs font-semibold tracking-wider uppercase">
               <a 
                 href="#contact" 
-                className="bg-[#7651B9] text-white px-7 py-3 rounded-full hover:bg-black hover:text-white hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2 text-xs"
+                className="bg-[#7651B9] text-white px-7 py-3 rounded-lg hover:bg-black hover:text-white hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2 text-xs"
               >
                 Start Project <ArrowUpRight size={13} strokeWidth={2.5} />
               </a>
@@ -209,7 +209,7 @@ export default function Hero() {
             variants={itemVariants}
             className="lg:col-span-7 w-full order-1 lg:order-2"
           >
-            <div className="relative w-full aspect-[16/9] md:aspect-[16/8.8] rounded-2xl md:rounded-3xl overflow-hidden bg-neutral-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-neutral-200/80 group">
+            <div className="relative w-full aspect-[16/9] md:aspect-[16/8.8] rounded-xl overflow-hidden bg-neutral-100 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-neutral-200/80 group">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#7651B9]/15 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
               
               <AnimatePresence mode="wait">
@@ -227,7 +227,7 @@ export default function Hero() {
               </AnimatePresence>
 
               {/* Floating Pill Badge on Image */}
-              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-white font-sans text-[10px] font-semibold tracking-widest uppercase shadow-lg">
+              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/80 backdrop-blur-md px-3.5 py-1.5 rounded-md border border-white/20 text-white font-sans text-[10px] font-semibold tracking-widest uppercase shadow-lg">
                 <span className="w-1.5 h-1.5 bg-[#7651B9] rounded-full animate-pulse" />
                 Featured Spatial Showcase
               </div>
