@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, ArrowUpRight, Sparkles, Home, ChevronRight, ArrowUp } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Sparkles, Home, ChevronRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const portfolioData = [
@@ -64,7 +64,6 @@ const portfolioData = [
 export default function Portfolio() {
   const { category } = useParams();
   const [activeSlug, setActiveSlug] = useState(category || "visual-merchandising");
-  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -77,18 +76,6 @@ export default function Portfolio() {
     }
   }, [category]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setShowBackToTop(true);
-      } else {
-        setShowBackToTop(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const scrollToSection = (slug: string) => {
     setActiveSlug(slug);
     const el = document.getElementById(slug);
@@ -97,10 +84,6 @@ export default function Portfolio() {
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -277,20 +260,6 @@ export default function Portfolio() {
           );
         })}
       </div>
-      
-      {/* Floating Back to Top Button */}
-      {showBackToTop && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-[#111] text-white hover:bg-[#7651B9] shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center border border-white/20"
-          title="Back to Top"
-        >
-          <ArrowUp size={20} />
-        </motion.button>
-      )}
 
       {/* Footer */}
       <footer className="w-full py-12 border-t border-neutral-200/80 text-center font-sans text-xs tracking-wider uppercase text-neutral-500 bg-[#fafafa]">
