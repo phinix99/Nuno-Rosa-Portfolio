@@ -2,9 +2,7 @@ import Hero from '../components/Hero';
 import Welcome from '../components/Welcome';
 import PortfolioHighlights from '../components/PortfolioHighlights';
 import Philosophy from '../components/Philosophy';
-import Services from '../components/Services';
 import VMCourse from '../components/VMCourse';
-import NewsUpdate from '../components/NewsUpdate';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 
@@ -15,9 +13,7 @@ export default function Home() {
       <Welcome />
       <PortfolioHighlights />
       <Philosophy />
-      <Services />
       <VMCourse />
-      <NewsUpdate />
       <Testimonials />
       <Footer />
     </main>

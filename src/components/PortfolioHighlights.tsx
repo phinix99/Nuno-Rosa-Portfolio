@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { ArrowUpRight, Sparkles, Layers, Eye } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface CollageItem {
@@ -216,36 +216,6 @@ export default function PortfolioHighlights() {
           </motion.div>
 
         </div>
-
-        {/* Bottom Interactive Discovery Callout */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-6 p-8 md:p-10 rounded-2xl md:rounded-3xl bg-[#FAF9FB] border border-[#7651B9]/20 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[inset_0_0_30px_rgba(118,81,185,0.03)]"
-        >
-          <div className="flex items-center gap-4 text-center md:text-left">
-            <div className="w-12 h-12 rounded-2xl bg-[#7651B9]/10 text-[#7651B9] flex items-center justify-center shrink-0">
-              <Layers size={22} />
-            </div>
-            <div>
-              <h4 className="font-sans text-lg md:text-xl font-medium text-black">
-                300+ Spatial Installations & Global Campaigns
-              </h4>
-              <p className="font-sans text-xs md:text-sm font-light text-black/60 mt-0.5">
-                Browse detailed case studies, client commissions, and high-resolution galleries.
-              </p>
-            </div>
-          </div>
-
-          <Link
-            to="/portfolio"
-            className="shrink-0 flex items-center gap-2 px-6 py-3 rounded-full bg-[#7651B9] hover:bg-black text-white text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
-          >
-            <Eye size={14} /> Open Archive
-          </Link>
-        </motion.div>
 
       </div>
     </section>
