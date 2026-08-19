@@ -400,19 +400,7 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
     ]
   },
   "Luxury Events": {
-    "Luxury & Lifestyle Events": [
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0014 (3).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/_MG_0017 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0022 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0027 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/_MG_0032 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0062 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0141 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0154 (2).JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/01.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/1.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/02.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/2.JPG",
+    "Bell & Ross": [
       "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0001 (2).JPG",
       "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0007 (2).JPG",
       "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0008 (2).JPG",
@@ -431,8 +419,21 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
       "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0082 (2).JPG",
       "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0084.JPG",
       "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of _MG_0094.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of 1.JPG",
-      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/NOT NEED IT IF LOOKS DARK .JPG"
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/BELL & ROSS/BELL & ROSS AUTODROME EVENT/Copy of 1.JPG"
+    ],
+    "Waterman": [
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0014 (3).JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/_MG_0017 (2).JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0022 (2).JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0027 (2).JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/_MG_0032 (2).JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0062 (2).JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0141 (2).JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/NOT SURE THEY LOOK GOOD/_MG_0154 (2).JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/01.JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/1.JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/02.JPG",
+      "/portfolio/Events & Brands Exhibition/Luxury & Lifestyle Events/WATERMAN PICS/2.JPG"
     ]
   },
   "Press & Guest Speaker": {
