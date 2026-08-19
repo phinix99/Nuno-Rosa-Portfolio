@@ -166,7 +166,7 @@ export default function PortfolioHighlights() {
     <section 
       ref={containerRef}
       className="w-full bg-white pt-20 md:pt-28 pb-24 md:pb-36 border-b border-black/10 px-6 md:px-12 lg:px-20 overflow-hidden" 
-      id="projects"
+      id="portfolio"
     >
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12 md:gap-16">
         

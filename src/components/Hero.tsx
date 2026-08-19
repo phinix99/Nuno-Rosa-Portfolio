@@ -122,14 +122,14 @@ export default function Hero() {
         
         {/* Navigation Menu */}
         <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-8 gap-y-3">
-          <a href="#projects" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
-            Projects
+          <a href="#portfolio" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
+            Portfolio
+          </a>
+          <a href="#about" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
+            About Me
           </a>
           <a href="#vm-course" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             VM Course
-          </a>
-          <a href="#about" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
-            About
           </a>
           <a href="#contact" className="hover:text-[#7651B9] transition-colors flex items-center gap-1 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Contact <ArrowUpRight size={13} strokeWidth={2.5} />

@@ -10,7 +10,7 @@ export default function Welcome() {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section className="w-full bg-white text-black py-20 md:py-32 px-6 md:px-12 lg:px-20 border-b border-black/10 overflow-hidden" id="welcome">
+    <section className="w-full bg-white text-black py-20 md:py-32 px-6 md:px-12 lg:px-20 border-b border-black/10 overflow-hidden" id="about">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
