@@ -13,19 +13,25 @@ const timeline = [
   { location: "Lisbon, Portugal", year: "1996", brand: "MANGO", role: "Country VM of Franchise Expansion" }
 ];
 
-const brands = [
-  { name: "Mango", domain: "mango.com" },
-  { name: "United Colours of Benetton", domain: "benetton.com" },
-  { name: "Central Models", domain: "centralmodels.pt" },
-  { name: "Hugo Boss", domain: "hugoboss.com" },
-  { name: "Lacoste", domain: "lacoste.com" },
-  { name: "Bicester Village", domain: "thebicestercollection.com" },
-  { name: "Chalhoub Group", domain: "chalhoubgroup.com" },
-  { name: "C&A", domain: "c-and-a.com" },
-  { name: "Vero Moda", domain: "veromoda.com" },
-  { name: "Jack & Jones", domain: "jackjones.com" },
-  { name: "Trends", domain: "reliancetrends.com" },
-  { name: "Yousta", domain: "relianceretail.com" }
+const brandLogos = [
+  { name: "Hugo Boss", src: "/brands/966_hugoboss.jpg" },
+  { name: "Jack & Jones", src: "/brands/1200px-Jack_&_Jones_logo.svg (1).png" },
+  { name: "Vero Moda", src: "/brands/Vero-Moda-Logo500x417_02.png" },
+  { name: "Mango", src: "/brands/mango_logo.gif" },
+  { name: "United Colors of Benetton", src: "/brands/ucb.jpg" },
+  { name: "Yousta", src: "/brands/YOUSTA.jpg" },
+  { name: "Reliance Trends", src: "/brands/reliance-trends-logo-hd.png" },
+  { name: "Bell & Ross", src: "/brands/bell-ross-1.svg" },
+  { name: "Chalhoub Group", src: "/brands/20140713_chalhoub.jpg" },
+  { name: "COS Bicester", src: "/brands/COS Bicester Logo BLACK L_JPG.jpg" },
+  { name: "Ermenegildo Zegna", src: "/brands/Logo_von_Ermenegildo_Zegna.svg.png" },
+  { name: "Tod's", src: "/brands/Tods-Logo-normal.png" },
+  { name: "Marc Jacobs", src: "/brands/marcjacobs.jpg" },
+  { name: "S.T. Dupont", src: "/brands/st_ dupont logo.jpg" },
+  { name: "Pequignet", src: "/brands/pequignet-logo.png" },
+  { name: "Jack & Jones Junior", src: "/brands/jackjones_junior_logo_1_line_blue_rgb.png" },
+  { name: "DSD", src: "/brands/DSD.png" },
+  { name: "260", src: "/brands/260_01.jpg" }
 ];
 
 const metrics = [
@@ -41,47 +47,47 @@ const metrics = [
 
 export default function Philosophy() {
   return (
-    <section className="w-full bg-white text-black py-24 md:py-32 px-6 md:px-12 lg:px-20 border-b border-black/10" id="about">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="w-full bg-white text-black py-20 md:py-28 border-b border-black/10 overflow-hidden" id="about">
+      {/* Full-Screen Brands Carousel Section without container box */}
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pb-16 md:pb-24">
+        <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-black/50 mb-12 md:mb-16">
+          TRUSTED BY GLOBAL ICONS
+        </h4>
         
-
-
-        {/* Brands Carousel Section */}
-        <div className="my-16 py-12 md:py-16 rounded-[2rem] bg-[#FAF9FB] border border-[#7651B9]/10 overflow-hidden w-full relative shadow-[inset_0_0_40px_rgba(107,76,154,0.02)]">
-          <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-widest uppercase text-[#7651B9]/60 mb-12">
-            Trusted by Global Icons
-          </h4>
+        <div className="relative w-full flex overflow-hidden">
+          {/* Fade Edges for seamless edge fading on full-screen white background */}
+          <div className="absolute inset-y-0 left-0 w-20 md:w-60 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-20 md:w-60 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
           
-          <div className="relative w-full flex overflow-hidden">
-            {/* Fade Edges */}
-            <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-[#FAF9FB] to-transparent z-10 pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-[#FAF9FB] to-transparent z-10 pointer-events-none" />
-            
-            <motion.div 
-              className="flex items-center"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-              style={{ width: "fit-content" }}
-            >
-              {[...brands, ...brands].map((brand, idx) => (
-                <div key={`${brand.name}-${idx}`} className="flex flex-col items-center justify-center shrink-0 w-40 md:w-56 lg:w-64 mx-6 md:mx-12 group">
-                  <img 
-                    src={`https://logos.hunter.io/${brand.domain}`} 
-                    alt={brand.name}
-                    className="h-12 md:h-16 lg:h-20 w-auto object-contain filter grayscale opacity-50 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 drop-shadow-sm"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling!.classList.remove('hidden');
-                    }}
-                  />
-                  <span className="hidden font-sans text-xl md:text-2xl font-medium tracking-tight text-black/60 group-hover:text-[#7651B9] transition-colors cursor-default text-center">
-                    {brand.name}
-                  </span>
-                </div>
-              ))}
-            </motion.div>
-          </div>
+          <motion.div 
+            className="flex items-center"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 32 }}
+            style={{ width: "fit-content" }}
+          >
+            {[...brandLogos, ...brandLogos].map((brand, idx) => (
+              <div key={`${brand.name}-${idx}`} className="flex flex-col items-center justify-center shrink-0 w-48 md:w-72 lg:w-80 mx-8 md:mx-14 group">
+                <img 
+                  src={brand.src} 
+                  alt={brand.name}
+                  className="h-16 md:h-24 lg:h-28 max-h-[110px] w-auto max-w-[220px] md:max-w-[280px] object-contain filter grayscale contrast-125 mix-blend-multiply opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    if (e.currentTarget.nextElementSibling) {
+                      e.currentTarget.nextElementSibling.classList.remove('hidden');
+                    }
+                  }}
+                />
+                <span className="hidden font-sans text-lg md:text-2xl font-bold tracking-tight text-black/70 group-hover:text-[#7651B9] transition-colors cursor-default text-center">
+                  {brand.name}
+                </span>
+              </div>
+            ))}
+          </motion.div>
         </div>
+      </div>
+
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
 
         {/* Global Footprint Timeline */}
         <div className="mt-16 p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-[2rem] bg-[#7651B9] text-white relative overflow-hidden shadow-[0_30px_60px_rgba(107,76,154,0.3)] border border-white/10">
