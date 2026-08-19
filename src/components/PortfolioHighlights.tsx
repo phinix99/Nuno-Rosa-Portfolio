@@ -20,7 +20,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       title: 'Bespoke Windows Concepts',
       category: 'Creative Visual Storytelling',
       slug: 'creative-windows',
-      image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif',
+      image: '/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg',
       aspect: 'aspect-[4/3]',
       tag: 'Window Concepts'
     },

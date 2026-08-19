@@ -10,9 +10,9 @@ const portfolioData = [
     num: "01",
     desc: "Bespoke windows concepts, in-store product displays, and limited-edition product launch architectures.",
     items: [
-      { id: "vm-1", title: "Creative Windows", slug: "creative-windows", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif" },
-      { id: "vm-2", title: "In-store Display", slug: "in-store-display", image: "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg" },
-      { id: "vm-3", title: "Limited Editions", slug: "limited-editions", image: "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg" }
+      { id: "vm-1", title: "Creative Windows", slug: "creative-windows", image: "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg" },
+      { id: "vm-2", title: "In-store Display", slug: "in-store-display", image: "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/20170227_112718.avif" },
+      { id: "vm-3", title: "Limited Editions", slug: "limited-editions", image: "/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg" }
     ]
   },
   {

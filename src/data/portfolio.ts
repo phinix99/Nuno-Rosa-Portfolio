@@ -40,6 +40,7 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
       "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/3.jpg",
       "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/4.jpg",
       "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/111.jpg",
+      "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/20170227_112718.avif",
       "/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Final SS25 In store visuals .jpg",
       "/portfolio/VISUAL SIGNAGE/Final SS25 In store visuals .jpg",
       "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/IMG-20210831-WA0027.jpg",
@@ -84,6 +85,20 @@ export const portfolioData: Record<string, Record<string, string[]>> = {
   },
   "Limited Editions": {
     "Limited Editions": [
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191011_110755_edited.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191011_110941~2.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191104_131042.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191107_133738~3_edited.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/20191111_183341~2_edited.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/43527154_2279064838833119_2170682248129413120_n.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/43750634_2284038788335724_8388411178828693504_n.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/44319782_2298070196932583_2427615974984253440_n.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/44359792_2298070340265902_8587857146383695872_n.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/IMG-20181018-WA0004.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/IMG-20181130-WA0028.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212301994.jpg",
+      "/portfolio/VISUAL MERCHANDISING/Limited Editions/InShot_20181009_212511085.jpg",
       "/portfolio/E-Commerce Creative Direction & Styling/MARQUEE COLLECTION 1 - SS22.jpg"
     ]
   },

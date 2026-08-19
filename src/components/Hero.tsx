@@ -42,17 +42,17 @@ export default function Hero() {
     {
       title: "Creative Windows",
       slug: "creative-windows",
-      image: portfolioData["Creative Windows"]?.["Creative Window Concepts"]?.[0] || "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/a.jpg"
+      image: "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg"
     },
     {
       title: "In-store Display",
       slug: "in-store-display",
-      image: portfolioData["In-store Display"]?.["In-store Product Displays"]?.[0] || "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/1.jpg"
+      image: "/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/20170227_112718.avif"
     },
     {
       title: "Limited Editions",
       slug: "limited-editions",
-      image: portfolioData["Limited Editions"]?.["Limited Editions"]?.[0] || "https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg"
+      image: "/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg"
     },
     {
       title: "E-Commerce & Styling",
