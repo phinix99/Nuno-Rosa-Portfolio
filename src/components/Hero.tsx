@@ -97,34 +97,10 @@ export default function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-[1600px] mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-6 mb-12 md:mb-16 lg:mb-20 font-sans text-xs font-semibold tracking-wider uppercase border-b border-neutral-200/60 pb-6"
+        className="max-w-[1600px] mx-auto w-full flex justify-end items-center mb-12 md:mb-16 lg:mb-20 font-sans text-xs font-semibold tracking-wider uppercase border-b border-neutral-200/60 pb-6"
       >
-        <motion.div 
-          whileHover="hover"
-          className="flex items-center gap-3 cursor-pointer group"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          <div className="grid grid-cols-3 gap-[3px] w-4 h-4">
-            {[...Array(9)].map((_, i) => (
-              <motion.div 
-                key={i} 
-                variants={{
-                  hover: { 
-                    scale: [1, 1.2, 1],
-                    transition: { duration: 0.6, delay: i * 0.04, ease: "easeInOut" }
-                  }
-                }}
-                className="bg-[#7651B9] rounded-[1px]"
-              />
-            ))}
-          </div>
-          <span className="tracking-[0.22em] font-extrabold text-[#7651B9] group-hover:text-black transition-colors text-sm">
-            NUNO ROSA
-          </span>
-        </motion.div>
-        
         {/* Navigation Menu */}
-        <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-8 gap-y-3">
+        <div className="flex flex-wrap justify-end items-center gap-x-6 md:gap-x-10 gap-y-3">
           <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#7651B9] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Portfolio
           </Link>
