@@ -2,60 +2,64 @@ export const portfolioData: Record<string, Record<string, string[][]>> = {
   "Creative Windows": {
     "Creative Window Concepts": [
       [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg",
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/InShot_20220506_162829603.jpg"
-      ],
-      [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/l.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/a.jpg",
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/b.jpg"
-      ],
-      [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/y.jpg",
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG_7385.jpg"
-      ],
-      [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/n.jpg",
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/o.jpg"
-      ],
-      [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/m.jpg",
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/k.jpg"
       ],
       [
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/c.jpg",
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/d.jpg"
       ],
       [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/e.jpg"
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/e.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/e1.jpg"
       ],
       [
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/f.jpg",
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/g.jpg"
       ],
       [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG_7385.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG-20220817-WA0027.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG-20221027-WA0017.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/InShot_20220506_162829603.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/k.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/l.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/m.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/n.jpg"
+      ],
+      [
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/o.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg"
+      ],
+      [
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/q.jpg",
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/r.jpg"
       ],
       [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/s.jpg"
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/s.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Screenshot_2023-06-14-15-18-22-25_1c337646f29875672b5a61192b9010f9.jpg"
       ],
       [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/u.jpg"
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Slide1.JPG",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Slide82 (1).JPG"
       ],
       [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/v.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/u.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/v.jpg"
+      ],
+      [
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/w.jpg",
         "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/x.JPG"
       ],
       [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Slide1.JPG"
-      ],
-      [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG-20220817-WA0027.jpg",
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/IMG-20221027-WA0017.jpg"
-      ],
-      [
-        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Screenshot_2023-06-14-15-18-22-25_1c337646f29875672b5a61192b9010f9.jpg"
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/y.jpg",
+        "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/z.jpg"
       ]
     ]
   },
