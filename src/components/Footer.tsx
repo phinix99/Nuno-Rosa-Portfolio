@@ -2,19 +2,19 @@ import { motion } from 'motion/react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#7651B9] text-white px-6 md:px-12 lg:px-20 py-12 md:py-24" id="contact">
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+    <footer className="w-full bg-[#7651B9] text-white px-6 md:px-12 lg:px-20 py-10 md:py-16" id="contact">
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
           className="flex flex-col"
         >
-          <h2 className="font-sans text-5xl md:text-[8rem] font-medium tracking-tighter uppercase mb-6 md:mb-12 leading-none">
+          <h2 className="font-sans text-5xl md:text-[6.5rem] font-medium tracking-tighter uppercase mb-4 md:mb-6 leading-none">
             LET'S TALK
           </h2>
-          <div className="flex flex-col gap-2 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase opacity-70 hover:text-black transition-colors">
+          <div className="flex flex-col gap-1 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase opacity-75 hover:text-black transition-colors">
             <a href="mailto:hello@studio.co">hello@studio.co</a>
           </div>
         </motion.div>
@@ -23,10 +23,10 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="flex flex-col md:text-right gap-8"
+          transition={{ duration: 0.8, delay: 0.15 }}
+          className="flex flex-col md:text-right gap-6"
         >
-          <div className="flex flex-col gap-2 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase">
+          <div className="flex flex-col gap-1.5 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase">
             <a 
               href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
               target="_blank" 

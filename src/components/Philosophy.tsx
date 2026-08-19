@@ -23,32 +23,32 @@ const metrics = [
 
 export default function Philosophy() {
   return (
-    <section className="w-full bg-white text-black py-16 md:py-20 border-b border-black/10 overflow-hidden" id="philosophy">
+    <section className="w-full bg-white text-black py-10 md:py-14 border-b border-black/10 overflow-hidden" id="philosophy">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
 
-        {/* Compact, High-Impact Global Footprint Card */}
-        <div className="p-6 md:p-10 lg:p-12 rounded-2xl md:rounded-[2rem] bg-[#7651B9] text-white relative overflow-hidden shadow-[0_25px_50px_rgba(118,81,185,0.25)] border border-white/10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-black/10 blur-[100px] rounded-full pointer-events-none" />
+        {/* Compact, Single-Screen Global Footprint Card */}
+        <div className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-[#7651B9] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(118,81,185,0.22)] border border-white/10">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-black/10 blur-[90px] rounded-full pointer-events-none" />
 
           {/* Top Bar: Section Title + Horizontal Metrics Strip */}
-          <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-8 md:pb-10 border-b border-white/15">
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-white/70 uppercase">
-                <Globe2 size={14} /> Career Trajectory
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-5 pb-5 md:pb-6 border-b border-white/15">
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-white/70 uppercase">
+                <Globe2 size={13} /> Career Trajectory
               </div>
-              <h3 className="font-sans text-3xl md:text-5xl font-medium tracking-tight text-white uppercase leading-none">
+              <h3 className="font-sans text-2xl md:text-4xl font-medium tracking-tight text-white uppercase leading-none">
                 GLOBAL FOOTPRINT
               </h3>
             </div>
 
             {/* Streamlined Horizontal Highlights */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 font-sans">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5 font-sans">
               {metrics.map((m, idx) => (
-                <div key={idx} className="flex flex-col border-l border-white/20 pl-3.5">
-                  <span className="text-xl md:text-2xl font-bold tracking-tight text-white leading-tight">
+                <div key={idx} className="flex flex-col border-l border-white/20 pl-3">
+                  <span className="text-lg md:text-xl font-bold tracking-tight text-white leading-tight">
                     {m.value}
                   </span>
-                  <span className="text-[10px] md:text-[11px] font-medium tracking-wider uppercase text-white/70 mt-0.5">
+                  <span className="text-[9px] md:text-[10px] font-medium tracking-wider uppercase text-white/70 mt-0.5">
                     {m.label}
                   </span>
                 </div>
@@ -56,32 +56,32 @@ export default function Philosophy() {
             </div>
           </div>
 
-          {/* 2-Column Compact Timeline Grid */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 pt-8 md:pt-10">
+          {/* 3-Column Compact Timeline Grid */}
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-3 pt-5 md:pt-6">
             {timeline.map((item, index) => (
               <motion.div 
                 key={index}
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.04 }}
-                className="flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-black/[0.08] hover:bg-black/[0.16] border border-white/10 hover:border-white/25 transition-all duration-300 group cursor-default"
+                transition={{ duration: 0.35, delay: index * 0.03 }}
+                className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-black/[0.08] hover:bg-black/[0.16] border border-white/10 hover:border-white/25 transition-all duration-300 group cursor-default"
               >
-                <div className="flex items-center gap-3 min-w-0 pr-2">
-                  <span className="font-mono text-xs md:text-sm font-bold text-white/90 group-hover:text-white tabular-nums shrink-0 px-2 py-1 rounded bg-white/10">
+                <div className="flex items-center gap-2.5 min-w-0 pr-2">
+                  <span className="font-mono text-[11px] md:text-xs font-bold text-white/90 group-hover:text-white tabular-nums shrink-0 px-1.5 py-0.5 rounded bg-white/10">
                     {item.year}
                   </span>
                   <div className="flex flex-col min-w-0">
-                    <span className="font-sans text-xs md:text-sm font-semibold text-white tracking-tight truncate">
+                    <span className="font-sans text-xs font-semibold text-white tracking-tight truncate">
                       {item.role}
                     </span>
-                    <span className="font-sans text-[10px] text-white/60 uppercase tracking-wider truncate">
+                    <span className="font-sans text-[9px] text-white/60 uppercase tracking-wider truncate">
                       {item.location}
                     </span>
                   </div>
                 </div>
 
-                <span className="font-sans text-[10px] md:text-xs font-bold tracking-wider uppercase text-white/90 shrink-0 px-2.5 py-1 rounded-full bg-white/15 border border-white/10 group-hover:bg-white group-hover:text-black transition-colors">
+                <span className="font-sans text-[9px] md:text-[10px] font-bold tracking-wider uppercase text-white/90 shrink-0 px-2 py-0.5 rounded-full bg-white/15 border border-white/10 group-hover:bg-white group-hover:text-black transition-colors">
                   @{item.brand}
                 </span>
               </motion.div>

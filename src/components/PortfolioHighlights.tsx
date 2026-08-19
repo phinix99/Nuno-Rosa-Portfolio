@@ -21,7 +21,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       category: 'Creative Visual Storytelling',
       slug: 'visual-merchandising',
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif',
-      aspect: 'aspect-[3/4]',
+      aspect: 'aspect-[4/3]',
       tag: 'Window Concepts'
     },
     {
@@ -30,17 +30,8 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       category: 'Digital Visual Merchandising',
       slug: 'e-commerce-styling',
       image: 'https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg',
-      aspect: 'aspect-[4/3]',
+      aspect: 'aspect-[16/10]',
       tag: 'Fashion Curation'
-    },
-    {
-      id: 'c3',
-      title: 'Luxury Lifestyle Events',
-      category: 'Brand Retail Experiences',
-      slug: 'events-exhibition',
-      image: 'https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg',
-      aspect: 'aspect-[3/4]',
-      tag: 'Brand Activation'
     }
   ],
   col2: [
@@ -50,7 +41,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       category: 'Digital Visual Merchandising',
       slug: 'e-commerce-styling',
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405512/1_10_sekb5j.jpg',
-      aspect: 'aspect-[4/5]',
+      aspect: 'aspect-[4/3]',
       tag: 'Art Direction'
     },
     {
@@ -61,15 +52,6 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg',
       aspect: 'aspect-[16/10]',
       tag: 'Spatial Geometry'
-    },
-    {
-      id: 'c6',
-      title: 'In-Store Product Display',
-      category: 'Creative Visual Storytelling',
-      slug: 'visual-merchandising',
-      image: 'https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405524/1_75_wvwlye.jpg',
-      aspect: 'aspect-[4/3]',
-      tag: 'Retail Environment'
     }
   ],
   col3: [
@@ -88,130 +70,120 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       category: 'Press & Guest Speaker',
       slug: 'press-speaker',
       image: 'https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg',
-      aspect: 'aspect-[3/4]',
-      tag: 'Guest Speaker'
-    },
-    {
-      id: 'c9',
-      title: 'Limited-Edition Launches',
-      category: 'Creative Visual Storytelling',
-      slug: 'visual-merchandising',
-      image: 'https://static.wixstatic.com/media/9e4437_31a5b991f9744ab8ae644c77c80f76e7~mv2.jpg/v1/crop/x_0,y_193,w_960,h_550/fill/w_787,h_451,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/44319782_2298070196932583_2427615974984253440_n.jpg',
       aspect: 'aspect-[16/10]',
-      tag: 'Luxury Boutique'
+      tag: 'Guest Speaker'
     }
   ]
 };
 
 export default function PortfolioHighlights() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start end', 'end start']
+    offset: ["start end", "end start"]
   });
 
-  // Parallax translation offsets for columns
-  const yCol1 = useTransform(scrollYProgress, [0, 1], [40, -60]);
-  const yCol2 = useTransform(scrollYProgress, [0, 1], [-20, 50]);
-  const yCol3 = useTransform(scrollYProgress, [0, 1], [60, -40]);
+  const yCol1 = useTransform(scrollYProgress, [0, 1], ["0%", "-4%"]);
+  const yCol2 = useTransform(scrollYProgress, [0, 1], ["4%", "-4%"]);
+  const yCol3 = useTransform(scrollYProgress, [0, 1], ["0%", "-6%"]);
 
   const renderCard = (item: CollageItem, index: number) => (
     <motion.div
       key={item.id}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.7, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative w-full overflow-hidden rounded-2xl md:rounded-3xl border border-black/10 bg-neutral-900 transition-all duration-500 hover:border-[#7651B9] hover:shadow-[0_25px_50px_rgba(118,81,185,0.2)]"
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+      className="group relative w-full"
     >
-      <Link to={`/gallery/${item.slug}`} className="block relative w-full h-full">
-        {/* Image Container with aspect ratio */}
+      <Link 
+        to={`/portfolio`}
+        className="block relative w-full overflow-hidden rounded-2xl md:rounded-3xl bg-neutral-100 border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_45px_rgba(118,81,185,0.18)] transition-all duration-500 hover:-translate-y-1"
+      >
         <div className={`relative w-full ${item.aspect} overflow-hidden`}>
           <img
             src={item.image}
             alt={item.title}
             loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+            className="w-full h-full object-cover origin-center transition-transform duration-700 ease-out group-hover:scale-108 filter contrast-[1.03]"
           />
-          {/* Subtle Ambient Vignette & Purple Tint on Hover */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
-          <div className="absolute inset-0 bg-[#7651B9]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
-        </div>
 
-        {/* Top Floating Badge */}
-        <div className="absolute top-4 left-4 right-4 z-10 flex items-center justify-between">
-          <span className="px-3 py-1 text-[10px] md:text-xs font-mono font-bold tracking-widest uppercase text-white/90 bg-black/40 backdrop-blur-md border border-white/20 rounded-full shadow-sm">
-            {item.tag}
-          </span>
-          <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-300 group-hover:bg-[#7651B9] group-hover:border-[#7651B9] group-hover:scale-110 shadow-md">
-            <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          {/* Luxury Gradient Vignette Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-60 group-hover:opacity-85 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-[#7651B9]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
+
+          {/* Floating Category Pill */}
+          <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white font-sans text-[9px] md:text-[10px] font-semibold tracking-widest uppercase shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#7651B9]" />
+              {item.tag}
+            </span>
           </div>
-        </div>
 
-        {/* Bottom Content Bar */}
-        <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 z-10 flex flex-col gap-1.5 transition-transform duration-300 group-hover:-translate-y-1">
-          <span className="text-[11px] font-sans font-semibold tracking-wider uppercase text-[#7651B9] group-hover:text-purple-300 transition-colors">
-            {item.category}
-          </span>
-          <h4 className="text-base md:text-xl font-medium tracking-tight text-white font-sans drop-shadow-sm">
-            {item.title}
-          </h4>
+          {/* Action Link Arrow */}
+          <div className="absolute top-3 right-3 md:top-4 md:right-4 z-20">
+            <div className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md text-black flex items-center justify-center shadow-md transform group-hover:scale-110 group-hover:bg-[#7651B9] group-hover:text-white transition-all duration-300">
+              <ArrowUpRight size={14} />
+            </div>
+          </div>
+
+          {/* Card Meta Content */}
+          <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 z-20 flex flex-col justify-end text-white">
+            <span className="font-sans text-[9px] md:text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70 mb-0.5 group-hover:text-[#7651B9] transition-colors">
+              {item.category}
+            </span>
+            <h3 className="font-sans text-base md:text-xl font-bold tracking-tight text-white leading-tight group-hover:translate-x-1 transition-transform duration-300">
+              {item.title}
+            </h3>
+          </div>
         </div>
       </Link>
     </motion.div>
   );
 
   return (
-    <section 
-      ref={containerRef}
-      className="w-full bg-white pt-20 md:pt-28 pb-24 md:pb-36 border-b border-black/10 px-6 md:px-12 lg:px-20 overflow-hidden" 
-      id="portfolio"
-    >
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 md:gap-16">
+    <section ref={containerRef} className="w-full bg-white text-black py-10 md:py-16 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="portfolio">
+      
+      {/* Background Ambient Glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[50%] bg-[#7651B9]/5 blur-[140px] rounded-full pointer-events-none" />
+
+      <div className="max-w-[1500px] mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-black/10 pb-10">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 md:mb-8 border-b border-black/10 pb-4">
+          <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#7651B9] uppercase">
-              <Sparkles size={14} /> PORTFOLIO
+              <Sparkles size={13} /> PORTFOLIO ARCHIVES
             </div>
-            <h2 className="font-sans text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight uppercase text-black max-w-2xl leading-[1.05]">
-              CREATIVE DISCIPLINE ARCHIVES
+            <h2 className="font-sans text-3xl md:text-5xl font-medium tracking-tight uppercase leading-none text-black">
+              CREATIVE DISCIPLINES
             </h2>
-            <p className="font-sans text-base md:text-lg font-light text-black/70 max-w-xl leading-relaxed mt-1">
-              A comprehensive curation of retail window displays, editorial styling, spatial exhibition architectures, and keynote speaking engagements worldwide.
-            </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <Link 
-              to="/portfolio" 
-              className="group relative flex items-center justify-center gap-3 px-8 py-4 rounded-full border border-black/20 hover:border-[#7651B9] bg-white hover:bg-[#7651B9] transition-all duration-300 shadow-sm hover:shadow-lg"
+          <div className="flex items-center gap-3">
+            <Link
+              to="/portfolio"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-black/15 bg-white text-black hover:bg-[#7651B9] hover:text-white hover:border-[#7651B9] transition-all duration-300 text-xs font-bold tracking-widest uppercase shadow-sm"
             >
-              <span className="text-xs font-bold tracking-widest uppercase text-black group-hover:text-white transition-colors">
-                EXPLORE FULL PORTFOLIO
-              </span>
-              <ArrowUpRight size={16} className="text-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+              <span>Explore All Archives</span>
+              <ArrowUpRight size={14} className="text-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
             </Link>
           </div>
         </div>
 
-        {/* Interactive Parallax Collage Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-start pt-4">
+        {/* Compact Parallax Collage Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-start">
           
-          {/* Column 1 with smooth parallax */}
-          <motion.div style={{ y: yCol1 }} className="flex flex-col gap-6 md:gap-8">
+          <motion.div style={{ y: yCol1 }} className="flex flex-col gap-4 md:gap-6">
             {collageItems.col1.map((item, idx) => renderCard(item, idx))}
           </motion.div>
 
-          {/* Column 2 with inverse parallax */}
-          <motion.div style={{ y: yCol2 }} className="flex flex-col gap-6 md:gap-8">
+          <motion.div style={{ y: yCol2 }} className="flex flex-col gap-4 md:gap-6">
             {collageItems.col2.map((item, idx) => renderCard(item, idx))}
           </motion.div>
 
-          {/* Column 3 with delayed parallax */}
-          <motion.div style={{ y: yCol3 }} className="flex flex-col gap-6 md:gap-8 md:col-span-2 lg:col-span-1">
+          <motion.div style={{ y: yCol3 }} className="flex flex-col gap-4 md:gap-6 md:col-span-2 lg:col-span-1">
             {collageItems.col3.map((item, idx) => renderCard(item, idx))}
           </motion.div>
 

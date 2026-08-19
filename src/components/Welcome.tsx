@@ -10,10 +10,10 @@ const brandLogos = Array.from({ length: 23 }, (_, i) => ({
 
 const accolades = [
   { icon: Award, text: "4 National Window Design Awards" },
-  { icon: Mic, text: "2x Guest Speaker at Asian National Retail Events" },
-  { icon: Trophy, text: "4x Guest Host of the VM Challenge In-Store Asia" },
+  { icon: Mic, text: "2x Asian Retail Keynote Speaker" },
+  { icon: Trophy, text: "4x Host of VM Challenge In-Store Asia" },
   { icon: Newspaper, text: "8+ Press Featured Articles" },
-  { icon: GraduationCap, text: "2x VM Workshops for Fashion Schools" }
+  { icon: GraduationCap, text: "2x Fashion School VM Workshops" }
 ];
 
 export default function Welcome() {
@@ -22,22 +22,22 @@ export default function Welcome() {
     target: imageRef,
     offset: ["start end", "end start"]
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
 
   return (
-    <section className="w-full bg-white text-black pt-20 md:pt-32 pb-16 md:pb-24 border-b border-black/10 overflow-hidden" id="about">
+    <section className="w-full bg-white text-black pt-12 md:pt-16 pb-10 md:pb-14 border-b border-black/10 overflow-hidden" id="about">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
         
         {/* Main About Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
-          {/* Left Column: Welcome Greeting and Philosophy Statement */}
+          {/* Left Column: Greeting and Philosophy Statement */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 flex flex-col items-start gap-8"
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 flex flex-col items-start gap-5"
           >
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-[#7651B9] rounded-full animate-pulse" />
@@ -46,11 +46,11 @@ export default function Welcome() {
               </h2>
             </div>
             
-            <h3 className="font-sans text-3xl md:text-5xl lg:text-[2.75rem] font-medium tracking-tight leading-[1.15] text-[#7651B9]">
+            <h3 className="font-sans text-2xl md:text-4xl lg:text-[2.25rem] font-medium tracking-tight leading-[1.18] text-[#7651B9]">
               Balancing artistic vision with proven commercial results at any scale.
             </h3>
             
-            <div className="font-sans text-base md:text-lg font-light leading-relaxed text-black/80 max-w-2xl flex flex-col gap-6">
+            <div className="font-sans text-sm md:text-base font-light leading-relaxed text-black/80 max-w-2xl flex flex-col gap-3">
               <p>
                 With 30+ years of international fashion retail experience spanning the UAE, Mexico, India, Portugal, and the UK, I translate brand identities into immersive, 360-degree visual storytelling environments.
               </p>
@@ -63,69 +63,68 @@ export default function Welcome() {
             </div>
 
             {/* Designer Signature Detail */}
-            <div className="mt-2 flex flex-col gap-1">
-              <span className="font-serif italic text-3xl text-[#7651B9] font-light tracking-wide select-none">
+            <div className="flex flex-col gap-0.5 mt-1">
+              <span className="font-serif italic text-2xl text-[#7651B9] font-light tracking-wide select-none">
                 Nuno Rosa
               </span>
-              <span className="font-sans text-[10px] font-semibold tracking-widest uppercase opacity-40">
+              <span className="font-sans text-[9px] font-semibold tracking-widest uppercase opacity-40">
                 Founder & Creative Director
               </span>
             </div>
           </motion.div>
 
-          {/* Right Column: High-Impact Portrait */}
+          {/* Right Column: Portrait */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 w-full flex justify-center lg:justify-end"
             ref={imageRef}
           >
-            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden bg-white shadow-[0_12px_40px_rgba(107,76,154,0.15)] group border border-black/10">
-              {/* Decorative Frame */}
-              <div className="absolute inset-4 border border-[#7651B9]/40 rounded-xl pointer-events-none z-10 transition-all duration-500 group-hover:inset-3 group-hover:border-[#7651B9]" />
+            <div className="relative w-full max-w-[320px] aspect-[3/3.8] rounded-2xl overflow-hidden bg-white shadow-[0_10px_30px_rgba(107,76,154,0.12)] group border border-black/10">
+              <div className="absolute inset-3 border border-[#7651B9]/30 rounded-xl pointer-events-none z-10 transition-all duration-500 group-hover:inset-2 group-hover:border-[#7651B9]" />
               
               <motion.img 
-                style={{ y, scale: 1.15 }}
+                style={{ y, scale: 1.1 }}
                 src="https://static.wixstatic.com/media/9e4437_0b022f9ff7e645fbacc6aa8a6e68dbe0~mv2.jpg/v1/crop/x_304,y_805,w_3588,h_5915/fill/w_477,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SKPL8757_JPG.jpg" 
                 alt="Nuno Rosa Portrait" 
-                className="w-full h-full object-cover object-top filter grayscale hover:grayscale-0 transition-transform duration-1000 ease-out group-hover:scale-[1.2]"
+                className="w-full h-full object-cover object-top filter grayscale hover:grayscale-0 transition-transform duration-700 ease-out group-hover:scale-[1.14]"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/40 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute inset-0 bg-[#7651B9]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none mix-blend-overlay" />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/35 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-[#7651B9]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none mix-blend-overlay" />
             </div>
           </motion.div>
 
         </div>
 
-        {/* Global Retail Design Expert Accolades Block */}
+        {/* Compact Accolades Strip */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 md:mt-20 p-6 md:p-8 rounded-2xl md:rounded-3xl bg-[#FAF9FB] border border-[#7651B9]/15 flex flex-col lg:flex-row lg:items-center justify-between gap-6"
+          transition={{ duration: 0.5 }}
+          className="mt-8 md:mt-10 p-4 md:p-6 rounded-2xl bg-[#FAF9FB] border border-[#7651B9]/15 flex flex-col lg:flex-row lg:items-center justify-between gap-4"
         >
-          <div className="flex flex-col gap-1 shrink-0">
-            <div className="flex items-center gap-1.5 text-xs font-bold tracking-widest text-[#7651B9] uppercase">
-              <Sparkles size={13} /> Industry Recognition
+          <div className="flex flex-col gap-0.5 shrink-0">
+            <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-[#7651B9] uppercase">
+              <Sparkles size={11} /> Recognition
             </div>
-            <h4 className="font-sans text-xl md:text-2xl font-bold tracking-tight text-black">
-              GLOBAL RETAIL DESIGN EXPERT
+            <h4 className="font-sans text-base md:text-lg font-bold tracking-tight text-black">
+              GLOBAL RETAIL EXPERT
             </h4>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 flex-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-3 flex-1">
             {accolades.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-white border border-black/5 shadow-xs">
-                  <div className="w-8 h-8 rounded-lg bg-[#7651B9]/10 text-[#7651B9] flex items-center justify-center shrink-0">
-                    <Icon size={16} />
+                <div key={idx} className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-black/5 shadow-xs">
+                  <div className="w-6 h-6 rounded-md bg-[#7651B9]/10 text-[#7651B9] flex items-center justify-center shrink-0">
+                    <Icon size={13} />
                   </div>
-                  <span className="font-sans text-xs md:text-sm font-semibold text-black/80">
+                  <span className="font-sans text-[11px] font-semibold text-black/80 leading-tight">
                     {item.text}
                   </span>
                 </div>
@@ -137,18 +136,17 @@ export default function Welcome() {
       </div>
 
       {/* Brands Carousel Section directly under About Me */}
-      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-16 md:pt-20">
-        <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-black/50 mb-8 md:mb-10">
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-8 md:pt-10">
+        <h4 className="text-center font-sans text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-black/40 mb-4 md:mb-6">
           TRUSTED BY GLOBAL ICONS
         </h4>
         
-        <div className="relative w-full flex overflow-hidden py-8 md:py-14">
-          {/* Fade Edges for seamless edge fading on full-screen white background */}
-          <div className="absolute inset-y-0 left-0 w-24 md:w-64 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-24 md:w-64 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
+        <div className="relative w-full flex overflow-hidden py-4 md:py-6">
+          <div className="absolute inset-y-0 left-0 w-20 md:w-48 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-20 md:w-48 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
           
           <motion.div 
-            className="flex items-center py-6"
+            className="flex items-center py-2"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
             style={{ width: "fit-content" }}
@@ -156,13 +154,13 @@ export default function Welcome() {
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
               <div 
                 key={`${brand.id}-${idx}`} 
-                className="flex items-center justify-center shrink-0 w-44 md:w-60 lg:w-68 h-24 md:h-28 mx-6 md:mx-10 group"
+                className="flex items-center justify-center shrink-0 w-36 md:w-48 lg:w-56 h-16 md:h-20 mx-4 md:mx-6 group"
               >
-                <div className="w-full h-full flex items-center justify-center p-2">
+                <div className="w-full h-full flex items-center justify-center p-1">
                   <img 
                     src={brand.src} 
                     alt={brand.alt}
-                    className="max-h-16 md:max-h-20 lg:max-h-24 max-w-[180px] md:max-w-[230px] lg:max-w-[260px] w-auto h-auto object-contain filter grayscale contrast-125 mix-blend-multiply opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-115 transform-gpu origin-center"
+                    className="max-h-12 md:max-h-14 lg:max-h-16 max-w-[150px] md:max-w-[190px] lg:max-w-[220px] w-auto h-auto object-contain filter grayscale contrast-125 mix-blend-multiply opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transform-gpu origin-center"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
