@@ -3,63 +3,18 @@ import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolio';
 
-const categories = [
-  {
-    num: "01",
-    titleLine1: "VISUAL",
-    titleLine2: "MERCHANDISING",
-    subcategories: ["Creative Windows", "In-Store Displays", "Limited Editions"],
-    image: portfolioData["VISUAL MERCHANDISING"]?.[0] || "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784662099/1_78_tfobxr.avif",
-    categoryKey: "VISUAL MERCHANDISING",
-    slug: "visual-merchandising",
-    bentoClass: "lg:col-span-2 lg:row-span-2 min-h-[420px] lg:min-h-[600px]"
-  },
-  {
-    num: "02",
-    titleLine1: "E-COMMERCE",
-    titleLine2: "& STYLING",
-    subcategories: ["Fashion Editorial Styling"],
-    image: portfolioData["E-COMMERCE & STYLING"]?.[0] || "https://static.wixstatic.com/media/9e4437_c7516a73c7a74931a566495ddbea2df5~mv2.jpg/v1/fill/w_1463,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1180mm%20X%20635mm%20(1)_edited.jpg",
-    categoryKey: "E-COMMERCE & STYLING",
-    slug: "e-commerce-styling",
-    bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[290px]"
-  },
-  {
-    num: "03",
-    titleLine1: "CONCEPT",
-    titleLine2: "& SIGNAGE",
-    subcategories: ["Conceptual Design", "Visual Signage"],
-    image: portfolioData["CONCEPT & SIGNAGE"]?.[0] || "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405554/1_217_r3tuuz.jpg",
-    categoryKey: "CONCEPT & SIGNAGE",
-    slug: "concept-signage",
-    bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[290px]"
-  },
-  {
-    num: "04",
-    titleLine1: "EVENTS &",
-    titleLine2: "BRAND EXHIBITION",
-    subcategories: ["Trade Shows", "Press Showrooms", "Luxury Events"],
-    image: portfolioData["EVENTS & Brand Exhibition"]?.[0] || "https://static.wixstatic.com/media/9e4437_590cee324ec8484980dce6346f6d9664~mv2.jpg/v1/fill/w_1181,h_787,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/_MG_0064_edited.jpg",
-    categoryKey: "EVENTS & Brand Exhibition",
-    slug: "events-exhibition",
-    bentoClass: "lg:col-span-2 lg:row-span-1 min-h-[300px]"
-  },
-  {
-    num: "05",
-    titleLine1: "PRESS &",
-    titleLine2: "GUEST SPEAKER",
-    subcategories: ["Keynote Speaking", "Workshops"],
-    image: portfolioData["PRESS & GUEST SPEAKER"]?.[0] || "https://res.cloudinary.com/dtom0ivbp/image/upload/v1784405555/1_224_yf8cfh.jpg",
-    categoryKey: "PRESS & GUEST SPEAKER",
-    slug: "press-speaker",
-    bentoClass: "lg:col-span-1 lg:row-span-1 min-h-[300px]"
-  }
-];
-
 export default function PortfolioHighlights() {
+  const getImageUrl = (category: string, subcategory?: string) => {
+    if (subcategory && portfolioData[category]?.[subcategory]) {
+      return portfolioData[category][subcategory][0];
+    }
+    const subcats = Object.values(portfolioData[category] || {});
+    return subcats[0]?.[0] || '';
+  };
+
   return (
     <section className="w-full bg-white pt-20 md:pt-28 pb-24 md:pb-32 border-b border-black/10 px-6 md:px-12 lg:px-20" id="projects">
-      <div className="max-w-[1400px] mx-auto flex flex-col gap-12 md:gap-16">
+      <div className="max-w-[1400px] mx-auto flex flex-col gap-16 md:gap-24">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-black/10 pb-8">
@@ -80,69 +35,117 @@ export default function PortfolioHighlights() {
           </Link>
         </div>
 
-        {/* Dynamic Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((cat, idx) => (
-            <motion.div
-              key={cat.categoryKey}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className={cat.bentoClass}
-            >
-              <Link 
-                to={`/gallery/${cat.slug}`}
-                className="group relative flex flex-col justify-between w-full h-full text-left rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#7651B9] hover:shadow-[0_25px_50px_rgba(107,76,154,0.2)] transition-all duration-700 p-6 md:p-8 bg-white"
-              >
-                {/* Background Image - Always Visible */}
-                <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="flex flex-col gap-20">
+          
+          {/* Category A: Visual Merchandising */}
+          <div className="flex flex-col gap-8">
+            <Link to="/gallery/visual-merchandising" className="group w-fit">
+              <h3 className="font-sans text-4xl md:text-5xl font-light tracking-tight leading-[1.1] text-black group-hover:text-[#7651B9] transition-colors uppercase">
+                VISUAL <br /> MERCHANDISING
+              </h3>
+            </Link>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {[
+                { name: "Creative Windows", img: getImageUrl("VISUAL MERCHANDISING", "Creative Windows") },
+                { name: "In - Store Display", img: getImageUrl("VISUAL MERCHANDISING", "In-Store Displays") },
+                { name: "Limited Editions", img: getImageUrl("VISUAL MERCHANDISING", "Limited Editions") }
+              ].map((sub, i) => (
+                <Link to={`/gallery/visual-merchandising`} key={i} className="relative aspect-[4/3] md:aspect-auto md:h-[300px] lg:h-[400px] overflow-hidden group">
                   <img 
-                    src={cat.image} 
-                    alt={`${cat.titleLine1} ${cat.titleLine2}`} 
+                    src={sub.img || 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800'} 
+                    alt={sub.name}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  {/* Gradient Overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#7651B9]/90 via-[#7651B9]/40 to-black/20 group-hover:from-[#7651B9] group-hover:via-[#7651B9]/70 transition-colors duration-500" />
-                  <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
-                </div>
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="bg-white/95 text-black px-6 md:px-8 py-2 md:py-3 rounded-full border border-black/80 font-sans text-sm font-medium tracking-wide shadow-lg group-hover:bg-[#7651B9] group-hover:text-white group-hover:border-[#7651B9] transition-all duration-300">
+                      {sub.name}
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
 
-                {/* Top Bar: Number & Arrow CTA */}
-                <div className="relative z-10 flex items-center justify-between w-full">
-                  <span className="font-sans text-xs md:text-sm font-mono font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-white border border-white/20 shadow-sm">
-                    {cat.num}
+          {/* Category B: E-Commerce & Styling */}
+          <Link to="/gallery/e-commerce-styling" className="block w-full border-[10px] md:border-[16px] border-black p-8 md:p-16 lg:p-24 hover:border-[#7651B9] transition-colors duration-500 group relative overflow-hidden bg-white">
+            <div className="relative z-10">
+              <h3 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.1] text-black group-hover:text-[#7651B9] transition-colors uppercase">
+                E-COMMERCE <br /> & STYLING
+              </h3>
+            </div>
+            {/* Subtle background reveal on hover */}
+            <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+          </Link>
+
+          {/* Category C: Concept & Signage */}
+          <div className="flex flex-col gap-8">
+            <Link to="/gallery/concept-signage" className="group w-fit">
+              <h3 className="font-sans text-4xl md:text-5xl font-light tracking-tight leading-[1.1] text-black group-hover:text-[#7651B9] transition-colors uppercase">
+                CONCEPT <br /> & SIGNAGE
+              </h3>
+            </Link>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {[
+                { name: "Conceptual Design", img: getImageUrl("CONCEPT & SIGNAGE", "Conceptual Design") },
+                { name: "Signage", img: getImageUrl("CONCEPT & SIGNAGE", "Visual Signage") }
+              ].map((sub, i) => (
+                <Link to={`/gallery/concept-signage`} key={i} className="relative aspect-[16/9] overflow-hidden group">
+                  <img 
+                    src={sub.img || 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800'} 
+                    alt={sub.name}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="bg-white/95 text-black px-6 md:px-8 py-2 md:py-3 rounded-full border border-black/80 font-sans text-sm font-medium tracking-wide shadow-lg group-hover:bg-[#7651B9] group-hover:text-white group-hover:border-[#7651B9] transition-all duration-300">
+                      {sub.name}
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Category D: Events & Brand Exhibition */}
+          <Link to="/gallery/events-exhibition" className="block w-full border-[10px] md:border-[16px] border-black p-8 md:p-16 lg:p-24 hover:border-[#7651B9] transition-colors duration-500 group relative overflow-hidden bg-white">
+            <div className="relative z-10">
+              <h3 className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.1] text-black group-hover:text-[#7651B9] transition-colors uppercase">
+                EVENTS & <br /> BRAND EXHIBITION
+              </h3>
+            </div>
+            <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+          </Link>
+
+          {/* Category E: Press & Guest Speaker */}
+          <div className="flex flex-col gap-8">
+            <Link to="/gallery/press-speaker" className="group w-fit">
+              <h3 className="font-sans text-4xl md:text-5xl font-light tracking-tight leading-[1.1] text-black group-hover:text-[#7651B9] transition-colors uppercase">
+                PRESS & <br /> GUEST SPEAKER
+              </h3>
+            </Link>
+            
+            <div className="grid grid-cols-1 gap-6 md:gap-8">
+              <Link to={`/gallery/press-speaker`} className="relative aspect-[21/9] md:h-[400px] overflow-hidden group">
+                <img 
+                  src={getImageUrl("PRESS & GUEST SPEAKER") || 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800'} 
+                  alt="Press and Guest Speaker"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="bg-white/95 text-black px-6 md:px-8 py-2 md:py-3 rounded-full border border-black/80 font-sans text-sm font-medium tracking-wide shadow-lg group-hover:bg-[#7651B9] group-hover:text-white group-hover:border-[#7651B9] transition-all duration-300">
+                    Press & Events
                   </span>
-
-                  <div className="w-10 h-10 rounded-full bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#7651B9] group-hover:border-[#7651B9] transition-all shadow-md">
-                    <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </div>
-                </div>
-
-                {/* Bottom Content: Title & Subcategory Badges */}
-                <div className="relative z-10 flex flex-col gap-3 mt-auto pt-12">
-                  <h3 className="font-sans text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight uppercase text-white group-hover:text-[#d3bcfa] transition-colors leading-[1.08]">
-                    {cat.titleLine1} <br /> {cat.titleLine2}
-                  </h3>
-
-                  {/* Subcategories Tags */}
-                  <div className="flex flex-wrap gap-2 pt-1">
-                    {cat.subcategories.map((sub, i) => (
-                      <span 
-                        key={i} 
-                        className="px-3 py-1 text-[10px] md:text-xs font-semibold tracking-wider uppercase border border-white/20 rounded-full text-white/80 bg-white/10 backdrop-blur-md group-hover:border-white/40 group-hover:text-white transition-colors"
-                      >
-                        {sub}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </Link>
-            </motion.div>
-          ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   );
 }
-
-
