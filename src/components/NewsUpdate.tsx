@@ -104,19 +104,19 @@ Read the full series of articles and thought-leadership pieces on Retail4Growth.
     mediaCount: "1/3",
     images: [
       {
-        src: "/portfolio/Press & Guest Speaker/retail4growth_edited.jpg",
-        caption: "Retail4Growth Industry Feature & Strategic VM Analysis",
-        tag: "Press Article"
-      },
-      {
-        src: "/portfolio/Press & Guest Speaker/Drapers UK press 2013  - Biggest LACOSTE Flagship in Europe _edited.jpg",
+        src: "/portfolio/Press & Guest Speaker/Drapers UK press 2013  - Biggest LACOSTE Flagship in Europe _edited.avif",
         caption: "Drapers UK Press - Biggest European Flagship Architecture",
         tag: "Global Press"
       },
       {
-        src: "/portfolio/Press & Guest Speaker/VMRD Magazine.jpg",
+        src: "/portfolio/Press & Guest Speaker/VMRD Magazine.avif",
         caption: "VMRD Magazine Retail Design & Storefront Dialogue",
         tag: "Magazine Feature"
+      },
+      {
+        src: "/portfolio/Press & Guest Speaker/FIFA YOUSTA 2026_edited.avif",
+        caption: "FIFA & Retail Experience Architecture Feature",
+        tag: "Press Article"
       }
     ],
     postUrl: "https://www.retail4growth.com/search/nuno-rosa"

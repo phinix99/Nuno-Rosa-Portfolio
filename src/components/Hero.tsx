@@ -87,7 +87,7 @@ export default function Hero() {
     {
       title: "Press & Guest Speaker",
       slug: "press-speaker",
-      image: "/portfolio/Press & Guest Speaker/SKPL8763_JPG.jpg"
+      image: "/portfolio/Press & Guest Speaker/SKPL8763_JPG.avif"
     }
   ];
 

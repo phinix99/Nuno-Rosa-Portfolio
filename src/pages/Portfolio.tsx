@@ -54,9 +54,9 @@ const portfolioData = [
     num: "05",
     desc: "Keynote industry panel sessions, creative workshops, and international retail design features.",
     items: [
-      { id: "ps-1", title: "Keynote Panels", slug: "press-speaker", image: "/portfolio/Press & Guest Speaker/SKPL8763_JPG.jpg" },
-      { id: "ps-2", title: "Press & Articles", slug: "press-speaker", image: "/portfolio/Press & Guest Speaker/Drapers UK press 2013  - Biggest LACOSTE Flagship in Europe _edited.jpg" },
-      { id: "ps-3", title: "VM Workshops", slug: "press-speaker", image: "/portfolio/Press & Guest Speaker/IMG_20260522_181734.jpg" }
+      { id: "ps-1", title: "Keynote Panels", slug: "press-speaker", image: "/portfolio/Press & Guest Speaker/SKPL8763_JPG.avif" },
+      { id: "ps-2", title: "Press & Articles", slug: "press-speaker", image: "/portfolio/Press & Guest Speaker/Drapers UK press 2013  - Biggest LACOSTE Flagship in Europe _edited.avif" },
+      { id: "ps-3", title: "VM Workshops", slug: "press-speaker", image: "/portfolio/Press & Guest Speaker/1677031409.png" }
     ]
   }
 ];

@@ -69,7 +69,7 @@ const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageIte
       title: 'Keynote & Industry Panels',
       category: 'Press & Guest Speaker',
       slug: 'press-speaker',
-      image: '/portfolio/Press & Guest Speaker/SKPL8763_JPG.jpg',
+      image: '/portfolio/Press & Guest Speaker/SKPL8763_JPG.avif',
       aspect: 'aspect-[16/10]',
       tag: 'Guest Speaker'
     }

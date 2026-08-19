@@ -448,35 +448,29 @@ export const portfolioData: Record<string, Record<string, string[][]>> = {
   "Press & Guest Speaker": {
     "Press & Guest Speaker": [
       [
-        "/portfolio/Press & Guest Speaker/Drapers UK press 2013  - Biggest LACOSTE Flagship in Europe _edited.jpg"
+        "/portfolio/Press & Guest Speaker/Drapers UK press 2013  - Biggest LACOSTE Flagship in Europe _edited.avif"
       ],
       [
-        "/portfolio/Press & Guest Speaker/retail4growth_edited.jpg",
-        "/portfolio/Press & Guest Speaker/VMRD Magazine.jpg",
-        "/portfolio/Press & Guest Speaker/FIFA YOUSTA 2026_edited.jpg"
+        "/portfolio/Press & Guest Speaker/VMRD Magazine.avif",
+        "/portfolio/Press & Guest Speaker/FIFA YOUSTA 2026_edited.avif",
+        "/portfolio/Press & Guest Speaker/1677031409.png"
       ],
       [
-        "/portfolio/Press & Guest Speaker/VERO MODA SS20 Press Preview_edited_edited_edited_edited.jpg",
-        "/portfolio/Press & Guest Speaker/9e4437_a485a8109dae4d0daa3855f483233fb8f000.jpg"
+        "/portfolio/Press & Guest Speaker/SKPL8763_JPG.avif",
+        "/portfolio/Press & Guest Speaker/Screenshot_2026-05-22-13-46-14-48_254de13a4bc8758c9908fff1f73e3725.avif"
       ],
       [
-        "/portfolio/Press & Guest Speaker/IMG_20260522_181734.jpg",
-        "/portfolio/Press & Guest Speaker/IMG-20260522-WA0081.jpg",
-        "/portfolio/Press & Guest Speaker/SKPL8763_JPG.jpg"
+        "/portfolio/Press & Guest Speaker/IMG-20260522-WA0085.avif",
+        "/portfolio/Press & Guest Speaker/SKPL8757_JPG.avif"
       ],
       [
-        "/portfolio/Press & Guest Speaker/Screenshot_2026-05-22-13-46-14-48_254de13a4bc8758c9908fff1f73e3725.jpg",
-        "/portfolio/Press & Guest Speaker/IMG-20260522-WA0085.jpg",
-        "/portfolio/Press & Guest Speaker/1 (1).jpg"
+        "/portfolio/Press & Guest Speaker/1767953042966_jfif.avif",
+        "/portfolio/Press & Guest Speaker/1776231818682_jfif.avif",
+        "/portfolio/Press & Guest Speaker/1779272636030_jfif.avif"
       ],
       [
-        "/portfolio/Press & Guest Speaker/1767953042966_jfif.jpg",
-        "/portfolio/Press & Guest Speaker/1776231818682_jfif.jpg",
-        "/portfolio/Press & Guest Speaker/1779272636030_jfif.jpg",
-        "/portfolio/Press & Guest Speaker/1783773835103.jpg"
-      ],
-      [
-        "/portfolio/Press & Guest Speaker/SKPL8757_JPG.jpg"
+        "/portfolio/Press & Guest Speaker/1783773827184.avif",
+        "/portfolio/Press & Guest Speaker/1783773835103.avif"
       ]
     ]
   }
