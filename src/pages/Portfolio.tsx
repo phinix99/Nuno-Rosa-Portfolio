@@ -131,71 +131,73 @@ export default function Portfolio() {
 
       {/* Portfolio Content - Bento Grid Layout */}
       <div className="max-w-[1500px] mx-auto px-6 md:px-12 py-16 flex flex-col gap-24 md:gap-32">
-        {portfolioData.map((section) => (
-          <section key={section.slug} id={section.slug} className="flex flex-col gap-8 scroll-mt-28">
-            
-            {/* Section Header */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-neutral-200/80 pb-6">
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2 text-xs font-mono font-bold tracking-widest text-[#7651B9]">
-                  DISCIPLINE {section.num}
-                </div>
-                <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight uppercase text-[#111]">
-                  {section.category}
+        {portfolioData.map((section, idx) => {
+          const isEven = idx % 2 === 1; // 0-indexed: 1 and 3 are the "even" sections (E-Commerce, Events)
+          
+          const sectionContent = (
+            <>
+              {/* Section Header */}
+              <div className="flex flex-col gap-2 mb-12">
+                <h2 className={`font-sans ${isEven ? 'text-5xl md:text-6xl lg:text-7xl' : 'text-5xl md:text-6xl lg:text-7xl'} font-light tracking-tight uppercase text-[#111] leading-[1.1]`}>
+                  {section.category.split(' & ').map((part, i, arr) => (
+                    <span key={i}>
+                      {part}
+                      {i < arr.length - 1 && <><br /><span className="font-medium">& </span></>}
+                    </span>
+                  ))}
                 </h2>
               </div>
-              <p className="font-sans text-xs md:text-sm font-light text-neutral-500 max-w-md md:text-right leading-relaxed">
-                {section.desc}
-              </p>
-            </div>
 
-            {/* Asymmetric Bento Grid per Discipline */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {section.items.map((item, i) => (
-                <motion.div 
-                  key={item.id}
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className={item.bentoSpan}
-                >
-                  <div className="group relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#7651B9]/40 hover:shadow-[0_25px_50px_rgba(107,76,154,0.12)] transition-all duration-700 bg-neutral-900 p-6 md:p-8 flex flex-col justify-between">
-                    {/* Background Full-Bleed Image */}
-                    <div className="absolute inset-0 z-0 overflow-hidden">
-                      <img 
-                        src={item.image} 
-                        alt={item.title} 
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      />
-                      {/* Gradient Overlays for readable text */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/20 group-hover:from-black/90 group-hover:via-black/40 transition-colors duration-500" />
-                      <div className="absolute inset-0 bg-[#7651B9]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
-                    </div>
-
-                    {/* Top Tag & Arrow */}
-                    <div className="relative z-10 flex items-center justify-between w-full">
-                      <span className="font-sans text-xs font-mono font-bold tracking-widest text-white/90 uppercase px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20">
-                        {section.num}.0{i + 1}
-                      </span>
-                      
-                      <div className="w-9 h-9 rounded-full bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#7651B9] group-hover:border-[#7651B9] transition-all shadow-md">
-                        <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              {/* 3-Column Image Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                {section.items.map((item, i) => (
+                  <motion.div 
+                    key={item.id}
+                    initial={{ opacity: 0, y: 25 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    className="relative aspect-[4/5] md:aspect-auto md:h-[400px] lg:h-[500px]"
+                  >
+                    <Link to={`/gallery/${section.slug}`} className="group relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border border-neutral-200/80 hover:border-[#7651B9]/40 hover:shadow-[0_25px_50px_rgba(107,76,154,0.12)] transition-all duration-700 bg-neutral-900 flex flex-col justify-center items-center">
+                      {/* Background Image */}
+                      <div className="absolute inset-0 z-0 overflow-hidden">
+                        <img 
+                          src={item.image} 
+                          alt={item.title} 
+                          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
-                    </div>
 
-                    {/* Bottom Title */}
-                    <div className="relative z-10 mt-auto pt-16">
-                      <span className="bg-[#111]/70 backdrop-blur-md text-white px-4 py-2 rounded-full font-sans text-xs md:text-sm font-semibold tracking-wider uppercase border border-white/20 inline-block group-hover:bg-[#7651B9] group-hover:border-[#7651B9] transition-colors shadow-lg">
-                        {item.title}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </section>
-        ))}
+                      {/* Center Badge (Matching layout arrangement but with consistent UI) */}
+                      <div className="relative z-10">
+                        <span className="bg-white/95 text-black px-6 md:px-8 py-2 md:py-3 rounded-full border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-lg group-hover:bg-[#7651B9] group-hover:text-white group-hover:border-[#7651B9] transition-all duration-300">
+                          {item.title}
+                        </span>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </>
+          );
+
+          return (
+            <section key={section.slug} id={section.slug} className="scroll-mt-32">
+              {isEven ? (
+                <div className="w-full border-[12px] md:border-[16px] border-[#111] p-8 md:p-12 lg:p-16 rounded-3xl bg-white/50">
+                  {sectionContent}
+                </div>
+              ) : (
+                <div className="w-full">
+                  {sectionContent}
+                </div>
+              )}
+            </section>
+          );
+        })}
       </div>
       
       {/* Footer */}
