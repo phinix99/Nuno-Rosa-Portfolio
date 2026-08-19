@@ -61,6 +61,14 @@ const portfolioData = [
   }
 ];
 
+const galleryLinks = [
+  { name: "VISUAL MERCHANDISING", slug: "visual-merchandising" },
+  { name: "E-COMMERCE & STYLING", slug: "e-commerce-styling" },
+  { name: "CONCEPT & SIGNAGE", slug: "concept-signage" },
+  { name: "EVENTS & EXHIBITIONS", slug: "events-exhibition" },
+  { name: "PRESS & GUEST SPEAKER", slug: "press-speaker" }
+];
+
 export default function Portfolio() {
   const { category } = useParams();
   const [activeSlug, setActiveSlug] = useState(category || "visual-merchandising");
@@ -76,16 +84,6 @@ export default function Portfolio() {
     }
   }, [category]);
 
-  const scrollToSection = (slug: string) => {
-    setActiveSlug(slug);
-    const el = document.getElementById(slug);
-    if (el) {
-      const yOffset = -100; 
-      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-
   return (
     <main className="bg-[#fdfdfd] min-h-screen text-[#111] font-sans antialiased overflow-x-hidden">
       {/* Sticky Minimal Navbar */}
@@ -97,20 +95,16 @@ export default function Portfolio() {
           <ArrowLeft size={16} /> NUNO ROSA
         </Link>
 
-        {/* Quick Category Anchor Bar (Desktop) */}
+        {/* Quick Category Selector Links (Desktop) */}
         <div className="hidden xl:flex items-center gap-2 font-sans text-xs font-semibold tracking-wider uppercase">
-          {portfolioData.map((section) => (
-            <button 
-              key={section.slug} 
-              onClick={() => scrollToSection(section.slug)}
-              className={`px-3.5 py-1.5 rounded-full transition-all ${
-                activeSlug === section.slug 
-                  ? 'bg-[#111] text-white shadow-sm' 
-                  : 'text-[#111]/60 hover:text-[#111] hover:bg-neutral-100'
-              }`}
+          {galleryLinks.map((g) => (
+            <Link 
+              key={g.slug} 
+              to={`/gallery/${g.slug}`}
+              className="px-3.5 py-1.5 rounded-sm transition-all text-[#111]/70 hover:text-white hover:bg-[#7651B9] border border-transparent hover:border-[#7651B9]"
             >
-              {section.category}
-            </button>
+              {g.name}
+            </Link>
           ))}
         </div>
 
@@ -131,31 +125,30 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* Minimal Header & Breadcrumbs */}
-      <header className="max-w-[1500px] mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-6 border-b border-neutral-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
-        {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500">
-          <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
-            <Home size={13} /> Home
-          </Link>
-          <ChevronRight size={13} className="text-neutral-400" />
-          <span className="text-neutral-900 font-bold">Portfolio</span>
-        </nav>
+      {/* Minimal Header & Gallery Selectors */}
+      <header className="max-w-[1500px] mx-auto px-6 md:px-12 pt-8 md:pt-10 pb-6 border-b border-neutral-200/80 flex flex-col gap-6">
+        <div className="flex items-center justify-between">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500">
+            <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
+              <Home size={13} /> Home
+            </Link>
+            <ChevronRight size={13} className="text-neutral-400" />
+            <span className="text-neutral-900 font-bold">Portfolio</span>
+          </nav>
+        </div>
 
-        {/* Quick Category Bar */}
-        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
-          {portfolioData.map((section) => (
-            <button 
-              key={section.slug} 
-              onClick={() => scrollToSection(section.slug)}
-              className={`shrink-0 px-3.5 py-1.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all ${
-                activeSlug === section.slug 
-                  ? 'bg-[#111] text-white shadow-xs' 
-                  : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
-              }`}
+        {/* Gallery Selectors Bar - Click any to directly open that gallery */}
+        <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-1">
+          {galleryLinks.map((g) => (
+            <Link 
+              key={g.slug} 
+              to={`/gallery/${g.slug}`}
+              className="shrink-0 px-4 py-2.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-800 hover:bg-[#7651B9] hover:text-white border border-black/5 hover:border-[#7651B9] shadow-xs flex items-center gap-1.5 group"
             >
-              {section.category}
-            </button>
+              <span>{g.name}</span>
+              <ArrowUpRight size={12} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+            </Link>
           ))}
         </div>
       </header>

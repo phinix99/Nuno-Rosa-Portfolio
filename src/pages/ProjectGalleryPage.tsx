@@ -13,6 +13,14 @@ const slugMap: Record<string, string> = {
   "press-speaker": "PRESS & GUEST SPEAKER"
 };
 
+const galleryTabs = [
+  { name: "VISUAL MERCHANDISING", slug: "visual-merchandising" },
+  { name: "E-COMMERCE & STYLING", slug: "e-commerce-styling" },
+  { name: "CONCEPT & SIGNAGE", slug: "concept-signage" },
+  { name: "EVENTS & EXHIBITION", slug: "events-exhibition" },
+  { name: "PRESS & GUEST SPEAKER", slug: "press-speaker" }
+];
+
 export default function ProjectGalleryPage() {
   const { category } = useParams();
   const navigate = useNavigate();
@@ -75,7 +83,7 @@ export default function ProjectGalleryPage() {
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [category]);
 
   if (!category || !categoryKey) {
     return (
@@ -101,38 +109,72 @@ export default function ProjectGalleryPage() {
             ← All Disciplines
           </Link>
         </div>
+
+        {/* Gallery Tabs (Desktop Navbar) */}
+        <div className="hidden xl:flex items-center gap-2">
+          {galleryTabs.map((tab) => (
+            <Link
+              key={tab.slug}
+              to={`/gallery/${tab.slug}`}
+              className={`px-3 py-1.5 rounded-sm text-[11px] font-semibold tracking-wider uppercase transition-all ${
+                category === tab.slug
+                  ? 'bg-[#7651B9] text-white'
+                  : 'text-black/60 hover:text-black hover:bg-black/5'
+              }`}
+            >
+              {tab.name}
+            </Link>
+          ))}
+        </div>
+
         <span className="font-mono text-xs md:text-sm text-black/60 tracking-widest uppercase">
           {flattenedImages.length} Curated Visuals
         </span>
       </nav>
 
       {/* Header */}
-      <header className="max-w-[1600px] mx-auto px-6 md:px-12 pt-12 md:pt-20 pb-12">
-        {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500 mb-8">
-          <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
-            <Home size={13} /> Home
-          </Link>
-          <ChevronRight size={13} className="text-neutral-400" />
-          <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors">
-            Portfolio
-          </Link>
-          <ChevronRight size={13} className="text-neutral-400" />
-          <span className="text-neutral-900 font-bold">{categoryKey}</span>
-        </nav>
+      <header className="max-w-[1600px] mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-8">
+        {/* Breadcrumb Navigation & Top Category Switcher */}
+        <div className="flex flex-col gap-6 mb-8">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500">
+            <Link to="/" className="hover:text-[#7651B9] transition-colors flex items-center gap-1.5 font-medium">
+              <Home size={13} /> Home
+            </Link>
+            <ChevronRight size={13} className="text-neutral-400" />
+            <Link to="/portfolio" className="hover:text-[#7651B9] transition-colors">
+              Portfolio
+            </Link>
+            <ChevronRight size={13} className="text-neutral-400" />
+            <span className="text-neutral-900 font-bold">{categoryKey}</span>
+          </nav>
+
+          {/* Gallery Switcher Bar */}
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+            {galleryTabs.map((tab) => (
+              <Link
+                key={tab.slug}
+                to={`/gallery/${tab.slug}`}
+                className={`shrink-0 px-3.5 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all border ${
+                  category === tab.slug
+                    ? 'bg-[#7651B9] text-white border-[#7651B9] shadow-xs'
+                    : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-black/5'
+                }`}
+              >
+                {tab.name}
+              </Link>
+            ))}
+          </div>
+        </div>
 
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight uppercase text-black mb-6 leading-none">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight uppercase text-black mb-4 leading-none">
             {categoryKey}
           </h1>
-          <div className="w-20 h-[3px] bg-[#7651B9]" />
-          <p className="mt-6 text-black/70 font-light max-w-2xl text-base md:text-xl leading-relaxed">
-            Explore the curated spatial architecture and visual merchandising concepts for {categoryKey}.
-          </p>
+          <div className="w-16 h-[3px] bg-[#7651B9]" />
         </motion.div>
       </header>
 
