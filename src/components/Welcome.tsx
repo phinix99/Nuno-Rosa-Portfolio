@@ -1,6 +1,12 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 
+const brandLogos = Array.from({ length: 23 }, (_, i) => ({
+  id: `brand-${i + 1}`,
+  src: `/brands/${i + 1}.jpg`,
+  alt: `Global Brand Icon ${i + 1}`
+}));
+
 export default function Welcome() {
   const imageRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -10,8 +16,8 @@ export default function Welcome() {
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <section className="w-full bg-white text-black py-20 md:py-32 px-6 md:px-12 lg:px-20 border-b border-black/10 overflow-hidden" id="about">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="w-full bg-white text-black pt-20 md:pt-32 pb-16 md:pb-24 border-b border-black/10 overflow-hidden" id="about">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           
           {/* Left Column: Welcome Greeting and Philosophy Statement */}
@@ -81,6 +87,44 @@ export default function Welcome() {
             </div>
           </motion.div>
 
+        </div>
+      </div>
+
+      {/* Brands Carousel Section directly under About Me */}
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-16 md:pt-24">
+        <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-black/50 mb-8 md:mb-10">
+          TRUSTED BY GLOBAL ICONS
+        </h4>
+        
+        <div className="relative w-full flex overflow-hidden py-8 md:py-14">
+          {/* Fade Edges for seamless edge fading on full-screen white background */}
+          <div className="absolute inset-y-0 left-0 w-24 md:w-64 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-24 md:w-64 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
+          
+          <motion.div 
+            className="flex items-center py-6"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
+            style={{ width: "fit-content" }}
+          >
+            {[...brandLogos, ...brandLogos].map((brand, idx) => (
+              <div 
+                key={`${brand.id}-${idx}`} 
+                className="flex items-center justify-center shrink-0 w-44 md:w-60 lg:w-68 h-24 md:h-28 mx-6 md:mx-10 group"
+              >
+                <div className="w-full h-full flex items-center justify-center p-2">
+                  <img 
+                    src={brand.src} 
+                    alt={brand.alt}
+                    className="max-h-16 md:max-h-20 lg:max-h-24 max-w-[180px] md:max-w-[230px] lg:max-w-[260px] w-auto h-auto object-contain filter grayscale contrast-125 mix-blend-multiply opacity-60 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-115 transform-gpu origin-center"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
