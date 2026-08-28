@@ -279,7 +279,7 @@ export default function Hero() {
                   </button>
                 </div>
 
-                {/* Bottom Bar: Title & Reel Counter */}
+                {/* Bottom Bar: Title & Explore Link */}
                 <div className="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4 z-20 flex items-center justify-between gap-3 bg-[#111]/85 backdrop-blur-md px-4 py-2.5 rounded-sm border border-white/20 text-white shadow-xl transition-all duration-300 group-hover:border-[#0B3175]/60">
                   <div className="flex items-center gap-2.5">
                     <span className="w-2 h-2 bg-[#0B3175] rounded-full" />
@@ -288,10 +288,7 @@ export default function Hero() {
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <span className="font-mono text-[11px] font-semibold text-white/60 tracking-widest">
-                      <span className="text-white font-bold">{String(currentSlideIndex + 1).padStart(2, '0')}</span> / {String(showcaseSlides.length).padStart(2, '0')}
-                    </span>
+                  <div className="flex items-center">
                     <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-wider uppercase text-[#0B3175] bg-white px-2 py-0.5 rounded-2xs group-hover:bg-[#0B3175] group-hover:text-white transition-colors">
                       <span>Explore</span>
                       <ArrowUpRight size={11} />
