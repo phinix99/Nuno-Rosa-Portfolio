@@ -122,7 +122,7 @@ export default function Welcome() {
                   src={brand.src}
                   alt={brand.alt}
                   className="max-h-20 sm:max-h-28 md:max-h-32 lg:max-h-36 max-w-[200px] sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px] w-auto h-auto object-contain
-                    grayscale opacity-55
+                    mix-blend-multiply grayscale opacity-60
                     group-hover:grayscale-0 group-hover:opacity-100
                     transition-all duration-400 ease-out
                     group-hover:scale-110 transform-gpu origin-center"
