@@ -116,12 +116,12 @@ export default function Welcome() {
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
               <div
                 key={`${brand.id}-${idx}`}
-                className="flex items-center justify-center shrink-0 w-56 sm:w-72 md:w-80 lg:w-96 h-28 sm:h-36 md:h-44 mx-4 md:mx-8 group cursor-pointer"
+                className="flex items-center justify-center shrink-0 w-44 sm:w-56 md:w-64 lg:w-72 h-24 sm:h-32 md:h-36 mx-2 sm:mx-3 md:mx-4 px-1 group cursor-pointer"
               >
                 <img
                   src={brand.src}
                   alt={brand.alt}
-                  className="max-h-20 sm:max-h-28 md:max-h-32 lg:max-h-36 max-w-[200px] sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px] w-auto h-auto object-contain
+                  className="max-h-20 sm:max-h-28 md:max-h-32 lg:max-h-36 max-w-[190px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-[310px] w-auto h-auto object-contain
                     mix-blend-multiply grayscale opacity-60
                     group-hover:grayscale-0 group-hover:opacity-100
                     transition-all duration-400 ease-out
