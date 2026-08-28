@@ -128,7 +128,7 @@ export default function Portfolio() {
             <Link 
               key={g.slug} 
               to={`/gallery/${g.slug}`}
-              className="px-3.5 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-800 hover:bg-[#0B3175] hover:text-white border border-black/5 hover:border-[#0B3175] shadow-xs flex items-center gap-1.5 group"
+              className="px-3.5 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all bg-neutral-100 text-neutral-800 hover:bg-gradient-to-r hover:from-[#0B3175] hover:to-[#601DB3] hover:text-white border border-black/5 hover:border-transparent shadow-xs flex items-center gap-1.5 group"
             >
               <span>{g.name}</span>
               <ArrowUpRight size={12} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -146,14 +146,14 @@ export default function Portfolio() {
             <div className="flex flex-col gap-5 md:gap-6">
               {/* Section Header */}
               <div className="flex flex-col gap-1.5">
-                <span className="text-xs font-mono font-bold tracking-widest text-[#0B3175] uppercase">
+                <span className="text-xs font-mono font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#0B3175] to-[#601DB3] uppercase">
                   DISCIPLINE 0{idx + 1}
                 </span>
                 <Link 
                   to={`/gallery/${section.slug}`}
                   className="group w-fit"
                 >
-                  <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase text-[#111] leading-[1.08] group-hover:text-[#0B3175] transition-colors">
+                  <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-tight uppercase text-[#111] leading-[1.08] group-hover:text-[#601DB3] transition-colors">
                     {section.category.split(' & ').map((part, i, arr) => (
                       <span key={i}>
                         {part}
@@ -177,7 +177,7 @@ export default function Portfolio() {
                   >
                     <Link 
                       to={`/gallery/${item.slug || section.slug}`} 
-                      className="group relative w-full h-full rounded-sm md:rounded overflow-hidden border border-neutral-200/80 hover:border-[#0B3175]/60 hover:shadow-[0_15px_35px_rgba(11, 49, 117,0.18)] transition-all duration-500 bg-neutral-900 flex flex-col justify-center items-center"
+                      className="group relative w-full h-full rounded-sm md:rounded overflow-hidden border border-neutral-200/80 hover:border-[#601DB3]/60 hover:shadow-[0_15px_35px_rgba(96,29,179,0.18)] transition-all duration-500 bg-neutral-900 flex flex-col justify-center items-center"
                     >
                       {/* Background Image */}
                       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -188,19 +188,19 @@ export default function Portfolio() {
                         />
                         <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="absolute inset-0 bg-[#0B3175]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
+                        <div className="absolute inset-0 bg-[#601DB3]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
                       </div>
 
                       {/* Center Badge if sub-group exists */}
                       {item.title ? (
                         <div className="relative z-10 p-3 text-center">
-                          <span className="bg-white/95 text-black px-5 md:px-7 py-2 md:py-2.5 rounded-sm border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-sm group-hover:bg-[#0B3175] group-hover:text-white group-hover:border-[#0B3175] transition-all duration-300 inline-block">
+                          <span className="bg-white/95 text-black px-5 md:px-7 py-2 md:py-2.5 rounded-sm border border-black/10 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase shadow-sm group-hover:bg-gradient-to-r group-hover:from-[#0B3175] group-hover:to-[#601DB3] group-hover:text-white group-hover:border-transparent transition-all duration-300 inline-block">
                             {item.title}
                           </span>
                         </div>
                       ) : (
                         <div className="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                          <span className="bg-[#0B3175] text-white px-5 py-2 rounded-sm font-sans text-xs font-semibold tracking-wider uppercase shadow-md flex items-center gap-1.5">
+                          <span className="bg-gradient-to-r from-[#0B3175] to-[#601DB3] text-white px-5 py-2 rounded-sm font-sans text-xs font-semibold tracking-wider uppercase shadow-md flex items-center gap-1.5">
                             <span>Explore Collection</span>
                             <ArrowUpRight size={13} />
                           </span>

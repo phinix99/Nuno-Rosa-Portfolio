@@ -60,9 +60,10 @@ export default function Philosophy() {
     <section className="w-full bg-white text-black py-12 md:py-18 border-b border-black/10 overflow-hidden" id="philosophy">
       <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-20">
 
-        {/* Global Footprint Showcase Card */}
-        <div className="p-6 md:p-10 rounded-sm md:rounded bg-[#0B3175] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(11, 49, 117,0.22)] border border-white/10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-black/10 blur-[100px] rounded-full pointer-events-none" />
+        {/* Global Footprint Showcase Card with Rich Blue-to-Purple Gradient */}
+        <div className="p-6 md:p-10 rounded-sm md:rounded bg-gradient-to-br from-[#06183B] via-[#130E38] to-[#2D0F4D] text-white relative overflow-hidden shadow-[0_25px_60px_rgba(19,14,56,0.35)] border border-white/10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#7000FF]/15 blur-[120px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#0B3175]/25 blur-[100px] rounded-full pointer-events-none" />
 
           {/* Section Header */}
           <div className="relative z-10 flex flex-col gap-1.5 pb-6 mb-8 border-b border-white/15">
