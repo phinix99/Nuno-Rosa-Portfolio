@@ -200,8 +200,13 @@ export default function Hero() {
             variants={itemVariants}
             className="lg:col-span-5 flex flex-col items-start gap-5 lg:pr-4 order-2 lg:order-1"
           >
-            <div className="font-sans text-base md:text-lg lg:text-xl font-light tracking-tight text-[#111]/90 max-w-md leading-relaxed">
-              I craft immersive visual merchandising and bespoke exhibition architectures that captivate global audiences and transform physical spaces into visceral brand stories.
+            <div className="font-sans text-xs md:text-sm lg:text-[0.925rem] font-light tracking-tight text-[#111]/90 max-w-xl leading-relaxed flex flex-col gap-2.5">
+              <p>
+                To enhance a brand's visual presence, every project must balance strategic planning with immaculate execution. I design high-impact window concepts, spatial retail layouts, and immersive physical activations for global fashion brands.
+              </p>
+              <p>
+                From bespoke luxury events to fixture development, detailed planograms, and national store layout optimisation, each concept is engineered to elevate brand DNA and market positioning.
+              </p>
             </div>
             
             <div className="flex items-center font-sans text-xs font-semibold tracking-wider uppercase pt-1">
