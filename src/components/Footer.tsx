@@ -1,8 +1,9 @@
 import { motion } from 'motion/react';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0B3175] text-white px-6 md:px-12 lg:px-20 py-10 md:py-16" id="contact">
+    <footer className="w-full bg-[#0B3175] text-white px-6 md:px-12 lg:px-20 py-12 md:py-18" id="contact">
       <div className="max-w-[1500px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
         <motion.div 
           initial={{ opacity: 0 }}
@@ -14,8 +15,17 @@ export default function Footer() {
           <h2 className="font-sans text-5xl md:text-[6.5rem] font-medium tracking-tighter uppercase mb-4 md:mb-6 leading-none">
             LET'S TALK
           </h2>
-          <div className="flex flex-col gap-1 font-sans text-xs md:text-sm font-semibold tracking-wide uppercase opacity-75 hover:text-black transition-colors">
-            <a href="mailto:nunorosa75@gmail.com">nunorosa75@gmail.com</a>
+          <div className="flex flex-col gap-3 font-sans text-xs md:text-sm">
+            <p className="font-light text-white/80 max-w-md leading-relaxed">
+              Available for global retail visual merchandising direction, masterclasses, and executive consultations.
+            </p>
+            <a 
+              href="#vm-course" 
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-white text-[#0B3175] hover:bg-black hover:text-white font-sans text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm w-fit"
+            >
+              <span>Get In Touch / Inquire</span>
+              <ArrowUpRight size={13} strokeWidth={2.5} />
+            </a>
           </div>
         </motion.div>
 

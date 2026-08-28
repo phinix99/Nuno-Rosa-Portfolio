@@ -14,16 +14,16 @@ interface TestimonialItem {
 const testimonials: TestimonialItem[] = [
   {
     name: "Anne-Marie Bodal",
-    role: "Brand Strategy & Product Transformation Specialist",
-    company: "Global Multi-Product Design Leader",
-    country: "France",
+    role: "Vice President – Clothing, Footwear, Accessories & Beauty",
+    company: "Yousta",
+    country: "India",
     avatar: "/reviews/Anne-Marie Bodal.png",
     text: "Nuno is incredibly process-driven, which means complex, multi-city projects never lost momentum; he has a gift for navigating complexity and driving delivery at scale. A brilliant trainer, generous with knowledge and genuinely invested in building up people around him."
   },
   {
     name: "Hannah Mercer",
-    role: "Chief Executive Officer",
-    company: "Footasylum",
+    role: "Senior Director",
+    company: "Bicester Village Value Retail",
     country: "UK",
     avatar: "/reviews/Hannah Mercer.jfif",
     text: "Nuno was visionary in his implementation across the array of brands; his attention to detail, flair and execution were exemplary. A true pleasure to work with."
@@ -38,32 +38,32 @@ const testimonials: TestimonialItem[] = [
   },
   {
     name: "Nisha Pikle",
-    role: "Retail & Brand Head",
-    company: "Vero Moda | Strategy & P&L",
+    role: "Brand Head",
+    company: "Vero Moda",
     country: "India",
     avatar: "/reviews/Nisha Pikle.jfif",
     text: "Nuno has an incredible eye for detail—his in-store display sensibility significantly elevated Vero Moda brand presence. Season after season, his innovative window concepts set us apart and brought collections to life."
   },
   {
     name: "Clare Lecointe",
-    role: "Senior Retail Director",
-    company: "Bicester Village Shopping Collection",
+    role: "Senior Retail Manager",
+    company: "Bicester Village Value Retail",
     country: "UK",
     avatar: "/reviews/Clare Lecointe.jfif",
     text: "I worked with Nuno at Bicester Village across premium luxury fashion brands (Prada, Dior, Gucci). Nuno is a talented Visual Merchandiser, hugely creative and able to adapt to a variety of VM styles."
   },
   {
     name: "Ammar Nagane",
-    role: "Head of HR Operations, Compensation & Benefits",
-    company: "Bestseller | HR Transformation",
+    role: "Head of Compensation Benefits",
+    company: "Bestseller",
     country: "India",
     avatar: "/reviews/Amar Nagane.jfif",
     text: "Nuno Rosa is one of the most dedicated Visual Merchandising professionals I’ve worked with. A reliable, forward-thinking leader with solid work ethic and an inspiring team player."
   },
   {
     name: "Juan Carlos Gómez García",
-    role: "CDMO LATAM",
-    company: "L'Oréal",
+    role: "Marketing Director",
+    company: "C&A",
     country: "Mexico",
     text: "Nuno is always professional; he is very, very creative, inspiring, responsible, respectful and a big and good communicator."
   }

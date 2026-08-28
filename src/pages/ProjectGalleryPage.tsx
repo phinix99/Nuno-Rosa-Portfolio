@@ -297,12 +297,12 @@ export default function ProjectGalleryPage() {
       {/* Footer */}
       <footer className="w-full py-12 mt-16 border-t border-neutral-200/80 text-center font-sans text-xs tracking-wider uppercase text-neutral-500 bg-[#fafafa] flex flex-col items-center gap-4">
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-neutral-700">
-          <a 
-            href="mailto:nunorosa75@gmail.com" 
-            className="hover:text-[#0B3175] transition-colors flex items-center gap-1 font-semibold lowercase"
+          <Link 
+            to="/#vm-course" 
+            className="hover:text-[#0B3175] transition-colors flex items-center gap-1 font-semibold"
           >
-            nunorosa75@gmail.com
-          </a>
+            Contact / Inquire <ArrowUpRight size={12} />
+          </Link>
           <span className="text-neutral-300 hidden sm:inline">•</span>
           <a 
             href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
