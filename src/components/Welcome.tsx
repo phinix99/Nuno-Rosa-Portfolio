@@ -130,31 +130,31 @@ export default function Welcome() {
       </div>
 
       {/* Brands Carousel Section directly under About Me */}
-      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-8 md:pt-10">
-        <h4 className="text-center font-sans text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-black/50 mb-4 md:mb-6">
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-10 md:pt-14 pb-4">
+        <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-black/60 mb-6 md:mb-8">
           TRUSTED BY GLOBAL ICONS
         </h4>
         
-        <div className="relative w-full flex overflow-hidden py-4 md:py-6">
-          <div className="absolute inset-y-0 left-0 w-20 md:w-48 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-20 md:w-48 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
+        <div className="relative w-full flex overflow-hidden py-4 md:py-8">
+          <div className="absolute inset-y-0 left-0 w-24 md:w-56 bg-gradient-to-r from-white via-white/95 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-24 md:w-56 bg-gradient-to-l from-white via-white/95 to-transparent z-10 pointer-events-none" />
           
           <motion.div 
             className="flex items-center py-2"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 55 }}
             style={{ width: "fit-content" }}
           >
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
               <div 
                 key={`${brand.id}-${idx}`} 
-                className="flex items-center justify-center shrink-0 w-44 md:w-56 lg:w-64 h-20 md:h-24 lg:h-28 mx-2 md:mx-3 group"
+                className="flex items-center justify-center shrink-0 w-56 md:w-72 lg:w-80 h-28 md:h-36 lg:h-40 mx-3 md:mx-6 group"
               >
-                <div className="w-full h-full flex items-center justify-center p-1">
+                <div className="w-full h-full flex items-center justify-center p-2">
                   <img 
                     src={brand.src} 
                     alt={brand.alt}
-                    className="max-h-16 md:max-h-20 lg:max-h-24 max-w-[180px] md:max-w-[230px] lg:max-w-[260px] w-auto h-auto object-contain transition-all duration-300 group-hover:scale-105 transform-gpu origin-center"
+                    className="max-h-24 md:max-h-32 lg:max-h-36 max-w-[220px] md:max-w-[280px] lg:max-w-[320px] w-auto h-auto object-contain transition-all duration-300 group-hover:scale-108 transform-gpu origin-center filter contrast-105"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
