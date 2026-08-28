@@ -48,7 +48,7 @@ const pillars: Pillar[] = [
     id: 'p3',
     num: '03',
     title: 'Spatial Graphic Design',
-    description: "Engineering cohesive environmental graphics, architectural wayfinding, and branded retail identities that seamlessly guide consumer journey and enhance in-store discovery.",
+    description: "Every design choice must solve a specific problem. In commercial retail, an impactful brand experience relies on the precise alignment of structural fixtures, conceptual layout development, environmental signage, and standardized visual manuals. Every single element is positioned with an exact commercial purpose—never just to fill empty space.",
     subDisciplines: [
       { name: 'Retail Conceptual Design', slug: 'conceptual-design' },
       { name: 'Visual Signage Communication', slug: 'visual-signage' }
@@ -62,10 +62,10 @@ const pillars: Pillar[] = [
     id: 'p4',
     num: '04',
     title: 'Brand Retail Experiences',
-    description: "Orchestrating high-impact fashion trade shows, VIP press showrooms, and bespoke luxury lifestyle activations that amplify market presence and brand prestige.",
+    description: "Designing physical retail activations that transcend traditional layouts. Every concept is engineered to transport clients into an immersive experience that enhances brand DNA and elevates long-term market positioning.",
     subDisciplines: [
       { name: 'Fashion Trade Shows', slug: 'events-exhibitions' },
-      { name: 'Press Rooms Curation', slug: 'events-exhibitions' },
+      { name: 'Press Room Curation', slug: 'events-exhibitions' },
       { name: 'Luxury Lifestyle Events', slug: 'events-exhibitions' }
     ],
     primarySlug: 'events-exhibitions',
