@@ -6,6 +6,7 @@ interface Pillar {
   id: string;
   num: string;
   title: string;
+  description: string;
   subDisciplines: { name: string; slug: string }[];
   primarySlug: string;
   mediaType: 'image' | 'video';
@@ -18,6 +19,7 @@ const pillars: Pillar[] = [
     id: 'p1',
     num: '01',
     title: 'Creative Visual Storytelling',
+    description: "The window display acts as a silent theatre behind the store façade—unveiling precise visual narratives that instantly communicate a brand's core DNA and engage the modern consumer.",
     subDisciplines: [
       { name: 'Bespoke Windows Concepts', slug: 'creative-windows' },
       { name: 'In-store Product Display', slug: 'in-store-display' },
@@ -32,6 +34,7 @@ const pillars: Pillar[] = [
     id: 'p2',
     num: '02',
     title: 'Digital Visual Merchandising',
+    description: "Translating seasonal narratives and brand campaigns into precise digital storefronts. Every visual element is intentionally structured to maximize digital traffic and brand retention.",
     subDisciplines: [
       { name: 'E-Commerce Creative Direction', slug: 'e-commerce-styling' },
       { name: 'Styling Curation', slug: 'e-commerce-styling' }
@@ -45,6 +48,7 @@ const pillars: Pillar[] = [
     id: 'p3',
     num: '03',
     title: 'Spatial Graphic Design',
+    description: "Engineering cohesive environmental graphics, architectural wayfinding, and branded retail identities that seamlessly guide consumer journey and enhance in-store discovery.",
     subDisciplines: [
       { name: 'Retail Conceptual Design', slug: 'conceptual-design' },
       { name: 'Visual Signage Communication', slug: 'visual-signage' }
@@ -58,6 +62,7 @@ const pillars: Pillar[] = [
     id: 'p4',
     num: '04',
     title: 'Brand Retail Experiences',
+    description: "Orchestrating high-impact fashion trade shows, VIP press showrooms, and bespoke luxury lifestyle activations that amplify market presence and brand prestige.",
     subDisciplines: [
       { name: 'Fashion Trade Shows', slug: 'events-exhibitions' },
       { name: 'Press Rooms Curation', slug: 'events-exhibitions' },
@@ -119,8 +124,13 @@ export default function PortfolioHighlights() {
                   </h3>
                 </Link>
 
+                {/* Editorial Narrative Description */}
+                <p className="font-sans text-xs md:text-sm font-light text-black/75 leading-relaxed pt-1">
+                  {pillar.description}
+                </p>
+
                 {/* Sub-disciplines List Pills */}
-                <div className="flex flex-wrap gap-2 pt-1">
+                <div className="flex flex-wrap gap-2 pt-2">
                   {pillar.subDisciplines.map((sub, sIdx) => (
                     <Link
                       key={sIdx}
