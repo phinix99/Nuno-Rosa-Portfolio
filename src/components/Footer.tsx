@@ -1,15 +1,22 @@
-import { motion } from 'motion/react';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
+  const footerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: footerRef,
+    offset: ["start end", "end end"]
+  });
+
+  const titleY = useTransform(scrollYProgress, [0, 1], ["25px", "0px"]);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.8], [0.4, 1]);
+
   return (
-    <footer className="w-full bg-[#0B3175] text-white px-6 md:px-12 lg:px-20 py-12 md:py-18 relative overflow-hidden" id="contact">
+    <footer ref={footerRef} className="w-full bg-[#0B3175] text-white px-6 md:px-12 lg:px-20 py-14 md:py-20 relative overflow-hidden" id="contact">
       <div className="max-w-[1500px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8 relative z-10">
         <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          style={{ y: titleY, opacity: titleOpacity }}
           className="flex flex-col"
         >
           <h2 className="font-sans text-5xl md:text-[6.5rem] font-medium tracking-tighter uppercase mb-4 md:mb-6 leading-none">
@@ -30,9 +37,9 @@ export default function Footer() {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: "-30px" }}
           transition={{ duration: 0.8, delay: 0.15 }}
           className="flex flex-col md:text-right gap-6"
         >

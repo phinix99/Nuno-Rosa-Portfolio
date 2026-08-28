@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,8 @@ export default function Hero() {
     offset: ["start start", "end start"]
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
+  const showcaseY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0.35]);
 
   const showcaseSlides = [
     {
@@ -105,19 +106,19 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.12,
         delayChildren: 0.05,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 15 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.8,
         ease: [0.16, 1, 0.3, 1],
       },
     },
@@ -160,6 +161,7 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        style={{ opacity: textOpacity }}
         className="max-w-[1500px] mx-auto w-full flex flex-col flex-1 justify-center"
       >
         {/* Top Header: Brand Name + Studio Subtitle + International Markets */}
@@ -226,6 +228,7 @@ export default function Hero() {
           {/* Right Column (60% Dominant Visual): 7 Columns in 12-col grid */}
           <motion.div 
             variants={itemVariants}
+            style={{ y: showcaseY }}
             className="lg:col-span-7 w-full order-1 lg:order-2"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
@@ -246,7 +249,6 @@ export default function Hero() {
                     animate={{ opacity: 1, scale: 1.08 }}
                     exit={{ opacity: 0, scale: 1.03 }}
                     transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                    style={{ y }}
                     src={currentSlide.image}
                     alt={`${currentSlide.title} showcase by Nuno Rosa`}
                     className="absolute inset-0 w-full h-full object-cover origin-center transition-transform duration-[2.5s] ease-out group-hover:scale-[1.12]"
