@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 
 const brandLogos = Array.from({ length: 23 }, (_, i) => ({
@@ -9,7 +9,6 @@ const brandLogos = Array.from({ length: 23 }, (_, i) => ({
 
 export default function Welcome() {
   const imageRef = useRef(null);
-  const [carouselPaused, setCarouselPaused] = useState(false);
   const { scrollYProgress } = useScroll({
     target: imageRef,
     offset: ["start end", "end start"]
@@ -88,15 +87,13 @@ export default function Welcome() {
 
       </div>
 
-      {/* ── TRUSTED BY GLOBAL ICONS ── Redesigned Brand Carousel Strip */}
+      {/* ── TRUSTED BY GLOBAL ICONS ── Redesigned Brand Carousel Strip with 1.5X Larger Logos & Zero-Jump CSS Pause ── */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full mt-14 md:mt-20 bg-[#F4F6FA] border-t border-black/8"
-        onMouseEnter={() => setCarouselPaused(true)}
-        onMouseLeave={() => setCarouselPaused(false)}
+        className="w-full mt-14 md:mt-20 bg-[#F4F6FA] border-t border-black/8 pause-on-hover"
       >
         {/* Section Header */}
         <div className="flex items-center justify-center gap-4 pt-10 md:pt-12 pb-8 md:pb-10 px-5">
@@ -107,32 +104,27 @@ export default function Welcome() {
           <span className="flex-1 max-w-[120px] h-px bg-[#0B3175]/20" />
         </div>
 
-        {/* Scrolling Logo Track */}
+        {/* Scrolling Logo Track with Seamless GPU Marquee */}
         <div className="relative w-full flex overflow-hidden pb-10 md:pb-12">
 
           {/* Left edge fade — matched to bg-[#F4F6FA] */}
-          <div className="absolute inset-y-0 left-0 w-20 md:w-48 bg-gradient-to-r from-[#F4F6FA] to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-24 md:w-56 bg-gradient-to-r from-[#F4F6FA] via-[#F4F6FA]/90 to-transparent z-10 pointer-events-none" />
           {/* Right edge fade */}
-          <div className="absolute inset-y-0 right-0 w-20 md:w-48 bg-gradient-to-l from-[#F4F6FA] to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-24 md:w-56 bg-gradient-to-l from-[#F4F6FA] via-[#F4F6FA]/90 to-transparent z-10 pointer-events-none" />
 
-          <motion.div
-            className="flex items-center"
-            animate={{ x: carouselPaused ? undefined : ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
-            style={{ width: "fit-content" }}
-          >
+          <div className="animate-marquee-smooth items-center">
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
               <div
                 key={`${brand.id}-${idx}`}
-                className="flex items-center justify-center shrink-0 w-40 md:w-56 lg:w-64 h-20 md:h-28 mx-4 md:mx-8 group"
+                className="flex items-center justify-center shrink-0 w-56 sm:w-72 md:w-80 lg:w-96 h-28 sm:h-36 md:h-44 mx-4 md:mx-8 group cursor-pointer"
               >
                 <img
                   src={brand.src}
                   alt={brand.alt}
-                  className="max-h-14 md:max-h-20 max-w-[140px] md:max-w-[200px] w-auto h-auto object-contain
-                    grayscale opacity-50
+                  className="max-h-20 sm:max-h-28 md:max-h-32 lg:max-h-36 max-w-[200px] sm:max-w-[260px] md:max-w-[300px] lg:max-w-[340px] w-auto h-auto object-contain
+                    grayscale opacity-55
                     group-hover:grayscale-0 group-hover:opacity-100
-                    transition-all duration-500 ease-out
+                    transition-all duration-400 ease-out
                     group-hover:scale-110 transform-gpu origin-center"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -140,7 +132,7 @@ export default function Welcome() {
                 />
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* Brand count indicator */}

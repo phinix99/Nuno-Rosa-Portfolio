@@ -10,6 +10,26 @@
   --color-accent: #0B3175;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-smooth {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+  will-change: transform;
+}
+
+.pause-on-hover:hover .animate-marquee-smooth {
+  animation-play-state: paused;
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
