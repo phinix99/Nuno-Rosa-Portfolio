@@ -1,149 +1,80 @@
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
-interface CollageItem {
+interface Pillar {
   id: string;
+  num: string;
   title: string;
-  category: string;
-  slug: string;
-  image: string;
-  aspect: string;
+  subDisciplines: { name: string; slug: string }[];
+  primarySlug: string;
+  mediaType: 'image' | 'video';
+  mediaSrc: string;
   tag: string;
 }
 
-const collageItems: { col1: CollageItem[]; col2: CollageItem[]; col3: CollageItem[] } = {
-  col1: [
-    {
-      id: 'c1',
-      title: 'Creative Windows',
-      category: 'Visual Merchandising',
-      slug: 'creative-windows',
-      image: '/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg',
-      aspect: 'aspect-[4/3]',
-      tag: 'Window Concepts'
-    },
-    {
-      id: 'c2',
-      title: 'In-store Display',
-      category: 'Spatial Experience',
-      slug: 'in-store-display',
-      image: '/portfolio/VISUAL MERCHANDISING/In-store Product Display/IN STORE/YOUSTA.jpg',
-      aspect: 'aspect-[16/10]',
-      tag: 'Store Display'
-    }
-  ],
-  col2: [
-    {
-      id: 'c3',
-      title: 'Limited Editions',
-      category: 'Bespoke Visuals',
-      slug: 'limited-editions',
-      image: '/portfolio/VISUAL MERCHANDISING/Limited Editions/01.jpg',
-      aspect: 'aspect-[4/3]',
-      tag: 'Limited Editions'
-    },
-    {
-      id: 'c4',
-      title: 'E-Commerce & Styling',
-      category: 'Creative Direction',
-      slug: 'e-commerce-styling',
-      image: '/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg',
-      aspect: 'aspect-[16/10]',
-      tag: 'Fashion Styling'
-    }
-  ],
-  col3: [
-    {
-      id: 'c5',
-      title: 'Conceptual Design',
-      category: 'Spatial Graphic Design',
-      slug: 'conceptual-design',
-      image: '/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg',
-      aspect: 'aspect-[4/3]',
-      tag: 'Spatial Geometry'
-    },
-    {
-      id: 'c6',
-      title: 'Visual Signage',
-      category: 'Wayfinding & Graphics',
-      slug: 'visual-signage',
-      image: '/portfolio/Conceptual Design & Visual Signage Packdage/VISUAL SIGNAGE/Slide102.JPG',
-      aspect: 'aspect-[16/10]',
-      tag: 'Visual Signage'
-    }
-  ]
-};
+const pillars: Pillar[] = [
+  {
+    id: 'p1',
+    num: '01',
+    title: 'Creative Visual Storytelling',
+    subDisciplines: [
+      { name: 'Bespoke Windows Concepts', slug: 'creative-windows' },
+      { name: 'In-store Product Display', slug: 'in-store-display' },
+      { name: 'Limited-edition Product Launches', slug: 'limited-editions' }
+    ],
+    primarySlug: 'creative-windows',
+    mediaType: 'image',
+    mediaSrc: '/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg',
+    tag: 'Window Concepts & In-Store Displays'
+  },
+  {
+    id: 'p2',
+    num: '02',
+    title: 'Digital Visual Merchandising',
+    subDisciplines: [
+      { name: 'E-Commerce Creative Direction', slug: 'e-commerce-styling' },
+      { name: 'Styling Curation', slug: 'e-commerce-styling' }
+    ],
+    primarySlug: 'e-commerce-styling',
+    mediaType: 'image',
+    mediaSrc: '/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg',
+    tag: 'Digital Curation & Fashion Styling'
+  },
+  {
+    id: 'p3',
+    num: '03',
+    title: 'Spatial Graphic Design',
+    subDisciplines: [
+      { name: 'Retail Conceptual Design', slug: 'conceptual-design' },
+      { name: 'Visual Signage Communication', slug: 'visual-signage' }
+    ],
+    primarySlug: 'conceptual-design',
+    mediaType: 'image',
+    mediaSrc: '/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg',
+    tag: 'Conceptual Geometry & Signage'
+  },
+  {
+    id: 'p4',
+    num: '04',
+    title: 'Brand Retail Experiences',
+    subDisciplines: [
+      { name: 'Fashion Trade Shows', slug: 'events-exhibitions' },
+      { name: 'Press Rooms Curation', slug: 'events-exhibitions' },
+      { name: 'Luxury Lifestyle Events', slug: 'events-exhibitions' }
+    ],
+    primarySlug: 'events-exhibitions',
+    mediaType: 'video',
+    mediaSrc: '/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/Final Vero Moda cut.mp4',
+    tag: 'Vero Moda Press Showroom & Trade Events'
+  }
+];
 
 export default function PortfolioHighlights() {
   const containerRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-
-  const yCol1 = useTransform(scrollYProgress, [0, 1], ["0%", "-4%"]);
-  const yCol2 = useTransform(scrollYProgress, [0, 1], ["4%", "-4%"]);
-  const yCol3 = useTransform(scrollYProgress, [0, 1], ["0%", "-6%"]);
-
-  const renderCard = (item: CollageItem, index: number) => (
-    <motion.div
-      key={item.id}
-      initial={{ opacity: 0, y: 15 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative w-full"
-    >
-      <Link 
-        to={`/gallery/${item.slug}`}
-        className="block relative w-full overflow-hidden rounded-sm md:rounded bg-neutral-100 border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_15px_35px_rgba(11, 49, 117,0.18)] transition-all duration-500 hover:-translate-y-1"
-      >
-        <div className={`relative w-full ${item.aspect} overflow-hidden`}>
-          <img
-            src={item.image}
-            alt={item.title}
-            loading="lazy"
-            className="w-full h-full object-cover origin-center transition-transform duration-700 ease-out group-hover:scale-108"
-          />
-
-          {/* Luxury Gradient Vignette Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-60 group-hover:opacity-85 transition-opacity duration-500" />
-          <div className="absolute inset-0 bg-[#0B3175]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
-
-          {/* Floating Category Pill */}
-          <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm bg-black/60 backdrop-blur-md border border-white/20 text-white font-sans text-[9px] md:text-[10px] font-semibold tracking-widest uppercase shadow-xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#0B3175]" />
-              {item.tag}
-            </span>
-          </div>
-
-          {/* Action Link Arrow */}
-          <div className="absolute top-3 right-3 md:top-4 md:right-4 z-20">
-            <div className="w-8 h-8 rounded-sm bg-white/90 backdrop-blur-md text-black flex items-center justify-center shadow-xs transform group-hover:scale-110 group-hover:bg-[#0B3175] group-hover:text-white transition-all duration-300">
-              <ArrowUpRight size={14} />
-            </div>
-          </div>
-
-          {/* Card Meta Content */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 z-20 flex flex-col justify-end text-white">
-            <span className="font-sans text-[9px] md:text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70 mb-0.5 group-hover:text-[#0B3175] transition-colors">
-              {item.category}
-            </span>
-            <h3 className="font-sans text-base md:text-xl font-bold tracking-tight text-white leading-tight group-hover:translate-x-1 transition-transform duration-300">
-              {item.title}
-            </h3>
-          </div>
-        </div>
-      </Link>
-    </motion.div>
-  );
-
   return (
-    <section ref={containerRef} className="w-full bg-white text-black py-10 md:py-16 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="portfolio">
+    <section ref={containerRef} className="w-full bg-white text-black py-12 md:py-20 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="portfolio">
       
       {/* Background Ambient Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[50%] bg-[#0B3175]/5 blur-[140px] rounded-full pointer-events-none" />
@@ -151,42 +82,93 @@ export default function PortfolioHighlights() {
       <div className="max-w-[1500px] mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 md:mb-8 border-b border-black/10 pb-4">
-          <div className="flex flex-col gap-1">
-            <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
-              PORTFOLIO ARCHIVES
-            </div>
-            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
-              CREATIVE DISCIPLINES
-            </h2>
+        <div className="flex flex-col gap-2 mb-8 md:mb-12 border-b border-black/10 pb-5">
+          <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
+            VISUAL CORE PILLARS
           </div>
-
-          <div className="flex items-center gap-3">
-            <Link
-              to="/portfolio"
-              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-sm border border-black/15 bg-white text-black hover:bg-[#0B3175] hover:text-white hover:border-[#0B3175] transition-all duration-300 text-xs font-bold tracking-widest uppercase shadow-xs"
-            >
-              <span>Explore All Archives</span>
-              <ArrowUpRight size={14} className="text-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
-            </Link>
-          </div>
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
+            Retail Footprint Transformation
+          </h2>
         </div>
 
-        {/* Compact Parallax Collage Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-start">
-          
-          <motion.div style={{ y: yCol1 }} className="flex flex-col gap-4 md:gap-6">
-            {collageItems.col1.map((item, idx) => renderCard(item, idx))}
-          </motion.div>
+        {/* 4 Folders Organisation Grid - Spacious & Clean */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+          {pillars.map((pillar, idx) => (
+            <motion.div
+              key={pillar.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="p-6 md:p-8 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#0B3175]/40 transition-all duration-500 shadow-xs flex flex-col justify-between group"
+            >
+              {/* Top Header of Pillar */}
+              <div className="flex flex-col gap-3 mb-6">
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-xs font-bold tracking-widest text-[#0B3175] uppercase">
+                    PILLAR {pillar.num}
+                  </span>
+                  <span className="text-[10px] uppercase font-semibold text-black/50 tracking-wider">
+                    {pillar.tag}
+                  </span>
+                </div>
 
-          <motion.div style={{ y: yCol2 }} className="flex flex-col gap-4 md:gap-6">
-            {collageItems.col2.map((item, idx) => renderCard(item, idx))}
-          </motion.div>
+                <Link to={`/gallery/${pillar.primarySlug}`} className="group/title">
+                  <h3 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold tracking-tight uppercase text-black group-hover/title:text-[#0B3175] transition-colors">
+                    {pillar.title}
+                  </h3>
+                </Link>
 
-          <motion.div style={{ y: yCol3 }} className="flex flex-col gap-4 md:gap-6 md:col-span-2 lg:col-span-1">
-            {collageItems.col3.map((item, idx) => renderCard(item, idx))}
-          </motion.div>
+                {/* Sub-disciplines List Pills */}
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {pillar.subDisciplines.map((sub, sIdx) => (
+                    <Link
+                      key={sIdx}
+                      to={`/gallery/${sub.slug}`}
+                      className="px-3 py-1.5 bg-white hover:bg-[#0B3175] text-neutral-800 hover:text-white border border-black/10 hover:border-[#0B3175] rounded-xs text-[11px] font-semibold tracking-wide uppercase transition-all duration-300 shadow-2xs"
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
+              {/* Visual Showcase Media */}
+              <Link
+                to={`/gallery/${pillar.primarySlug}`}
+                className="block relative w-full aspect-[16/10] md:aspect-[16/9.5] overflow-hidden rounded-sm bg-neutral-900 border border-black/10 shadow-sm mt-auto"
+              >
+                {pillar.mediaType === 'video' ? (
+                  <video
+                    src={pillar.mediaSrc}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover origin-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                ) : (
+                  <img
+                    src={pillar.mediaSrc}
+                    alt={pillar.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover origin-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                )}
+
+                {/* Bottom Title Vignette (No top-right arrow button) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 flex items-center justify-between z-10">
+                  <span className="font-sans text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                    {pillar.title}
+                  </span>
+                  <span className="text-[10px] font-mono text-white/90 uppercase tracking-widest bg-black/50 backdrop-blur-md px-3 py-1 rounded-xs border border-white/20">
+                    Explore Pillar
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
 
       </div>
