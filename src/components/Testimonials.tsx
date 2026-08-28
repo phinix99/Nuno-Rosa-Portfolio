@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
-import { MessageSquareQuote, ChevronLeft, ChevronRight, Linkedin, MapPin, Sparkles, Star } from 'lucide-react';
+import { MessageSquareQuote, ChevronLeft, ChevronRight, Linkedin, MapPin } from 'lucide-react';
 
 interface TestimonialItem {
   name: string;
@@ -98,7 +98,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="w-full bg-white text-black py-10 md:py-16 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="testimonials">
+    <section className="w-full bg-white text-black py-12 md:py-20 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="testimonials">
       
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-[#0B3175]/5 blur-[140px] rounded-full pointer-events-none" />
@@ -106,10 +106,10 @@ export default function Testimonials() {
       <div className="max-w-[1500px] mx-auto relative z-10">
         
         {/* Section Header with Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 md:mb-10 border-b border-black/10 pb-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 md:mb-14 border-b border-black/10 pb-5">
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
-              <Linkedin size={13} className="text-[#0077B5]" /> VERIFIED RECOMMENDATIONS
+              <Linkedin size={14} className="text-[#0077B5]" /> PROFESSIONAL VALIDATION
             </div>
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
               WHAT LEADERS SAY
@@ -135,89 +135,82 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* 3 Reviews Displayed Together in Responsive 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {/* 3 Elevated Reviews Displayed in Responsive 3-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 pt-4">
           <AnimatePresence mode="popLayout">
             {visibleTestimonials.map((t, idx) => (
               <motion.div
                 key={`${t.name}-${startIndex + idx}`}
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.35, delay: idx * 0.05 }}
-                className="flex flex-col justify-between p-5 md:p-6 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#0B3175]/40 hover:shadow-[0_15px_30px_rgba(11, 49, 117,0.06)] transition-all duration-300 group min-h-[300px]"
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                className="relative pt-7 flex flex-col justify-between group"
               >
-                {/* Top: Avatar & Recommender Info */}
-                <div className="flex flex-col gap-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-3">
-                      <div className="relative shrink-0">
-                        {t.avatar ? (
-                          <img 
-                            src={t.avatar} 
-                            alt={t.name}
-                            className="w-12 h-12 rounded-sm object-cover border border-[#0B3175] shadow-xs group-hover:scale-105 transition-transform duration-300"
-                            onError={(e) => {
-                              e.currentTarget.style.display = 'none';
-                              if (e.currentTarget.nextElementSibling) {
-                                e.currentTarget.nextElementSibling.classList.remove('hidden');
-                              }
-                            }}
-                          />
-                        ) : null}
-                        <div className={`${t.avatar ? 'hidden' : 'flex'} w-12 h-12 rounded-sm bg-[#0B3175] text-white font-bold items-center justify-center text-sm border border-white shadow-xs`}>
-                          {t.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                        </div>
-
-                        <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-xs bg-[#0077B5] text-white flex items-center justify-center border border-white">
-                          <Linkedin size={8} />
-                        </div>
+                <div className="w-full h-full p-6 md:p-7 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#0B3175]/40 hover:shadow-[0_20px_40px_rgba(11,49,117,0.08)] transition-all duration-300 flex flex-col justify-between relative shadow-xs">
+                  
+                  {/* Floating Circular Avatar on Top Border */}
+                  <div className="absolute -top-7 left-6 flex items-center">
+                    <div className="relative">
+                      {t.avatar ? (
+                        <img 
+                          src={t.avatar} 
+                          alt={t.name}
+                          className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md group-hover:scale-105 transition-transform duration-300"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            if (e.currentTarget.nextElementSibling) {
+                              e.currentTarget.nextElementSibling.classList.remove('hidden');
+                            }
+                          }}
+                        />
+                      ) : null}
+                      <div className={`${t.avatar ? 'hidden' : 'flex'} w-14 h-14 rounded-full bg-[#0B3175] text-white font-bold items-center justify-center text-sm border-2 border-white shadow-md`}>
+                        {t.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                       </div>
 
-                      <div className="flex flex-col">
-                        <h3 className="font-sans text-sm md:text-base font-bold tracking-tight text-black group-hover:text-[#0B3175] transition-colors leading-snug">
-                          {t.name}
-                        </h3>
-                        <span className="font-sans text-[11px] font-semibold text-black/70 line-clamp-1">
-                          {t.role}
-                        </span>
-                        <span className="font-sans text-[10px] text-black/50 line-clamp-1">
-                          {t.company}
-                        </span>
+                      <div className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-[#0077B5] text-white flex items-center justify-center border border-white shadow-xs">
+                        <Linkedin size={9} />
                       </div>
                     </div>
+                  </div>
 
-                    <span className="shrink-0 flex items-center gap-1 px-2 py-0.5 rounded-xs bg-black/5 text-[9px] font-bold tracking-wider text-black/60 uppercase">
-                      <MapPin size={9} className="text-[#0B3175]" /> {t.country}
+                  {/* Top Right: Prominent Country Badge */}
+                  <div className="flex justify-end items-center mb-5">
+                    <span className="flex items-center gap-1.5 px-3 py-1 rounded-xs bg-[#0B3175]/10 border border-[#0B3175]/25 text-[10px] md:text-[11px] font-bold tracking-wider text-[#0B3175] uppercase shadow-2xs">
+                      <MapPin size={11} className="text-[#0B3175]" /> {t.country}
                     </span>
                   </div>
 
-                  {/* Review Text */}
-                  <p className="font-sans text-xs font-light leading-relaxed text-black/80">
-                    "{t.text}"
-                  </p>
-                </div>
-
-                {/* Bottom: Verified Endorsement Tag */}
-                <div className="pt-3 mt-4 border-t border-black/10 flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-[#0B3175]">
-                    <Sparkles size={11} />
-                    <span>Verified Endorsement</span>
+                  {/* Quote Body */}
+                  <div className="flex flex-col gap-3 my-auto">
+                    <MessageSquareQuote size={22} className="text-[#0B3175]/30 group-hover:text-[#0B3175]/60 transition-colors" />
+                    <p className="font-sans text-xs md:text-sm font-light leading-relaxed text-black/85 italic">
+                      "{t.text}"
+                    </p>
                   </div>
-                  <div className="flex items-center gap-0.5 text-amber-500">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={10} className="fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                </div>
 
+                  {/* Bottom: Recommender Details */}
+                  <div className="pt-4 mt-6 border-t border-black/10 flex flex-col gap-0.5">
+                    <h3 className="font-sans text-sm md:text-base font-bold tracking-tight text-black group-hover:text-[#0B3175] transition-colors">
+                      {t.name}
+                    </h3>
+                    <span className="font-sans text-xs font-semibold text-black/75 line-clamp-1">
+                      {t.role}
+                    </span>
+                    <span className="font-sans text-[11px] font-medium text-black/50 line-clamp-1">
+                      {t.company}
+                    </span>
+                  </div>
+
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
 
         {/* Carousel Indicator Track */}
-        <div className="flex justify-center items-center gap-1.5 mt-8">
+        <div className="flex justify-center items-center gap-1.5 mt-10">
           {testimonials.map((_, idx) => (
             <button
               key={idx}
