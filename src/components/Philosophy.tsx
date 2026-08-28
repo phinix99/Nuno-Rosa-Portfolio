@@ -1,89 +1,113 @@
 import { motion } from 'motion/react';
-import { Globe2, Sparkles, TrendingUp, Building2, Award } from 'lucide-react';
+import { Globe2 } from 'lucide-react';
 
-const timeline = [
-  { location: "Bangalore, India", year: "2025", brand: "YOUSTA", role: "Chief of Visual Merchandising" },
-  { location: "Bangalore, India", year: "2024", brand: "TRENDS", role: "VP of Visual Merchandising F&L" },
-  { location: "Mumbai, India", year: "2022", brand: "JACK & JONES", role: "Head of VM & Styling" },
-  { location: "Mumbai, India", year: "2015", brand: "VERO MODA", role: "Head of VM & Styling" },
-  { location: "GDL, Mexico", year: "2013", brand: "C&A", role: "National Head of VM" },
-  { location: "UK & Ireland", year: "2010", brand: "LACOSTE", role: "VM & Store Design Director" },
-  { location: "Dubai, UAE", year: "2008", brand: "CHALHOUB GROUP", role: "Senior Regional VM Manager" },
-  { location: "London, UK", year: "2005", brand: "HUGO BOSS", role: "Area Display Merchandiser" },
-  { location: "Lisbon, Portugal", year: "1996", brand: "MANGO", role: "Country VM Lead" }
-];
+interface CareerMilestone {
+  brand: string;
+  country: string;
+  highlights: string[];
+}
 
-const metrics = [
-  { icon: Globe2, label: "Experience", value: "30+ Yrs" },
-  { icon: Sparkles, label: "Market Reach", value: "3 Continents" },
-  { icon: Award, label: "Pros Led", value: "50+ Team" },
-  { icon: Building2, label: "Stores Transformed", value: "2,000+" },
-  { icon: TrendingUp, label: "Budget Optimisation", value: "€0.5M" }
+const trajectory: CareerMilestone[] = [
+  {
+    brand: "YOUSTA",
+    country: "India",
+    highlights: ["Fixture Development", "VM Manual Rollouts"]
+  },
+  {
+    brand: "TRENDS",
+    country: "India",
+    highlights: ["Standardised Window Campaigns", "Store Layout Optimisation & VM Audits"]
+  },
+  {
+    brand: "JACK & JONES",
+    country: "India",
+    highlights: ["Innovated Trade Show Experience", "Upskilling Regional VM Teams"]
+  },
+  {
+    brand: "VERO MODA",
+    country: "India",
+    highlights: ["Award-Winning Window Concepts", "Redefined Brand Expression & Styling"]
+  },
+  {
+    brand: "C&A",
+    country: "Mexico",
+    highlights: ["Brand Visual Elevation", "Product Assortment & Zoning", "National Visual Training Development"]
+  },
+  {
+    brand: "LACOSTE",
+    country: "UK & Ireland",
+    highlights: ["Directed UK Largest European Flagship Opening", "Refurbishment Projects", "SIS Concepts"]
+  },
+  {
+    brand: "Bicester Village",
+    country: "UK",
+    highlights: ["Elevated Visual Standards Across Multi-Luxury Brands", "Daily Display Compliance"]
+  },
+  {
+    brand: "Chalhoub Group",
+    country: "UAE",
+    highlights: ["Bespoke Lifestyle & Brand Events", "Gulf Visual Ambassador for Luxury French Brands"]
+  },
+  {
+    brand: "MANGO",
+    country: "Portugal",
+    highlights: ["National Window Dresser", "VM Expansion"]
+  }
 ];
 
 export default function Philosophy() {
   return (
-    <section className="w-full bg-white text-black py-10 md:py-14 border-b border-black/10 overflow-hidden" id="philosophy">
+    <section className="w-full bg-white text-black py-12 md:py-18 border-b border-black/10 overflow-hidden" id="philosophy">
       <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-20">
 
-        {/* Compact, Single-Screen Global Footprint Card */}
-        <div className="p-5 md:p-8 rounded-sm md:rounded bg-[#0B3175] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(11, 49, 117,0.22)] border border-white/10">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-black/10 blur-[90px] rounded-full pointer-events-none" />
+        {/* Global Footprint Showcase Card */}
+        <div className="p-6 md:p-10 rounded-sm md:rounded bg-[#0B3175] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(11, 49, 117,0.22)] border border-white/10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-black/10 blur-[100px] rounded-full pointer-events-none" />
 
-          {/* Top Bar: Section Title + Horizontal Metrics Strip */}
-          <div className="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-5 pb-5 md:pb-6 border-b border-white/15">
-            <div className="flex flex-col gap-1">
-              <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-white/80 uppercase">
-                <Globe2 size={13} /> Career Trajectory
-              </div>
-              <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-white">
-                GLOBAL FOOTPRINT
-              </h2>
+          {/* Section Header */}
+          <div className="relative z-10 flex flex-col gap-1.5 pb-6 mb-8 border-b border-white/15">
+            <div className="flex items-center gap-2 text-xs md:text-sm font-bold tracking-[0.22em] text-white/80 uppercase">
+              <Globe2 size={14} /> Career Trajectory
             </div>
-
-            {/* Streamlined Horizontal Highlights */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5 font-sans">
-              {metrics.map((m, idx) => (
-                <div key={idx} className="flex flex-col border-l border-white/20 pl-3">
-                  <span className="text-lg md:text-xl font-bold tracking-tight text-white leading-tight">
-                    {m.value}
-                  </span>
-                  <span className="text-[9px] md:text-[10px] font-medium tracking-wider uppercase text-white/70 mt-0.5">
-                    {m.label}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-white">
+              GLOBAL FOOTPRINT
+            </h2>
           </div>
 
-          {/* 3-Column Compact Timeline Grid */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 md:gap-3 pt-5 md:pt-6">
-            {timeline.map((item, index) => (
+          {/* 3-Column Elegant Trajectory Grid */}
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {trajectory.map((item, index) => (
               <motion.div 
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: index * 0.03 }}
-                className="flex items-center justify-between p-2.5 sm:p-3 rounded-sm bg-black/[0.08] hover:bg-black/[0.16] border border-white/10 hover:border-white/25 transition-all duration-300 group cursor-default"
+                transition={{ duration: 0.4, delay: index * 0.04 }}
+                className="p-5 sm:p-6 rounded-sm bg-black/15 hover:bg-black/25 border border-white/15 hover:border-white/30 transition-all duration-300 flex flex-col justify-between group shadow-xs"
               >
-                <div className="flex items-center gap-2.5 min-w-0 pr-2">
-                  <span className="font-mono text-[11px] md:text-xs font-bold text-white/90 group-hover:text-white tabular-nums shrink-0 px-1.5 py-0.5 rounded-xs bg-white/10">
-                    {item.year}
-                  </span>
-                  <div className="flex flex-col min-w-0">
-                    <span className="font-sans text-xs font-semibold text-white tracking-tight truncate">
-                      {item.role}
-                    </span>
-                    <span className="font-sans text-[9px] text-white/60 uppercase tracking-wider truncate">
-                      {item.location}
+                <div>
+                  {/* Top Bar: Brand Name & Country Badge */}
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <h3 className="font-sans text-lg sm:text-xl font-bold tracking-tight text-white uppercase group-hover:text-white transition-colors">
+                      {item.brand}
+                    </h3>
+                    <span className="font-sans text-[10px] font-bold tracking-wider uppercase text-white/90 px-2.5 py-0.5 rounded-xs bg-white/15 border border-white/10 shrink-0">
+                      {item.country}
                     </span>
                   </div>
-                </div>
 
-                <span className="font-sans text-[9px] md:text-[10px] font-bold tracking-wider uppercase text-white/90 shrink-0 px-2 py-0.5 rounded-xs bg-white/15 border border-white/10 group-hover:bg-white group-hover:text-black transition-colors">
-                  @{item.brand}
-                </span>
+                  <div className="w-full h-[1px] bg-white/15 my-3" />
+
+                  {/* Clean Highlights List */}
+                  <div className="flex flex-col gap-2 font-sans text-xs md:text-[0.825rem] font-light text-white/85 leading-relaxed">
+                    {item.highlights.map((highlight, hIdx) => (
+                      <div key={hIdx} className="flex items-start gap-2">
+                        <span className="text-white/40 select-none text-[10px] mt-1 shrink-0">•</span>
+                        <span>{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
