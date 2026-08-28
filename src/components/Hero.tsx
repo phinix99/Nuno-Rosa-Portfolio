@@ -124,13 +124,13 @@ export default function Hero() {
   };
 
   return (
-    <section ref={heroRef} className="w-full bg-white text-black pt-4 md:pt-6 lg:pt-8 px-6 md:px-12 lg:px-20 pb-10 md:pb-14 overflow-hidden flex flex-col justify-between">
+    <section ref={heroRef} className="w-full bg-white text-black pt-4 md:pt-6 lg:pt-8 px-5 md:px-10 lg:px-16 pb-10 md:pb-14 overflow-hidden flex flex-col justify-between">
       {/* Top Nav (10% Accent & Structure) */}
       <motion.nav 
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-[1500px] mx-auto w-full flex justify-between items-center mb-6 md:mb-8 font-sans text-xs font-semibold tracking-wider uppercase border-b border-neutral-200/70 pb-4"
+        className="max-w-[1440px] mx-auto w-full flex justify-between items-center mb-6 md:mb-8 font-sans text-xs font-semibold tracking-wider uppercase border-b border-neutral-200/70 pb-4"
       >
         {/* Subtle Brand Tagline on Left */}
         <div className="hidden sm:flex items-center gap-2 text-[11px] font-mono tracking-widest text-[#0B3175] uppercase">
@@ -160,7 +160,7 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-[1500px] mx-auto w-full flex flex-col flex-1 justify-center"
+        className="max-w-[1440px] mx-auto w-full flex flex-col flex-1 justify-center"
       >
         {/* Top Header: Brand Name + Studio Subtitle + International Markets */}
         <div className="overflow-hidden mb-6 md:mb-8">

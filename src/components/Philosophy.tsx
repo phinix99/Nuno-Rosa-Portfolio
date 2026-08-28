@@ -57,8 +57,8 @@ const trajectory: CareerMilestone[] = [
 
 export default function Philosophy() {
   return (
-    <section className="w-full bg-white text-black py-12 md:py-18 border-b border-black/10 overflow-hidden" id="philosophy">
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-20">
+    <section className="w-full bg-white text-black py-14 md:py-20 lg:py-24 border-b border-black/10 overflow-hidden" id="philosophy">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-16">
 
         {/* Global Footprint Showcase Card in Elegant Royal Blue */}
         <div className="p-6 md:p-10 rounded-sm md:rounded bg-[#0B3175] text-white relative overflow-hidden shadow-[0_20px_45px_rgba(11,49,117,0.25)] border border-white/10">

@@ -98,12 +98,12 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="w-full bg-white text-black py-12 md:py-20 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="testimonials">
+    <section className="w-full bg-white text-black py-14 md:py-20 lg:py-24 px-5 md:px-10 lg:px-16 border-b border-black/10 relative overflow-hidden" id="testimonials">
       
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-[#0B3175]/5 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="max-w-[1500px] mx-auto relative z-10">
+      <div className="max-w-[1440px] mx-auto relative z-10">
         
         {/* Section Header with Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 md:mb-14 border-b border-black/10 pb-5">

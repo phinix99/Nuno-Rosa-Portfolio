@@ -3,8 +3,8 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0B3175] text-white px-6 md:px-12 lg:px-20 py-12 md:py-18 relative overflow-hidden" id="contact">
-      <div className="max-w-[1500px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8 relative z-10">
+    <footer className="w-full bg-[#0B3175] text-white px-5 md:px-10 lg:px-16 py-14 md:py-20 relative overflow-hidden" id="contact">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-8 relative z-10">
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

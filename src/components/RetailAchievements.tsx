@@ -89,8 +89,8 @@ export default function RetailAchievements() {
   const inView = useInView(sectionRef, { margin: "-60px" });
 
   return (
-    <section className="w-full bg-white text-black pt-2 pb-6 md:pb-8 px-6 md:px-12 lg:px-20 overflow-hidden" id="achievements">
-      <div className="max-w-[1500px] mx-auto" ref={sectionRef}>
+    <section className="w-full bg-white text-black pt-2 pb-8 md:pb-10 px-5 md:px-10 lg:px-16 overflow-hidden" id="achievements">
+      <div className="max-w-[1440px] mx-auto" ref={sectionRef}>
         <motion.div 
           initial={{ opacity: 0, y: 15 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0.85, y: 10 }}
