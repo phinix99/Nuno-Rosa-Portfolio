@@ -93,7 +93,7 @@ export default function Welcome() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full mt-14 md:mt-20 bg-[#F4F6FA] border-t border-black/8 pause-on-hover"
+        className="w-full mt-14 md:mt-20 bg-white border-t border-black/8 pause-on-hover"
       >
         {/* Section Header */}
         <div className="flex items-center justify-center gap-4 pt-10 md:pt-12 pb-8 md:pb-10 px-5">
@@ -107,10 +107,10 @@ export default function Welcome() {
         {/* Scrolling Logo Track with Seamless GPU Marquee */}
         <div className="relative w-full flex overflow-hidden pb-10 md:pb-12">
 
-          {/* Left edge fade — matched to bg-[#F4F6FA] */}
-          <div className="absolute inset-y-0 left-0 w-24 md:w-56 bg-gradient-to-r from-[#F4F6FA] via-[#F4F6FA]/90 to-transparent z-10 pointer-events-none" />
+          {/* Left edge fade — matched to white bg */}
+          <div className="absolute inset-y-0 left-0 w-24 md:w-56 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none" />
           {/* Right edge fade */}
-          <div className="absolute inset-y-0 right-0 w-24 md:w-56 bg-gradient-to-l from-[#F4F6FA] via-[#F4F6FA]/90 to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-24 md:w-56 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none" />
 
           <div className="animate-marquee-smooth items-center">
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
