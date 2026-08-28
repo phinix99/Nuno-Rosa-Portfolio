@@ -99,7 +99,7 @@ export default function PortfolioHighlights() {
     >
       <Link 
         to={`/gallery/${item.slug}`}
-        className="block relative w-full overflow-hidden rounded-sm md:rounded bg-neutral-100 border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_15px_35px_rgba(94, 39, 186,0.18)] transition-all duration-500 hover:-translate-y-1"
+        className="block relative w-full overflow-hidden rounded-sm md:rounded bg-neutral-100 border border-black/10 shadow-[0_10px_30px_rgba(0,0,0,0.06)] hover:shadow-[0_15px_35px_rgba(11, 49, 117,0.18)] transition-all duration-500 hover:-translate-y-1"
       >
         <div className={`relative w-full ${item.aspect} overflow-hidden`}>
           <img
@@ -111,26 +111,26 @@ export default function PortfolioHighlights() {
 
           {/* Luxury Gradient Vignette Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-60 group-hover:opacity-85 transition-opacity duration-500" />
-          <div className="absolute inset-0 bg-[#5E27BA]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-[#0B3175]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
 
           {/* Floating Category Pill */}
           <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm bg-black/60 backdrop-blur-md border border-white/20 text-white font-sans text-[9px] md:text-[10px] font-semibold tracking-widest uppercase shadow-xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#5E27BA]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0B3175]" />
               {item.tag}
             </span>
           </div>
 
           {/* Action Link Arrow */}
           <div className="absolute top-3 right-3 md:top-4 md:right-4 z-20">
-            <div className="w-8 h-8 rounded-sm bg-white/90 backdrop-blur-md text-black flex items-center justify-center shadow-xs transform group-hover:scale-110 group-hover:bg-[#5E27BA] group-hover:text-white transition-all duration-300">
+            <div className="w-8 h-8 rounded-sm bg-white/90 backdrop-blur-md text-black flex items-center justify-center shadow-xs transform group-hover:scale-110 group-hover:bg-[#0B3175] group-hover:text-white transition-all duration-300">
               <ArrowUpRight size={14} />
             </div>
           </div>
 
           {/* Card Meta Content */}
           <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 z-20 flex flex-col justify-end text-white">
-            <span className="font-sans text-[9px] md:text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70 mb-0.5 group-hover:text-[#5E27BA] transition-colors">
+            <span className="font-sans text-[9px] md:text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70 mb-0.5 group-hover:text-[#0B3175] transition-colors">
               {item.category}
             </span>
             <h3 className="font-sans text-base md:text-xl font-bold tracking-tight text-white leading-tight group-hover:translate-x-1 transition-transform duration-300">
@@ -146,14 +146,14 @@ export default function PortfolioHighlights() {
     <section ref={containerRef} className="w-full bg-white text-black py-10 md:py-16 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="portfolio">
       
       {/* Background Ambient Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[50%] bg-[#5E27BA]/5 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[50%] bg-[#0B3175]/5 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-[1500px] mx-auto relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 md:mb-8 border-b border-black/10 pb-4">
           <div className="flex flex-col gap-1">
-            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#5E27BA] uppercase">
+            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#0B3175] uppercase">
               <Sparkles size={13} /> PORTFOLIO ARCHIVES
             </div>
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
@@ -164,7 +164,7 @@ export default function PortfolioHighlights() {
           <div className="flex items-center gap-3">
             <Link
               to="/portfolio"
-              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-sm border border-black/15 bg-white text-black hover:bg-[#5E27BA] hover:text-white hover:border-[#5E27BA] transition-all duration-300 text-xs font-bold tracking-widest uppercase shadow-xs"
+              className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-sm border border-black/15 bg-white text-black hover:bg-[#0B3175] hover:text-white hover:border-[#0B3175] transition-all duration-300 text-xs font-bold tracking-widest uppercase shadow-xs"
             >
               <span>Explore All Archives</span>
               <ArrowUpRight size={14} className="text-black group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />

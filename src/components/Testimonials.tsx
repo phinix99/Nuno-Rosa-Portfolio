@@ -101,14 +101,14 @@ export default function Testimonials() {
     <section className="w-full bg-white text-black py-10 md:py-16 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="testimonials">
       
       {/* Ambient background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-[#5E27BA]/5 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] bg-[#0B3175]/5 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-[1500px] mx-auto relative z-10">
         
         {/* Section Header with Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 md:mb-10 border-b border-black/10 pb-4">
           <div className="flex flex-col gap-1">
-            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#5E27BA] uppercase">
+            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#0B3175] uppercase">
               <Linkedin size={13} className="text-[#0077B5]" /> VERIFIED RECOMMENDATIONS
             </div>
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
@@ -119,7 +119,7 @@ export default function Testimonials() {
           <div className="flex items-center gap-2.5">
             <button 
               onClick={handlePrev}
-              className="w-10 h-10 flex items-center justify-center rounded-sm bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#5E27BA] hover:text-white hover:border-[#5E27BA] transition-all shadow-xs"
+              className="w-10 h-10 flex items-center justify-center rounded-sm bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#0B3175] hover:text-white hover:border-[#0B3175] transition-all shadow-xs"
               title="Previous Reviews"
             >
               <ChevronLeft size={18} />
@@ -127,7 +127,7 @@ export default function Testimonials() {
             
             <button 
               onClick={handleNext}
-              className="w-10 h-10 flex items-center justify-center rounded-sm bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#5E27BA] hover:text-white hover:border-[#5E27BA] transition-all shadow-xs"
+              className="w-10 h-10 flex items-center justify-center rounded-sm bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#0B3175] hover:text-white hover:border-[#0B3175] transition-all shadow-xs"
               title="Next Reviews"
             >
               <ChevronRight size={18} />
@@ -145,7 +145,7 @@ export default function Testimonials() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.35, delay: idx * 0.05 }}
-                className="flex flex-col justify-between p-5 md:p-6 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#5E27BA]/40 hover:shadow-[0_15px_30px_rgba(94, 39, 186,0.06)] transition-all duration-300 group min-h-[300px]"
+                className="flex flex-col justify-between p-5 md:p-6 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#0B3175]/40 hover:shadow-[0_15px_30px_rgba(11, 49, 117,0.06)] transition-all duration-300 group min-h-[300px]"
               >
                 {/* Top: Avatar & Recommender Info */}
                 <div className="flex flex-col gap-4">
@@ -156,7 +156,7 @@ export default function Testimonials() {
                           <img 
                             src={t.avatar} 
                             alt={t.name}
-                            className="w-12 h-12 rounded-sm object-cover border border-[#5E27BA] shadow-xs group-hover:scale-105 transition-transform duration-300"
+                            className="w-12 h-12 rounded-sm object-cover border border-[#0B3175] shadow-xs group-hover:scale-105 transition-transform duration-300"
                             onError={(e) => {
                               e.currentTarget.style.display = 'none';
                               if (e.currentTarget.nextElementSibling) {
@@ -165,7 +165,7 @@ export default function Testimonials() {
                             }}
                           />
                         ) : null}
-                        <div className={`${t.avatar ? 'hidden' : 'flex'} w-12 h-12 rounded-sm bg-[#5E27BA] text-white font-bold items-center justify-center text-sm border border-white shadow-xs`}>
+                        <div className={`${t.avatar ? 'hidden' : 'flex'} w-12 h-12 rounded-sm bg-[#0B3175] text-white font-bold items-center justify-center text-sm border border-white shadow-xs`}>
                           {t.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                         </div>
 
@@ -175,7 +175,7 @@ export default function Testimonials() {
                       </div>
 
                       <div className="flex flex-col">
-                        <h3 className="font-sans text-sm md:text-base font-bold tracking-tight text-black group-hover:text-[#5E27BA] transition-colors leading-snug">
+                        <h3 className="font-sans text-sm md:text-base font-bold tracking-tight text-black group-hover:text-[#0B3175] transition-colors leading-snug">
                           {t.name}
                         </h3>
                         <span className="font-sans text-[11px] font-semibold text-black/70 line-clamp-1">
@@ -188,7 +188,7 @@ export default function Testimonials() {
                     </div>
 
                     <span className="shrink-0 flex items-center gap-1 px-2 py-0.5 rounded-xs bg-black/5 text-[9px] font-bold tracking-wider text-black/60 uppercase">
-                      <MapPin size={9} className="text-[#5E27BA]" /> {t.country}
+                      <MapPin size={9} className="text-[#0B3175]" /> {t.country}
                     </span>
                   </div>
 
@@ -200,7 +200,7 @@ export default function Testimonials() {
 
                 {/* Bottom: Verified Endorsement Tag */}
                 <div className="pt-3 mt-4 border-t border-black/10 flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-[#5E27BA]">
+                  <div className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-[#0B3175]">
                     <Sparkles size={11} />
                     <span>Verified Endorsement</span>
                   </div>
@@ -227,7 +227,7 @@ export default function Testimonials() {
               }}
               title={`Jump to review ${idx + 1}`}
               className={`h-1.5 rounded-xs transition-all duration-300 ${
-                idx === startIndex ? 'bg-[#5E27BA] w-6' : 'bg-black/20 hover:bg-black/40 w-1.5'
+                idx === startIndex ? 'bg-[#0B3175] w-6' : 'bg-black/20 hover:bg-black/40 w-1.5'
               }`}
             />
           ))}

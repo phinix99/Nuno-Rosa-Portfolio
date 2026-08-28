@@ -9,11 +9,11 @@ const brandLogos = Array.from({ length: 23 }, (_, i) => ({
 }));
 
 const accolades = [
-  { label: "Window Design", value: "4", suffix: "", detail: "Awards" },
-  { label: "Keynote Speaker", value: "2", suffix: "x", detail: "Asian Summits" },
-  { label: "VM Challenge", value: "4", suffix: "x", detail: "Guest Host" },
-  { label: "Press Features", value: "8", suffix: "+", detail: "Articles" },
-  { label: "Masterclasses", value: "2", suffix: "x", detail: "Workshops" }
+  { label: "International Exp.", value: "30", suffix: "+", detail: "Years" },
+  { label: "Market Expansion", value: "3", suffix: "", detail: "Continents" },
+  { label: "High-Performing", value: "50", suffix: "+", detail: "Pros Led" },
+  { label: "Stores Transformed", value: "2,000", suffix: "+", detail: "Locations" },
+  { label: "Budget Optimisation", value: "€0.5", suffix: "M", detail: "Annual" }
 ];
 
 export default function Welcome() {
@@ -40,8 +40,8 @@ export default function Welcome() {
             className="lg:col-span-5 w-full flex justify-center lg:justify-start"
             ref={imageRef}
           >
-            <div className="relative w-full aspect-[900/586] rounded-sm overflow-hidden bg-neutral-100 shadow-[0_15px_40px_rgba(94,39,186,0.12)] group border border-black/10">
-              <div className="absolute inset-2 border border-[#5E27BA]/30 rounded-xs pointer-events-none z-10 transition-all duration-500 group-hover:inset-1.5 group-hover:border-[#5E27BA]" />
+            <div className="relative w-full aspect-[900/586] rounded-sm overflow-hidden bg-neutral-100 shadow-[0_15px_40px_rgba(11, 49, 117,0.12)] group border border-black/10">
+              <div className="absolute inset-2 border border-[#0B3175]/30 rounded-xs pointer-events-none z-10 transition-all duration-500 group-hover:inset-1.5 group-hover:border-[#0B3175]" />
               
               <img 
                 src="/portfolio/Press & Guest Speaker/1677031409.png" 
@@ -61,12 +61,12 @@ export default function Welcome() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col items-start gap-5"
           >
-            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-[#5E27BA]">
-              <span className="w-2 h-2 bg-[#5E27BA] rounded-full animate-pulse" />
+            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-[#0B3175]">
+              <span className="w-2 h-2 bg-[#0B3175] rounded-full animate-pulse" />
               <span>ABOUT ME</span>
             </div>
             
-            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-[#5E27BA]">
+            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-[#0B3175]">
               Balancing artistic vision with proven commercial results at any scale.
             </h2>
             
@@ -84,7 +84,7 @@ export default function Welcome() {
 
             {/* Designer Signature Detail */}
             <div className="flex flex-col gap-0.5 mt-1">
-              <span className="font-serif italic text-2xl md:text-3xl text-[#5E27BA] font-light tracking-wide select-none">
+              <span className="font-serif italic text-2xl md:text-3xl text-[#0B3175] font-light tracking-wide select-none">
                 Nuno Rosa
               </span>
               <span className="font-sans text-[10px] font-semibold tracking-widest uppercase opacity-40">
@@ -103,7 +103,7 @@ export default function Welcome() {
           transition={{ duration: 0.5 }}
           className="w-full border-t border-neutral-200/80 pt-6 mt-10 md:mt-12"
         >
-          <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#5E27BA] uppercase mb-4">
+          <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#0B3175] uppercase mb-4">
             <Sparkles size={13} />
             <span>GLOBAL RETAIL EXPERT</span>
           </div>
@@ -119,7 +119,7 @@ export default function Welcome() {
                     {item.value}
                   </span>
                   {item.suffix && (
-                    <span className="font-sans text-xl lg:text-2xl font-bold text-[#5E27BA]">
+                    <span className="font-sans text-xl lg:text-2xl font-bold text-[#0B3175]">
                       {item.suffix}
                     </span>
                   )}

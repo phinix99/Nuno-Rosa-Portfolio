@@ -142,7 +142,7 @@ export default function NewsUpdate() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 md:mb-14 border-b border-black/10 pb-8">
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#5E27BA] uppercase">
+            <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#0B3175] uppercase">
               <Linkedin size={14} className="text-[#0077B5]" /> LIVE DISPATCHES & ACTIVITY
             </div>
             <h2 className="font-sans text-4xl md:text-6xl font-medium tracking-tight uppercase text-black">
@@ -155,7 +155,7 @@ export default function NewsUpdate() {
               href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#111] text-white hover:bg-[#5E27BA] transition-all text-xs font-bold tracking-widest uppercase group shadow-md"
+              className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#111] text-white hover:bg-[#0B3175] transition-all text-xs font-bold tracking-widest uppercase group shadow-md"
             >
               <Linkedin size={14} /> Connect with Nuno
               <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -171,7 +171,7 @@ export default function NewsUpdate() {
               onClick={() => setActivePostIndex(idx)}
               className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all whitespace-nowrap flex items-center gap-2 ${
                 activePostIndex === idx
-                  ? 'bg-[#5E27BA] text-white shadow-md'
+                  ? 'bg-[#0B3175] text-white shadow-md'
                   : 'bg-[#FAF9FB] text-black/60 hover:text-black hover:bg-neutral-200/70 border border-black/5'
               }`}
             >
@@ -185,7 +185,7 @@ export default function NewsUpdate() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
           
           {/* Main LinkedIn Feed Post */}
-          <div className="lg:col-span-8 rounded-3xl bg-[#FAF9FB] border border-black/10 overflow-hidden shadow-[0_15px_40px_rgba(94, 39, 186,0.06)] flex flex-col">
+          <div className="lg:col-span-8 rounded-3xl bg-[#FAF9FB] border border-black/10 overflow-hidden shadow-[0_15px_40px_rgba(11, 49, 117,0.06)] flex flex-col">
             
             {/* Post Author Header */}
             <div className="p-6 md:p-8 flex items-center justify-between border-b border-black/5 bg-white/80 backdrop-blur-md">
@@ -199,7 +199,7 @@ export default function NewsUpdate() {
                   <img 
                     src="/DP/1 (1).png" 
                     alt="Nuno Rosa"
-                    className="w-14 h-14 rounded-full object-cover border-2 border-[#5E27BA] group-hover:scale-105 transition-transform"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-[#0B3175] group-hover:scale-105 transition-transform"
                   />
                   <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-[#0077B5] text-white flex items-center justify-center border-2 border-white">
                     <Linkedin size={11} />
@@ -212,7 +212,7 @@ export default function NewsUpdate() {
                       href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="font-sans text-base md:text-lg font-bold text-black hover:text-[#5E27BA] transition-colors"
+                      className="font-sans text-base md:text-lg font-bold text-black hover:text-[#0B3175] transition-colors"
                     >
                       Nuno Rosa
                     </a>
@@ -230,14 +230,14 @@ export default function NewsUpdate() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={handlePrev}
-                  className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-black/60 hover:bg-[#5E27BA] hover:text-white hover:border-[#5E27BA] transition-colors"
+                  className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-black/60 hover:bg-[#0B3175] hover:text-white hover:border-[#0B3175] transition-colors"
                   title="Previous Post"
                 >
                   <ChevronLeft size={16} />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-black/60 hover:bg-[#5E27BA] hover:text-white hover:border-[#5E27BA] transition-colors"
+                  className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-black/60 hover:bg-[#0B3175] hover:text-white hover:border-[#0B3175] transition-colors"
                   title="Next Post"
                 >
                   <ChevronRight size={16} />
@@ -262,7 +262,7 @@ export default function NewsUpdate() {
                 {/* Hashtags */}
                 <div className="flex flex-wrap gap-2">
                   {activePost.tags.map((tag) => (
-                    <span key={tag} className="text-xs font-semibold text-[#5E27BA] hover:underline cursor-pointer">
+                    <span key={tag} className="text-xs font-semibold text-[#0B3175] hover:underline cursor-pointer">
                       {tag}
                     </span>
                   ))}
@@ -303,7 +303,7 @@ export default function NewsUpdate() {
                             href={activePost.postUrl} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="w-14 h-14 rounded-full bg-[#5E27BA] text-white flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-white hover:text-black transition-all shrink-0"
+                            className="w-14 h-14 rounded-full bg-[#0B3175] text-white flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-white hover:text-black transition-all shrink-0"
                             title="Play Video on LinkedIn"
                           >
                             <Play size={24} className="ml-1 fill-current" />
@@ -372,13 +372,13 @@ export default function NewsUpdate() {
                 {/* Engagement Bar */}
                 <div className="flex items-center justify-between pt-4 border-t border-black/10 text-xs font-semibold text-black/60">
                   <div className="flex items-center gap-6">
-                    <span className="flex items-center gap-1.5 hover:text-[#5E27BA] transition-colors cursor-pointer">
-                      <Heart size={16} className="text-[#5E27BA]" /> {activePost.stats.reactions} Reactions
+                    <span className="flex items-center gap-1.5 hover:text-[#0B3175] transition-colors cursor-pointer">
+                      <Heart size={16} className="text-[#0B3175]" /> {activePost.stats.reactions} Reactions
                     </span>
-                    <span className="flex items-center gap-1.5 hover:text-[#5E27BA] transition-colors cursor-pointer">
+                    <span className="flex items-center gap-1.5 hover:text-[#0B3175] transition-colors cursor-pointer">
                       <MessageCircle size={16} /> {activePost.stats.comments} Comments
                     </span>
-                    <span className="hidden sm:flex items-center gap-1.5 hover:text-[#5E27BA] transition-colors cursor-pointer">
+                    <span className="hidden sm:flex items-center gap-1.5 hover:text-[#0B3175] transition-colors cursor-pointer">
                       <Share2 size={16} /> {activePost.stats.reposts} Reposts
                     </span>
                   </div>
@@ -402,7 +402,7 @@ export default function NewsUpdate() {
             
             {/* Quick Profile Summary Card */}
             <div className="p-6 md:p-8 rounded-3xl bg-white border border-black/10 flex flex-col gap-5 shadow-sm">
-              <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#5E27BA] uppercase">
+              <div className="flex items-center gap-2 text-xs font-bold tracking-widest text-[#0B3175] uppercase">
                 <Sparkles size={14} /> LINKEDIN PROFILE SUMMARY
               </div>
               
@@ -417,15 +417,15 @@ export default function NewsUpdate() {
 
               <div className="flex flex-col gap-2.5 pt-4 border-t border-black/10 font-sans text-xs">
                 <div className="flex items-center gap-2 text-black/80">
-                  <CheckCircle2 size={15} className="text-[#5E27BA] shrink-0" />
+                  <CheckCircle2 size={15} className="text-[#0B3175] shrink-0" />
                   <span>14,288+ Active Industry Followers</span>
                 </div>
                 <div className="flex items-center gap-2 text-black/80">
-                  <CheckCircle2 size={15} className="text-[#5E27BA] shrink-0" />
+                  <CheckCircle2 size={15} className="text-[#0B3175] shrink-0" />
                   <span>Weekly VM Insights & Store Analyses</span>
                 </div>
                 <div className="flex items-center gap-2 text-black/80">
-                  <CheckCircle2 size={15} className="text-[#5E27BA] shrink-0" />
+                  <CheckCircle2 size={15} className="text-[#0B3175] shrink-0" />
                   <span>Open for Consultations & Masterclasses</span>
                 </div>
               </div>
@@ -441,7 +441,7 @@ export default function NewsUpdate() {
             </div>
 
             {/* Speaking Summit Highlight */}
-            <div className="p-6 md:p-8 rounded-3xl bg-[#5E27BA] text-white flex flex-col gap-4 shadow-[0_15px_30px_rgba(94, 39, 186,0.25)]">
+            <div className="p-6 md:p-8 rounded-3xl bg-[#0B3175] text-white flex flex-col gap-4 shadow-[0_15px_30px_rgba(11, 49, 117,0.25)]">
               <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/70">
                 Keynote & Masterclasses
               </span>
@@ -458,21 +458,21 @@ export default function NewsUpdate() {
               href="https://www.retail4growth.com/search/nuno-rosa" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-6 md:p-8 rounded-3xl bg-neutral-900 text-white flex flex-col gap-3.5 border border-black/10 hover:border-[#5E27BA] transition-all group shadow-md"
+              className="p-6 md:p-8 rounded-3xl bg-neutral-900 text-white flex flex-col gap-3.5 border border-black/10 hover:border-[#0B3175] transition-all group shadow-md"
             >
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#5E27BA]">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#0B3175]">
                   Press & Media Feature
                 </span>
                 <ExternalLink size={14} className="text-white/60 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </div>
-              <h4 className="font-sans text-base md:text-lg font-bold tracking-tight leading-snug group-hover:text-[#5E27BA] transition-colors">
+              <h4 className="font-sans text-base md:text-lg font-bold tracking-tight leading-snug group-hover:text-[#0B3175] transition-colors">
                 Latest from the world of retail experience and its eco-system
               </h4>
               <p className="font-sans text-xs font-light text-white/70 leading-relaxed">
                 Read Nuno Rosa's exclusive articles, interviews, and industry analyses on Retail4Growth.
               </p>
-              <div className="flex items-center gap-1.5 text-xs font-bold text-[#5E27BA] uppercase tracking-wider mt-1">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-[#0B3175] uppercase tracking-wider mt-1">
                 <span>Read on Retail4Growth</span>
                 <ArrowUpRight size={13} />
               </div>

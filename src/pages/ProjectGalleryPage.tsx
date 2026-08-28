@@ -103,7 +103,7 @@ export default function ProjectGalleryPage() {
     return (
       <div className="min-h-screen bg-white text-black flex flex-col items-center justify-center">
         <h1 className="text-2xl mb-4 font-sans tracking-widest uppercase">Gallery not found</h1>
-        <button onClick={() => navigate('/')} className="px-6 py-3 bg-black text-white hover:bg-[#5E27BA] hover:text-white transition-colors rounded-lg text-xs font-bold uppercase tracking-wider">
+        <button onClick={() => navigate('/')} className="px-6 py-3 bg-black text-white hover:bg-[#0B3175] hover:text-white transition-colors rounded-lg text-xs font-bold uppercase tracking-wider">
           Return Home
         </button>
       </div>
@@ -111,15 +111,15 @@ export default function ProjectGalleryPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white text-black font-sans selection:bg-[#5E27BA] selection:text-white pb-24">
+    <main className="min-h-screen bg-white text-black font-sans selection:bg-[#0B3175] selection:text-white pb-24">
       {/* Sticky Minimal Navbar */}
       <nav className="sticky top-0 w-full z-40 bg-white/90 backdrop-blur-xl border-b border-black/5 px-6 md:px-12 py-4 md:py-5 flex justify-between items-center shadow-xs">
         <div className="flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#5E27BA] transition-colors group">
+          <Link to="/" className="flex items-center gap-2 font-bold tracking-widest text-sm md:text-base uppercase hover:text-[#0B3175] transition-colors group">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> NUNO ROSA
           </Link>
           <span className="text-neutral-300 hidden sm:inline">|</span>
-          <Link to="/portfolio" className="text-xs uppercase tracking-wider font-semibold text-neutral-500 hover:text-[#5E27BA] transition-colors hidden sm:inline">
+          <Link to="/portfolio" className="text-xs uppercase tracking-wider font-semibold text-neutral-500 hover:text-[#0B3175] transition-colors hidden sm:inline">
             ← All Disciplines
           </Link>
         </div>
@@ -133,11 +133,11 @@ export default function ProjectGalleryPage() {
       <header className="max-w-[1500px] mx-auto px-6 md:px-12 pt-6 md:pt-10 pb-6">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-neutral-500 mb-4">
-          <Link to="/" className="hover:text-[#5E27BA] transition-colors flex items-center gap-1.5 font-medium">
+          <Link to="/" className="hover:text-[#0B3175] transition-colors flex items-center gap-1.5 font-medium">
             <Home size={13} /> Home
           </Link>
           <ChevronRight size={13} className="text-neutral-400" />
-          <Link to="/portfolio" className="hover:text-[#5E27BA] transition-colors">
+          <Link to="/portfolio" className="hover:text-[#0B3175] transition-colors">
             Portfolio
           </Link>
           <ChevronRight size={13} className="text-neutral-400" />
@@ -152,7 +152,7 @@ export default function ProjectGalleryPage() {
               to={`/gallery/${tab.slug}`}
               className={`px-3.5 py-1.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all border ${
                 category === tab.slug
-                  ? 'bg-[#5E27BA] text-white border-[#5E27BA] shadow-xs'
+                  ? 'bg-[#0B3175] text-white border-[#0B3175] shadow-xs'
                   : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-black/5'
               }`}
             >
@@ -167,7 +167,7 @@ export default function ProjectGalleryPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase text-black">
               {categoryKey}
             </h1>
-            <div className="w-12 h-[2.5px] bg-[#5E27BA] mt-2" />
+            <div className="w-12 h-[2.5px] bg-[#0B3175] mt-2" />
           </div>
           <span className="font-mono text-xs text-black/40 uppercase tracking-widest hidden sm:inline">
             {flattenedImages.length} Visuals
@@ -184,20 +184,20 @@ export default function ProjectGalleryPage() {
             href="https://www.retail4growth.com/search/nuno-rosa" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="mb-8 p-5 md:p-7 rounded-sm bg-neutral-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-black/10 hover:border-[#5E27BA] transition-all group shadow-sm"
+            className="mb-8 p-5 md:p-7 rounded-sm bg-neutral-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-black/10 hover:border-[#0B3175] transition-all group shadow-sm"
           >
             <div className="flex flex-col gap-1.5">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#5E27BA]">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#0B3175]">
                 Featured Press & Articles
               </span>
-              <h3 className="font-sans text-lg sm:text-xl font-bold text-white group-hover:text-[#5E27BA] transition-colors leading-snug">
+              <h3 className="font-sans text-lg sm:text-xl font-bold text-white group-hover:text-[#0B3175] transition-colors leading-snug">
                 Latest from the world of retail experience and its eco-system
               </h3>
               <p className="text-xs text-white/70">
                 Explore Nuno Rosa's complete collection of published interviews, store analyses, and retail design columns on Retail4Growth.
               </p>
             </div>
-            <div className="flex items-center gap-2 px-5 py-2.5 bg-[#5E27BA] text-white text-xs font-bold uppercase tracking-wider rounded-sm shrink-0 group-hover:bg-white group-hover:text-black transition-colors shadow-sm">
+            <div className="flex items-center gap-2 px-5 py-2.5 bg-[#0B3175] text-white text-xs font-bold uppercase tracking-wider rounded-sm shrink-0 group-hover:bg-white group-hover:text-black transition-colors shadow-sm">
               <span>Read on Retail4Growth</span>
               <ArrowUpRight size={14} />
             </div>
@@ -266,7 +266,7 @@ export default function ProjectGalleryPage() {
                                 viewport={{ once: true, margin: "50px" }}
                                 transition={{ duration: 0.5 }}
                                 onClick={() => setSelectedImageIndex(globalIndex)}
-                                className={`group relative rounded-sm md:rounded overflow-hidden bg-neutral-100/80 border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#5E27BA]/50 transition-all duration-500 flex items-center justify-center ${aspectClass}`}
+                                className={`group relative rounded-sm md:rounded overflow-hidden bg-neutral-100/80 border border-black/10 cursor-pointer shadow-xs hover:shadow-lg hover:border-[#0B3175]/50 transition-all duration-500 flex items-center justify-center ${aspectClass}`}
                               >
                                 <img 
                                   src={src} 
@@ -274,9 +274,9 @@ export default function ProjectGalleryPage() {
                                   className="w-full h-full object-contain p-1 sm:p-2 transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
                                   loading="lazy"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#5E27BA]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                                <div className="absolute inset-0 bg-[#5E27BA]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center pointer-events-none">
-                                  <span className="bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-xs text-[#5E27BA] font-mono text-xs uppercase tracking-widest border border-[#5E27BA]/20 transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0B3175]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                                <div className="absolute inset-0 bg-[#0B3175]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center pointer-events-none">
+                                  <span className="bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-xs text-[#0B3175] font-mono text-xs uppercase tracking-widest border border-[#0B3175]/20 transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500 shadow-md">
                                     View Visual
                                   </span>
                                 </div>
@@ -299,7 +299,7 @@ export default function ProjectGalleryPage() {
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-neutral-700">
           <a 
             href="mailto:nunorosa75@gmail.com" 
-            className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 font-semibold lowercase"
+            className="hover:text-[#0B3175] transition-colors flex items-center gap-1 font-semibold lowercase"
           >
             nunorosa75@gmail.com
           </a>
@@ -308,7 +308,7 @@ export default function ProjectGalleryPage() {
             href="https://www.linkedin.com/in/fashionvisualmerchandising/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 font-semibold"
+            className="hover:text-[#0B3175] transition-colors flex items-center gap-1 font-semibold"
           >
             LinkedIn <ArrowUpRight size={12} />
           </a>
@@ -317,7 +317,7 @@ export default function ProjectGalleryPage() {
             href="https://www.instagram.com/nuno.marques.rosa/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 font-semibold"
+            className="hover:text-[#0B3175] transition-colors flex items-center gap-1 font-semibold"
           >
             Instagram <ArrowUpRight size={12} />
           </a>
@@ -362,7 +362,7 @@ export default function ProjectGalleryPage() {
             {/* Previous Button */}
             <button 
               onClick={handlePrev}
-              className="absolute left-4 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-sm bg-white/40 hover:bg-[#5E27BA] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
+              className="absolute left-4 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-sm bg-white/40 hover:bg-[#0B3175] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
             >
               <ChevronLeft size={28} />
             </button>
@@ -378,7 +378,7 @@ export default function ProjectGalleryPage() {
                     transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                     src={flattenedImages[selectedImageIndex]}
                     alt={`${categoryKey} showcase ${selectedImageIndex}`}
-                    className="max-w-full max-h-full object-contain drop-shadow-[0_20px_60px_rgba(107,76,154,0.15)]"
+                    className="max-w-full max-h-full object-contain drop-shadow-[0_20px_60px_rgba(11, 49, 117,0.15)]"
                     onClick={(e) => e.stopPropagation()} // prevent close on image click
                   />
               </AnimatePresence>
@@ -387,7 +387,7 @@ export default function ProjectGalleryPage() {
             {/* Next Button */}
             <button 
               onClick={handleNext}
-              className="absolute right-4 md:right-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-sm bg-white/40 hover:bg-[#5E27BA] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
+              className="absolute right-4 md:right-8 z-50 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-sm bg-white/40 hover:bg-[#0B3175] text-black hover:text-white transition-colors border border-black/10 backdrop-blur-md hidden sm:flex"
             >
               <ChevronRight size={28} />
             </button>
@@ -395,7 +395,7 @@ export default function ProjectGalleryPage() {
             {/* Progress Bar (if playing) */}
             {isPlaying && (
               <motion.div 
-                className="absolute bottom-0 left-0 h-1 bg-[#5E27BA]"
+                className="absolute bottom-0 left-0 h-1 bg-[#0B3175]"
                 initial={{ width: "0%" }}
                 animate={{ width: "100%" }}
                 transition={{ duration: 3.5, ease: "linear", repeat: Infinity, key: selectedImageIndex }}

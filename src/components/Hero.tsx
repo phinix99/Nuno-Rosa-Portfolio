@@ -24,7 +24,7 @@ function RollingReel({ value, suffix = "" }: { value: number; suffix?: string })
           ))}
         </motion.div>
       </span>
-      <span className="text-[#5E27BA] ml-0.5">{suffix}</span>
+      <span className="text-[#0B3175] ml-0.5">{suffix}</span>
     </span>
   );
 }
@@ -148,16 +148,16 @@ export default function Hero() {
       >
         {/* Navigation Menu */}
         <div className="flex flex-wrap justify-end items-center gap-x-6 md:gap-x-10 gap-y-2">
-          <Link to="/portfolio" className="hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <Link to="/portfolio" className="hover:text-[#0B3175] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#0B3175] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Portfolio
           </Link>
-          <a href="#about" className="hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#about" className="hover:text-[#0B3175] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#0B3175] hover:after:w-full after:transition-all after:duration-300 pb-1">
             About Me
           </a>
-          <a href="#vm-course" className="hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#vm-course" className="hover:text-[#0B3175] transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#0B3175] hover:after:w-full after:transition-all after:duration-300 pb-1">
             VM Course
           </a>
-          <a href="#contact" className="hover:text-[#5E27BA] transition-colors flex items-center gap-1 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#5E27BA] hover:after:w-full after:transition-all after:duration-300 pb-1">
+          <a href="#contact" className="hover:text-[#0B3175] transition-colors flex items-center gap-1 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#0B3175] hover:after:w-full after:transition-all after:duration-300 pb-1">
             Contact <ArrowUpRight size={13} strokeWidth={2.5} />
           </a>
         </div>
@@ -174,7 +174,7 @@ export default function Hero() {
         <div className="overflow-hidden mb-4 md:mb-6">
           <motion.h1 
             variants={lineVariants}
-            className="font-sans text-[11vw] md:text-[8.5vw] lg:text-[7.2vw] leading-[0.88] font-normal tracking-tight md:tracking-[-0.02em] uppercase select-none text-black ml-0 text-left"
+            className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-[4.75rem] leading-[0.95] font-normal tracking-tight md:tracking-[-0.02em] uppercase select-none text-black ml-0 text-left"
           >
             NUNO ROSA
           </motion.h1>
@@ -184,9 +184,9 @@ export default function Hero() {
             className="flex flex-col gap-1 mt-2 md:mt-3 text-left"
           >
             <span className="font-sans text-xl md:text-2xl lg:text-3xl font-light tracking-tight text-black/90">
-              Fashion Retail & Visual Merchandising
+              Fashion Retail & Visual Merchandising Studio
             </span>
-            <span className="font-sans text-xs md:text-sm lg:text-base font-semibold tracking-[0.12em] text-[#5E27BA] uppercase mt-0.5">
+            <span className="font-sans text-xs md:text-sm lg:text-base font-semibold tracking-[0.12em] text-[#0B3175] uppercase mt-0.5">
               London &nbsp;|&nbsp; UAE &nbsp;|&nbsp; India &nbsp;|&nbsp; Mexico &nbsp;|&nbsp; Portugal
             </span>
           </motion.div>
@@ -198,55 +198,67 @@ export default function Hero() {
           {/* Left Column (Text & CTAs): 5 Columns */}
           <motion.div 
             variants={itemVariants}
-            className="lg:col-span-5 flex flex-col items-start gap-6 lg:pr-4 order-2 lg:order-1"
+            className="lg:col-span-5 flex flex-col items-start gap-5 lg:pr-4 order-2 lg:order-1"
           >
-            <div className="flex items-center gap-2 bg-[#5E27BA]/10 text-[#5E27BA] px-3 py-1 rounded-sm font-sans text-[11px] font-semibold tracking-wider uppercase border border-[#5E27BA]/20">
-              <Sparkles size={12} />
-              <span>Spatial Design & Visual Merchandising</span>
-            </div>
-
             <div className="font-sans text-base md:text-lg lg:text-xl font-light tracking-tight text-[#111]/90 max-w-md leading-relaxed">
               I craft immersive visual merchandising and bespoke exhibition architectures that captivate global audiences and transform physical spaces into visceral brand stories.
             </div>
             
-            <div className="flex flex-wrap items-center gap-4 font-sans text-xs font-semibold tracking-wider uppercase">
-              <a 
-                href="#contact" 
-                className="bg-[#5E27BA] text-white px-7 py-3 rounded-sm hover:bg-black hover:text-white hover:shadow-xl transition-all duration-300 transform active:scale-95 flex items-center gap-2 text-xs"
-              >
-                Start Project <ArrowUpRight size={13} strokeWidth={2.5} />
-              </a>
+            <div className="flex items-center font-sans text-xs font-semibold tracking-wider uppercase pt-1">
               <a 
                 href="#about" 
-                className="flex items-center gap-1 py-2 px-1 hover:text-[#5E27BA] transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-black/30 hover:after:bg-[#5E27BA] text-xs"
+                className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-black hover:text-[#0B3175] group transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-black group-hover:after:bg-[#0B3175] after:transition-colors"
               >
-                My Approach
+                <span>My Approach</span>
+                <ArrowUpRight size={13} strokeWidth={2.5} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>
 
-            {/* Metrics Checklist */}
-            <div className="w-full border-t border-neutral-200/80 pt-4 mt-2 grid grid-cols-3 gap-3">
-              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-3">
-                <span className="font-sans text-[9px] lg:text-[10px] font-semibold tracking-widest text-[#111]/60 uppercase">Experience</span>
-                <div className="flex items-baseline gap-0.5 text-[#111]">
-                  <RollingReel value={30} suffix="+" />
-                  <span className="font-sans text-[9px] lg:text-[10px] font-semibold uppercase text-[#111]/60 ml-0.5">Yrs</span>
-                </div>
+            {/* Metrics Checklist - 5 Key Highlights */}
+            <div className="w-full border-t border-neutral-200/80 pt-5 mt-2 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
+              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-2">
+                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
+                  30<span className="text-[#0B3175]">+</span>
+                </span>
+                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
+                  Years International Exp.
+                </span>
               </div>
-              
-              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-3">
-                <span className="font-sans text-[9px] lg:text-[10px] font-semibold tracking-widest text-[#111]/60 uppercase">Based In</span>
-                <div className="flex items-baseline gap-1 pt-[2px]">
-                  <span className="font-sans text-lg lg:text-xl font-bold tracking-tight text-[#111] uppercase">London</span>
-                </div>
+
+              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-2">
+                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
+                  3
+                </span>
+                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
+                  Continents Expansion
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-2">
+                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
+                  50<span className="text-[#0B3175]">+</span>
+                </span>
+                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
+                  Led High-Performing Pros
+                </span>
+              </div>
+
+              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-2">
+                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
+                  2,000<span className="text-[#0B3175]">+</span>
+                </span>
+                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
+                  Stores Transformed
+                </span>
               </div>
 
               <div className="flex flex-col gap-0.5">
-                <span className="font-sans text-[9px] lg:text-[10px] font-semibold tracking-widest text-[#111]/60 uppercase">Brands</span>
-                <div className="flex items-baseline gap-0.5 text-[#111]">
-                  <RollingReel value={40} suffix="+" />
-                  <span className="font-sans text-[9px] lg:text-[10px] font-semibold uppercase text-[#111]/60 ml-0.5">Global</span>
-                </div>
+                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
+                  €0.5M
+                </span>
+                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
+                  Annual Budget Optimisation
+                </span>
               </div>
             </div>
           </motion.div>
@@ -260,7 +272,7 @@ export default function Hero() {
               to={`/gallery/${currentSlide.slug}`}
               className="block relative w-full aspect-[16/9] md:aspect-[16/8.8] rounded-sm md:rounded overflow-hidden bg-neutral-900 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-neutral-200/80 group cursor-pointer"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#5E27BA]/20 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#0B3175]/20 via-transparent to-transparent opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
               
               <AnimatePresence mode="wait">
                 <motion.img 
@@ -277,15 +289,15 @@ export default function Hero() {
               </AnimatePresence>
 
               {/* Floating Dynamic Discipline Pill Badge on Image */}
-              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-[#5E27BA] transition-colors duration-300">
-                <span className="w-1.5 h-1.5 bg-[#5E27BA] group-hover:bg-white rounded-full animate-pulse" />
+              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-[#0B3175] transition-colors duration-300">
+                <span className="w-1.5 h-1.5 bg-[#0B3175] group-hover:bg-white rounded-full animate-pulse" />
                 <span>{currentSlide.title}</span>
                 <ArrowUpRight size={12} className="opacity-60 group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Indicator Counter & Dots */}
               <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 z-20 flex items-center gap-1.5 bg-[#111]/80 backdrop-blur-md px-3 py-1 rounded-sm border border-white/10 text-white font-mono text-[10px] tracking-wider uppercase">
-                <span className="text-[#5E27BA] font-bold">0{currentSlideIndex + 1}</span>
+                <span className="text-[#0B3175] font-bold">0{currentSlideIndex + 1}</span>
                 <span className="opacity-40">/</span>
                 <span className="opacity-60">10</span>
               </div>
