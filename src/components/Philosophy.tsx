@@ -99,7 +99,7 @@ export default function Philosophy() {
                   <div className="w-full h-[1px] bg-white/15 my-3" />
 
                   {/* Clean Highlights List */}
-                  <div className="flex flex-col gap-2 font-sans text-xs md:text-[0.825rem] font-light text-white/85 leading-relaxed">
+                  <div className="flex flex-col gap-2 font-sans text-sm font-light text-white/85 leading-relaxed">
                     {item.highlights.map((highlight, hIdx) => (
                       <div key={hIdx} className="flex items-start gap-2">
                         <span className="text-white/40 select-none text-[10px] mt-1 shrink-0">•</span>

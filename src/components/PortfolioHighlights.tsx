@@ -135,7 +135,7 @@ export default function PortfolioHighlights() {
                     <Link
                       key={sIdx}
                       to={`/gallery/${sub.slug}`}
-                      className="px-3 py-1.5 bg-white hover:bg-[#0B3175] text-neutral-800 hover:text-white border border-black/10 hover:border-[#0B3175] rounded-xs text-[11px] font-semibold tracking-wide uppercase transition-all duration-300 shadow-2xs"
+                      className="px-3 py-1.5 bg-white hover:bg-[#0B3175] text-neutral-800 hover:text-white border border-black/10 hover:border-[#0B3175] rounded-xs text-xs font-semibold tracking-wide uppercase transition-all duration-300 shadow-2xs"
                     >
                       {sub.name}
                     </Link>

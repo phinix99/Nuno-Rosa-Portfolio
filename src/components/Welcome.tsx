@@ -57,7 +57,7 @@ export default function Welcome() {
               ABOUT ME
             </div>
             
-            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-[#0B3175]">
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] text-[#0B3175]">
               Balancing artistic vision with proven commercial results at any scale.
             </h2>
             

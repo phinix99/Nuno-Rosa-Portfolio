@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle2, ArrowRight, Sparkles, BookOpen, Clock, Users, Globe } from 'lucide-react';
 
@@ -54,7 +54,7 @@ export default function VMCourse() {
                 <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
                   VM EDUCATION
                 </div>
-                <span className="px-2.5 py-0.5 rounded-xs bg-[#0B3175]/10 text-[#0B3175] border border-[#0B3175]/25 text-[9px] font-bold tracking-widest uppercase">
+                <span className="px-2.5 py-0.5 rounded-xs bg-[#0B3175]/10 text-[#0B3175] border border-[#0B3175]/25 text-[10px] font-bold tracking-widest uppercase">
                   COMING UP SOON
                 </span>
               </div>
@@ -69,25 +69,25 @@ export default function VMCourse() {
             {/* Quick Specs */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-3 border-y border-black/10 font-sans">
               <div className="flex flex-col gap-0.5">
-                <span className="text-[9px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
+                <span className="text-[10px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
                   <Clock size={11} className="text-[#0B3175]" /> Duration
                 </span>
                 <span className="text-xs font-bold text-black">8 Weeks Online</span>
               </div>
               <div className="flex flex-col gap-0.5">
-                <span className="text-[9px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
+                <span className="text-[10px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
                   <BookOpen size={11} className="text-[#0B3175]" /> Format
                 </span>
                 <span className="text-xs font-bold text-black">Live Workshops</span>
               </div>
               <div className="flex flex-col gap-0.5">
-                <span className="text-[9px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
+                <span className="text-[10px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
                   <Users size={11} className="text-[#0B3175]" /> Cohort Size
                 </span>
                 <span className="text-xs font-bold text-black">25 Spots Only</span>
               </div>
               <div className="flex flex-col gap-0.5">
-                <span className="text-[9px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
+                <span className="text-[10px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
                   <Globe size={11} className="text-[#0B3175]" /> Alumni
                 </span>
                 <span className="text-xs font-bold text-black">Global Brands</span>
@@ -110,7 +110,7 @@ export default function VMCourse() {
                       MODULE {m.num}
                     </span>
                     <span className="text-[10px] text-black/40 group-hover:text-[#0B3175] transition-colors">
-                      →
+                      â†’
                     </span>
                   </div>
                   <h4 className="font-sans text-sm font-semibold tracking-tight text-black">
@@ -139,8 +139,8 @@ export default function VMCourse() {
                     className="flex flex-col gap-4"
                   >
                     <div className="flex flex-col gap-1">
-                      <div className="inline-flex items-center px-2.5 py-0.5 bg-[#0B3175]/10 text-[#0B3175] border border-[#0B3175]/20 rounded-xs text-[9px] font-bold tracking-widest uppercase w-fit">
-                        Coming Up Soon • Waitlist Open
+                      <div className="inline-flex items-center px-2.5 py-0.5 bg-[#0B3175]/10 text-[#0B3175] border border-[#0B3175]/20 rounded-xs text-[10px] font-bold tracking-widest uppercase w-fit">
+                        Coming Up Soon â€¢ Waitlist Open
                       </div>
                       <h3 className="font-sans text-xl font-bold tracking-tight text-black mt-1">
                         Reserve Your Seat
@@ -152,7 +152,7 @@ export default function VMCourse() {
 
                     <form onSubmit={handleSubmit} className="flex flex-col gap-3 font-sans">
                       <div className="flex flex-col gap-1">
-                        <label className="text-[9px] font-bold tracking-wider uppercase text-black/60">
+                        <label className="text-[10px] font-bold tracking-wider uppercase text-black/60">
                           Full Name
                         </label>
                         <input 
@@ -166,7 +166,7 @@ export default function VMCourse() {
                       </div>
                       
                       <div className="flex flex-col gap-1">
-                        <label className="text-[9px] font-bold tracking-wider uppercase text-black/60">
+                        <label className="text-[10px] font-bold tracking-wider uppercase text-black/60">
                           Email Address
                         </label>
                         <input 
@@ -194,7 +194,7 @@ export default function VMCourse() {
                       </button>
                     </form>
 
-                    <div className="text-center font-sans text-[9px] text-black/50">
+                    <div className="text-center font-sans text-[10px] text-black/50">
                       By submitting, you agree to receive curriculum updates.
                     </div>
                   </motion.div>
@@ -237,3 +237,4 @@ export default function VMCourse() {
     </section>
   );
 }
+

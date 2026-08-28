@@ -133,7 +133,7 @@ export default function Hero() {
         className="max-w-[1440px] mx-auto w-full flex justify-between items-center mb-6 md:mb-8 font-sans text-xs font-semibold tracking-wider uppercase border-b border-neutral-200/70 pb-4"
       >
         {/* Subtle Brand Tagline on Left */}
-        <div className="hidden sm:flex items-center gap-2 text-[11px] font-mono tracking-widest text-[#0B3175] uppercase">
+        <div className="hidden sm:flex items-center gap-2 text-xs font-mono tracking-widest text-[#0B3175] uppercase">
           <span className="w-1.5 h-1.5 rounded-full bg-[#0B3175]" />
           Visual Direction & Spatial Design
         </div>
@@ -166,7 +166,7 @@ export default function Hero() {
         <div className="overflow-hidden mb-6 md:mb-8">
           <motion.h1 
             variants={itemVariants}
-            className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-[4.75rem] leading-[0.95] font-normal tracking-tight md:tracking-[-0.02em] uppercase select-none text-black ml-0 text-left"
+            className="font-sans text-5xl sm:text-6xl md:text-7xl leading-[0.95] font-normal tracking-tight md:tracking-[-0.02em] uppercase select-none text-black ml-0 text-left"
           >
             NUNO ROSA
           </motion.h1>
@@ -175,7 +175,7 @@ export default function Hero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mt-2 md:mt-3 pt-1 border-t border-black/5"
           >
-            <span className="font-sans text-xl md:text-2xl lg:text-[1.75rem] font-light tracking-tight text-black/90">
+            <span className="font-sans text-xl md:text-2xl font-light tracking-tight text-black/90">
               Fashion Retail & Visual Merchandising Studio
             </span>
             <span className="font-sans text-xs md:text-sm font-semibold tracking-[0.14em] uppercase text-[#0B3175] shrink-0">
@@ -194,7 +194,7 @@ export default function Hero() {
             className="lg:col-span-5 flex flex-col items-start gap-6 lg:pr-2 order-2 lg:order-1"
           >
             {/* Editorial Narrative */}
-            <div className="font-sans text-xs sm:text-sm lg:text-[0.95rem] font-light tracking-tight text-[#111]/85 max-w-xl leading-relaxed flex flex-col gap-3.5 border-l-2 border-[#0B3175]/30 pl-4">
+            <div className="font-sans text-sm md:text-base font-light tracking-tight text-[#111]/85 max-w-xl leading-relaxed flex flex-col gap-3.5 border-l-2 border-[#0B3175]/30 pl-4">
               <p>
                 To enhance a brand's visual presence, every project must balance strategic planning with immaculate execution. I design high-impact window concepts, spatial retail layouts, and immersive physical activations for global fashion brands.
               </p>

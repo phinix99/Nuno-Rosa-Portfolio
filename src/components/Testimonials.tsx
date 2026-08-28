@@ -198,7 +198,7 @@ export default function Testimonials() {
                     <span className="font-sans text-xs font-semibold text-black/75 line-clamp-1">
                       {t.role}
                     </span>
-                    <span className="font-sans text-[11px] font-medium text-black/50 line-clamp-1">
+                    <span className="font-sans text-xs font-medium text-black/50 line-clamp-1">
                       {t.company}
                     </span>
                   </div>

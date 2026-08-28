@@ -12,7 +12,7 @@ export default function Footer() {
           transition={{ duration: 0.8 }}
           className="flex flex-col"
         >
-          <h2 className="font-sans text-5xl md:text-[6.5rem] font-medium tracking-tighter uppercase mb-4 md:mb-6 leading-none">
+          <h2 className="font-sans text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter uppercase mb-4 md:mb-6 leading-none">
             LET'S TALK
           </h2>
           <div className="flex flex-col gap-3 font-sans text-xs md:text-sm">
