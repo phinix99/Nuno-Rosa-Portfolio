@@ -1,6 +1,5 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { Sparkles } from 'lucide-react';
 
 const brandLogos = Array.from({ length: 23 }, (_, i) => ({
   id: `brand-${i + 1}`,
@@ -10,6 +9,7 @@ const brandLogos = Array.from({ length: 23 }, (_, i) => ({
 
 export default function Welcome() {
   const imageRef = useRef(null);
+  const [carouselPaused, setCarouselPaused] = useState(false);
   const { scrollYProgress } = useScroll({
     target: imageRef,
     offset: ["start end", "end start"]
@@ -17,7 +17,7 @@ export default function Welcome() {
   const y = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
 
   return (
-    <section className="w-full bg-white text-black pt-14 md:pt-20 lg:pt-24 pb-10 md:pb-14 border-b border-black/10 overflow-hidden" id="about">
+    <section className="w-full bg-white text-black pt-14 md:pt-20 lg:pt-24 pb-0 border-b border-black/10 overflow-hidden" id="about">
       <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-16">
         
         {/* Main About Grid */}
@@ -32,7 +32,7 @@ export default function Welcome() {
             className="lg:col-span-5 w-full flex justify-center lg:justify-start"
             ref={imageRef}
           >
-            <div className="relative w-full aspect-[900/586] rounded-sm overflow-hidden bg-neutral-100 shadow-[0_15px_40px_rgba(11, 49, 117,0.12)] group border border-black/10">
+            <div className="relative w-full aspect-[900/586] rounded-sm overflow-hidden bg-neutral-100 shadow-[0_15px_40px_rgba(11,49,117,0.12)] group border border-black/10">
               <div className="absolute inset-2 border border-[#0B3175]/30 rounded-xs pointer-events-none z-10 transition-all duration-500 group-hover:inset-1.5 group-hover:border-[#0B3175]" />
               
               <img 
@@ -88,42 +88,68 @@ export default function Welcome() {
 
       </div>
 
-      {/* Brands Carousel Section directly under About Me */}
-      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden pt-10 md:pt-14 pb-4">
-        <h4 className="text-center font-sans text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-black/60 mb-6 md:mb-8">
-          TRUSTED BY GLOBAL ICONS
-        </h4>
-        
-        <div className="relative w-full flex overflow-hidden py-4 md:py-8">
-          <div className="absolute inset-y-0 left-0 w-24 md:w-56 bg-gradient-to-r from-white via-white/95 to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-24 md:w-56 bg-gradient-to-l from-white via-white/95 to-transparent z-10 pointer-events-none" />
-          
-          <motion.div 
-            className="flex items-center py-2"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 55 }}
+      {/* ── TRUSTED BY GLOBAL ICONS ── Redesigned Brand Carousel Strip */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        className="w-full mt-14 md:mt-20 bg-[#F4F6FA] border-t border-black/8"
+        onMouseEnter={() => setCarouselPaused(true)}
+        onMouseLeave={() => setCarouselPaused(false)}
+      >
+        {/* Section Header */}
+        <div className="flex items-center justify-center gap-4 pt-10 md:pt-12 pb-8 md:pb-10 px-5">
+          <span className="flex-1 max-w-[120px] h-px bg-[#0B3175]/20" />
+          <p className="font-sans text-xs font-bold tracking-[0.30em] uppercase text-[#0B3175]/70">
+            TRUSTED BY GLOBAL ICONS
+          </p>
+          <span className="flex-1 max-w-[120px] h-px bg-[#0B3175]/20" />
+        </div>
+
+        {/* Scrolling Logo Track */}
+        <div className="relative w-full flex overflow-hidden pb-10 md:pb-12">
+
+          {/* Left edge fade — matched to bg-[#F4F6FA] */}
+          <div className="absolute inset-y-0 left-0 w-20 md:w-48 bg-gradient-to-r from-[#F4F6FA] to-transparent z-10 pointer-events-none" />
+          {/* Right edge fade */}
+          <div className="absolute inset-y-0 right-0 w-20 md:w-48 bg-gradient-to-l from-[#F4F6FA] to-transparent z-10 pointer-events-none" />
+
+          <motion.div
+            className="flex items-center"
+            animate={{ x: carouselPaused ? undefined : ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
             style={{ width: "fit-content" }}
           >
             {[...brandLogos, ...brandLogos].map((brand, idx) => (
-              <div 
-                key={`${brand.id}-${idx}`} 
-                className="flex items-center justify-center shrink-0 w-56 md:w-72 lg:w-80 h-28 md:h-36 lg:h-40 mx-3 md:mx-6 group"
+              <div
+                key={`${brand.id}-${idx}`}
+                className="flex items-center justify-center shrink-0 w-40 md:w-56 lg:w-64 h-20 md:h-28 mx-4 md:mx-8 group"
               >
-                <div className="w-full h-full flex items-center justify-center p-2">
-                  <img 
-                    src={brand.src} 
-                    alt={brand.alt}
-                    className="max-h-24 md:max-h-32 lg:max-h-36 max-w-[220px] md:max-w-[280px] lg:max-w-[320px] w-auto h-auto object-contain transition-all duration-300 group-hover:scale-108 transform-gpu origin-center filter contrast-105"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
+                <img
+                  src={brand.src}
+                  alt={brand.alt}
+                  className="max-h-14 md:max-h-20 max-w-[140px] md:max-w-[200px] w-auto h-auto object-contain
+                    grayscale opacity-50
+                    group-hover:grayscale-0 group-hover:opacity-100
+                    transition-all duration-500 ease-out
+                    group-hover:scale-110 transform-gpu origin-center"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
               </div>
             ))}
           </motion.div>
         </div>
-      </div>
+
+        {/* Brand count indicator */}
+        <div className="flex items-center justify-center gap-2 pb-8 md:pb-10">
+          <span className="text-[10px] font-mono tracking-widest uppercase text-black/30">
+            23 Global Fashion Brands
+          </span>
+        </div>
+      </motion.div>
     </section>
   );
 }
