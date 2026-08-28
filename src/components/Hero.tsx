@@ -288,18 +288,11 @@ export default function Hero() {
                 />
               </AnimatePresence>
 
-              {/* Floating Dynamic Discipline Pill Badge on Image */}
-              <div className="absolute top-3 left-3 md:top-4 md:left-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-[#0B3175] transition-colors duration-300">
+              {/* Dynamic Discipline Title Badge at Bottom Right */}
+              <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-[#0B3175] transition-colors duration-300">
                 <span className="w-1.5 h-1.5 bg-[#0B3175] group-hover:bg-white rounded-full animate-pulse" />
                 <span>{currentSlide.title}</span>
                 <ArrowUpRight size={12} className="opacity-60 group-hover:opacity-100 transition-opacity" />
-              </div>
-
-              {/* Indicator Counter & Dots */}
-              <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 z-20 flex items-center gap-1.5 bg-[#111]/80 backdrop-blur-md px-3 py-1 rounded-sm border border-white/10 text-white font-mono text-[10px] tracking-wider uppercase">
-                <span className="text-[#0B3175] font-bold">0{currentSlideIndex + 1}</span>
-                <span className="opacity-40">/</span>
-                <span className="opacity-60">10</span>
               </div>
 
               <div className="absolute inset-0 bg-gradient-to-t from-[#111]/50 via-transparent to-transparent opacity-40 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none z-10" />
