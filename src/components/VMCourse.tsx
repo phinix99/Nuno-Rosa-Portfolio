@@ -50,9 +50,8 @@ export default function VMCourse() {
           {/* Left Column: Course Details */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-[#0B3175]">
-                <span className="w-2 h-2 bg-[#0B3175] rounded-full animate-pulse" />
-                <span>VM EDUCATION</span>
+              <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
+                VM EDUCATION
               </div>
               <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
                 VM MASTERCLASS

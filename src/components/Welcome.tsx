@@ -8,12 +8,12 @@ const brandLogos = Array.from({ length: 23 }, (_, i) => ({
   alt: `Global Brand Icon ${i + 1}`
 }));
 
-const accolades = [
-  { label: "International Exp.", value: "30", suffix: "+", detail: "Years" },
-  { label: "Market Expansion", value: "3", suffix: "", detail: "Continents" },
-  { label: "High-Performing", value: "50", suffix: "+", detail: "Pros Led" },
-  { label: "Stores Transformed", value: "2,000", suffix: "+", detail: "Locations" },
-  { label: "Budget Optimisation", value: "€0.5", suffix: "M", detail: "Annual" }
+const achievements = [
+  { value: "30", suffix: "+", text: "Years of International Experience" },
+  { value: "3", suffix: "", text: "Continents of Market Expansion" },
+  { value: "50", suffix: "+", text: "Led High-Performing Professionals" },
+  { value: "2,000", suffix: "+", text: "Stores Transformed" },
+  { value: "€0.5", suffix: "M", text: "Annual Budget Optimisation" }
 ];
 
 export default function Welcome() {
@@ -61,9 +61,8 @@ export default function Welcome() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col items-start gap-5"
           >
-            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-[#0B3175]">
-              <span className="w-2 h-2 bg-[#0B3175] rounded-full animate-pulse" />
-              <span>ABOUT ME</span>
+            <div className="text-xs md:text-sm font-bold tracking-[0.22em] uppercase text-[#0B3175]">
+              ABOUT ME
             </div>
             
             <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-[#0B3175]">
@@ -82,9 +81,9 @@ export default function Welcome() {
               </p>
             </div>
 
-            {/* Designer Signature Detail */}
+            {/* Designer Signature Detail - Straight (not italic) */}
             <div className="flex flex-col gap-0.5 mt-1">
-              <span className="font-serif italic text-2xl md:text-3xl text-[#0B3175] font-light tracking-wide select-none">
+              <span className="font-sans not-italic text-2xl md:text-3xl text-[#0B3175] font-bold tracking-tight select-none">
                 Nuno Rosa
               </span>
               <span className="font-sans text-[10px] font-semibold tracking-widest uppercase opacity-40">
@@ -95,7 +94,7 @@ export default function Welcome() {
 
         </div>
 
-        {/* Global Retail Expert Recognition Strip - Matching Hero Numbers Style */}
+        {/* Retail Achievements Strip - Top to Bottom Number & Text */}
         <motion.div 
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,30 +102,26 @@ export default function Welcome() {
           transition={{ duration: 0.5 }}
           className="w-full border-t border-neutral-200/80 pt-6 mt-10 md:mt-12"
         >
-          <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#0B3175] uppercase mb-4">
-            <Sparkles size={13} />
-            <span>GLOBAL RETAIL EXPERT</span>
+          <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase mb-6">
+            RETAIL ACHIEVEMENTS
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
-            {accolades.map((item, idx) => (
-              <div key={idx} className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-3 last:border-r-0">
-                <span className="font-sans text-[9px] lg:text-[10px] font-semibold tracking-widest text-[#111]/60 uppercase">
-                  {item.label}
-                </span>
-                <div className="flex items-baseline gap-0.5 text-[#111]">
-                  <span className="font-sans text-2xl lg:text-3xl font-bold tracking-tight text-[#111]">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
+            {achievements.map((item, idx) => (
+              <div key={idx} className="flex flex-col gap-1.5 border-r border-[#111]/10 pr-4 last:border-r-0">
+                <div className="flex items-baseline gap-0.5 text-neutral-900">
+                  <span className="font-sans text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 leading-none">
                     {item.value}
                   </span>
                   {item.suffix && (
-                    <span className="font-sans text-xl lg:text-2xl font-bold text-[#0B3175]">
+                    <span className="font-sans text-2xl lg:text-3xl font-bold text-[#0B3175]">
                       {item.suffix}
                     </span>
                   )}
-                  <span className="font-sans text-[9px] lg:text-[10px] font-semibold uppercase text-[#111]/60 ml-1">
-                    {item.detail}
-                  </span>
                 </div>
+                <span className="font-sans text-xs md:text-sm font-medium text-black/75 leading-snug">
+                  {item.text}
+                </span>
               </div>
             ))}
           </div>

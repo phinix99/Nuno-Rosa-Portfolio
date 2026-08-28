@@ -108,7 +108,7 @@ export default function Testimonials() {
         {/* Section Header with Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 md:mb-10 border-b border-black/10 pb-4">
           <div className="flex flex-col gap-1">
-            <div className="flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#0B3175] uppercase">
+            <div className="flex items-center gap-2 text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
               <Linkedin size={13} className="text-[#0077B5]" /> VERIFIED RECOMMENDATIONS
             </div>
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
