@@ -209,62 +209,14 @@ export default function Hero() {
               </p>
             </div>
             
-            <div className="flex items-center font-sans text-xs font-semibold tracking-wider uppercase pt-1">
+            <div className="flex items-center pt-2">
               <a 
                 href="#about" 
-                className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-black hover:text-[#5B1DA8] group transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-black group-hover:after:bg-gradient-to-r group-hover:after:from-[#0B3175] group-hover:after:to-[#5B1DA8] after:transition-colors"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xs md:rounded-sm bg-[#111] hover:bg-gradient-to-r hover:from-[#0B3175] hover:to-[#601DB3] text-white font-sans text-xs font-bold uppercase tracking-widest shadow-[0_4px_14px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_25px_rgba(96,29,179,0.28)] transition-all duration-300 group active:scale-[0.98]"
               >
                 <span>My Approach</span>
-                <ArrowUpRight size={13} strokeWidth={2.5} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-black group-hover:text-[#5B1DA8]" />
+                <ArrowUpRight size={14} strokeWidth={2.5} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 text-white/80 group-hover:text-white" />
               </a>
-            </div>
-
-            {/* Metrics Checklist - 5 Key Highlights */}
-            <div className="w-full border-t border-neutral-200/80 pt-5 mt-2 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
-              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-2">
-                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
-                  30<span className="text-[#601DB3]">+</span>
-                </span>
-                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
-                  Years International Exp.
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-2">
-                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
-                  3
-                </span>
-                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
-                  Continents Expansion
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-2">
-                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
-                  50<span className="text-[#601DB3]">+</span>
-                </span>
-                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
-                  Led High-Performing Pros
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-0.5 border-r border-[#111]/15 pr-2">
-                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
-                  2,000<span className="text-[#601DB3]">+</span>
-                </span>
-                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
-                  Stores Transformed
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-0.5">
-                <span className="font-sans text-lg md:text-xl font-bold tracking-tight text-neutral-900 leading-none">
-                  €0.5M
-                </span>
-                <span className="font-sans text-[8.5px] lg:text-[9px] font-semibold uppercase tracking-wider text-black/60 mt-1 leading-tight">
-                  Annual Budget Optimisation
-                </span>
-              </div>
             </div>
           </motion.div>
 
