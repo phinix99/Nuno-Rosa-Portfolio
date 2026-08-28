@@ -124,7 +124,7 @@ export default function Welcome() {
                   className="max-h-20 sm:max-h-28 md:max-h-32 lg:max-h-36 max-w-[190px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-[310px] w-auto h-auto object-contain
                     mix-blend-multiply opacity-95 group-hover:opacity-100
                     transition-all duration-300 ease-out
-                    group-hover:scale-108 transform-gpu origin-center"
+                    group-hover:scale-110 origin-center"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                   }}

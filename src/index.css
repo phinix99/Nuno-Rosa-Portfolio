@@ -12,10 +12,10 @@
 
 @keyframes marquee {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate3d(-50%, 0, 0);
+    transform: translateX(-50%);
   }
 }
 
@@ -23,7 +23,6 @@
   display: flex;
   width: max-content;
   animation: marquee 60s linear infinite;
-  will-change: transform;
 }
 
 .pause-on-hover:hover .animate-marquee-smooth {
