@@ -48,13 +48,7 @@ export default function VMCourse() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Course Details */}
-          <motion.div 
-            initial={{ opacity: 0, x: -25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ margin: "-50px" }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 flex flex-col gap-6"
-          >
+          <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-3">
                 <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
@@ -100,15 +94,15 @@ export default function VMCourse() {
               </div>
             </div>
 
-            {/* Curriculum Modules - Staggered Scroll Triggers */}
+            {/* Curriculum Modules */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {modules.map((m, idx) => (
+              {modules.map((m) => (
                 <motion.div 
                   key={m.num}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ margin: "-30px" }}
-                  transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
                   className="p-3.5 bg-[#FAF9FB] border border-black/10 rounded-sm hover:border-[#0B3175]/50 transition-all flex flex-col gap-1.5 group"
                 >
                   <div className="flex justify-between items-center">
@@ -128,16 +122,10 @@ export default function VMCourse() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          {/* Right Column: Waitlist Sign Up Form with Smooth Scroll Entrance */}
-          <motion.div 
-            initial={{ opacity: 0, x: 25, scale: 0.98 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            viewport={{ margin: "-50px" }}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 w-full"
-          >
+          {/* Right Column: Waitlist Sign Up Form */}
+          <div className="lg:col-span-5 w-full">
             <div className="w-full bg-[#FAF9FB] border border-[#0B3175]/20 rounded-md p-6 md:p-8 shadow-[0_10px_35px_rgba(11,49,117,0.08)] relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#0B3175]" />
               
@@ -242,7 +230,7 @@ export default function VMCourse() {
                 )}
               </AnimatePresence>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

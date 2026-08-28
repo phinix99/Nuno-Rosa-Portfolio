@@ -105,14 +105,8 @@ export default function Testimonials() {
 
       <div className="max-w-[1500px] mx-auto relative z-10">
         
-        {/* Section Header with Controls - Scroll Trigger */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ margin: "-50px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 md:mb-14 border-b border-black/10 pb-5"
-        >
+        {/* Section Header with Controls */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 md:mb-14 border-b border-black/10 pb-5">
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
               <Linkedin size={14} className="text-[#0077B5]" /> PROFESSIONAL VALIDATION
@@ -139,7 +133,7 @@ export default function Testimonials() {
               <ChevronRight size={18} />
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* 3 Elevated Reviews Displayed in Responsive 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 pt-4">

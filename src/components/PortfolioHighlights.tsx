@@ -1,98 +1,110 @@
-import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+interface Pillar {
+  id: string;
+  num: string;
+  title: string;
+  description: string;
+  subDisciplines: { name: string; slug: string }[];
+  primarySlug: string;
+  mediaType: 'image' | 'video';
+  mediaSrc: string;
+  tag: string;
+}
+
+const pillars: Pillar[] = [
+  {
+    id: 'p1',
+    num: '01',
+    title: 'Creative Visual Storytelling',
+    description: "The window display acts as a silent theatre behind the store façade—unveiling precise visual narratives that instantly communicate a brand's core DNA and engage the modern consumer.",
+    subDisciplines: [
+      { name: 'Bespoke Windows Concepts', slug: 'creative-windows' },
+      { name: 'In-store Product Display', slug: 'in-store-display' },
+      { name: 'Limited-edition Product Launches', slug: 'limited-editions' }
+    ],
+    primarySlug: 'creative-windows',
+    mediaType: 'image',
+    mediaSrc: '/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/p.jpg',
+    tag: 'Window Concepts & In-Store Displays'
+  },
+  {
+    id: 'p2',
+    num: '02',
+    title: 'Digital Visual Merchandising',
+    description: "Translating seasonal narratives and brand campaigns into precise digital storefronts. Every visual element is intentionally structured to maximize digital traffic and brand retention.",
+    subDisciplines: [
+      { name: 'E-Commerce Creative Direction', slug: 'e-commerce-styling' },
+      { name: 'Styling Curation', slug: 'e-commerce-styling' }
+    ],
+    primarySlug: 'e-commerce-styling',
+    mediaType: 'image',
+    mediaSrc: '/portfolio/E-Commerce Creative Direction & Styling/01_yousta_beach.jpg',
+    tag: 'Digital Curation & Fashion Styling'
+  },
+  {
+    id: 'p3',
+    num: '03',
+    title: 'Spatial Graphic Design',
+    description: "Every design choice must solve a specific problem. In commercial retail, an impactful brand experience relies on the precise alignment of structural fixtures, conceptual layout development, environmental signage, and standardized visual manuals. Every single element is positioned with an exact commercial purpose—never just to fill empty space.",
+    subDisciplines: [
+      { name: 'Retail Conceptual Design', slug: 'conceptual-design' },
+      { name: 'Visual Signage Communication', slug: 'visual-signage' }
+    ],
+    primarySlug: 'conceptual-design',
+    mediaType: 'image',
+    mediaSrc: '/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/1.jpg',
+    tag: 'Conceptual Geometry & Signage'
+  },
+  {
+    id: 'p4',
+    num: '04',
+    title: 'Brand Retail Experiences',
+    description: "Designing physical retail activations that transcend traditional layouts. Every concept is engineered to transport clients into an immersive experience that enhances brand DNA and elevates long-term market positioning.",
+    subDisciplines: [
+      { name: 'Fashion Trade Shows', slug: 'events-exhibitions' },
+      { name: 'Press Room Curation', slug: 'events-exhibitions' },
+      { name: 'Luxury Lifestyle Events', slug: 'events-exhibitions' }
+    ],
+    primarySlug: 'events-exhibitions',
+    mediaType: 'video',
+    mediaSrc: '/portfolio/Events & Brands Exhibition/Bespoke Press Showroom Curation/SET-UP PICS/Final Vero Moda cut.mp4',
+    tag: 'Vero Moda Press Showroom & Trade Events'
+  }
+];
 
 export default function PortfolioHighlights() {
-  const pillars = [
-    {
-      id: "pillar-1",
-      num: "01",
-      tag: "DISCIPLINE 01",
-      title: "Visual Merchandising",
-      primarySlug: "creative-windows",
-      description: "The window display acts as a silent theatre behind the store façade—unveiling precise visual narratives that instantly communicate a brand's core DNA and engage the modern consumer.",
-      subDisciplines: [
-        { name: "Creative Windows", slug: "creative-windows" },
-        { name: "In-store Display", slug: "in-store-display" },
-        { name: "Limited Editions", slug: "limited-editions" }
-      ],
-      mediaType: "video",
-      mediaSrc: "/portfolio/VISUAL MERCHANDISING/Creative Window Concepts/Creative Windows.mp4"
-    },
-    {
-      id: "pillar-2",
-      num: "02",
-      tag: "DISCIPLINE 02",
-      title: "Digital VM & E-Commerce",
-      primarySlug: "e-commerce-styling",
-      description: "Translating seasonal narratives and brand campaigns into precise digital storefronts. Every visual element is intentionally structured to maximize digital traffic and brand retention.",
-      subDisciplines: [
-        { name: "E-Commerce Creative Direction", slug: "e-commerce-styling" },
-        { name: "Styling Curation", slug: "e-commerce-styling" }
-      ],
-      mediaType: "image",
-      mediaSrc: "/portfolio/E-Commerce Creative Direction & Styling/1_200x100_edited.jpg"
-    },
-    {
-      id: "pillar-3",
-      num: "03",
-      tag: "DISCIPLINE 03",
-      title: "Spatial Graphic Design",
-      primarySlug: "conceptual-design",
-      description: "Every design choice must solve a specific problem. In commercial retail, an impactful brand experience relies on the precise alignment of structural fixtures, conceptual layout development, environmental signage, and standardized visual manuals. Every single element is positioned with an exact commercial purpose—never just to fill empty space.",
-      subDisciplines: [
-        { name: "Retail Conceptual Design", slug: "conceptual-design" },
-        { name: "Visual Signage Communication", slug: "visual-signage" }
-      ],
-      mediaType: "video",
-      mediaSrc: "/portfolio/Conceptual Design & Visual Signage Packdage/CONCEPTUAL DESIGN/Jack & Jones Conceptual Store Layout Video.mp4"
-    },
-    {
-      id: "pillar-4",
-      num: "04",
-      tag: "DISCIPLINE 04",
-      title: "Brand Retail Experiences",
-      primarySlug: "trade-shows",
-      description: "Designing physical retail activations that transcend traditional layouts. Every concept is engineered to transport clients into an immersive experience that enhances brand DNA and elevates long-term market positioning.",
-      subDisciplines: [
-        { name: "Fashion Trade Shows", slug: "trade-shows" },
-        { name: "Press Room Curation", slug: "showroom-curation" },
-        { name: "Luxury Lifestyle Events", slug: "luxury-events" }
-      ],
-      mediaType: "video",
-      mediaSrc: "/portfolio/Events & Brands Exhibition/Fashion Trade Shows/Fashion Trade Shows.mp4"
-    }
-  ];
+  const containerRef = useRef(null);
 
   return (
-    <section className="w-full bg-white text-black py-12 md:py-20 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="pillars">
+    <section ref={containerRef} className="w-full bg-white text-black py-12 md:py-20 px-6 md:px-12 lg:px-20 border-b border-black/10 relative overflow-hidden" id="portfolio">
+      
+      {/* Background Ambient Glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[50%] bg-[#0B3175]/5 blur-[140px] rounded-full pointer-events-none" />
+
       <div className="max-w-[1500px] mx-auto relative z-10">
         
-        {/* Section Header with Scroll Trigger */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ margin: "-50px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col gap-2 mb-8 md:mb-12 border-b border-black/10 pb-5"
-        >
+        {/* Section Header */}
+        <div className="flex flex-col gap-2 mb-8 md:mb-12 border-b border-black/10 pb-5">
           <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
             VISUAL CORE PILLARS
           </div>
           <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
             Retail Footprint Transformation
           </h2>
-        </motion.div>
+        </div>
 
-        {/* 4 Folders Organisation Grid - Staggered Scroll Triggers */}
+        {/* 4 Folders Organisation Grid - Spacious & Clean */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
           {pillars.map((pillar, idx) => (
             <motion.div
               key={pillar.id}
-              initial={{ opacity: 0, y: 35, scale: 0.98 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ margin: "-50px" }}
-              transition={{ duration: 0.7, delay: idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="p-6 md:p-8 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#0B3175]/50 hover:shadow-[0_20px_45px_rgba(11,49,117,0.1)] transition-all duration-500 shadow-xs flex flex-col justify-between group"
             >
               {/* Top Header of Pillar */}
@@ -154,7 +166,7 @@ export default function PortfolioHighlights() {
                   />
                 )}
 
-                {/* Bottom Title Vignette */}
+                {/* Bottom Title Vignette (No top-right arrow button) */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 flex items-center justify-between z-10">
                   <span className="font-sans text-xs md:text-sm font-bold text-white uppercase tracking-wider">
