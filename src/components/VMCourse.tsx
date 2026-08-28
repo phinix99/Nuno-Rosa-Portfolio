@@ -51,10 +51,10 @@ export default function VMCourse() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-3">
-                <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient uppercase">
+                <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
                   VM EDUCATION
                 </div>
-                <span className="px-2.5 py-0.5 rounded-xs bg-[#7C3AED]/15 text-[#7C3AED] border border-[#7C3AED]/30 text-[9px] font-bold tracking-widest uppercase">
+                <span className="px-2.5 py-0.5 rounded-xs bg-[#0B3175]/10 text-[#0B3175] border border-[#0B3175]/25 text-[9px] font-bold tracking-widest uppercase">
                   COMING UP SOON
                 </span>
               </div>
@@ -70,25 +70,25 @@ export default function VMCourse() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-3 border-y border-black/10 font-sans">
               <div className="flex flex-col gap-0.5">
                 <span className="text-[9px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
-                  <Clock size={11} className="text-[#7C3AED]" /> Duration
+                  <Clock size={11} className="text-[#0B3175]" /> Duration
                 </span>
                 <span className="text-xs font-bold text-black">8 Weeks Online</span>
               </div>
               <div className="flex flex-col gap-0.5">
                 <span className="text-[9px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
-                  <BookOpen size={11} className="text-[#7C3AED]" /> Format
+                  <BookOpen size={11} className="text-[#0B3175]" /> Format
                 </span>
                 <span className="text-xs font-bold text-black">Live Workshops</span>
               </div>
               <div className="flex flex-col gap-0.5">
                 <span className="text-[9px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
-                  <Users size={11} className="text-[#7C3AED]" /> Cohort Size
+                  <Users size={11} className="text-[#0B3175]" /> Cohort Size
                 </span>
                 <span className="text-xs font-bold text-black">25 Spots Only</span>
               </div>
               <div className="flex flex-col gap-0.5">
                 <span className="text-[9px] uppercase tracking-wider text-black/60 font-semibold flex items-center gap-1">
-                  <Globe size={11} className="text-[#7C3AED]" /> Alumni
+                  <Globe size={11} className="text-[#0B3175]" /> Alumni
                 </span>
                 <span className="text-xs font-bold text-black">Global Brands</span>
               </div>
@@ -103,13 +103,13 @@ export default function VMCourse() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
-                  className="p-3.5 bg-[#FAF9FB] border border-black/10 rounded-sm hover:border-[#7C3AED]/50 hover:shadow-[0_8px_20px_rgba(124,58,237,0.08)] transition-all flex flex-col gap-1.5 group"
+                  className="p-3.5 bg-[#FAF9FB] border border-black/10 rounded-sm hover:border-[#0B3175]/50 transition-all flex flex-col gap-1.5 group"
                 >
                   <div className="flex justify-between items-center">
-                    <span className="font-sans text-[10px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient tracking-widest uppercase">
+                    <span className="font-sans text-[10px] font-bold text-[#0B3175] tracking-widest uppercase">
                       MODULE {m.num}
                     </span>
-                    <span className="text-[10px] text-black/40 group-hover:text-[#7C3AED] transition-colors">
+                    <span className="text-[10px] text-black/40 group-hover:text-[#0B3175] transition-colors">
                       →
                     </span>
                   </div>
@@ -126,8 +126,8 @@ export default function VMCourse() {
 
           {/* Right Column: Waitlist Sign Up Form */}
           <div className="lg:col-span-5 w-full">
-            <div className="w-full bg-[#FAF9FB] border border-[#7C3AED]/25 rounded-md p-6 md:p-8 shadow-[0_15px_40px_rgba(124,58,237,0.1)] relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient" />
+            <div className="w-full bg-[#FAF9FB] border border-[#0B3175]/20 rounded-md p-6 md:p-8 shadow-[0_10px_35px_rgba(11,49,117,0.08)] relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#0B3175]" />
               
               <AnimatePresence mode="wait">
                 {!submitted ? (
@@ -139,7 +139,7 @@ export default function VMCourse() {
                     className="flex flex-col gap-4"
                   >
                     <div className="flex flex-col gap-1">
-                      <div className="inline-flex items-center px-2.5 py-0.5 bg-gradient-to-r from-[#0052FF]/15 to-[#D946EF]/15 text-[#7C3AED] border border-[#7C3AED]/25 rounded-xs text-[9px] font-bold tracking-widest uppercase w-fit">
+                      <div className="inline-flex items-center px-2.5 py-0.5 bg-[#0B3175]/10 text-[#0B3175] border border-[#0B3175]/20 rounded-xs text-[9px] font-bold tracking-widest uppercase w-fit">
                         Coming Up Soon • Waitlist Open
                       </div>
                       <h3 className="font-sans text-xl font-bold tracking-tight text-black mt-1">
@@ -161,7 +161,7 @@ export default function VMCourse() {
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           placeholder="e.g. Jean Laurent"
-                          className="w-full px-3.5 py-2.5 bg-white border border-black/10 rounded-sm focus:outline-none focus:border-[#7C3AED] text-xs transition-all placeholder:text-black/40 text-black"
+                          className="w-full px-3.5 py-2.5 bg-white border border-black/10 rounded-sm focus:outline-none focus:border-[#0B3175] text-xs transition-all placeholder:text-black/40 text-black"
                         />
                       </div>
                       
@@ -175,14 +175,14 @@ export default function VMCourse() {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="e.g. jean@fashionbrand.com"
-                          className="w-full px-3.5 py-2.5 bg-white border border-black/10 rounded-sm focus:outline-none focus:border-[#7C3AED] text-xs transition-all placeholder:text-black/40 text-black"
+                          className="w-full px-3.5 py-2.5 bg-white border border-black/10 rounded-sm focus:outline-none focus:border-[#0B3175] text-xs transition-all placeholder:text-black/40 text-black"
                         />
                       </div>
 
                       <button 
                         type="submit"
                         disabled={loading}
-                        className="w-full mt-1 bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient text-white font-bold tracking-wider uppercase text-xs py-3 rounded-sm flex items-center justify-center gap-2 transition-all duration-300 group shadow-[0_4px_15px_rgba(124,58,237,0.35)] hover:shadow-[0_8px_25px_rgba(124,58,237,0.5)] active:scale-[0.98]"
+                        className="w-full mt-1 bg-[#0B3175] hover:bg-black disabled:bg-neutral-300 text-white font-bold tracking-wider uppercase text-xs py-3 rounded-sm flex items-center justify-center gap-2 transition-all duration-300 group shadow-sm active:scale-[0.98]"
                       >
                         {loading ? (
                           <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -210,7 +210,7 @@ export default function VMCourse() {
                       animate={{ scale: 1 }}
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
                     >
-                      <CheckCircle2 size={44} className="text-[#601DB3] mb-4" />
+                      <CheckCircle2 size={44} className="text-[#0B3175] mb-4" />
                     </motion.div>
                     
                     <h3 className="text-lg font-bold tracking-tight text-black mb-1">

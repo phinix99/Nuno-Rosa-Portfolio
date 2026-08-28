@@ -108,7 +108,7 @@ export default function Testimonials() {
         {/* Section Header with Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 md:mb-14 border-b border-black/10 pb-5">
           <div className="flex flex-col gap-1">
-            <div className="flex items-center gap-2 text-xs md:text-sm font-bold tracking-[0.22em] text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient uppercase">
+            <div className="flex items-center gap-2 text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
               <Linkedin size={14} className="text-[#0077B5]" /> PROFESSIONAL VALIDATION
             </div>
             <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
@@ -119,7 +119,7 @@ export default function Testimonials() {
           <div className="flex items-center gap-2.5">
             <button 
               onClick={handlePrev}
-              className="w-10 h-10 flex items-center justify-center rounded-sm bg-[#FAF9FB] border border-black/10 text-black hover:bg-gradient-to-r hover:from-[#0052FF] hover:via-[#7C3AED] hover:to-[#D946EF] hover:animate-gradient hover:text-white hover:border-transparent transition-all shadow-xs"
+              className="w-10 h-10 flex items-center justify-center rounded-sm bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#0B3175] hover:text-white hover:border-[#0B3175] transition-all shadow-xs"
               title="Previous Reviews"
             >
               <ChevronLeft size={18} />
@@ -127,7 +127,7 @@ export default function Testimonials() {
             
             <button 
               onClick={handleNext}
-              className="w-10 h-10 flex items-center justify-center rounded-sm bg-[#FAF9FB] border border-black/10 text-black hover:bg-gradient-to-r hover:from-[#0052FF] hover:via-[#7C3AED] hover:to-[#D946EF] hover:animate-gradient hover:text-white hover:border-transparent transition-all shadow-xs"
+              className="w-10 h-10 flex items-center justify-center rounded-sm bg-[#FAF9FB] border border-black/10 text-black hover:bg-[#0B3175] hover:text-white hover:border-[#0B3175] transition-all shadow-xs"
               title="Next Reviews"
             >
               <ChevronRight size={18} />
@@ -147,7 +147,7 @@ export default function Testimonials() {
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
                 className="relative pt-7 flex flex-col justify-between group"
               >
-                <div className="w-full h-full p-6 md:p-7 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#7C3AED]/50 hover:shadow-[0_20px_45px_rgba(124,58,237,0.12)] transition-all duration-300 flex flex-col justify-between relative shadow-xs">
+                <div className="w-full h-full p-6 md:p-7 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#0B3175]/40 hover:shadow-[0_20px_40px_rgba(11,49,117,0.08)] transition-all duration-300 flex flex-col justify-between relative shadow-xs">
                   
                   {/* Floating Circular Avatar on Top Border */}
                   <div className="absolute -top-7 left-6 flex items-center">
@@ -165,7 +165,7 @@ export default function Testimonials() {
                           }}
                         />
                       ) : null}
-                      <div className={`${t.avatar ? 'hidden' : 'flex'} w-14 h-14 rounded-full bg-gradient-to-br from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient text-white font-bold items-center justify-center text-sm border-2 border-white shadow-md`}>
+                      <div className={`${t.avatar ? 'hidden' : 'flex'} w-14 h-14 rounded-full bg-[#0B3175] text-white font-bold items-center justify-center text-sm border-2 border-white shadow-md`}>
                         {t.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                       </div>
 
@@ -175,16 +175,16 @@ export default function Testimonials() {
                     </div>
                   </div>
 
-                  {/* Top Right: Prominent Country Badge with Moving Bright Gradient */}
+                  {/* Top Right: Prominent Country Badge in Elegant Royal Blue */}
                   <div className="flex justify-end items-center mb-5">
-                    <span className="flex items-center gap-1.5 px-3 py-1 rounded-xs bg-gradient-to-r from-[#0052FF]/15 via-[#7C3AED]/15 to-[#D946EF]/15 border border-[#7C3AED]/30 text-[10px] md:text-[11px] font-bold tracking-wider text-[#7C3AED] uppercase shadow-2xs">
-                      <MapPin size={11} className="text-[#7C3AED]" /> {t.country}
+                    <span className="flex items-center gap-1.5 px-3 py-1 rounded-xs bg-[#0B3175]/10 border border-[#0B3175]/25 text-[10px] md:text-[11px] font-bold tracking-wider text-[#0B3175] uppercase shadow-2xs">
+                      <MapPin size={11} className="text-[#0B3175]" /> {t.country}
                     </span>
                   </div>
 
                   {/* Quote Body */}
                   <div className="flex flex-col gap-3 my-auto">
-                    <MessageSquareQuote size={22} className="text-[#7C3AED]/35 group-hover:text-[#7C3AED]/70 transition-colors" />
+                    <MessageSquareQuote size={22} className="text-[#0B3175]/30 group-hover:text-[#0B3175]/60 transition-colors" />
                     <p className="font-sans text-xs md:text-sm font-light leading-relaxed text-black/85 italic">
                       "{t.text}"
                     </p>
@@ -192,7 +192,7 @@ export default function Testimonials() {
 
                   {/* Bottom: Recommender Details */}
                   <div className="pt-4 mt-6 border-t border-black/10 flex flex-col gap-0.5">
-                    <h3 className="font-sans text-sm md:text-base font-bold tracking-tight text-black group-hover:text-[#7C3AED] transition-colors">
+                    <h3 className="font-sans text-sm md:text-base font-bold tracking-tight text-black group-hover:text-[#0B3175] transition-colors">
                       {t.name}
                     </h3>
                     <span className="font-sans text-xs font-semibold text-black/75 line-clamp-1">
@@ -220,7 +220,7 @@ export default function Testimonials() {
               }}
               title={`Jump to review ${idx + 1}`}
               className={`h-1.5 rounded-xs transition-all duration-300 ${
-                idx === startIndex ? 'bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient w-6' : 'bg-black/20 hover:bg-black/40 w-1.5'
+                idx === startIndex ? 'bg-[#0B3175] w-6' : 'bg-black/20 hover:bg-black/40 w-1.5'
               }`}
             />
           ))}

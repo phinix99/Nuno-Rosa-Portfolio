@@ -186,7 +186,7 @@ export default function Hero() {
             <span className="font-sans text-xl md:text-2xl lg:text-3xl font-light tracking-tight text-black/90">
               Fashion Retail & Visual Merchandising Studio
             </span>
-            <span className="font-sans text-xs md:text-sm lg:text-base font-bold tracking-[0.14em] uppercase mt-0.5 text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient">
+            <span className="font-sans text-xs md:text-sm lg:text-base font-semibold tracking-[0.14em] uppercase mt-0.5 text-[#0B3175]">
               London &nbsp;|&nbsp; UAE &nbsp;|&nbsp; India &nbsp;|&nbsp; Mexico &nbsp;|&nbsp; Portugal
             </span>
           </motion.div>
@@ -212,7 +212,7 @@ export default function Hero() {
             <div className="flex items-center pt-2">
               <a 
                 href="#about" 
-                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xs md:rounded-sm bg-[#111] hover:bg-gradient-to-r hover:from-[#0052FF] hover:via-[#7C3AED] hover:to-[#D946EF] hover:animate-gradient text-white font-sans text-xs font-bold uppercase tracking-widest shadow-[0_4px_14px_rgba(0,0,0,0.12)] hover:shadow-[0_10px_30px_rgba(124,58,237,0.38)] transition-all duration-300 group active:scale-[0.98]"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xs md:rounded-sm bg-[#111] hover:bg-[#0B3175] text-white font-sans text-xs font-bold uppercase tracking-widest shadow-[0_4px_14px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_25px_rgba(11,49,117,0.3)] transition-all duration-300 group active:scale-[0.98]"
               >
                 <span>My Approach</span>
                 <ArrowUpRight size={14} strokeWidth={2.5} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 text-white/80 group-hover:text-white" />
@@ -229,7 +229,7 @@ export default function Hero() {
               to={`/gallery/${currentSlide.slug}`}
               className="block relative w-full aspect-[16/9] md:aspect-[16/8.8] rounded-sm md:rounded overflow-hidden bg-neutral-900 shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-neutral-200/80 group cursor-pointer"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#0052FF]/20 via-transparent to-[#D946EF]/20 opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-[#0B3175]/10 opacity-70 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
               
               <AnimatePresence mode="wait">
                 <motion.img 
@@ -246,8 +246,8 @@ export default function Hero() {
               </AnimatePresence>
 
               {/* Dynamic Discipline Title Badge at Bottom Right */}
-              <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-gradient-to-r group-hover:from-[#0052FF] group-hover:via-[#7C3AED] group-hover:to-[#D946EF] group-hover:animate-gradient transition-all duration-300">
-                <span className="w-1.5 h-1.5 bg-[#A855F7] group-hover:bg-white rounded-full animate-pulse" />
+              <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 z-20 flex items-center gap-2 bg-[#111]/85 backdrop-blur-md px-3.5 py-1.5 rounded-sm border border-white/20 text-white font-sans text-[10px] md:text-xs font-semibold tracking-widest uppercase shadow-lg group-hover:bg-[#0B3175] transition-all duration-300">
+                <span className="w-1.5 h-1.5 bg-[#0B3175] group-hover:bg-white rounded-full animate-pulse" />
                 <span>{currentSlide.title}</span>
                 <ArrowUpRight size={12} className="opacity-60 group-hover:opacity-100 transition-opacity" />
               </div>

@@ -88,7 +88,7 @@ export default function PortfolioHighlights() {
         
         {/* Section Header */}
         <div className="flex flex-col gap-2 mb-8 md:mb-12 border-b border-black/10 pb-5">
-          <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient uppercase">
+          <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase">
             VISUAL CORE PILLARS
           </div>
           <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase leading-[1.08] text-black">
@@ -105,12 +105,12 @@ export default function PortfolioHighlights() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="p-6 md:p-8 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#7C3AED]/50 hover:shadow-[0_20px_45px_rgba(124,58,237,0.12)] transition-all duration-500 shadow-xs flex flex-col justify-between group"
+              className="p-6 md:p-8 rounded-sm md:rounded bg-[#FAF9FB] border border-black/10 hover:border-[#0B3175]/50 hover:shadow-[0_20px_45px_rgba(11,49,117,0.1)] transition-all duration-500 shadow-xs flex flex-col justify-between group"
             >
               {/* Top Header of Pillar */}
               <div className="flex flex-col gap-3 mb-6">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient uppercase">
+                  <span className="font-mono text-xs font-bold tracking-widest text-[#0B3175] uppercase">
                     PILLAR {pillar.num}
                   </span>
                   <span className="text-[10px] uppercase font-semibold text-black/50 tracking-wider">
@@ -119,7 +119,7 @@ export default function PortfolioHighlights() {
                 </div>
 
                 <Link to={`/gallery/${pillar.primarySlug}`} className="group/title">
-                  <h3 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold tracking-tight uppercase text-black group-hover/title:text-[#7C3AED] transition-colors">
+                  <h3 className="font-sans text-xl sm:text-2xl md:text-3xl font-bold tracking-tight uppercase text-black group-hover/title:text-[#0B3175] transition-colors">
                     {pillar.title}
                   </h3>
                 </Link>
@@ -135,7 +135,7 @@ export default function PortfolioHighlights() {
                     <Link
                       key={sIdx}
                       to={`/gallery/${sub.slug}`}
-                      className="px-3 py-1.5 bg-white hover:bg-gradient-to-r hover:from-[#0052FF] hover:via-[#7C3AED] hover:to-[#D946EF] hover:animate-gradient text-neutral-800 hover:text-white border border-black/10 hover:border-transparent rounded-xs text-[11px] font-semibold tracking-wide uppercase transition-all duration-300 shadow-2xs"
+                      className="px-3 py-1.5 bg-white hover:bg-[#0B3175] text-neutral-800 hover:text-white border border-black/10 hover:border-[#0B3175] rounded-xs text-[11px] font-semibold tracking-wide uppercase transition-all duration-300 shadow-2xs"
                     >
                       {sub.name}
                     </Link>

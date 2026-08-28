@@ -152,7 +152,7 @@ export default function ProjectGalleryPage() {
               to={`/gallery/${tab.slug}`}
               className={`px-3.5 py-1.5 rounded-sm text-xs font-semibold tracking-wider uppercase transition-all border ${
                 category === tab.slug
-                  ? 'bg-gradient-to-r from-[#0B3175] to-[#601DB3] text-white border-transparent shadow-xs'
+                  ? 'bg-[#0B3175] text-white border-transparent shadow-xs'
                   : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 border-black/5'
               }`}
             >
@@ -167,7 +167,7 @@ export default function ProjectGalleryPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight uppercase text-black">
               {categoryKey}
             </h1>
-            <div className="w-12 h-[2.5px] bg-gradient-to-r from-[#0B3175] to-[#601DB3] mt-2" />
+            <div className="w-12 h-[2.5px] bg-[#0B3175] mt-2" />
           </div>
           <span className="font-mono text-xs text-black/40 uppercase tracking-widest hidden sm:inline">
             {flattenedImages.length} Visuals
@@ -184,20 +184,20 @@ export default function ProjectGalleryPage() {
             href="https://www.retail4growth.com/search/nuno-rosa" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="mb-8 p-5 md:p-7 rounded-sm bg-neutral-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-black/10 hover:border-[#601DB3] transition-all group shadow-sm"
+            className="mb-8 p-5 md:p-7 rounded-sm bg-neutral-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-black/10 hover:border-[#0B3175] transition-all group shadow-sm"
           >
             <div className="flex flex-col gap-1.5">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#0B3175] to-[#601DB3]">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#0B3175]">
                 Featured Press & Articles
               </span>
-              <h3 className="font-sans text-lg sm:text-xl font-bold text-white group-hover:text-[#601DB3] transition-colors leading-snug">
+              <h3 className="font-sans text-lg sm:text-xl font-bold text-white group-hover:text-[#0B3175] transition-colors leading-snug">
                 Latest from the world of retail experience and its eco-system
               </h3>
               <p className="text-xs text-white/70">
                 Explore Nuno Rosa's complete collection of published interviews, store analyses, and retail design columns on Retail4Growth.
               </p>
             </div>
-            <div className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#0B3175] to-[#601DB3] text-white text-xs font-bold uppercase tracking-wider rounded-sm shrink-0 group-hover:bg-white group-hover:text-black transition-colors shadow-sm">
+            <div className="flex items-center gap-2 px-5 py-2.5 bg-[#0B3175] text-white text-xs font-bold uppercase tracking-wider rounded-sm shrink-0 group-hover:bg-white group-hover:text-black transition-colors shadow-sm">
               <span>Read on Retail4Growth</span>
               <ArrowUpRight size={14} />
             </div>

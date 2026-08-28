@@ -61,11 +61,11 @@ export default function Welcome() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7 flex flex-col items-start gap-5"
           >
-            <div className="text-xs md:text-sm font-bold tracking-[0.22em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient">
+            <div className="text-xs md:text-sm font-bold tracking-[0.22em] uppercase text-[#0B3175]">
               ABOUT ME
             </div>
             
-            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient">
+            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-[2.35rem] font-medium tracking-tight leading-[1.15] text-[#0B3175]">
               Balancing artistic vision with proven commercial results at any scale.
             </h2>
             
@@ -81,9 +81,9 @@ export default function Welcome() {
               </p>
             </div>
 
-            {/* Designer Signature Detail - Straight (not italic) with Moving Bright Gradient */}
+            {/* Designer Signature Detail - Straight (not italic) */}
             <div className="flex flex-col gap-0.5 mt-1">
-              <span className="font-sans not-italic text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient font-bold tracking-tight select-none">
+              <span className="font-sans not-italic text-2xl md:text-3xl text-[#0B3175] font-bold tracking-tight select-none">
                 Nuno Rosa
               </span>
               <span className="font-sans text-[10px] font-semibold tracking-widest uppercase opacity-40">
@@ -102,7 +102,7 @@ export default function Welcome() {
           transition={{ duration: 0.5 }}
           className="w-full border-t border-neutral-200/80 pt-6 mt-10 md:mt-12"
         >
-          <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient uppercase mb-6">
+          <div className="text-xs md:text-sm font-bold tracking-[0.22em] text-[#0B3175] uppercase mb-6">
             RETAIL ACHIEVEMENTS
           </div>
 
@@ -114,7 +114,7 @@ export default function Welcome() {
                     {item.value}
                   </span>
                   {item.suffix && (
-                    <span className="font-sans text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0052FF] via-[#7C3AED] to-[#D946EF] animate-gradient">
+                    <span className="font-sans text-2xl lg:text-3xl font-bold text-[#0B3175]">
                       {item.suffix}
                     </span>
                   )}
